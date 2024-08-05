@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Reaction Wall Game </title>
+    <title>Reaction Wall Game</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div id="image-loader"></div>
+    <div id="container" style="display: none;">
+        <div class='info'>
+            <div class='time'></div>
+            <div class='points'></div>
+        </div>
+        <div class='wall'>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='start'>
+                <button>Start game!</button>
+            </div>
+            <div class='end'>
+                <div class='score'></div>
+                <button>Play again!</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        fetch('../splash.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('image-loader').innerHTML = data;
+            });
+        setTimeout(() => {
+            document.getElementById('image-loader').style.display = 'none';
+            document.getElementById('container').style.display = '';
+            tick();
+        }, 3000); // Changed to 10000 ms (10 seconds)
+    </script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <title>Tower Platform</title>
+  <link href='http://fonts.googleapis.com/css?family=Cherry+Swash' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../common.css" />
+  <style>
+    body {
+      background: #111;
+    }
+
+    #tower {
+      position: relative;
+      margin: 1em auto;
+      width: 512px;
+      height: 384px;
+      border: 4px solid #C080C0;
+    }
+
+    #hud {
+      position: absolute;
+      bottom: 0em;
+      width: 8em;
+      background-color: red;
+      opacity: 0.8;
+      border: 4px solid black;
+    }
+
+    #score {
+      color: yellow;
+      font-size: 2em;
+      font-family: 'Cherry Swash', cursive
+    }
+
+    #canvas {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+
+    #instructions {
+      font-style: italic;
+      color: #999;
+      font-size: 9pt;
+      margin-left: 1em;
+      margin-top: 0.5em;
+    }
+
+    #instructions b {
+      color: #DDD;
+    }
+
+    @media screen and (min-width: 0px) and (min-height: 0px) {
+      #tower {
+        width: 512px;
+        height: 384px;
+        font-size: 7pt;
+      }
+    }
+
+    /* block = 16 */
+    @media screen and (min-width: 840px) and (min-height: 530px) {
+      #tower {
+        width: 640px;
+        height: 480px;
+        font-size: 9pt;
+      }
+    }
+
+    /* block = 20 */
+    @media screen and (min-width: 968px) and (min-height: 626px) {
+      #tower {
+        width: 768px;
+        height: 576px;
+        font-size: 11pt;
+      }
+    }
+
+    /* block = 24 */
+    @media screen and (min-width: 1096px) and (min-height: 722px) {
+      #tower {
+        width: 896px;
+        height: 672px;
+        font-size: 13pt;
+      }
+    }
+
+    /* block = 28 */
+    @media screen and (min-width: 1224px) and (min-height: 818px) {
+      #tower {
+        width: 1024px;
+        height: 768px;
+        font-size: 15pt;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .game {
+        display: none;
+      }
+      body {
+        background: #3C95C3;
+      }
+    }
+    /* block = 32 */
+  </style>
+  
+</head>
+<body>
+
+  <div id="image-loader"></div>
+
+  <div class="main" id="main">
+    <section class="wrapper" oncontextmenu="return false">
+      <div class="mobile-screen" id="mobile-error"></div>
+      <section class="game">
+
+        <div id="image-loader"></div>
+        <div id="tower" style="display: none;">
+          <div id="hud">
+            <table>
+              <tr>
+                <td><img src="images/coin.png"></td>
+                <td><span id="score"></span></td>
+              </tr>
+            </table>
+          </div>
+          <canvas id="canvas">
+            <div class="unsupported">
+              Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
+            </div>
+          </canvas>
+          <div id="instructions">
+            <b>ARROW KEYS</b> to move, <b>SPACE</b> to Jump
+            <span id="debug"></span>
+          </div>
+        </div>
+
+      </section>
+    </section>
+  </div>
+
+  <script src="js/fpsmeter.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/tower.js"></script>
+  <script>
+
+    fetch('../splash.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('image-loader').innerHTML = data;
+        document.getElementById('mobile-error').style.display = 'none';
+      });
+
+    fetch('../mobile.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('mobile-error').innerHTML = data;
+    });
+
+    setTimeout(() => {
+      document.getElementById('image-loader').style.display = 'none';
+      document.getElementById('mobile-error').style.display = '';
+      document.getElementById('tower').style.display = '';
+    }, 3000);
+
+  </script>
+</body>
+
+</html>

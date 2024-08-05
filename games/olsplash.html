@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Cyborg - Gaming</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+         html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Prevents scrolling */
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-div {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Full screen height */
+            overflow: hidden;
+        }
+
+        .sp-bg-images {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%; /* Double the width to hold two images */
+            height: 100%;
+            display: flex;
+        }
+
+        .sp-bg-image {
+            width: 50%; /* Each image takes up half the width */
+            height: 100%;
+            background: url('../assets/images/s5.jpg') no-repeat center center;
+            background-size: cover;
+        }
+
+        @keyframes slide {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        .sp-bg-images {
+            animation: slide 10s linear infinite;
+        }
+        
+        .page-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header-text {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .main-button {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div class="main-div">
+        <div class="sp-bg-images">
+            <div class="sp-bg-image"></div>
+            <div class="sp-bg-image"></div>
+        </div>
+    </div>
+    
+    <script src="../assets/js/isotope.min.js"></script>
+    <script src="../assets/js/owl-carousel.js"></script>
+    <script src="../assets/js/custom.js"></script>
+  </body>
+</html>
