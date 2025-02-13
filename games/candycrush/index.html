@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Play Games Online">
+    <meta name="description"
+        content="Jewel Sweet Saga is a captivating puzzle and strategy game that promises hours of sugary fun. With its seamless blend of puzzle and strategy elements, this game is designed to appeal to players of all ages, making it ideal for casual and seasoned gamers.
+    The player must match colorful candies to clear levels, overcome obstacles, and achieve high scores. The game demands rapid decision-making and strategic planning, making it an exciting challenge for casual and seasoned gamers.
+    Set in the whimsical world of Candyland, 'Jewel Sweet Saga' takes players through various candy-themed environments. Players must align three or more candies of the same type to clear them from the board and earn points. 
+    There is a time limit of 60 seconds, so you will have to have a great presence of mind to play this game and score high. You can beat your high score and have a great sense of achievement.">
+    <meta name="keywords"
+        content="Game,5 MinutesGames,Gem Candy Crush,Match-3 Puzzle,Candy Crush,Colorful Gems,Addictive Gameplay,Casual Gaming,Fun Puzzles,Mobile Game">
+
+    <link rel="stylesheet" href="Component/Comman/header.html">
+    <link rel="stylesheet" href="Component/Comman/footer.html">
+    <link rel="stylesheet" href="Component/Comman/recommended.html">
+    <link rel="shortcut icon" type="image/x-icon" href="../Assets/images/Favicon_1.svg" />
+    <link rel="icon" type="image/x-icon" href="../Assets/images/Favicon_1.svg">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../tailwind.config.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="../Assets/css/style.css">
+    <link rel="stylesheet" href="../Assets/css/owl.carousel.min.css">
+    <title>Gem Candy Crush | 5 MinutesGames</title>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B8YGFQP4DE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-B8YGFQP4DE');
+    </script>
+
+    <!-- ad code - anchor_ad_top -->
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+    <script src="../adscripts/tcz_games/tczGames_anchorAd_gameDetails_bottom.js"></script>
+    <script src="../adscripts/tcz_games/tczGames_interstitial_allPlace_outOfPage.js"></script>
+    <script src="../adscripts/tcz_games/tcz_games_displayAd_gamedetailsPage_top.js"></script>
+    <script src="../adscripts/tcz_games/tcz_games_displayAd_gamedetailsPage_center.js"></script>
+    <script src="../adscripts/tcz_games/tczGames_reward_gameDetailPage_OnbuttonClick.js"></script>
+
+    <style>
+        body.hidden {
+            visibility: hidden;
+            /* Hide content initially */
+        }
+    </style>
+</head>
+
+<body class="hidden font-Poppins w-full">
+    <!-- anchor_ad_top -->
+    <script>
+        googletag.cmd.push(() => {
+            googletag.display(anchorSlot);
+        });
+    </script>
+    <!-- interstitial_ad -->
+    <script>
+        googletag.cmd.push(() => {
+            // Ensure the first call to display comes after static ad slot
+            // divs are defined. If you do not have any static ad slots, this
+            // call can be made immediately after services are enabled.
+            googletag.display(interstitialSlot);
+        });
+    </script>
+
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /*loop through a collection of all HTML elements:*/
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    /*make an HTTP request using the attribute value as the file name:*/
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) {
+                                elmnt.innerHTML = this.responseText;
+                                executeScripts(elmnt);
+                            }
+                            if (this.status == 404) {
+                                elmnt.innerHTML = "Page not found.";
+                            }
+                            /*remove the attribute, and call this function once more:*/
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    console.log("object", xhttp);
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /*exit the function:*/
+                    return;
+                }
+            }
+        };
+
+        function executeScripts(container) {
+            var scripts = container.getElementsByTagName('script');
+            for (var i = 0; i < scripts.length; i++) {
+                var script = document.createElement('script');
+                script.text = scripts[i].text;
+                container.appendChild(script).parentNode.removeChild(script);
+            }
+        }
+    </script>
+
+    <div w3-include-html="/Component/Comman/header.html"></div>
+
+    <section class="background_mobile">
+        <!-- POCKET QUEST Page Start -->
+        <div class="text-white pb-[80px]">
+            <!-- Banner Section Start -->
+            <section class="container hidden md:block">
+                <h4
+                    class="font-semibold text-[18px] top-section text-left text-white py-5 uppercase flex gap-3 items-center">
+                    <a class="text-[#0976FE]" href="../">HOME</a>
+                    <i class="fa-solid fa-angle-right"></i>
+                    <span class="underline">Gem Candy Crush</span>
+                </h4>
+            </section>
+
+            <!-- ======================================================= Start New Design ========================================================-->
+            <section class="container">
+                <div class=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 md:gap-6 gap-[16px] pb-5">
+                    <div class="hidden lg:block" id="responsive-screen">
+                        <a href="../../8ballbilliards" class="card h-full">
+                            <div class="parent">
+                                <img src="../Assets/images/ballbilliards.webp" loading="lazy" alt="ballbilliards"
+                                    class="card-image w-full h-full object-cover" />
+                            </div>
+                            <div class="card-overlay">
+                                <h2 class="card-title text-sm md:text-md">
+                                    8 Ball Billiards
+                                </h2>
+                            </div>
+                        </a>
+                    </div>
+                    <div id="add-row"
+                        class="md:row-span-6 md-lg:row-span-6 xl:row-span-6 lg:col-span-5 row-span-4 md:col-span-3 col-span-2">
+                        <div class="flex flex-col gap-4 md:gap-6">
+                            <div
+                                class="bg-[#1A7EFB1F] md:rounded-2xl rounded-xl md:py-6 py-4 flex justify-center items-center mt-4 md:mt-0">
+                                <h2 class="md:font-bold md:text-3xl text-xl font-semibold">Gem Candy Crush</h2>
+                            </div>
+                            <div class="md:row-span-4 lg:col-span-5 row-span-4 md:col-span-3 col-span-2">
+                                <div class="flex flex-col gap-4 md:gap-6">
+                                    <section class="relative" id="playButtonSection">
+                                        <div
+                                            class="bg-skeletonColor w-full rounded-[32px] overflow-hidden skeleton-desktop skeleton-desktop-second md:block hidden">
+                                            <img src="../Assets/images/gemcandycrushbanner.webp" loading="lazy"
+                                                alt="Gem Candy Crush"
+                                                class="skeleton-desktop-img w-full h-full transition object-cover duration-700 opacity-0"
+                                                onload="this.style.opacity='1';" id="skeleton-games">
+                                            <div
+                                                class="bg-[url('/Assets/images/banner_text.png')] h-[55px] py-3 absolute left-0 bottom-5 w-full text-center">
+                                                <p class="banner_text">Gem Candy Crush</p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="bg-skeletonColor w-full rounded-[32px] overflow-hidden skeleton-mobile block md:hidden">
+                                            <img loading="lazy" src="../Assets/images/gemcandycrushmobile.webp"
+                                                alt="Gem Candy Crush"
+                                                class="skeleton-desktop-img w-full h-full transition object-cover duration-700 opacity-0"
+                                                onload="this.style.opacity='1';" id="skeleton-games">
+                                            <div
+                                                class="bg-[url('/Assets/images/banner_text.png')] h-[55px] py-3 absolute left-0 bottom-5 w-full text-center">
+                                                <p class="text-[21px] text-white font-bold">Gem Candy Crush</p>
+                                            </div>
+                                        </div>
+                                        <div class="absolute inset-0 flex items-center justify-center">
+                                            <a href="javascript:void(0);"
+                                                onclick="setupRewardedAd(true,showSecondSection)">
+                                                <div w3-include-html="/Component/Comman/playbutton.html"
+                                                    id="scroll-target"></div>
+                                            </a>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+
+                            <section class="relative pt-4 md:pt-0" id="secondSection" style="display: none;">
+                                <div
+                                    class="bg-skeletonColor w-full rounded-[32px] overflow-hidden skeleton-desktop skeleton-desktop-second md:block hidden">
+                                    <!-- <button id="back-button" class="hidden bg-white text-black"
+                                        onclick="exitFullScreen();">Back</button> -->
+                                    <div class="banner-inner-image">
+                                        <img src="../Assets/images/gemcandycrush.webp" loading="lazy"
+                                            alt="Gem Candy Crush" class="skeleton-desktop-img-second"
+                                            onload="this.style.opacity='1';" id="skeleton-games">
+                                        <a href="javascript:void(0);" class="mb-0 pb-0">
+                                            <button id="second-button" class="play-button-second" onclick="showGame()">
+                                                <img src="../Assets/images/palybutton.png" alt=""
+                                                    class="lg:w-[79px] md:w-[60px]">
+                                            </button>
+                                            <div id="loader2" class="hidden flex items-center justify-center flex-col">
+                                                <div class="loader_2"></div>
+                                                <div id="loader-text" class="mt-2"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </section>
+
+                            <!-- ============================= Full Screen Design Start ============================== -->
+
+                            <section class="relative pt-4 md:pt-0 full-screen-bg" id="secondSectionFullScreen"
+                                style="display: none;">
+                                <button id="back-button-fullscreen"
+                                    class="hidden game_back_button_bg absolute top-4 left-0"
+                                    onclick="exitFullScreen();">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                    <img src="../Assets/images/full_screen_icon.svg" alt="Full Screen Icon">
+                                </button>
+
+                                <!-- <button id="back-button-fullscreen" onclick="exitFullScreen();">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                    <img src="../Assets/images/full_screen_icon.svg" alt="Full Screen Icon">
+                                </button> -->
+                                <div
+                                    class="bg-skeletonColor w-full rounded-[32px] overflow-hidden skeleton-desktop-second full-screen-main md:block">
+                                    <div class="banner-inner-image">
+                                        <img src="../Assets/images/gemcandycrush.webp" loading="lazy"
+                                            alt="Gem Candy Crush" class="skeleton-desktop-img-second"
+                                            onload="this.style.opacity='1';" id="skeleton-games">
+                                        <a href="javascript:void(0);" class="mb-0 pb-0">
+                                            <button id="second-button-full-screen" class="play-button-second"
+                                                onclick="showGame()">
+                                                <img src="../Assets/images/palybutton.png" alt=""
+                                                    class="lg:w-[69px] md:w-[60px] w-[60px]">
+                                            </button>
+                                            <div id="loaderFullScreen"
+                                                class="hidden flex items-center justify-center flex-col">
+                                                <div class="loader_2"></div>
+                                                <div id="loader-text-fullscreen" class="mt-2"></div>
+                                            </div>
+                                        </a>
+                                        <!-- <a href="javascript:void(0);" class="mb-0 pb-0" onclick="showGame()">
+                                            <button id="second-button" class="play-button-second">
+                                                <img src="../Assets/images/palybutton.png" alt=""
+                                                    class="lg:w-[79px] md:w-[60px]">
+                                            </button>
+                                        </a> -->
+                                    </div>
+                                    <div id="fullscreen-texts">
+                                        <h5 class="text-[22px] font-semibold text-white mb-[18px] text-center">Gem Candy
+                                            Crush</h5>
+                                        <p class="text-[16.63px] font-normal text-center">Jewel Sweet Saga is a
+                                            captivating puzzle and strategy game that promises hours of sugary fun.
+                                            With
+                                            its
+                                            seamless blend of puzzle and strategy elements...
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Full Screen slider Design Start  -->
+                                <div class="full-screen-slider">
+                                    <button id="toggle-slider" onclick="toggleSlider()">
+                                        <i id="arrow-down" class="fa-solid fa-angle-down md:top-[-29px] top-[19px]"
+                                            style="display: block;"></i>
+                                        <i id="arrow-up" class="fa-solid fa-angle-up" style="display: none; "></i>
+                                    </button>
+                                    <!-- Start Full Screen Slider Mobile -->
+                                    <!-- <div id="full-screen-mobile-slider"
+                                        class="full-screen-mobile-slider bg-cover flex h-screen justify-center items-center"> -->
+
+                                    <div id="full-screen-mobile-slider" class="glide w-[100%] px-5 py-5"
+                                        style="transition: bottom 0.3s ease;display: block;bottom: 0px;">
+                                        <div class="leistungen_slider" style="transition: bottom 0.3s ease;">
+                                            <div class="leistungen_banner">
+                                                <div id="leistungen_slider" class="owl-carousel owl-theme wow fadeInUp">
+                                                    <div class="item">
+                                                        <a href="../flapcathalloween" class="card card-slider">
+                                                            <div class="parent">
+                                                                <img src="../Assets/images/flapcat_halloween.webp"
+                                                                    loading="lazy" alt="Flapcat Halloween"
+                                                                    class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                    onload="this.style.opacity='1';" />
+                                                            </div>
+                                                            <div class="card-overlay">
+                                                                <h2 class="card-title text-sm md:text-xs ">
+                                                                    Flapcat Halloween
+                                                                </h2>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="item">
+                                                        <a href="../killzombies" class="card card-slider">
+                                                            <div class="parent">
+                                                                <img src="../Assets/images/killzombies.webp"
+                                                                    loading="lazy" alt="Kill Zombies"
+                                                                    class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                    onload="this.style.opacity='1';" />
+                                                            </div>
+                                                            <div class="card-overlay">
+                                                                <h2 class="card-title text-sm md:text-xs ">
+                                                                    Kill Zombies
+                                                                </h2>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="item">
+                                                        <a href="../galacticbattlefront" class="card card card-slider">
+                                                            <div class="parent">
+                                                                <img src="../Assets/images/galacticbattlefront.webp"
+                                                                    loading="lazy" alt="Galactic Battlefront"
+                                                                    class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                    onload="this.style.opacity='1';" />
+                                                            </div>
+                                                            <div class="card-overlay">
+                                                                <h2 class="card-title text-sm md:text-xs ">
+                                                                    Galactic Battlefront
+                                                                </h2>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="item">
+                                                        <a href="../gemcandycrush" class="card card card-slider">
+                                                            <div class="parent">
+                                                                <img src="../Assets/images/gemcandycrush.webp"
+                                                                    loading="lazy" alt="Gem Candy Crush"
+                                                                    class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                    onload="this.style.opacity='1';" />
+                                                            </div>
+                                                            <div class="card-overlay">
+                                                                <h2 class="card-title text-sm md:text-xs">
+                                                                    Gem Candy Crush
+                                                                </h2>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="item">
+                                                        <a href="../fruitninjamaster" class="card card card-slider">
+                                                            <div class="parent">
+                                                                <img src="../Assets/images/fruitninjamaster.webp"
+                                                                    loading="lazy" alt="Fruit Ninja Master"
+                                                                    class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                    onload="this.style.opacity='1';" />
+                                                            </div>
+                                                            <div class="card-overlay">
+                                                                <h2 class="card-title text-sm md:text-xs ">
+                                                                    Fruit Ninja Master
+                                                                </h2>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="item">
+                                                        <a href="../zombiegunner" class="card card card-slider">
+                                                            <div class="parent">
+                                                                <img src="../Assets/images/zombiegunner.webp"
+                                                                    loading="lazy" alt="Zombie Gunner"
+                                                                    class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                    onload="this.style.opacity='1';" />
+                                                            </div>
+                                                            <div class="card-overlay">
+                                                                <h2 class="card-title text-sm md:text-xs ">
+                                                                    Zombie Gunner
+                                                                </h2>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="item">
+                                                        <a href="../8ballbilliards" class="card card card-slider">
+                                                            <div class="parent">
+                                                                <img src="../Assets/images/ballbilliards.webp"
+                                                                    loading="lazy" alt="8 Ball Billiards"
+                                                                    class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                    onload="this.style.opacity='1';" />
+                                                            </div>
+                                                            <div class="card-overlay">
+                                                                <h2 class="card-title text-sm md:text-xs ">
+                                                                    8 Ball Billiards
+                                                                </h2>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="item">
+                                                        <a href="../searaiders" class="card card card-slider">
+                                                            <div class="parent">
+                                                                <img src="../Assets/images/seariders.webp"
+                                                                    loading="lazy" alt="Sea Raiders"
+                                                                    class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                    onload="this.style.opacity='1';" />
+                                                            </div>
+                                                            <div class="card-overlay">
+                                                                <h2 class="card-title text-sm md:text-xs ">
+                                                                    Sea Raiders
+                                                                </h2>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="item">
+                                                        <a href="../animalfusion" class="card card card-slider">
+                                                            <div class="parent">
+                                                                <img src="../Assets/images/animalfusion.webp"
+                                                                    loading="lazy" alt="Animal Fusion"
+                                                                    class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                    onload="this.style.opacity='1';" />
+                                                            </div>
+                                                            <div class="card-overlay">
+                                                                <h2 class="card-title text-sm md:text-xs ">
+                                                                    Animal Fusion
+                                                                </h2>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="item">
+                                                        <a href="../tumblebeans" class="card card card-slider">
+                                                            <div class="parent">
+                                                                <img src="../Assets/images/thumble_beans.webp"
+                                                                    loading="lazy" alt="Tumble Beans"
+                                                                    class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                    onload="this.style.opacity='1';" />
+                                                            </div>
+                                                            <div class="card-overlay">
+                                                                <h2 class="card-title text-sm md:text-xs ">
+                                                                    Tumble Beans
+                                                                </h2>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="item">
+                                                        <a href="../dogeadventure" class="card card card-slider">
+                                                            <div class="parent">
+                                                                <img src="../Assets/images/dogeadventure.webp"
+                                                                    loading="lazy" alt="Doge Adventure"
+                                                                    class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                    onload="this.style.opacity='1';" />
+                                                            </div>
+                                                            <div class="card-overlay">
+                                                                <h2 class="card-title text-sm md:text-xs ">
+                                                                    Doge Adventure
+                                                                </h2>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="item">
+                                                        <a href="../aztecpuzzlequest/" class="card card card-slider">
+                                                            <div class="parent">
+                                                                <img src="../Assets/images/aztecpuzzleques.webp"
+                                                                    loading="lazy" alt="Aztec Puzzle Quest"
+                                                                    class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                    onload="this.style.opacity='1';" />
+                                                            </div>
+                                                            <div class="card-overlay">
+                                                                <h2 class="card-title text-sm md:text-xs ">
+                                                                    Aztec Puzzle Quest
+                                                                </h2>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="item">
+                                                        <a href="../towertapbuilder" class="card card card-slider">
+                                                            <div class="parent">
+                                                                <img src="../Assets/images/towertapbuilder.webp"
+                                                                    loading="lazy" alt="Tower Tap Builder"
+                                                                    class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                    onload="this.style.opacity='1';" />
+                                                            </div>
+                                                            <div class="card-overlay">
+                                                                <h2 class="card-title text-sm md:text-xs ">
+                                                                    Tower Tap Builder
+                                                                </h2>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="item">
+                                                        <a href="../turbotrucksoccer" class="card card card-slider">
+                                                            <div class="parent">
+                                                                <img src="../Assets/images/turbotrucksoccer.webp"
+                                                                    loading="lazy" alt="Turbo Truck Soccer"
+                                                                    class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                    onload="this.style.opacity='1';" />
+                                                            </div>
+                                                            <div class="card-overlay">
+                                                                <h2 class="card-title text-sm md:text-xs ">
+                                                                    Turbo Truck Soccer
+                                                                </h2>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="item">
+                                                        <a href="../olympicchampion" class="card card card-slider">
+                                                            <div class="parent">
+                                                                <img src="../Assets/images/olympicchampion.webp"
+                                                                    loading="lazy" alt="Olympic Champion"
+                                                                    class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                    onload="this.style.opacity='1';" />
+                                                            </div>
+                                                            <div class="card-overlay">
+                                                                <h2 class="card-title text-sm md:text-xs ">
+                                                                    Olympic Champion
+                                                                </h2>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- </div> -->
+
+                                    <!-- End Full Screen Slider Mobile -->
+                                </div>
+                                <!-- Full Screen slider Design End  -->
+
+
+                                <div
+                                    class="bg-skeletonColor w-full rounded-[32px] overflow-hidden skeleton-mobile-second full-screen-main-mobile block md:hidden">
+                                    <div class="banner-inner-image">
+                                        <img src="../Assets/images/gemcandycrush.webp" loading="lazy"
+                                            alt="Gem Candy Crush" class="skeleton-desktop-img-second"
+                                            onload="this.style.opacity='1';" id="skeleton-games">
+                                        <a href="javascript:void(0);" class="mb-0 pb-0">
+                                            <button id="second-button-full" class="play-button-second"
+                                                onclick="showGame();">
+                                                <img src="../Assets/images/palybutton.png" alt="" class="w-[55px]">
+                                            </button>
+                                            <div id="loaderFullScreen_mobile"
+                                                class="hidden flex items-center justify-center flex-col">
+                                                <div class="loader_2"></div>
+                                                <div id="loader-text-fullscreen-mobile" class="mt-2"></div>
+
+                                                <div class="loader_3"></div>
+                                                <div id="loader-text-fullscreen_3" class="mt-2"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div id="fullscreen-texts-mobile">
+                                        <h5 class="text-[20px] font-semibold text-white mb-[18px] text-center">Gem Candy
+                                            Crush</h5>
+                                        <p class="text-[12px] font-normal text-center">Jewel Sweet Saga is a captivating
+                                            puzzle and strategy game that promises hours of sugary fun.
+                                            With
+                                            its seamless blend of puzzle and strategy elements...
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- <div id="loaderFullScreen"
+                                    class="hidden absolute inset-0 flex items-center justify-center z-50">
+                                    <div class="loader_2"></div>
+                                    <div id="loader-text-fullscreen" class="mt-2"></div>
+
+                                    <div class="loader_3"></div>
+                                    <div id="loader-text-fullscreen_3" class="mt-2"></div>
+                                </div> -->
+                            </section>
+
+                            <!-- ============================= Full Screen Design End ============================== -->
+
+                            <div class="w-full h-[443px] mt-4 rounded-[32px] hidden relative" id="gameIframeContainer">
+                                <button id="game-back-button" class="hidden game_back_button_bg absolute top-4 left-0"
+                                    onclick="exitFullScreen();">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                    <img class="w-[34px] h-[33px]" src="../Assets/images/full_screen_icon.svg"
+                                        alt="Full Screen Icon">
+                                </button>
+
+                                <iframe src="../games/gemcandycrush/index.html" width="100%" height="100%"
+                                    frameborder="0" allowfullscreen class="rounded-iframe"></iframe>
+
+                                <!-- Full Screen slider Game Design Start  -->
+
+                                <div id="game-slider-full-screen" class="hidden full-screen-slider absolute bottom-0">
+                                    <button id="toggle-slider-game" onclick="toggleSliderGame()">
+                                        <i id="arrow-down-game" class="fa-solid fa-angle-down md:top-[-29px] top-[20px]"
+                                            style="display: block;"></i>
+                                        <i id="arrow-up-game" class="fa-solid fa-angle-up" style="display: none;"></i>
+                                    </button>
+                                    <!-- Start Full Screen Slider Mobile -->
+                                    <div id="full-screen-mobile-slider-game" class="glide-game w-[100%] px-5 py-5"
+                                        style="transition: bottom 0.3s ease;display: block;bottom: 0px;">
+                                        <div class="beratungstermin_slider">
+                                            <div id="beratungstermin_slider"
+                                                class="beratungstermin_block owl-carousel owl-theme">
+                                                <div class="item">
+                                                    <a href="../flapcathalloween" class="card card-slider">
+                                                        <div class="parent">
+                                                            <img src="../Assets/images/flapcat_halloween.webp"
+                                                                loading="lazy" alt="Flapcat Halloween"
+                                                                class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                onload="this.style.opacity='1';" />
+                                                        </div>
+                                                        <div class="card-overlay">
+                                                            <h2 class="card-title text-sm md:text-xs ">
+                                                                Flapcat Halloween
+                                                            </h2>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="item">
+                                                    <a href="../killzombies" class="card card-slider">
+                                                        <div class="parent">
+                                                            <img src="../Assets/images/killzombies.webp" loading="lazy"
+                                                                alt="Kill Zombies"
+                                                                class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                onload="this.style.opacity='1';" />
+                                                        </div>
+                                                        <div class="card-overlay">
+                                                            <h2 class="card-title text-sm md:text-xs ">
+                                                                Kill Zombies
+                                                            </h2>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="item">
+                                                    <a href="../galacticbattlefront" class="card card card-slider">
+                                                        <div class="parent">
+                                                            <img src="../Assets/images/galacticbattlefront.webp"
+                                                                loading="lazy" alt="Galactic Battlefront"
+                                                                class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                onload="this.style.opacity='1';" />
+                                                        </div>
+                                                        <div class="card-overlay">
+                                                            <h2 class="card-title text-sm md:text-xs ">
+                                                                Galactic Battlefront
+                                                            </h2>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="item">
+                                                    <a href="../gemcandycrush" class="card card card-slider">
+                                                        <div class="parent">
+                                                            <img src="../Assets/images/gemcandycrush.webp"
+                                                                loading="lazy" alt="Gem Candy Crush"
+                                                                class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                onload="this.style.opacity='1';" />
+                                                        </div>
+                                                        <div class="card-overlay">
+                                                            <h2 class="card-title text-sm md:text-xs">
+                                                                Gem Candy Crush
+                                                            </h2>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="item">
+                                                    <a href="../fruitninjamaster" class="card card card-slider">
+                                                        <div class="parent">
+                                                            <img src="../Assets/images/fruitninjamaster.webp"
+                                                                loading="lazy" alt="Fruit Ninja Master"
+                                                                class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                onload="this.style.opacity='1';" />
+                                                        </div>
+                                                        <div class="card-overlay">
+                                                            <h2 class="card-title text-sm md:text-xs ">
+                                                                Fruit Ninja Master
+                                                            </h2>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="item">
+                                                    <a href="../zombiegunner" class="card card card-slider">
+                                                        <div class="parent">
+                                                            <img src="../Assets/images/zombiegunner.webp" loading="lazy"
+                                                                alt="Zombie Gunner"
+                                                                class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                onload="this.style.opacity='1';" />
+                                                        </div>
+                                                        <div class="card-overlay">
+                                                            <h2 class="card-title text-sm md:text-xs ">
+                                                                Zombie Gunner
+                                                            </h2>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="item">
+                                                    <a href="../8ballbilliards" class="card card card-slider">
+                                                        <div class="parent">
+                                                            <img src="../Assets/images/ballbilliards.webp"
+                                                                loading="lazy" alt="8 Ball Billiards"
+                                                                class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                onload="this.style.opacity='1';" />
+                                                        </div>
+                                                        <div class="card-overlay">
+                                                            <h2 class="card-title text-sm md:text-xs ">
+                                                                8 Ball Billiards
+                                                            </h2>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="item">
+                                                    <a href="../searaiders" class="card card card-slider">
+                                                        <div class="parent">
+                                                            <img src="../Assets/images/seariders.webp" loading="lazy"
+                                                                alt="Sea Raiders"
+                                                                class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                onload="this.style.opacity='1';" />
+                                                        </div>
+                                                        <div class="card-overlay">
+                                                            <h2 class="card-title text-sm md:text-xs ">
+                                                                Sea Raiders
+                                                            </h2>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="item">
+                                                    <a href="../animalfusion" class="card card card-slider">
+                                                        <div class="parent">
+                                                            <img src="../Assets/images/animalfusion.webp" loading="lazy"
+                                                                alt="Animal Fusion"
+                                                                class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                onload="this.style.opacity='1';" />
+                                                        </div>
+                                                        <div class="card-overlay">
+                                                            <h2 class="card-title text-sm md:text-xs ">
+                                                                Animal Fusion
+                                                            </h2>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="item">
+                                                    <a href="../tumblebeans" class="card card card-slider">
+                                                        <div class="parent">
+                                                            <img src="../Assets/images/thumble_beans.webp"
+                                                                loading="lazy" alt="Tumble Beans"
+                                                                class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                onload="this.style.opacity='1';" />
+                                                        </div>
+                                                        <div class="card-overlay">
+                                                            <h2 class="card-title text-sm md:text-xs ">
+                                                                Tumble Beans
+                                                            </h2>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="item">
+                                                    <a href="../dogeadventure" class="card card card-slider">
+                                                        <div class="parent">
+                                                            <img src="../Assets/images/dogeadventure.webp"
+                                                                loading="lazy" alt="Doge Adventure"
+                                                                class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                onload="this.style.opacity='1';" />
+                                                        </div>
+                                                        <div class="card-overlay">
+                                                            <h2 class="card-title text-sm md:text-xs ">
+                                                                Doge Adventure
+                                                            </h2>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="item">
+                                                    <a href="../aztecpuzzlequest/" class="card card card-slider">
+                                                        <div class="parent">
+                                                            <img src="../Assets/images/aztecpuzzleques.webp"
+                                                                loading="lazy" alt="Aztec Puzzle Quest"
+                                                                class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                onload="this.style.opacity='1';" />
+                                                        </div>
+                                                        <div class="card-overlay">
+                                                            <h2 class="card-title text-sm md:text-xs ">
+                                                                Aztec Puzzle Quest
+                                                            </h2>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="item">
+                                                    <a href="../towertapbuilder" class="card card card-slider">
+                                                        <div class="parent">
+                                                            <img src="../Assets/images/towertapbuilder.webp"
+                                                                loading="lazy" alt="Tower Tap Builder"
+                                                                class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                onload="this.style.opacity='1';" />
+                                                        </div>
+                                                        <div class="card-overlay">
+                                                            <h2 class="card-title text-sm md:text-xs ">
+                                                                Tower Tap Builder
+                                                            </h2>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="item">
+                                                    <a href="../turbotrucksoccer" class="card card card-slider">
+                                                        <div class="parent">
+                                                            <img src="../Assets/images/turbotrucksoccer.webp"
+                                                                loading="lazy" alt="Turbo Truck Soccer"
+                                                                class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                onload="this.style.opacity='1';" />
+                                                        </div>
+                                                        <div class="card-overlay">
+                                                            <h2 class="card-title text-sm md:text-xs ">
+                                                                Turbo Truck Soccer
+                                                            </h2>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="item">
+                                                    <a href="../olympicchampion" class="card card card-slider">
+                                                        <div class="parent">
+                                                            <img src="../Assets/images/olympicchampion.webp"
+                                                                loading="lazy" alt="Olympic Champion"
+                                                                class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                onload="this.style.opacity='1';" />
+                                                        </div>
+                                                        <div class="card-overlay">
+                                                            <h2 class="card-title text-sm md:text-xs ">
+                                                                Olympic Champion
+                                                            </h2>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Full Screen Slider Mobile -->
+                                </div>
+                                <!-- Full Screen slider Game Design Start  -->
+                            </div>
+
+                            <div w3-include-html="/Component/Comman/detailspageicon.html"></div>
+
+                            <div class="ad_1 col-span-2">
+                                <p class="ad_title text-white">Advertisement</p>
+                                <!-- /23201071713/display_game_det_page_1 -->
+                                <div id='div-gpt-ad-1726290231679-0' style='min-width: 250px; min-height: 250px;'>
+                                    <script>
+                                        googletag.cmd.push(function () { googletag.display('div-gpt-ad-1726290231679-0'); });
+                                    </script>
+                                </div>
+                            </div>
+                            <div id="description"></div>
+                            <div class="hidden lg:block">
+                                <div class="hero_slider owl-carousel owl-theme owl-loaded owl-drag">
+                                    <div class="owl-stage-outer">
+                                        <div class="owl-stage flex justify-center items-center 2xl:gap-10 gap-3">
+                                            <div class="owl-item flex justify-center items-center ">
+                                                <div class="item">
+                                                    <a href="../flapcathalloween" class="card card-slider">
+                                                        <div class="parent">
+                                                            <img src="../Assets/images/flapcat_halloween.webp"
+                                                                loading="lazy" alt="Flapcat Halloween"
+                                                                class="card-image card-image-slider w-full h-full transition object-cover transition duration-700 opacity-0"
+                                                                onload="this.style.opacity='1';" />
+                                                        </div>
+                                                        <div class="card-overlay">
+                                                            <h2 class="card-title text-sm md:text-xs ">
+                                                                Flapcat Halloween
+                                                            </h2>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="owl-item flex justify-center items-center ">
+                                                <div class="item">
+                                                    <a href="../killzombies" class="card card-slider">
+                                                        <div class="parent">
+                                                            <img src="../Assets/images/killzombies.webp" loading="lazy"
+                                                                alt="Kill Zombies"
+                                                                class="card-image card-image-slider w-full h-full transition object-cover transition duration-700 opacity-0"
+                                                                onload="this.style.opacity='1';" />
+                                                        </div>
+                                                        <div class="card-overlay">
+                                                            <h2 class="card-title text-sm md:text-xs ">
+                                                                Kill Zombies
+                                                            </h2>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="owl-item flex justify-center items-center ">
+                                                <div class="item">
+                                                    <a href="../galacticbattlefront" class="card card card-slider">
+                                                        <div class="parent">
+                                                            <img src="../Assets/images/galacticbattlefront.webp"
+                                                                loading="lazy" alt="Galactic Battlefront"
+                                                                class="card-image card-image-slider w-full h-full transition object-cover transition duration-700 opacity-0"
+                                                                onload="this.style.opacity='1';" />
+                                                        </div>
+                                                        <div class="card-overlay">
+                                                            <h2 class="card-title text-sm md:text-xs ">
+                                                                Galactic Battlefront
+                                                            </h2>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="owl-item flex justify-center items-center ">
+                                                <div class="item">
+                                                    <a href="../gemcandycrush" class="card card card-slider">
+                                                        <div class="parent">
+                                                            <img src="../Assets/images/gemcandycrush.webp"
+                                                                loading="lazy" alt="Gem Candy Crush"
+                                                                class="card-image card-image-slider w-full h-full transition object-cover transition duration-700 opacity-0"
+                                                                onload="this.style.opacity='1';" />
+                                                        </div>
+                                                        <div class="card-overlay">
+                                                            <h2 class="card-title text-sm md:text-xs">
+                                                                Gem Candy Crush
+                                                            </h2>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="owl-item flex justify-center items-center ">
+                                                <div class="item">
+                                                    <a href="../fruitninjamaster" class="card card card-slider">
+                                                        <div class="parent">
+                                                            <img src="../Assets/images/fruitninjamaster.webp"
+                                                                loading="lazy" alt="Fruit Ninja Master"
+                                                                class="card-image card-image-slider w-full h-full transition object-cover transition duration-700 opacity-0"
+                                                                onload="this.style.opacity='1';" />
+                                                        </div>
+                                                        <div class="card-overlay">
+                                                            <h2 class="card-title text-sm md:text-xs ">
+                                                                Fruit Ninja Master
+                                                            </h2>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="owl-item flex justify-center items-center ">
+                                                <div class="item">
+                                                    <a href="../racketchampions" class="card card card-slider">
+                                                        <div class="parent">
+                                                            <img src="../Assets/images/rocket_champions.webp"
+                                                                loading="lazy" alt="rocket champions"
+                                                                class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                onload="this.style.opacity='1';" />
+                                                        </div>
+                                                        <div class="card-overlay">
+                                                            <h2 class="card-title text-sm md:text-xs ">
+                                                                Racket Champions
+                                                            </h2>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="owl-item flex justify-center items-center ">
+                                                <div class="item">
+                                                    <a href="../olympicchampion" class="card card card-slider">
+                                                        <div class="parent">
+                                                            <img src="../Assets/images/olympicchampion.webp"
+                                                                loading="lazy" alt="Olympic Champion"
+                                                                class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                onload="this.style.opacity='1';" />
+                                                        </div>
+                                                        <div class="card-overlay">
+                                                            <h2 class="card-title text-sm md:text-xs ">
+                                                                Olympic Champion
+                                                            </h2>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="owl-item flex justify-center items-center ">
+                                                <div class="item">
+                                                    <a href="../towertapbuilder" class="card card card-slider">
+                                                        <div class="parent">
+                                                            <img src="../Assets/images/towertapbuilder.webp"
+                                                                loading="lazy" alt="Tower Tap Builder"
+                                                                class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                onload="this.style.opacity='1';" />
+                                                        </div>
+                                                        <div class="card-overlay">
+                                                            <h2 class="card-title text-sm md:text-xs ">
+                                                                Tower Tap Builder
+                                                            </h2>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="owl-item flex justify-center items-center ">
+                                                <div class="item">
+                                                    <a href="../turbotrucksoccer" class="card card card-slider">
+                                                        <div class="parent">
+                                                            <img src="../Assets/images/turbotrucksoccer.webp"
+                                                                loading="lazy" alt="Turbo Truck Soccer"
+                                                                class="card-image card-image-slider w-full h-full transition bject-cover transition duration-700 opacity-0"
+                                                                onload="this.style.opacity='1';" />
+                                                        </div>
+                                                        <div class="card-overlay">
+                                                            <h2 class="card-title text-sm md:text-xs ">
+                                                                Turbo Truck Soccer
+                                                            </h2>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Ensure this is present for navigation -->
+                                    <div class="owl-nav">
+                                        <button class="owl-prev"><i class="fa-solid fa-chevron-left"></i></button>
+                                        <button class="owl-next"><i class="fa-solid fa-chevron-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="../../searaiders" class="card hidden lg:block">
+                        <div class="parent h-full">
+                            <img src="../Assets/images/seariders.webp" loading="lazy" alt="SeaRaiders"
+                                class="card-image w-full h-full object-cover" />
+                        </div>
+                        <div class="card-overlay">
+                            <h2 class="card-title text-sm md:text-md">
+                                Sea Raiders
+                            </h2>
+                        </div>
+                    </a>
+                    <a href="../../animalfusion" class="card hidden lg:block">
+                        <div class="parent h-full">
+                            <img src="../Assets/images/animalfusion.webp" loading="lazy" alt="AnimalFusion"
+                                class="card-image w-full h-full object-cover" />
+                        </div>
+                        <div class="card-overlay">
+                            <h2 class="card-title text-sm md:text-md">
+                                Animal Fusion
+                            </h2>
+                        </div>
+                    </a>
+                    <a href="../../gemcandycrush" class="card">
+                        <div class="parent">
+                            <img src="../Assets/images/gemcandycrush.webp" loading="lazy" alt="gemcandycrush"
+                                class="card-image w-full h-full object-cover" />
+                        </div>
+                        <div class="card-overlay">
+                            <h2 class="card-title text-sm md:text-md">
+                                Gem Candy Crush
+                            </h2>
+                        </div>
+                    </a>
+                    <a href="../../fruitninjamaster" class="card">
+                        <div class="parent">
+                            <img src="../Assets/images/fruitninjamaster.webp" loading="lazy" alt="fruitninjamaster"
+                                class="card-image w-full h-full object-cover" />
+                        </div>
+                        <div class="card-overlay">
+                            <h2 class="card-title text-sm md:text-md ">
+                                Fruit Ninja Master
+                            </h2>
+                        </div>
+                    </a>
+                    <a href="../../zombiegunner" class="card">
+                        <div class="parent">
+                            <img src="../Assets/images/zombiegunner.webp" loading="lazy" alt="zombiegunner"
+                                class="card-image w-full h-full object-cover" />
+                        </div>
+                        <div class="card-overlay">
+                            <h2 class="card-title text-sm md:text-md">
+                                Zombie Gunner
+                            </h2>
+                        </div>
+                    </a>
+                    <a href="../../8ballbilliards" class="card block lg:hidden" id="responsive_screen_card">
+                        <div class="parent">
+                            <img src="../Assets/images/ballbilliards.webp" loading="lazy" alt="ballbilliards"
+                                class="card-image w-full h-full object-cover" />
+                        </div>
+                        <div class="card-overlay">
+                            <h2 class="card-title text-sm md:text-md ">
+                                8 Ball Billiards
+                            </h2>
+                        </div>
+                    </a>
+                    <div id="text-full-icon" class="hidden flex flex-col gap-6">
+
+                        <a href="../../tumblebeans" class="card">
+                            <div class="parent">
+                                <img src="../Assets/images/thumble_beans.webp" loading="lazy" alt="Tumble Beans"
+                                    class="card-image w-full h-full object-cover" />
+                            </div>
+                            <div class="card-overlay">
+                                <h2 class="card-title text-sm md:text-md">
+                                    Tumble Beans
+                                </h2>
+                            </div>
+                        </a>
+                         <a href="../../towertapbuilder" class="card lg:block md-lg:hidden xl:hidden">
+                            <div class="parent">
+                                <img src="../Assets/images/towertapbuilder.webp" loading="lazy" alt="Tower Tap Builder"
+                                    class="card-image w-full h-full object-cover" />
+                            </div>
+                            <div class="card-overlay">
+                                <h2 class="card-title text-sm md:text-md">
+                                    Tower Tap Builder
+                                </h2>
+                            </div>
+                        </a>
+                        <a href="../../turbotrucksoccer" class="card lg:block md-lg:hidden xl:hidden">
+                            <div class="parent">
+                                <img src="../Assets/images/turbotrucksoccer.webp" loading="lazy" alt="Doge Adventure"
+                                    class="card-image w-full h-full object-cover" />
+                            </div>
+                            <div class="card-overlay">
+                                <h2 class="card-title text-sm md:text-md">
+                                    Turbo Truck Soccer
+                                    
+                                </h2>
+                            </div>
+                        </a>
+                        <a href="../../dogeadventure" class="card lg:block md-lg:hidden xl:hidden">
+                            <div class="parent">
+                                <img src="../Assets/images/dogeadventure.webp" loading="lazy" alt="Doge Adventure"
+                                    class="card-image w-full h-full object-cover" />
+                            </div>
+                            <div class="card-overlay">
+                                <h2 class="card-title text-sm md:text-md">
+                                    Doge Adventure
+                                </h2>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div w3-include-html="/Component/Comman/detailsrecommended.html"></div>
+            </section>
+
+            <!-- ======================================================= End New Design ========================================================-->
+            <div class="ad_1 col-span-2">
+                <p class="ad_title text-white">Advertisement</p>
+                <!-- /23201071713/display_game_det_page_2 -->
+                <div id='div-gpt-ad-1726290270084-0' style='min-width: 250px; min-height: 250px;'>
+                    <script>
+                        googletag.cmd.push(function () { googletag.display('div-gpt-ad-1726290270084-0'); });
+                    </script>
+                </div>
+            </div>
+            <section class="container" id="description">
+                <div
+                    class="py-[15px] md:py-[20px] rounded-[10px] text-white font-normal text-sm md:text-base flex flex-col gap-3">
+                    <div class="py-4 flex flex-wrap gap-4">
+                        <button
+                            class="bg-[#0C2153] videoBorder font-medium border-2 border-transparent text-white p-3 px-6 inline-block rounded-full transition duration-500"><span>#Match-3
+                                Puzzle</span></button>
+                        <button
+                            class="bg-[#0C2153] videoBorder font-medium border-2 border-transparent text-white p-3 px-6 inline-block rounded-full transition duration-500"><span>#Candy
+                                Crush</span></button>
+                        <button
+                            class="bg-[#0C2153] videoBorder font-medium border-2 border-transparent text-white p-3 px-6 inline-block rounded-full transition duration-500"><span>#Colorful
+                                Gems</span></button>
+                        <button
+                            class="bg-[#0C2153] videoBorder font-medium border-2 border-transparent text-white p-3 px-6 inline-block rounded-full transition duration-500"><span>#Addictive
+                                Gameplay</span></button>
+                        <button
+                            class="bg-[#0C2153] videoBorder font-medium border-2 border-transparent text-white p-3 px-6 inline-block rounded-full transition duration-500"><span>#Casual
+                                Gaming</span></button>
+                        <button
+                            class="bg-[#0C2153] videoBorder font-medium border-2 border-transparent text-white p-3 px-6 inline-block rounded-full transition duration-500"><span>#Fun
+                                Puzzles</span></button>
+                        <button
+                            class="bg-[#0C2153] videoBorder font-medium border-2 border-transparent text-white p-3 px-6 inline-block rounded-full transition duration-500"><span>#Mobile
+                                Game</span></button>
+                    </div>
+                </div>
+            </section>
+            <!-- Content Section End -->
+        </div>
+    </section>
+
+    <div class="ad_3">
+        <p class="ad_title">Advertisement</p>
+        <div class="ads_container">
+            <!-- /23201071713/display_game_det_footer -->
+            <div id='div-gpt-ad-1726290335986-0' style='min-width: 250px; min-height: 250px;'>
+                <script>
+                    googletag.cmd.push(function () { googletag.display('div-gpt-ad-1726290335986-0'); });
+                </script>
+            </div>
+        </div>
+    </div>
+    <div w3-include-html="/Component/Comman/footer.html"></div>
+
+    <script>
+        window.addEventListener('load', function () {
+            const body = document.body;
+            const header = document.querySelector('header');
+
+            // Measure the header height
+            body.classList.remove('hidden');
+            const headerHeight = header ? header.offsetHeight : 0;
+
+            const scrollPercentage = window.innerWidth < 768 ? 0.03 : 0.09;
+            const additionalScroll = document.documentElement.scrollHeight * scrollPercentage;
+            const totalScrollPosition = headerHeight + additionalScroll;
+
+            console.log('header', header, headerHeight);
+            window.scrollTo(0, totalScrollPosition);
+
+            // Show content after setting scroll position
+            body.style.visibility = 'visible'; // Ensure content is visible
+            body.classList.remove('hidden'); // Remove hidden class to show content
+        });
+    </script>
+    <script>
+        includeHTML();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="../Assets/js/script.js" defer></script>
+    <script src="../Assets/js/gamedetails.js"></script>
+    <script src="../Assets/js/dragbutton.js"></script>
+    <script src="../Assets/js/dropdown.js"></script>
+    <script src="../tailwind.config.js"></script>
+    <script src="../Assets/js/owl.carousel.js"></script>
+    <script src="../Assets/js/owl.carousel.min.js"></script>
+    <script src="../Assets/js/common.js"></script>
+    <script>
+        // ------------------------------------------------- leistungen slider start -----------------------------------
+        $('#leistungen_slider').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            autoplay: false,
+            slideTransition: 'linear',
+            autoplayTimeout: 1000,
+            autoplaySpeed: 1000,
+            autoplayHoverPause: false,
+            responsive: {
+                0: {
+                    items: 5
+                },
+                600: {
+                    items: 15
+                },
+                1920: {
+                    items: 15
+                }
+            }
+        });
+        // Smooth scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <script>
+        //  <!-------------------------------------- BERATUNGSTERMIN VEREINBAREN start -------------------------------------->
+        $('#beratungstermin_slider').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            autoplay: false,
+            slideTransition: 'linear',
+            autoplayTimeout: 1000,
+            autoplaySpeed: 1000,
+            autoplayHoverPause: false,
+            responsive: {
+                0: {
+                    items: 5
+                },
+                600: {
+                    items: 15
+                },
+                1920: {
+                    items: 15
+                }
+            }
+        });
+
+        // Smooth scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            var owl = $(".hero_slider");
+            owl.owlCarousel({
+                items: 6, // Default number of items displayed
+                loop: true,
+                margin: 15,
+                autoplay: false,
+                slideTransition: 'linear',
+                autoplayTimeout: 1000,
+                autoplaySpeed: 1000,
+                autoplayHoverPause: false,
+                responsive: {
+                    375: {
+                        items: 4,
+                        margin: 0,
+                    },
+                    600: {
+                        items: 5,
+                    },
+                    991: {
+                        items: 6,
+                    },
+                    1200: {
+                        items: 6,
+                    },
+                },
+            });
+
+            // Navigation buttons
+            $('.owl-prev').click(function () {
+                owl.trigger('prev.owl.carousel');
+            });
+
+            $('.owl-next').click(function () {
+                owl.trigger('next.owl.carousel');
+            });
+        });
+    </script>
+
+    <script>
+        jQuery("#carousel_main_screen").owlCarousel({
+            autoplay: false,
+            rewind: false,
+            margin: 10,
+            loop: true,
+            responsiveClass: true,
+            autoHeight: true,
+            autoplayTimeout: 7000,
+            smartSpeed: 800,
+            nav: true,
+            navText: [
+                '<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" /></svg>',
+                '<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z  "/></svg>'],
+            responsive: {
+                0: {
+                    items: 1
+                },
+
+                600: {
+                    items: 4
+                },
+
+                1024: {
+                    items: 4
+                },
+
+                1366: {
+                    items: 5
+                }
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const container = document.getElementById('card-container');
+            const cards = Array.from(container.children);
+            const selectedCards = [];
+
+            while (selectedCards.length < 48 && cards.length > 0) {
+                const randomIndex = Math.floor(Math.random() * cards.length);
+                selectedCards.push(cards.splice(randomIndex, 1)[0]);
+            }
+
+            container.innerHTML = '';
+            selectedCards.forEach(card => container.appendChild(card));
+        });
+    </script>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const backToTopButton = document.querySelector('.back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        document.querySelector('.back-to-top').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+    <script>
+        // Highlight the active link based on the current URL
+        const currentPath = window.location.pathname;
+        const links = document.querySelectorAll('.menu_block a');
+
+        links.forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active'); // Add 'active' class to the current link
+            }
+        });
+    </script>
+
+    <script>
+        if (window.location.pathname.endsWith('/')) {
+            const newURL = window.location.pathname.slice(0, -1);
+            history.replaceState({}, '', newURL);
+        }
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const $el = document.querySelector(".user-card");
+            if ($el) {
+                setTimeout(() => {
+                    $el.classList.remove("skeleton");
+                    $el.querySelectorAll(".hide-text").forEach((el) => el.classList.remove("hide-text"));
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+
+</html>
