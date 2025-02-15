@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,7 +15,6 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/play.css">
 </head>
-
 <body>
     <!-- ***** Preloader Start ***** -->
     <div id="js-preloader" class="js-preloader">
@@ -45,11 +43,10 @@
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="thumb">
-                                                <img src="assets/images/1176-580-transparnt-bg/0hh1.png" alt="" style="border-radius: 23px;" class="play-game-image">
+                                                <img src="" alt="" style="border-radius: 23px;" class="play-game-image">
                                                     <!-- <a href="play.html" class="play-button">
                                                          <i class="fa fa-play"></i>
                                                     </a> -->
-
                                                     <div class="main-button">
                                                         <a href="" class="play-button">Play Now</a>
                                                     </div>
@@ -115,29 +112,10 @@
                                         <h4><em>Similar</em> Games</h4>
                                     </div>
                                 </div>
-                            
                                 <div class="col-lg-6">
                                     <a href="play.html" target="_blank">
                                         <div class="item">
-                                            <img src="assets/images/195-150/ping-pong.png" alt="" class="templatemo-item related-game-image">
-                                            <h4 class="related-game-name"></h4><br>
-                                            <span>
-                                                <i class="fa fa-user play-value" style="color: yellow;"></i>&nbsp;&nbsp;&nbsp;
-                                                <i class="fa fa-chart-line play-value live" style="color: #e75e8d;"></i>
-                                            </span>
-                                            <ul>
-                                                <div class="main-button small-button">
-                                                    Play Now
-                                                </div>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="col-lg-6">
-                                    <a href="play.html" target="_blank">
-                                        <div class="item">
-                                            <img src="assets/images/195-150/ping-pong.png" alt="" class="templatemo-item related-game-image">
+                                            <img src="" alt="" class="templatemo-item related-game-image">
                                             <h4 class="related-game-name"></h4><br>
                                             <span>
                                                 <i class="fa fa-user play-value" style="color: yellow;"></i>&nbsp;&nbsp;&nbsp;
@@ -154,7 +132,7 @@
                                 <div class="col-lg-6">
                                     <a href="play.html" target="_blank">
                                         <div class="item">
-                                            <img src="assets/images/195-150/ping-pong.png" alt="" class="templatemo-item related-game-image">
+                                            <img src="" alt="" class="templatemo-item related-game-image">
                                             <h4 class="related-game-name"></h4><br>
                                             <span>
                                                 <i class="fa fa-user play-value" style="color: yellow;"></i>&nbsp;&nbsp;&nbsp;
@@ -171,7 +149,7 @@
                                 <div class="col-lg-6">
                                     <a href="play.html" target="_blank">
                                         <div class="item">
-                                            <img src="assets/images/195-150/ping-pong.png" alt="" class="templatemo-item related-game-image">
+                                            <img src="" alt="" class="templatemo-item related-game-image">
                                             <h4 class="related-game-name"></h4><br>
                                             <span>
                                                 <i class="fa fa-user play-value" style="color: yellow;"></i>&nbsp;&nbsp;&nbsp;
@@ -188,7 +166,7 @@
                                 <div class="col-lg-6">
                                     <a href="play.html" target="_blank">
                                         <div class="item">
-                                            <img src="assets/images/195-150/ping-pong.png" alt="" class="templatemo-item related-game-image">
+                                            <img src="" alt="" class="templatemo-item related-game-image">
                                             <h4 class="related-game-name"></h4><br>
                                             <span>
                                                 <i class="fa fa-user play-value" style="color: yellow;"></i>&nbsp;&nbsp;&nbsp;
@@ -205,7 +183,7 @@
                                 <div class="col-lg-6">
                                     <a href="play.html" target="_blank">
                                         <div class="item">
-                                            <img src="assets/images/195-150/ping-pong.png" alt="" class="templatemo-item related-game-image">
+                                            <img src="" alt="" class="templatemo-item related-game-image">
                                             <h4 class="related-game-name"></h4><br>
                                             <span>
                                                 <i class="fa fa-user play-value" style="color: yellow;"></i>&nbsp;&nbsp;&nbsp;
@@ -219,13 +197,26 @@
                                         </div>
                                     </a>
                                 </div>
-                                
-                            
-
+                                <div class="col-lg-6">
+                                    <a href="play.html" target="_blank">
+                                        <div class="item">
+                                            <img src="" alt="" class="templatemo-item related-game-image">
+                                            <h4 class="related-game-name"></h4><br>
+                                            <span>
+                                                <i class="fa fa-user play-value" style="color: yellow;"></i>&nbsp;&nbsp;&nbsp;
+                                                <i class="fa fa-chart-line play-value live" style="color: #e75e8d;"></i>
+                                            </span>
+                                            <ul>
+                                                <div class="main-button small-button">
+                                                    Play Now
+                                                </div>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     <!-- ***** Similar game End ***** -->
-                     
                 </div>
             </div>
         </div>
@@ -248,21 +239,19 @@
             .then(data => {
                 document.getElementById('header-placeholder').innerHTML = data;
             });
-
         fetch('_footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
             });
     </script>
-
     <script>
         window.onload = function () {
             // get from home page 
             var gameName = localStorage.getItem('gameName');
             let gameDescription = '';
             let gameInstructions = '';
-            console.log(gameName);
+            // console.log(gameName);
 
             switch (gameName) {
                 case '0hh1':
@@ -405,7 +394,6 @@
             if (gameUrl) {
                 document.querySelector('.play-button').href = gameUrl;
             }
-
             // Update the description and instruction elements
             document.getElementById('game-description').innerText = gameDescription;
             document.getElementById('game-instructions').innerText = gameInstructions;
@@ -425,29 +413,25 @@
 
     <script>
         const gameNames = [
-            "0hh1", "2048", "align-4", "archery", "car-game", "clumsy-bird",
-            "color-match", "crossy",  "hangman", "delta",
-            "tower-platformer", "math-game", "maze-grid", "memory-game",
-            "ping-pong", "reaction-wall", "space-shoot", "sudoku-training",
-            "word-guessing", "ziro-line"
+            "0hh1", "2048", "align-4",
+            "color-match", "crossy", "hangman",
+            "math-game", "memory-game",
+             "reaction-wall", "word-guessing",
+            // "archery", "delta", "car-game", "clumsy-bird","maze-grid","ping-pong","space-shoot","sudoku-training", "tower-platformer", "ziro-line",
         ];
-
         function shuffleArray(array) {
             for (let i = array.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [array[i], array[j]] = [array[j], array[i]];
             }
         }
-
         document.addEventListener("DOMContentLoaded", function() {
             shuffleArray(gameNames);
-
             document.querySelectorAll('.related-game-name').forEach((element, index) => {
                 let relatedGameName = gameNames[index];
                 // Capitalize the first letter of the game name
                 capRelatedGameName = relatedGameName.charAt(0).toUpperCase() + relatedGameName.slice(1);
                 element.innerText = capRelatedGameName;
-
                 document.querySelectorAll('.related-game-image')[index].src = `assets/images/195-150/${relatedGameName}.png`;
 
                 // Update the onclick attribute to pass the game name dynamically
@@ -480,10 +464,8 @@
         {
             let playedCount = getRandomLargeNumber();
             let playingCount = getRandomNumber(1, 5);
-
             // document.querySelectorAll('.played-count-value')[index].innerText =  " " + playedCount;   // working 
             // document.querySelectorAll('.playing-count-value')[index].innerText = ` ${playingCount}`;
-            
             if (element.classList.contains('live')) {
                 element.innerText = ` ${playingCount}`;    // set space working 
             } else {
@@ -492,6 +474,5 @@
         }
 
     </script>
-
 </body>
 </html>

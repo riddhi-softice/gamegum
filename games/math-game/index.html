@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Ping Pong Game</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Game</title>
+    <link rel="shortcut icon" href="../assets/images/icon.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -22,8 +25,11 @@
         setTimeout(() => {
           document.getElementById('image-loader').style.display = 'none';
           document.getElementById('game').style.display = '';
+          document.body.style.backgroundImage = 'none'; 
+          document.body.style.backgroundSize = ''; 
+          document.body.style.background = '#e5cc94';
           $('#bar').show();
-        }, 500);
+        }, 5000);
     </script>
 </body>
 </html>

@@ -6,18 +6,11 @@
     <title>Crossy Road Game</title>
     <link rel="shortcut icon" href="../assets/images/icon.png">
     <link rel="stylesheet" href="styles.css" />
-    <style>
-        #main-screen {
-            display: none;
-        }
-        canvas {
-            display: none;
-        }
-    </style>
+    
 </head>
 <body>
     <div id="image-loader"></div>
-    <div id="main-screen">
+    <div id="main-screen" style="display: none;">
         <div id="counter">0</div>
         <div id="controlls">
             <div>
@@ -28,16 +21,32 @@
                         </g>
                     </svg>
                 </button>
+                
                 <button id="left">
+                    <svg width="30" height="30" viewBox="0 0 10 10">
                         <g transform="rotate(-90, 5,5)">
+                            <path d="M5,4 L7,6 L3,6 L5,4" />
+                        </g>
+                    </svg>
+                </button>
                 <button id="backward">
+                    <svg width="30" height="30" viewBox="0 0 10 10">
                         <g transform="rotate(180, 5,5)">
+                            <path d="M5,4 L7,6 L3,6 L5,4" />
+                        </g>
+                    </svg>
+                </button>
                 <button id="right">
+                    <svg width="30" height="30" viewBox="0 0 10 10">
                         <g transform="rotate(90, 5,5)">
+                            <path d="M5,4 L7,6 L3,6 L5,4" />
+                        </g>
+                    </svg>
+                </button>
             </div>
-        </div>
+        </div>  
         <div id="end">
-            <button id="retry">Retry</button>
+            <button  id="retry" >Retry</button>
         </div>
     </div>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/99/three.min.js'></script>
@@ -46,35 +55,16 @@
         fetch('../splash.html')
             .then(response => response.text())
             .then(data => {
-            document.getElementById('image-loader').innerHTML = data;
-            document.getElementById('main-screen').style.display = 'none';
+                document.getElementById('image-loader').innerHTML = data;
         });
+        setTimeout(() => {
+            document.getElementById('image-loader').style.display = 'none';
+            document.getElementById('main-screen').style.display = '';
 
-        // setTimeout(() => {
-        //     document.getElementById('image-loader').style.display = 'none';
-        //     document.getElementById('main-screen').style.display = 'block';
-        //     // document.getElementById('main-screen').style.display = '';
-        //     document.body.style.backgroundImage = 'none'; // Remove body background image
-        //     document.body.style.backgroundSize = '';
-        //     document.body.style.background = '#ede6e3'; // Set new background
-        // }, 5000); 
-
-        document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById('main-screen').style.display = 'none';
-
-            setTimeout(() => {
-                document.getElementById('image-loader').style.display = 'none';
-                document.getElementById('main-screen').style.display = '';
-
-                document.body.style.backgroundImage = 'none';
-                document.body.style.backgroundSize = '';
-                document.body.style.background = '#ede6e3';
-                initGame();
-            }, 5000);
-        });
-        function initGame() {
-            console.log("Game initialized"); 
-        }
+            document.body.style.backgroundImage = 'none';
+            document.body.style.backgroundSize = '';
+            document.body.style.background = '#ede6e3';
+        }, 5000); 
     </script>
 </body>
 </html>

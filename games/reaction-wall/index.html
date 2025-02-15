@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Reaction Wall Game </title>
-    <title>Reaction Wall Game</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reaction Wall Game</title>
+    <link rel="shortcut icon" href="../assets/images/icon.png">
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -136,8 +136,10 @@
         setTimeout(() => {
             document.getElementById('image-loader').style.display = 'none';
             document.getElementById('container').style.display = '';
-            tick();
-        }, 3000); // Changed to 10000 ms (10 seconds)
+            document.body.style.backgroundImage = 'none'; // Remove body background image
+            document.body.style.backgroundSize = '';
+            document.body.style.background = '#2c3e50'; // Set new background
+        }, 5000); // Changed to 10000 ms (10 seconds)
     </script>
 </body>
 </html>

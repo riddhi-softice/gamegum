@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
 <head>
     <meta charset="utf-8">
     <title>Hangman Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/images/icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <div id="image-loader"></div>
-    
     <main id="main_div" style="display: none;">
         <div class="outside-wrapper">
             <h1 id="statusMessage"> Hangman Game </h1>
@@ -95,22 +93,20 @@
         </div>
     </main>
     <script src="script.js"></script>
-
     <script>
-        // Fetch splash screen
         fetch('../splash.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('image-loader').innerHTML = data;
         });
-
-        // Hide loader and show canvas after 5 seconds
         setTimeout(() => {
-        document.getElementById('image-loader').style.display = 'none';
-        document.getElementById('main_div').style.display = '';
-        resizeCanvas(); // Call resize function to set initial canvas size
+            document.getElementById('image-loader').style.display = 'none';
+            document.getElementById('main_div').style.display = '';
+            document.body.style.backgroundImage = 'none'; 
+            document.body.style.backgroundSize = ''; 
+            document.body.style.background = 'url("https://res.cloudinary.com/dshmwg7vw/image/upload/v1550486966/OCCNFD0.jpg")';
+            resizeCanvas(); 
         }, 5000);
     </script>
-
 </body>
 </html>

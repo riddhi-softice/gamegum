@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Memory Game</title>
+      <link rel="shortcut icon" href="../assets/images/icon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="image-loader"></div>
+    <div class="wrap" id="main_div" style="display: none;">
+        <div class="game"></div>
+        <div class="modal-overlay">
+            <div class="modal">
+                <h2 class="winner">You Rock!</h2>
+                <button class="restart">Play Again?</button>
+            </div>
+        </div>
+        <footer>
+            <p class="disclaimer">All logos are property of their respective owners, No Copyright infringement intended.</p>
+        </footer>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        fetch('../splash.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('image-loader').innerHTML = data;
+          });
+    
+        setTimeout(() => {
+            document.getElementById('image-loader').style.display = 'none';
+            document.getElementById('main_div').style.display = '';
+            document.body.style.backgroundImage = 'none'; 
+            document.body.style.backgroundSize = '';
+            document.body.style.background = 'black'; // Set new background
+        }, 5000);
+    </script>
+</body>
+</html>

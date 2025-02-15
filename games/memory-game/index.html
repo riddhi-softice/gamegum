@@ -1,37 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Memory Game</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Match the memory</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="stylesheet" href="app/assets/css/style.css" type="text/css" />
+  <link rel="shortcut icon" type="image/png" href="app/assets/images/favicon.ico" />
 </head>
+
 <body>
-    <div id="image-loader"></div>
-    <div class="wrap" id="main_div" style="display: none;">
-        <div class="game"></div>
-        <div class="modal-overlay">
-            <div class="modal">
-                <h2 class="winner">You Rock!</h2>
-                <button class="restart">Play Again?</button>
-            </div>
-        </div>
-        <footer>
-            <p class="disclaimer">All logos are property of their respective owners, No Copyright infringement intended.</p>
-        </footer>
+  
+  <div id="image-loader"></div>
+  <!-- page-wrapper -->
+  <div class="page-wrapper" id="main_div" style="display: none;">
+    <!-- init-wrapper -->
+    <div class="init-wrapper">
+      <button type="button" id="btn-start-modal" class="btn uppercase" data-toggle="modal" data-target="#start-modal">
+        Match The Memory
+      </button>
+      <button type="button" id="btn-results-modal" class="btn uppercase" data-toggle="modal" data-target="#results-modal">
+        My results
+      </button>
     </div>
-    
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
-    <script>
-        fetch('../splash.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('image-loader').innerHTML = data;
-          });
-    
-        setTimeout(() => {
-          document.getElementById('image-loader').style.display = 'none';
-          document.getElementById('main_div').style.display = '';
-        }, 5000);
-    </script>
+
+    <!-- header -->
+    <header>
+      <div class="container container-fluid content">
+        <div class="row">
+          <div class="col-12 header-details">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- container information -->
+    <div class="container container-information">
+      <div class="row">
+        <div class="col-12 information-details">
+          <h4 class="inline">
+          </h4>
+          <button type="button" class="btn btn btn-primary" id="btn-restart"><i class="fas fa-redo-alt"></i></button>
+          <button type="button" class="btn btn btn-primary" id="btn-exit"><i class="fas fa-sign-out-alt"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- container-cards -->
+    <div class="container container-cards">
+      <div class="row">
+        <div id="card-details" class="col-12"></div>
+      </div>
+    </div>
+
+    <!-- start-modal -->
+    <div id="start-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="start-modal-label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content text-center">
+          <div class="modal-header">
+            <h3 class="modal-title uppercase w-100" id="start-menu-title">
+              Can you make it ?
+              <button id="btn-close-cross-start-modal" type='button' class='close' data-dismiss='modal' aria-label='close'>
+                <span aria-hidden='true'>&times;</span>
+              </button>
+            </h3>
+          </div>
+          <div class="modal-body">
+            <form id="player-name-form">
+              <label for="player-name">Enter your username:</label><br />
+              <input type="text" class="player-name" id="player-name" name="player-name" placeholder="Username" required />
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="btn-close-start-modal" data-dismiss="modal">Close</button>
+            <button type="button" class="btn" id="btn-start-game">Let's play!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- results-modal -->
+    <div id="results-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="results-modal-label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content text-center">
+          <div class="modal-header">
+            <h3 class="modal-title uppercase w-100" id="result-menu-title">
+              Congrats!
+              <button id="btn-close-cross-results-modal" type='button' class='close' data-dismiss='modal' aria-label='close'>
+                <span aria-hidden='true'>&times;</span>
+              </button>
+            </h3>
+          </div>
+          <div class="modal-body">
+            <p class="results-text"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="btn-close-results-modal" data-dismiss="modal">Close</button>
+            <button type="button" class="btn" id="btn-level-up">Level up</button>
+            <button type="button" class="btn" id="btn-play-again">Play again!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="push"></div>
+  </div>
+
+  <!-- footer -->
+  <!-- <footer>
+    <div class="container container-fluid text-center">
+      <div class="row">
+        <div class="col-12">
+          <p> Match the memory
+            <i class="far fa-copyright"></i> 2021 by Lucinda Souchet
+            <a href="https://github.com/sctlcd" target="_blank">
+              <i class="fab fa-github"></i>
+              <span class="sr-only">Github</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer> -->
+
+  <!-- scripts -->
+  <script src="https://kit.fontawesome.com/e576f39845.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.slim.min.js" integrity="sha512-L/VGU4zvy5QAszSof84v07PyoLWojkWLGLlUMiFcIvgAP2jhPPdFmoT4MTt+rGMT9aAM6HQzIpL6sKsc7LdQtg==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js" integrity="sha512-cEgdeh0IWe1pUYypx4mYPjDxGB/tyIORwjxzKrnoxcif2ZxI7fw81pZWV0lGnPWLrfIHGA7qc964MnRjyCYmEQ==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.6.0/popper.min.js" integrity="sha512-FiHtRuOSbiye2rMcWy4ZPe+8H4j2fZ+/jP/cN0wWlApw7Bd5yfvRdvAeuZWKFHlzDccXGU91cZEBc8L9C1A6xg==" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="app/assets/js/game.js"></script>
+
+  <script>
+    fetch('../splash.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('image-loader').innerHTML = data;
+      });
+
+    setTimeout(() => {
+        document.getElementById('image-loader').style.display = 'none';
+        document.getElementById('main_div').style.display = '';
+        document.body.style.backgroundImage = 'none'; 
+        document.body.style.backgroundSize = '';
+        document.body.style.background = '#1f1740 url("app/assets/images/photo-of-multicolored-illustration-min.jpg")'; // Set new background
+    }, 5000);
+</script>
 </body>
+
 </html>
