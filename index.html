@@ -57,16 +57,47 @@
     </div>
     <!-- ***** Preloader End ***** -->
     <!-- Placeholder for the common header -->
-    <div id="header-placeholder"></div>
-    <div class="container"> 
+    <!-- <div id="header-placeholder"></div> -->
 
+    <!-- ***** Header Area Start ***** -->
+        <header class="header-area header-sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav class="main-nav">
+                            <!-- ***** Logo Start ***** -->
+                            <a href="index.html" class="logo">
+                                <img src="assets/images/logo.png" alt="">
+                            </a>
+                            <!-- ***** Logo End ***** -->
+
+                            <!-- ***** Menu Start ***** -->
+                            <ul class="nav">
+                                <li><a href="index.html" class="active">Home</a></li>
+                                <li><a href="contact-us.html">Contact Us</a></li>
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                <!-- <li><a href="profile.html">Profile <img src="assets/images/profile-header.jpg" alt=""></a></li> -->
+                            </ul>
+                            <a class='menu-trigger'>
+                                <span>Menu</span>
+                            </a>
+                            <!-- ***** Menu End ***** -->
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+    <!-- ***** Header Area End ***** -->
+
+    <div class="container"> 
         <!-- ***** Ads Start ***** -->
-            <div id="FloatAdx-left">
+            <!-- <div id="FloatAdx-left">
                 <p>YOUR LEFT AD HERE</p>
             </div>
             <div id="FloatAdx-right">
                 YOUR RIGHT AD HERE
-            </div>
+            </div> -->
         <!-- ***** Ads End ***** -->
 
         <div class="row">
@@ -146,44 +177,53 @@
                                 <ul>
                                     <li>
                                         <span>01</span>
+                                        <a href="play.html">
                                         <img src="" alt="" class="streamer-img">
-                                        <h6 class="streamer-name"></h6>
-                                        <div class="main-button">
-                                            <a href="play.html" onclick="setDynamicBackground('')">Play</a>
-                                        </div>
+                                            <h6 class="streamer-name"></h6>
+                                            <div class="main-button">
+                                            </div>
+                                        </a>
                                     </li>
                                     
                                     <li>
                                         <span>02</span>
+                                        <a href="play.html">
                                         <img src="" alt="" class="streamer-img">
                                         <h6 class="streamer-name"></h6>
                                         <div class="main-button">
-                                            <a href="play.html" onclick="setDynamicBackground('')">Play</a>
+                                            <!-- <a href="play.html">Play</a> -->
                                         </div>
+                                        </a>
                                     </li>
                                     <li>
                                         <span>03</span>
+                                        <a href="play.html">
                                         <img src="" alt="" class="streamer-img">
                                         <h6 class="streamer-name"></h6>
                                         <div class="main-button">
-                                            <a href="play.html" onclick="setDynamicBackground('')">Play</a>
+                                            <!-- <a href="play.html">Play</a> -->
                                         </div>
+                                        </a>
                                     </li>
                                     <li>
                                         <span>04</span>
+                                        <a href="play.html">
                                         <img src="" alt="" class="streamer-img">
                                         <h6 class="streamer-name"></h6>
                                         <div class="main-button">
-                                            <a href="play.html" onclick="setDynamicBackground('')">Play</a>
+                                            <!-- <a href="play.html">Play</a> -->
                                         </div>
+                                        </a>
                                     </li>
                                     <li>
                                         <span>05</span>
+                                        <a href="play.html">
                                         <img src="" alt="" class="streamer-img">
                                         <h6 class="streamer-name"></h6>
                                         <div class="main-button">
-                                            <a href="play.html" onclick="setDynamicBackground('')">Play</a>
+                                            <!-- <a href="play.html">Play</a> -->
                                         </div>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -498,7 +538,7 @@
                                             </a>
                                         </div> -->
 
-                                        <div class="col-lg-3 col-sm-6">
+                                        <!-- <div class="col-lg-3 col-sm-6">
                                             <a href="play.html"
                                                 onclick="setDynamicBackground('sudoku-training')">
                                             <div class="item">
@@ -513,7 +553,7 @@
                                                 </div>
                                             </div>
                                             </a>
-                                        </div>
+                                        </div> -->
 
                                         <div class="col-lg-3 col-sm-6">
                                             <a href="play.html"
@@ -573,18 +613,32 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- <script src="assets/js/main.js"></script> -->
     <script>
-        fetch('_header.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('header-placeholder').innerHTML = data;
-        });
+        // fetch('_header.html')
+        // .then(response => response.text())
+        // .then(data => {
+        //     document.getElementById('header-placeholder').innerHTML = data;
+        // });
+
+        // fetch('_footer.html')
+        // .then(response => response.text())
+        // .then(data => {
+        //     document.getElementById('footer-placeholder').innerHTML = data;
+        // });       
 
         fetch('_footer.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;
-        });
-        
+            const yearSpan = document.getElementById("currentYear");
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            } else {
+                console.error("Element with ID 'currentYear' not found.");
+            }
+        })
+        .catch(error => console.error("Error loading footer:", error));
+
+
         function setDynamicBackground(imageSrc) {
             localStorage.setItem('gameName', imageSrc);
         }
@@ -730,19 +784,26 @@
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-        fetch('ads_api_endpoint.php')
-            .then(response => response.json())
-            .then(data => {
-                data.forEach(ad => {
-                    if (ad.position === 'left') {
-                        document.getElementById('FloatAdx-left').innerHTML = ad.content;
-                    } else if (ad.position === 'right') {
-                        document.getElementById('FloatAdx-right').innerHTML = ad.content;
-                    }
-                });
-            })
-            .catch(error => console.error('Error fetching ads:', error));
+            console.log("Device Width:", window.innerWidth);
+            console.log("Device Height:", window.innerHeight);
+
+            // fetch('ads_api_endpoint.php')
+            // .then(response => response.text()) // Get raw response first
+            // .then(text => {
+            //     console.log("Raw API Response:", text); // Log response
+            //     return JSON.parse(text); // Try parsing JSON
+            // })
+            // .then(data => {
+            //     data.forEach(ad => {
+            //         if (ad.position === 'left') {
+            //             document.getElementById('FloatAdx-left').innerHTML = ad.content;
+            //         } else if (ad.position === 'right') {
+            //             document.getElementById('FloatAdx-right').innerHTML = ad.content;
+            //         }
+            //     });
+            // })
+            // .catch(error => console.error('Error fetching ads:', error));
         });
-    </script>       
+    </script>          
 </body>
 </html>

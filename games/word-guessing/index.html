@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Word Guessing Game</title>
+    <link rel="shortcut icon" href="../assets/images/icon.png">
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <div id="image-loader"></div>
     <div class="hangman" id="gameDiv" style="display: none;">
@@ -35,8 +36,10 @@
         setTimeout(() => {
             document.getElementById('image-loader').style.display = 'none';
             document.getElementById('gameDiv').style.display = '';
-            tick();
-        }, 3000); 
+            document.body.style.backgroundImage = 'none'; 
+            document.body.style.backgroundSize = '';
+            document.body.style.background = '#323232'; 
+        }, 5000); 
     </script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-header('Content-Type: application/json');
+/* header('Content-Type: application/json');
 
 $servername = "localhost";
 $username = "root";
@@ -24,5 +24,17 @@ if ($result->num_rows > 0) {
 } 
 $conn->close();
 
-echo json_encode($ads);
+echo json_encode($ads); */
+
+header('Content-Type: application/json'); // Ensure JSON response
+error_reporting(E_ALL);
+ini_set('display_errors', 1); // Show errors for debugging
+
+$data = [
+    ["position" => "left", "content" => "<div>Left Ad</div>"],
+    ["position" => "right", "content" => "<div>Right Ad</div>"]
+];
+
+echo json_encode($data);
 ?>
+

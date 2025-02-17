@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Sudoku Training</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="../common.css" />
     <style>
-        #image-loader {
+        /* #image-loader {
             position: absolute;
             top: 0;
             left: 0;
@@ -17,32 +16,48 @@
             align-items: center;
             justify-content: center;
             background-color: silver; 
-        }
-        @media (min-width: 768px) {
+        }       */
+        /* @media (max-width: 767px) {
             .mobile-screen {
                 display: none;
             }
             body{
                 background-color: silver;
             }
-        }          
-        @media (max-width: 767px) {
+        }
+        @media (min-width: 768px) {
             .play-game {
                 display: none;
             }
+        }   */
+
+        /* body {
+            background-color: #3C95C3; 
+        }
+        #image-loader {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: silver;
+        } */
+        .mobile-screen, .play-game {
+            display: none;
         }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TimelineMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
 </head>
-
 <body>
     <div id="image-loader"></div>
     <div class="main" id="main">
         <section class="wrapper" oncontextmenu="return false">
           <div class="mobile-screen" id="mobile-error"></div>
-
             <section class="play-game">
                 <div class="app" id="gameDiv" style="display: none;">
                     <h1>Sudoku Training</h1>
@@ -97,32 +112,68 @@
                     </div>
                 </div>
             </section>
-            
         </section>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
-    <script>
+    <!-- <script>
         fetch('../splash.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('image-loader').innerHTML = data;
                 document.getElementById('mobile-error').style.display = 'none';
-            });
-        
+            });      
         fetch('../mobile.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('mobile-error').innerHTML = data;
         });
-
         setTimeout(() => {
             document.getElementById('image-loader').style.display = 'none';
             document.getElementById('mobile-error').style.display = '';
             document.getElementById('gameDiv').style.display = '';
-            tick();
+            document.body.style.backgroundImage = 'none'; // Remove body background image
+            document.body.style.backgroundSize = '';
+            document.body.style.background = '#3C95C3'; // Set new background
         }, 3000); 
+    </script> -->
+
+    <script>
+        // Function to detect if the device is mobile
+        function isMobileDevice() {
+            return /Mobi|Android/i.test(navigator.userAgent);
+        }
+        // Function to load external HTML content
+        function loadContent(url, elementId) {
+            fetch(url)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById(elementId).innerHTML = data;
+            });
+        }
+        // On window load
+        window.onload = function() {
+            // Load the image loader content
+            loadContent('../splash.html', 'image-loader');
+            // After 3 seconds, hide the image loader and show the appropriate screen
+            setTimeout(() => {
+                document.getElementById('image-loader').style.display = 'none';
+                document.body.style.backgroundImage = 'none'; // Remove body background image
+                document.body.style.backgroundSize = '';
+
+                if (isMobileDevice()) {
+                    // console.log("mobile");
+                    
+                    document.getElementById('mobile-error').style.display = 'block';
+                    loadContent('../mobile.html', 'mobile-screen');
+                    document.body.style.backgroundColor = '#3C95C3'; // Mobile background color
+                } else {
+                    // console.log("window");
+                    document.getElementById('gameDiv').style.display = 'block';
+                    document.body.style.backgroundColor = 'silver'; // Game background color
+                }
+            }, 5000); // 3-second delay
+        };
     </script>
 </body>
 

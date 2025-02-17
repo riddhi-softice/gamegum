@@ -82,9 +82,7 @@ Other Related Style
     }
   }
 
-
 /* ***************** */
-
 /* .col-lg-6 {
     margin-bottom: 20px;
 }
@@ -100,8 +98,6 @@ Other Related Style
 .main-button.small-button {
     margin-top: 10px;
 } */
-
-
 
 
 /* 
@@ -170,9 +166,6 @@ Game ads Style
         padding: 20px;
     }
 }
-
-
-
 /* 
 ---------------------------------------------
 Game Details Style
@@ -182,7 +175,7 @@ Game Details Style
     font-size: 45px;
     text-transform: uppercase;
     text-align: center;
-    margin: 60px 0px;
+    margin: 30px 0px;
   }
   
   .game-details .content {

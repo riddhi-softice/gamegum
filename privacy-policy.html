@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Privacy Policy</title>
+    <link rel="shortcut icon" href="assets/images/icon.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -12,7 +13,6 @@
     <link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css">
     <link rel="stylesheet" href="assets/css/about.css">
 </head>
-
 <body>
     
     <!-- ***** Preloader Start ***** -->
@@ -28,8 +28,36 @@
     </div>
     <!-- ***** Preloader End ***** -->
 
-    <!-- Placeholder for the common header -->
-    <div id="header-placeholder"></div>
+    <!-- ***** Header Area Start ***** -->
+        <header class="header-area header-sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav class="main-nav">
+                            <!-- ***** Logo Start ***** -->
+                            <a href="index.html" class="logo">
+                                <img src="assets/images/logo.png" alt="">
+                            </a>
+                            <!-- ***** Logo End ***** -->
+
+                            <!-- ***** Menu Start ***** -->
+                            <ul class="nav">
+                                <li><a href="index.html" class="active">Home</a></li>
+                                <li><a href="contact-us.html">Contact Us</a></li>
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                <!-- <li><a href="profile.html">Profile <img src="assets/images/profile-header.jpg" alt=""></a></li> -->
+                            </ul>
+                            <a class='menu-trigger'>
+                                <span>Menu</span>
+                            </a>
+                            <!-- ***** Menu End ***** -->
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+    <!-- ***** Header Area End ***** -->
 
     <div class="container">
         <div class="row">
@@ -80,9 +108,7 @@
 
                     <h6>Contact Us</h6>
                     <p>If you have any questions about this privacy policy, please contact us at [Your Contact Information].</p>
-
                 </div>
-
             </div>
         </div>
     </div>
@@ -90,26 +116,27 @@
     <!-- Placeholder for the common footer -->
     <div id="footer-placeholder"></div>
 
-    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/popup.js"></script>
     <script src="assets/js/custom.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
     <script>
-        fetch('_header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-placeholder').innerHTML = data;
-            });
-
         fetch('_footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            });
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+            const yearSpan = document.getElementById("currentYear");
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            } else {
+                console.error("Element with ID 'currentYear' not found.");
+            }
+        })
+        .catch(error => console.error("Error loading footer:", error));
     </script>
-
 </body>
-
 </html>
