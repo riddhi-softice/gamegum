@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Connect 4</title>
+    <link rel="shortcut icon" href="../assets/images/icon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="image-loader"></div>
+  <div id="main" style="display: none;">
+
+
+    <h1>CSS Puzzle</h1>
+    <p>drag & drop the piece into...<br> Well, you know how a puzzle works :)</p>
+    <g style="--i:url(https://assets.codepen.io/1480814/1059-800x800.jpg)">
+      <z><a></a><b draggable="true"></b></z>
+      <z><a></a><b draggable="true"></b></z>
+      <z><a></a><b draggable="true"></b></z>
+      <z><a></a><b draggable="true"></b></z>
+      <z><a></a><b draggable="true"></b></z>
+      <z><a></a><b draggable="true"></b></z>
+      <z><a></a><b draggable="true"></b></z>
+      <z><a></a><b draggable="true"></b></z>
+      <z><a></a><b draggable="true"></b></z>
+      <z><a></a><b draggable="true"></b></z>
+      <z><a></a><b draggable="true"></b></z>
+      <z><a></a><b draggable="true"></b></z>
+      <z><a></a><b draggable="true"></b></z>
+      <z><a></a><b draggable="true"></b></z>
+      <z><a></a><b draggable="true"></b></z>
+      <z><a></a><b draggable="true"></b></z>
+      <z><a></a><b draggable="true"></b></z>
+      <z><a></a><b draggable="true"></b></z>
+      <z><a></a><b draggable="true"></b></z>
+      <z><a></a><b draggable="true"></b></z>
+      <z><a></a><b draggable="true"></b></z>
+      <z><a></a><b draggable="true"></b></z>
+      <z><a></a><b draggable="true"></b></z>
+      <z><a></a><b draggable="true"></b></z>
+      <z><a></a><b draggable="true"></b></z>
+    </g>
+</div>
+<script src="script.js"></script>
+<script>
+    fetch('../splash.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('image-loader').innerHTML = data;
+      });
+    setTimeout(() => {
+        document.getElementById('image-loader').style.display = 'none';
+        document.getElementById('main').style.display = '';
+        document.body.style.backgroundImage = 'none'; 
+        document.body.style.backgroundSize = '';
+        document.body.style.background = 'black'; // Set new background
+    }, 5000);
+</script>
+</body>
+</html>
