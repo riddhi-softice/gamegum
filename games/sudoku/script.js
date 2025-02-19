@@ -498,7 +498,7 @@ window.onload = function () {
             // set timer to remove the dif after the effect ends
             setTimeout(function () {
                 rippleItem.parentElement.removeChild(rippleItem);
-            }, 1500);
+            }, 500);
         };
     }
     for (var i = 0; i < 9; i++) {
@@ -870,7 +870,7 @@ function hideDialogButtonClick(dialogId) {
     setTimeout(function () {
         dialog.style.visibility = "collapse";
         //dialog.style.display = "none";
-    }, 500);
+    }, 100);
 }
 
 // hide hamburger menu when click outside
