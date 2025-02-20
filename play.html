@@ -469,6 +469,18 @@
                     gameDescription = 'Default description';
                     gameInstructions = 'Default instructions';
                     break;
+                case 'lazy-2048':
+                    gameUrl = 'games/lazy-2048/index.html';
+                    backgroundImage = 'assets/images/transparent_bg/banner-bg.jpg';
+                    gameDescription = 'Default description';
+                    gameInstructions = 'Default instructions';
+                    break;
+                case 'tower-blocks':
+                    gameUrl = 'games/tower-blocks/index.html';
+                    backgroundImage = 'assets/images/transparent_bg/banner-bg.jpg';
+                    gameDescription = 'Default description';
+                    gameInstructions = 'Default instructions';
+                    break;
                 default:
                     gameUrl = '#';
                     backgroundImage = 'assets/images/transparent_bg/banner-bg.jpg'; // Default background
@@ -476,7 +488,6 @@
                     gameInstructions = 'Default instructions';
                     break;
             }
-
             if (backgroundImage) {
                 document.querySelector('.play-game-image').src = backgroundImage;
             }
