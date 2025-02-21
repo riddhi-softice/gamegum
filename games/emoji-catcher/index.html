@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Emoji-Catcher</title>
+    <link rel="shortcut icon" href="../assets/images/icon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="image-loader"></div>
+    <div id="main" style="display: none;">
+        <div class="scores-container">
+            <div class="total-score">
+            <h2>Your Score:</h2>
+            <h2 id="score">0</h2>
+            </div>
+            <div class="time">
+            <h2>Time left:</h2>
+            <h2 id="time-left">60</h2>
+            </div>
+        </div>
+            <div class="grid-container">
+        <div class="grid">
+          <div class="square" id="1"></div>
+          <div class="square" id="2"></div>
+          <div class="square" id="3"></div>
+          <div class="square" id="4"></div>
+          <div class="square" id="5"></div>
+          <div class="square" id="6"></div>
+          <div class="square" id="7"></div>
+          <div class="square" id="8"></div>
+          <div class="square" id="9"></div>
+          <div class="square" id="10"></div>
+        </div>
+        </div> 
+    </div>
+<script src="script.js"></script>
+<script>
+    fetch('../splash.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('image-loader').innerHTML = data;
+      });
+    setTimeout(() => {
+        document.getElementById('image-loader').style.display = 'none';
+        document.getElementById('main').style.display = '';
+        document.body.style.backgroundImage = 'none'; 
+        document.body.style.backgroundSize = '';
+        document.body.style.background = 'rgb(10, 10, 10)'; // Set new background
+    }, 5000);
+</script>
+</body>
+</html>
