@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Connect 4</title>
+    <title>whack-a-mole</title>
     <link rel="shortcut icon" href="../assets/images/icon.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div id="image-loader"></div>
   <div id="main" style="display: none;">
-
-    <form class="demo-content">
+      <form class="demo-content">
         <input id="mole-title-toggle" class="toggle mole-title-toggle" type="checkbox" checked="checked" />
         <div class="mole-title">
           <p class="mole-title-chunks">
@@ -66,9 +65,8 @@
             <input class="button mole-restart-button" type="reset" value="Restart" />
           </div>
         </div>
-    </form>
-      
-</div>
+      </form>
+  </div>
 <script src="script.js"></script>
 <script>
     fetch('../splash.html')
@@ -81,7 +79,7 @@
         document.getElementById('main').style.display = '';
         document.body.style.backgroundImage = 'none'; 
         document.body.style.backgroundSize = '';
-        document.body.style.background = 'black'; // Set new background
+        document.body.style.background = 'black'; 
     }, 500);
 </script>
 </body>

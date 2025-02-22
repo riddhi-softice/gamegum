@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit-slicer</title>
+    <link rel="shortcut icon" href="../assets/images/icon.png">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="image-loader"></div>
+    <div id="main" style="display: none;">
+        <div id="container">
+            <div id="instructions">
+                Slice Fruits
+            </div>
+            <div id="fruitcontainer">
+                <div id="score">
+                    <div class="scoreDisplay">
+                        <img src="https://raw.githubusercontent.com/Saumya-07/Fruit-Slicer/master/images/scr.png"
+                            alt="" />
+                        <span id="scoreValue">0</span>
+                    </div>
+                </div>
+                <div id="trialsleft"></div>
+                <div id="front">
+                    Are you ready for the ultimate slice action ? <br />
+                    <img src="https://raw.githubusercontent.com/Saumya-07/Fruit-Slicer/master/images/splash.png"
+                        alt="Fruit logo" />
+                </div>
+                <img id="fruit1" class="fruit" />
+            </div>
+            <div id="startReset">
+                Start Game
+            </div>
+            <div id="gameOver"></div>
+        </div>
+        <audio id="slicesound">
+            <source src="https://github.com/Saumya-07/Fruit-Slicer/blob/master/audio/slicefruit.mp3" />
+            <source src="https://github.com/Saumya-07/Fruit-Slicer/blob/master/audio/slicefruit.ogg" />
+            <source src="https://github.com/Saumya-07/Fruit-Slicer/blob/master/audio/slicefruit.wav" />
+        </audio>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        fetch('../splash.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('image-loader').innerHTML = data;
+            });
+        setTimeout(() => {
+            document.getElementById('image-loader').style.display = 'none';
+            document.getElementById('main').style.display = '';
+
+            document.body.style.background = `url('https://raw.githubusercontent.com/Saumya-07/Fruit-Slicer/master/images/bg3%20-%20Copy.jpg')`;
+            document.body.style.backgroundSize = 'cover';
+        }, 5000);
+    </script>
+</body>
+</html>

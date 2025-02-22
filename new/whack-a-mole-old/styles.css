@@ -6,8 +6,6 @@ html, body {
     justify-content: center;
     background-color: #f0f0f0; /* Optional: background color */
 }
-
-
 .mole-modal {
     display: none;
     position: absolute;

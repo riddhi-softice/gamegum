@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Whack-a-mole</title>
+    <link rel="shortcut icon" href="../assets/images/icon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="image-loader"></div>
+  <div id="main" style="display: none;">
+    <h1>Whack-a-mole!</h1>
+    <h2>Score: <span class="score">0</span></h2>
+    <button id="start" onClick="startGame()">Start</button>
+    <div class="game">
+      <div class="hole hole1">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole2">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole3">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole4">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole5">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole6">
+        <div class="mole"></div>
+      </div>
+    </div>
+  </div>
+<script src="script.js"></script>
+<script>
+    fetch('../splash.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('image-loader').innerHTML = data;
+      });
+    setTimeout(() => {
+        document.getElementById('image-loader').style.display = 'none';
+        document.getElementById('main').style.display = '';
+        document.body.style.backgroundImage = 'none'; 
+        document.body.style.backgroundSize = '';
+        document.body.style.background = '#fff9e2'; // Set new background
+    }, 5000);
+</script>
+</body>
+</html>
