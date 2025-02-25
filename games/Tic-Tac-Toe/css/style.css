@@ -86,7 +86,7 @@ body {
 
 .player-choices {
     display: grid;
-    grid-template-columns: 250px 150px 250px;
+    /* grid-template-columns: 250px 150px 250px; two player choice ,web view*/  
     gap: 3rem;
     justify-content: center;
     align-content: space-evenly;
@@ -104,6 +104,7 @@ body {
     height: 100%;
     padding-bottom: 0px;
     font-weight: 500;
+    margin: 15px;
 }
 
 .player fieldset{

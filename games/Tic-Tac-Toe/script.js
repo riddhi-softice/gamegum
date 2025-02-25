@@ -434,9 +434,9 @@ const gameController = (() => {
     const player2 = player('Player 2', 'O', '#55eb34', 'ai');
     
     //Start game
-    // const startBtn = document.querySelector('.start');
-    // startBtn.onclick = () => {
-    window.onload = () => {
+    const startBtn = document.querySelector('.start');
+    startBtn.onclick = () => {
+    // window.onload = () => {
 
         //make the board appear
         const boardContainer = document.querySelector('.board-container');
@@ -447,26 +447,27 @@ const gameController = (() => {
         startScreen.style.display = 'none';
 
         //update player names, markers and colors
-        player1.name = '';
-        player2.name = '';
-        player1.color = 'rgb(235, 52, 52)';
-        player2.color = 'rgb(82 86 227)';
-        player1.mark =  'O';
-        player2.mark =  'X';
-        player1.type =  'human';
-        player2.type =  'ai';
+        // player1.name = '';
+        // player2.name = '';
+        // player1.color = 'rgb(235, 52, 52)';
+        // player2.color = 'rgb(82 86 227)';
+        // player1.mark =  'O';
+        // player2.mark =  'X';
+        // player1.type =  'human';
+        // player2.type =  'ai';
 
-        // player1.name = document.querySelector('.player-1-name').value !== '' ? document.querySelector('.player-1-name').value : player1.name;
-        // player2.name = document.querySelector('.player-2-name').value !== '' ? document.querySelector('.player-2-name').value : player2.name;
-        // player1.color = document.querySelector('.player-1-color').value;
-        // player2.color = document.querySelector('.player-2-color').value;
-        // player1.mark = document.querySelector('.player-1-choice-x').style.backgroundColor !== '' ? 'X' : 'O';
-        // player2.mark = document.querySelector('.player-2-choice-x').style.backgroundColor !== '' ? 'X' : 'O';
-        // player1.type = document.querySelector('#player-1-human').checked ? 'human' : 'ai';
-        // player2.type = document.querySelector('#player-2-human').checked ? 'human' : 'ai';
-        // console.log(player1.type);
-        // console.log(player2.type);
-
+        player1.name = document.querySelector('.player-1-name').value !== '' ? document.querySelector('.player-1-name').value : player1.name;
+        player2.name = document.querySelector('.player-2-name').value !== '' ? document.querySelector('.player-2-name').value : player2.name;
+        player1.color = document.querySelector('.player-1-color').value;
+        player2.color = document.querySelector('.player-2-color').value;
+        player1.mark = document.querySelector('.player-1-choice-x').style.backgroundColor !== '' ? 'X' : 'O';
+        player2.mark = document.querySelector('.player-2-choice-x').style.backgroundColor !== '' ? 'X' : 'O';
+        player1.type = document.querySelector('#player-1-human').checked ? 'human' : 'ai';
+        player2.type = document.querySelector('#player-2-human').checked ? 'human' : 'ai';
+        // player1.type =  'ai';
+        // player2.type =  'human';
+        console.log(player1.type);
+        console.log(player2.type);
         // see if the first player is human or ai
         if (player1.type === 'ai'){
             aiMove();

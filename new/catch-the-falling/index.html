@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Paddle Game</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { text-align: center; font-family: Arial, sans-serif; }
+        canvas { background: #222; display: block; margin: auto; }
+    </style>
+</head>
+<body>
+    <h1>Responsive Paddle Game</h1>
+    <canvas id="gameCanvas"></canvas>
+    <script>
+        const canvas = document.getElementById("gameCanvas");
+        const ctx = canvas.getContext("2d");
+        canvas.width = window.innerWidth > 600 ? 400 : window.innerWidth - 20;
+        canvas.height = window.innerHeight > 600 ? 500 : window.innerHeight - 100;
+        
+        let paddle = { x: canvas.width / 2 - 50, y: canvas.height - 30, width: 100, height: 10 };
+        let ball = { x: canvas.width / 2, y: canvas.height / 2, radius: 10, dx: 3, dy: -3 };
+        
+        function drawPaddle() {
+            ctx.fillStyle = "blue";
+            ctx.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
+        }
+        
+        function drawBall() {
+            ctx.fillStyle = "red";
+            ctx.beginPath();
+            ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+            ctx.fill();
+        }
+        
+        function update() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawPaddle();
+            drawBall();
+            
+            ball.x += ball.dx;
+            ball.y += ball.dy;
+            
+            if (ball.x - ball.radius < 0 || ball.x + ball.radius > canvas.width) {
+                ball.dx *= -1;
+            }
+            if (ball.y - ball.radius < 0) {
+                ball.dy *= -1;
+            }
+            if (ball.y + ball.radius > canvas.height) {
+                ball.x = canvas.width / 2;
+                ball.y = canvas.height / 2;
+            }
+            if (
+                ball.y + ball.radius > paddle.y &&
+                ball.x > paddle.x && ball.x < paddle.x + paddle.width
+            ) {
+                ball.dy *= -1;
+            }
+            requestAnimationFrame(update);
+        }      
+        document.addEventListener("mousemove", (e) => {
+            let rect = canvas.getBoundingClientRect();
+            paddle.x = e.clientX - rect.left - paddle.width / 2;
+        });
+        document.addEventListener("touchmove", (e) => {
+            let rect = canvas.getBoundingClientRect();
+            paddle.x = e.touches[0].clientX - rect.left - paddle.width / 2;
+        });
+
+        update();
+    </script>
+</body>
+</html>
