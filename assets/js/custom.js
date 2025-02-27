@@ -26,9 +26,9 @@
 		var box = $('.header-text').height();
 		var header = $('header').height();
 
-		  console.log("scrol" + scroll);
-		  console.log("box" + box);
-		  console.log("header" + header);
+		//   console.log("scrol" + scroll);
+		//   console.log("box" + box);
+		//   console.log("header" + header);
 
 		if (scroll >= box - header) {
 			$("header").addClass("background-header");
