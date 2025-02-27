@@ -1,16 +1,13 @@
 <!doctype html>
 <html>
-
 <head>
     <title>0h h1</title>
     <meta name="description" content="A little logic game by Q42." />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
     <meta name="format-detection" content="telephone=no">
-
     <link rel="icon" type="image/png" href="img/icon-1024.png" />
     <link rel="shortcut icon" href="img/icon-1024.png" />
     <link rel="apple-touch-icon-precomposed" href="img/icon-1024.png" />
-
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -20,21 +17,36 @@
         body {
             background: #222;
         }
-        /* .container {
-            display: none;
-        } */
+        .home-button {
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 16px;
+            text-align: center;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .home-button:hover {
+            background-color: #ff4830;
+        }
+        @media (max-width: 600px) {
+            .home-button {
+                width: 80%;
+            }
+        }
     </style>
- 
     <link href="css/style.css" type="text/css" rel="stylesheet" />
     <link href="fonts/fonts.css" type="text/css" rel="stylesheet" />
 </head>
-
-<body bgcolor="#222222">
-    <!-- <div id="image-loader"></div> -->
-
+<body>
     <div class="" id="gameDiv">
         <div id="container">
-
             <div id="title" class="screen show01 hide0 hide1 hidehs" data-action="close-titleScreen">
                 <div class="vertical">
                     <h1>Oh hi</h1>
@@ -63,7 +75,6 @@
                     </p>
                 </div>
             </div>
-
             <div id="menu" class="screen">
                 <div class="vertical">
                     <h2>Oh hi</h2>
@@ -78,7 +89,6 @@
                     </p> -->
                 </div>
             </div>
-
             <div id="about" class="screen text" data-action="show-menu">
                 <div class="vertical">
                     <h3>About</h3>
@@ -97,7 +107,6 @@
                     </p>
                 </div>
             </div>
-
             <div id="loading" class="screen">
                 <div class="vertical">
                     <h2>Loading..</h2>
@@ -117,7 +126,6 @@
                     </div>
                 </div>
             </div>
-
             <div id="game" class="screen">
                 <p id="hintMsg" class="topMsg"></p>
                 <p id="chooseSize" class="topMsg">Select a size to play...</p>
@@ -172,11 +180,10 @@
                     </div>
                 </div>
             </div>
-
+            <a href="../../index.html" class="home-button">Back to Home</a>
         </div>
         <div id="feelsize"></div>
     </div>
-
     <script>
         var WebFontConfig = {
             custom: {
@@ -208,18 +215,6 @@
         for (var i = 0; i < scripts.length; i++) {
             document.write('<scr' + 'ipt src="' + scripts[i] + (Config.barph ? ('?barph=' + (new Date() * 1)) : '') + '"></scr' + 'ipt>');
         }
-
-        /* fetch('../splash.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('image-loader').innerHTML = data;
-            });
-        setTimeout(() => {
-            document.getElementById('image-loader').style.display = 'none';
-            document.getElementById('gameDiv').style.display = 'flex';
-            tick();
-        }, 3000); */
     </script>
 </body>
-
 </html>
