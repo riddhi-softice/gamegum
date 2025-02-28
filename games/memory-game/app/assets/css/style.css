@@ -51,7 +51,7 @@ body {
   /* End center */
 }
 
-.init-wrapper a {
+/* .init-wrapper a {
   display: inline-block;
   text-decoration: none;
   padding: 15px;
@@ -60,7 +60,7 @@ body {
   text-transform: uppercase;
   color: #585858;
   font-family: 'Roboto', sans-serif;
-}
+} */
 
 /*------------------------------------------------------ start modal -------------------*/
 .modal-header {

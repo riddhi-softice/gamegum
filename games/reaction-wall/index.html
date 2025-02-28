@@ -10,9 +10,10 @@
 <body>
     <div id="image-loader"></div>
     <div id="container" style="display: none;">
+        <a href="../../index.html" class="home-button">Back To Home</a>
         <div class='info'>
-            <div class='time'></div>
-            <div class='points'></div>
+            <div class='time'>00:00</div>
+            <div class='points'>0</div>
         </div>
         <div class='wall'>
             <div class='dot'></div>
@@ -124,7 +125,6 @@
             </div>
         </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
     <script>
@@ -136,9 +136,9 @@
         setTimeout(() => {
             document.getElementById('image-loader').style.display = 'none';
             document.getElementById('container').style.display = '';
-            document.body.style.backgroundImage = 'none'; // Remove body background image
+            document.body.style.backgroundImage = 'none'; 
             document.body.style.backgroundSize = '';
-            document.body.style.background = '#2c3e50'; // Set new background
+            document.body.style.background = '#2c3e50'; 
         }, 3000); 
     </script>
 </body>

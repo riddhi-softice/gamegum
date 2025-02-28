@@ -7,9 +7,34 @@
     <link rel="shortcut icon" href="../assets/images/icon.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+      .home-button {
+        width: 520px;
+        display: inline-block;
+        padding: 12px 20px;
+        font-size: 18px;
+        margin: 10px auto;
+        color: white;
+        background: #2ca5d4;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 4px 4px #2980b9;
+      }
+      .home-button:hover {
+        color: white;
+        text-decoration: none;
+        box-shadow: 6px 6px #1c6691;
+      }
+      @media (max-width: 480px) {
+          .home-button {
+              width: 335px;
+          }
+      }
+    </style>
 </head>
 <body>
     <div id="image-loader"></div>
+    <a href="../../index.html" class="home-button">BACK TO HOME</a>
     <div id="game" class="wrapper" style="display: none;"></div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

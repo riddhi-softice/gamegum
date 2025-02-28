@@ -137,7 +137,7 @@ input[id^=f]:checked {
 input[id^=c]:checked ~ .infos .timer .digit, input[id^=c]:checked ~ .infos .timer .digit:after {
   animation-play-state: running;
 }
-
+/* 
 .actionSelector {
   order: 1;
   text-align: center;
@@ -178,7 +178,7 @@ input[id^=c]:checked ~ .infos .timer .digit, input[id^=c]:checked ~ .infos .time
 #modeFlag:checked ~ .actionSelector label[for=modeFlag]:before {
   transform: scale(1);
   border-radius: 2px;
-}
+} */
 
 .grid {
   order: 3;

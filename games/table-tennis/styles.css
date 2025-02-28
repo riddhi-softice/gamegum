@@ -255,7 +255,7 @@ html {
   
   @media (max-width: 1250px) {
     input,
-  input + span {
+    input + span {
       display: none;
     }
   }

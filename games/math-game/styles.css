@@ -1,17 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
-
 * {
     margin: 0;
     padding: 0;
 }
-
 body {
     background-color: #e5cc94;
     font-family: Montserrat, sans-serif;
     /* font-size: 50px; */
     text-align: center;
 }
-
 .wrapper {
     background-color: #fff;
     width: 520px;
@@ -21,7 +18,6 @@ body {
     border-radius: 10px;
     box-shadow: 6px 6px #ECF0F1;
 }
-
 .cal {
     background-color: #ECF0F1;
     width: 345px;
@@ -31,17 +27,13 @@ body {
     top: 30px;
     left: 50%;
     margin-left: -175px;
-
     font-size: 40px;
     color: #808080;
     border-radius: 5px;
-
 }
-
 .cal .cell {
     margin: 0 5px;
 }
-
 .player {
     position: absolute;
     width: 425px;
@@ -49,7 +41,6 @@ body {
     left: 50%;
     margin-left: -210px;
 }
-
 .btn {
     background: #cb4e4e;
     color: #fff;
@@ -65,7 +56,6 @@ body {
     outline: none;
     position: relative;
 }
-
 .btn:after {
     content: '';
     position: absolute;
@@ -75,45 +65,39 @@ body {
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
-
 .btn:hover {
     box-shadow: 0 8px #ab3c3c;
     top: -2px;
 }
-
 .btn:active {
     box-shadow: 0 0 #ab3c3c;
     top: 6px;
 }
-
 .control {
     display: none;
     position: relative;
     padding : 5px 0;
     background: #2ca5d4;
     width: 520px;
+    color: white;
     margin: 30px auto;
     border-radius: 5px;
     box-shadow: 0 6px #2980b9;
 }
-
 .control .ctrl-button {
     font-size: 35px;
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
 }
-
 .control:hover {
     top: -2px;
     box-shadow: 0 8px #2980b9;
 }
-
 .ctrl:active {
     box-shadow: 0 0 #2980b9;
     top: 6px;
 }
-
 .bar {
     display: none;
     position: relative;
@@ -123,7 +107,6 @@ body {
     background-color: #6BB9F0;
     border-radius: 5px;
 }
-
 .progress {
     position: absolute;
     top: 0;
@@ -133,7 +116,6 @@ body {
     background-color: #2980b9;
     border-radius: 5px;
 }
-
 /* .progress {
     position: absolute;
     top: 0;
@@ -142,9 +124,6 @@ body {
     background-color: #2980b9;
     border-radius: 5px;
 } */
-
-/**/
-
 .game-over {
     background: #87D37C;
     width: 520px;
@@ -153,12 +132,10 @@ body {
     box-shadow: 6px 6px #3FC380;
     border-radius: 10px;
 }
-
 p {
     font-size: 28px;
     color: #fff;
 }
-
 .new {
     position: absolute;
     top: 465px;
@@ -167,16 +144,12 @@ p {
     text-transform: uppercase;
     color: #cb4e4e;
 }
-
-
 /* For tablets and small desktops */
 /* Mobile Styles */
 @media (max-width: 480px) {
-
     .game-container {
         width: 335px;
     }
-
     .btn {
         /* margin-right: 10px; */
         /* padding-top: 0; */
@@ -187,12 +160,10 @@ p {
         left: 60%;
         margin: 10px;
     }
-
     .player {
         left: -25%;
         top: 162px;
     }
-
     .cal {
         left: 63%;
         width: 270px;
@@ -200,23 +171,19 @@ p {
         align-items: center;
         align-content: center;
     }
-
     .wrapper {
         width: 335px;
         margin: 10px auto; 
     }
-
     .game-over {
         width: 335px;
     }
-
     .control {
         width: 335px;
     }
     .bar {
         width: 335px;
     }
-
     .progress {
         width: 335px;
     }

@@ -11,6 +11,24 @@
     .wrapper {
       display: none;
     }
+    .home-button {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 15px;
+        transition: background 0.3s ease;
+        font-family: inherit;
+        font-size: 24px;
+        border: solid 2px #ccc;
+        border-radius: 8px;
+        background-color: #593f6b;
+        color: #fff;
+    }
+    .home-button:hover {
+        background: #593f6b;
+    }
   </style>
 </head>
 <body>
@@ -19,6 +37,7 @@
     <div class="content">
 
       <div class="sidebar">
+        <a href="../../index.html" class="home-button">Back to Home</a>
         <h1>Align 4</h1>
         <div class="panel dif">
           <h2>Difficulty</h2>
@@ -77,7 +96,6 @@
           <div></div>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -92,9 +110,9 @@
     setTimeout(() => {
       document.getElementById('image-loader').style.display = 'none';
       document.getElementById('main').style.display = 'table-cell';
-      document.body.style.backgroundImage = 'none'; 
+      document.body.style.backgroundImage = 'none';
       document.body.style.backgroundSize = '';
-      document.body.style.background = '#000 radial-gradient(1000px 500px, #3f546b, #000)'; 
+      document.body.style.background = '#000 radial-gradient(1000px 500px, #3f546b, #000)';
     }, 3000); 
   </script>
 </body>

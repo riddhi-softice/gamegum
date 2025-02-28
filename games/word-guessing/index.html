@@ -6,10 +6,31 @@
     <title>Word Guessing Game</title>
     <link rel="shortcut icon" href="../assets/images/icon.png">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .home-button {
+            display: inline-block;
+            background-color: #53BDFF;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            text-align: center;
+            position: absolute;
+            top: 20px; 
+            left: 20px;
+            z-index: 1000;
+        }
+        .home-button:hover {
+            background-color: #86d1ff;
+            color: white;
+        } 
+    </style>
 </head>
 <body>
     <div id="image-loader"></div>
     <div class="hangman" id="gameDiv" style="display: none;">
+        <a href="../../index.html" class="home-button">Back To Home</a> 
         <div class="guess"></div>
         <form class="guessForm">
             <input type="text" class="guessLetter" maxlength="1" placeholder="Enter a letter . . . &#x23ce;" /> <button type="submit" class="guessButton">Guess</button>

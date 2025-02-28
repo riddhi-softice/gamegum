@@ -40,7 +40,52 @@
         }
         .item:hover .hover-effect {
             opacity: 1;
-        }       
+        }    
+        body .page-content {
+            background-color: transparent !important;   
+            padding:30px !important;
+        }
+        .most-popular{
+            margin-top :0px !important;
+            padding : 0px !important;
+        }
+        .most-popular .item {
+         padding: 10px 10px 5px 10px !important;
+         margin-bottom: 10px;
+        }
+        .most-popular .item h4 {
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        /* @media (max-width: 576px) {
+            .row .col-6 {
+                width: 50%;
+                float: left;
+            }
+        } */
+        @media (max-width: 767px) {
+            body .page-content {
+                padding: 0px 0px !important;
+            }
+        }
+        .item {
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        /* .big-box img {
+            width: 100%;
+            height: auto;
+        } */
+        .small-box img {
+            width: 100%;
+            height: auto;
+        }
+        .big-box-hight {
+            height: 98% !important;
+        }
     </style>
 </head>
 <body>
@@ -56,8 +101,6 @@
         </div>
     </div>
     <!-- ***** Preloader End ***** -->
-    <!-- Placeholder for the common header -->
-    <!-- <div id="header-placeholder"></div> -->
 
     <!-- ***** Header Area Start ***** -->
         <header class="header-area header-sticky">
@@ -70,7 +113,6 @@
                                 <img src="assets/images/logo.png" alt="">
                             </a>
                             <!-- ***** Logo End ***** -->
-
                             <!-- ***** Menu Start ***** -->
                             <ul class="nav">
                                 <li><a href="index.html" class="active">Home</a></li>
@@ -91,146 +133,9 @@
     <!-- ***** Header Area End ***** -->
 
     <div class="container"> 
-        <!-- ***** Ads Start ***** -->
-            <!-- <div id="FloatAdx-left">
-                <p>YOUR LEFT AD HERE</p>
-            </div>
-            <div id="FloatAdx-right">
-                YOUR RIGHT AD HERE
-            </div> -->
-        <!-- ***** Ads End ***** -->
-
         <div class="row">
             <div class="col-lg-12">
-                <div class="page-content">
-
-                    <!-- ***** Featured Games Start ***** -->
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <div class="featured-games header-text">
-                                <div class="heading-section">
-                                    <h4><em>Live</em> Games</h4>
-                                </div>
-                                <div class="owl-features owl-carousel">
-
-                                    <div class="item">
-                                        <div class="thumb">
-                                            <img src="" alt="" class="live-img">
-                                            <div class="hover-effect">
-                                                <!-- <h6 class="playing-count"></h6> -->
-                                            </div>
-                                        </div>
-                                        <h4 class="game-name"><span class="played-count"></span></h4>
-                                        <ul>
-                                            <li><i class="fa fa-user" style="color: yellow;"></i> <span class="rating"></span></li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="item">
-                                        <div class="thumb">
-                                            <img src="" alt="" class="live-img">
-                                            <div class="hover-effect">
-                                                <!-- <h6 class="playing-count"></h6> -->
-                                            </div>
-                                        </div>
-                                        <h4 class="game-name"><span class="played-count"></span></h4>
-                                        <ul>
-                                            <li><i class="fa fa-user" style="color: yellow;"></i> <span class="rating"></span></li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="item">
-                                        <div class="thumb">
-                                            <img src="" alt="" class="live-img">
-                                            <div class="hover-effect">
-                                                <!-- <h6 class="playing-count"></h6> -->
-                                            </div>
-                                        </div>
-                                        <h4 class="game-name"><span class="played-count"></span></h4>
-                                        <ul>
-                                            <li><i class="fa fa-user" style="color: yellow;"></i> <span class="rating"></span></li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="item">
-                                        <div class="thumb">
-                                            <img src="" alt="" class="live-img">
-                                            <div class="hover-effect">
-                                                <!-- <h6 class="playing-count"></h6> -->
-                                            </div>
-                                        </div>
-                                        <h4 class="game-name"><span class="played-count"></span></h4>
-                                        <ul>
-                                            <li><i class="fa fa-user" style="color: yellow;"></i> <span class="rating"></span></li>
-                                        </ul>
-                                    </div>
-                                  
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4">
-                            <div class="top-streamers">
-                                <div class="heading-section">
-                                    <h4><em>Top</em> Games</h4>
-                                </div>
-                                <ul>
-                                    <li>
-                                        <span>01</span>
-                                        <a href="play.html">
-                                        <img src="" alt="" class="streamer-img">
-                                            <h6 class="streamer-name"></h6>
-                                            <div class="main-button">
-                                            </div>
-                                        </a>
-                                    </li>
-                                    
-                                    <li>
-                                        <span>02</span>
-                                        <a href="play.html">
-                                        <img src="" alt="" class="streamer-img">
-                                        <h6 class="streamer-name"></h6>
-                                        <div class="main-button">
-                                            <!-- <a href="play.html">Play</a> -->
-                                        </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <span>03</span>
-                                        <a href="play.html">
-                                        <img src="" alt="" class="streamer-img">
-                                        <h6 class="streamer-name"></h6>
-                                        <div class="main-button">
-                                            <!-- <a href="play.html">Play</a> -->
-                                        </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <span>04</span>
-                                        <a href="play.html">
-                                        <img src="" alt="" class="streamer-img">
-                                        <h6 class="streamer-name"></h6>
-                                        <div class="main-button">
-                                            <!-- <a href="play.html">Play</a> -->
-                                        </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <span>05</span>
-                                        <a href="play.html">
-                                        <img src="" alt="" class="streamer-img">
-                                        <h6 class="streamer-name"></h6>
-                                        <div class="main-button">
-                                            <!-- <a href="play.html">Play</a> -->
-                                        </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ***** Featured Games End ***** -->
-
+                <div class="page-content" >
                     <!-- ***** Most Popular Start ***** -->
                     <div class="most-popular">
                         <div class="row">
@@ -241,626 +146,255 @@
                                 <div class="header-text">
                                     <div class="row">
 
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html" onclick="setDynamicBackground('0hh1')">
-                                                <div class="item">
+                                        <div class="col-lg-6 col-sm-12">
+                                            <a href="new_play.html" onclick="setDynamicBackground('0hh1')">
+                                                <div class="item big-box-hight">
                                                     <img src="assets/images/195-150/0hh1.png" alt="">
                                                     <h4>0hh1</h4>
-                                                    <div class="user-info">
-                                                        <i class="fa fa-user" style="color: yellow;"></i><span
-                                                            class="total-users"></span>
-                                                        <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                            class="live-users"></span>
-                                                        <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html" onclick="setDynamicBackground('2048')">
-                                                <div class="item">
-                                                    <img src="assets/images/195-150/2048.png" alt="">
-                                                    <h4>2048</h4>
-                                                    <div class="user-info">
-                                                        <i class="fa fa-user" style="color: yellow;"></i><span
-                                                            class="total-users"></span>
-                                                        <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                            class="live-users"></span>
-                                                        <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
-                                                onclick="setDynamicBackground('align-4')">
-                                                <div class="item">
-                                                    <img src="assets/images/195-150/align-4.png" alt="">
-                                                    <h4>Align 4</h4>
-                                                    <div class="user-info">
-                                                        <i class="fa fa-user" style="color: yellow;"></i><span
-                                                            class="total-users"></span>
-                                                        <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                            class="live-users"></span>
-                                                        <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                    </div>
                                                 </div>
                                             </a>
                                         </div>
 
-                                        <!-- <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
-                                                onclick="setDynamicBackground('archery')">
-                                                <div class="item">
-                                                    <img src="assets/images/195-150/archery.png" alt="">
-                                                    <h4>Archery</h4>
-                                                    <div class="user-info">
-                                                        <i class="fa fa-user" style="color: yellow;"></i><span
-                                                            class="total-users"></span>
-                                                        <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                            class="live-users"></span>
-                                                        <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                    </div>
+                                        <div class="col-lg-6 col-sm-12">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-sm-6 col-6">
+                                                    <a href="new_play.html" onclick="setDynamicBackground('2048')">
+                                                        <div class="item small-box">
+                                                            <img src="assets/images/195-150/2048.png" alt="">
+                                                            <h4>2048</h4>
+                                                        </div>
+                                                    </a>
                                                 </div>
-                                            </a>
-                                        </div> -->
-
-                                        <!-- <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
-                                                onclick="setDynamicBackground('car-game')">
-                                                <div class="item">
-                                                    <img src="assets/images/195-150/car-game.png" alt="">
-                                                    <h4>Car Game</h4>
-                                                    <div class="user-info">
-                                                        <i class="fa fa-user" style="color: yellow;"></i><span
-                                                            class="total-users"></span>
-                                                        <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                            class="live-users"></span>
-                                                        <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                    </div>
+                                                <div class="col-lg-6 col-sm-6 col-6">
+                                                    <a href="new_play.html" onclick="setDynamicBackground('align-4')">
+                                                        <div class="item small-box">
+                                                            <img src="assets/images/195-150/align-4.png" alt="">
+                                                            <h4>Align 4</h4>
+                                                        </div>
+                                                    </a>
                                                 </div>
-                                            </a>
-                                        </div> -->
-
-                                        <!-- <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
-                                                onclick="setDynamicBackground('clumsy-bird')">
-                                                <div class="item">
-                                                    <img src="assets/images/195-150/clumsy-bird.png" alt="">
-                                                    <h4>Clumsy-Bird</h4>
-                                                    <div class="user-info">
-                                                        <i class="fa fa-user" style="color: yellow;"></i><span
-                                                            class="total-users"></span>
-                                                        <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                            class="live-users"></span>
-                                                        <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                    </div>
+                                                <div class="col-lg-6 col-sm-6 col-6">
+                                                    <a href="new_play.html" onclick="setDynamicBackground('color-match')">
+                                                        <div class="item small-box">
+                                                            <img src="assets/images/195-150/color-match.png" alt="">
+                                                            <h4>Color-Match</h4>
+                                                        </div>
+                                                    </a>
                                                 </div>
-                                            </a>
-                                        </div> -->
-
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
-                                                onclick="setDynamicBackground('color-match')">
-                                                <div class="item">
-                                                    <img src="assets/images/195-150/color-match.png" alt="">
-                                                    <h4>Color-Match</h4>
-                                                    <div class="user-info">
-                                                        <i class="fa fa-user" style="color: yellow;"></i><span
-                                                            class="total-users"></span>
-                                                        <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                            class="live-users"></span>
-                                                        <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                    </div>
+                                                <div class="col-lg-6 col-sm-6 col-6">
+                                                    <a href="new_play.html" onclick="setDynamicBackground('flappy-bird')">
+                                                        <div class="item small-box">
+                                                            <img src="assets/images/195-150/flappy-bird.png" alt="">
+                                                            <h4>Flappy-Bird</h4>
+                                                        </div>
+                                                    </a>
                                                 </div>
-                                            </a>
+                                            </div>
                                         </div>
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
-                                                onclick="setDynamicBackground('crossy')">
-                                                <div class="item">
-                                                    <img src="assets/images/195-150/crossy.png" alt="">
-                                                    <h4>Crossy</h4>
-                                                    <div class="user-info">
-                                                        <i class="fa fa-user" style="color: yellow;"></i><span
-                                                            class="total-users"></span>
-                                                        <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                            class="live-users"></span>
-                                                        <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
+                                    </div>
 
-                                        <!-- same as clumsy-bird -->
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
-                                                onclick="setDynamicBackground('flappy-bird')">
-                                                <div class="item">
-                                                    <img src="assets/images/195-150/flappy-bird.png" alt="">
-                                                    <h4>Flappy-Bird</h4>
-                                                    <div class="user-info">
-                                                        <i class="fa fa-user" style="color: yellow;"></i><span
-                                                            class="total-users"></span>
-                                                        <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                            class="live-users"></span>
-                                                        <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
+                                    <div class="row">                                       
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <a href="new_play.html"
                                                 onclick="setDynamicBackground('hangman')">
                                                 <div class="item">
                                                     <img src="assets/images/195-150/hangman.png" alt="">
                                                     <h4>Hangman</h4>
-                                                    <div class="user-info">
-                                                        <i class="fa fa-user" style="color: yellow;"></i><span
-                                                            class="total-users"></span>
-                                                        <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                            class="live-users"></span>
-                                                        <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                    </div>
                                                 </div>
                                             </a>
                                         </div>
-                                        <!-- <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
-                                                onclick="setDynamicBackground('delta')">
-                                                <div class="item">
-                                                    <img src="assets/images/195-150/delta.png" alt="">
-                                                    <h4>Delta</h4>
-                                                    <div class="user-info">
-                                                        <i class="fa fa-user" style="color: yellow;"></i><span
-                                                            class="total-users"></span>
-                                                        <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                            class="live-users"></span>
-                                                        <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div> -->
-                                        <!-- <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
-                                                onclick="setDynamicBackground('tower-platformer')">
-                                                <div class="item">
-                                                    <img src="assets/images/195-150/tower-platformer.png" alt="">
-                                                    <h4>Tower-Platform</h4>
-                                                    <div class="user-info">
-                                                        <i class="fa fa-user" style="color: yellow;"></i><span
-                                                            class="total-users"></span>
-                                                        <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                            class="live-users"></span>
-                                                        <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div> -->
 
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <a href="new_play.html"
                                                 onclick="setDynamicBackground('math-game')">
                                                 <div class="item">
                                                     <img src="assets/images/195-150/math-game.png" alt="">
                                                     <h4>Math Game</h4>
-                                                    <div class="user-info">
-                                                        <i class="fa fa-user" style="color: yellow;"></i><span
-                                                            class="total-users"></span>
-                                                        <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                            class="live-users"></span>
-                                                        <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                    </div>
                                                 </div>
                                             </a>
                                         </div>
-                                        <!-- <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
-                                                onclick="setDynamicBackground('maze-grid')">
-                                                <div class="item">
-                                                    <img src="assets/images/195-150/maze-grid.png" alt="">
-                                                    <h4>Maze Grid</h4>
-                                                    <div class="user-info">
-                                                        <i class="fa fa-user" style="color: yellow;"></i><span
-                                                            class="total-users"></span>
-                                                        <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                            class="live-users"></span>
-                                                        <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div> -->
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <a href="new_play.html"
                                                 onclick="setDynamicBackground('memory-game')">
                                             <div class="item">
                                                 <img src="assets/images/195-150/memory-game.png" alt="">
                                                 <h4>Memory Game</h4>
-                                                <div class="user-info">
-                                                    <i class="fa fa-user" style="color: yellow;"></i><span
-                                                        class="total-users"></span>
-                                                    <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                        class="live-users"></span>
-                                                    <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                </div>
                                             </div>
                                             </a>
                                         </div>
                                         
-                                        <!-- <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
-                                                onclick="setDynamicBackground('ping-pong')">
-                                            <div class="item">
-                                                <img src="assets/images/195-150/ping-pong.png" alt="">
-                                                <h4>Ping-Pong</h4>
-                                                <div class="user-info">
-                                                    <i class="fa fa-user" style="color: yellow;"></i><span
-                                                        class="total-users"></span>
-                                                    <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                        class="live-users"></span>
-                                                    <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                </div>
-                                            </div>
-                                            </a>
-                                        </div> -->
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <a href="new_play.html"
                                                 onclick="setDynamicBackground('reaction-wall')">
                                             <div class="item">
                                                 <img src="assets/images/195-150/reaction-wall.png" alt="">
                                                 <h4>Reaction-Wall</h4>
-                                                <div class="user-info">
-                                                    <i class="fa fa-user" style="color: yellow;"></i><span
-                                                        class="total-users"></span>
-                                                    <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                        class="live-users"></span>
-                                                    <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                </div>
                                             </div>
                                             </a>
                                         </div>
-                                        <!-- <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
-                                                onclick="setDynamicBackground('space-shoot')">
-                                            <div class="item">
-                                                <img src="assets/images/195-150/space-shoot.png" alt="">
-                                                <h4>Space-Shoot</h4>
-                                                <div class="user-info">
-                                                    <i class="fa fa-user" style="color: yellow;"></i><span
-                                                        class="total-users"></span>
-                                                    <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                        class="live-users"></span>
-                                                    <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                </div>
-                                            </div>
-                                            </a>
-                                        </div> -->
 
-                                        <!-- <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
-                                                onclick="setDynamicBackground('sudoku-training')">
-                                            <div class="item">
-                                                <img src="assets/images/195-150/sudoku-training.png" alt="">
-                                                <h4>Sudoku-Training</h4>
-                                                <div class="user-info">
-                                                    <i class="fa fa-user" style="color: yellow;"></i><span
-                                                        class="total-users"></span>
-                                                    <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                        class="live-users"></span>
-                                                    <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                </div>
-                                            </div>
-                                            </a>
-                                        </div> -->
-
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <a href="new_play.html"
                                                 onclick="setDynamicBackground('word-guessing')">
                                             <div class="item">
                                                 <img src="assets/images/195-150/word-guessing.png" alt="">
                                                 <h4>Word-Guessing</h4>
-                                                <div class="user-info">
-                                                    <i class="fa fa-user" style="color: yellow;"></i><span
-                                                        class="total-users"></span>
-                                                    <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                        class="live-users"></span>
-                                                    <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                </div>
                                             </div>
                                             </a>
                                         </div>
 
-                                        <!-- <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
-                                                onclick="setDynamicBackground('ziro-line')">
-                                            <div class="item">
-                                                <img src="assets/images/195-150/ziro-line.png" alt="">
-                                                <h4>Ziro-Line</h4>
-                                                <div class="user-info">
-                                                    <i class="fa fa-user" style="color: yellow;"></i><span
-                                                        class="total-users"></span>
-                                                    <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                        class="live-users"></span>
-                                                    <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                </div>
-                                            </div>
-                                            </a>
-                                        </div> -->
-
-                                        <!-- <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
-                                                onclick="setDynamicBackground('sudoku')">
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <a href="play.html" onclick="setDynamicBackground('sudoku')">
                                             <div class="item">
                                                 <img src="assets/images/195-150/sudoku-training.png" alt="">
                                                 <h4>Sudoku</h4>
-                                                <div class="user-info">
-                                                    <i class="fa fa-user" style="color: yellow;"></i><span
-                                                        class="total-users"></span>
-                                                    <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                        class="live-users"></span>
-                                                    <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                </div>
                                             </div>
                                             </a>
                                         </div> 
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
-                                                onclick="setDynamicBackground('Tic-Tac-Toe')">
+                                        <!-- <div class="col-lg-3 col-sm-6 col-6">
+                                            <a href="play.html" onclick="setDynamicBackground('Tic-Tac-Toe')">
                                             <div class="item">
                                                 <img src="assets/images/icon.png" alt="">
                                                 <h4>Tic-Tac-Toe</h4>
-                                                <div class="user-info">
-                                                    <i class="fa fa-user" style="color: yellow;"></i><span
-                                                        class="total-users"></span>
-                                                    <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                        class="live-users"></span>
-                                                    <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                </div>
                                             </div>
                                             </a>
-                                        </div>  -->
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
-                                                onclick="setDynamicBackground('table-tennis')">
+                                        </div> -->
+                                      
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <a href="new_play.html" onclick="setDynamicBackground('table-tennis')">
                                             <div class="item">
                                                 <img src="assets/images/icon.png" alt="">
                                                 <h4>Table-tennis</h4>
-                                                <div class="user-info">
-                                                    <i class="fa fa-user" style="color: yellow;"></i><span
-                                                        class="total-users"></span>
-                                                    <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                        class="live-users"></span>
-                                                    <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                </div>
                                             </div>
                                             </a>
                                         </div> 
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
+
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <a href="new_play.html"
                                                 onclick="setDynamicBackground('connect-4')">
                                             <div class="item">
                                                 <img src="assets/images/icon.png" alt="">
                                                 <h4>Connect-4</h4>
-                                                <div class="user-info">
-                                                    <i class="fa fa-user" style="color: yellow;"></i><span
-                                                        class="total-users"></span>
-                                                    <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                        class="live-users"></span>
-                                                    <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                </div>
                                             </div>
                                             </a>
                                         </div> 
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <a href="new_play.html"
                                                 onclick="setDynamicBackground('mine-sweeper')">
                                             <div class="item">
                                                 <img src="assets/images/icon.png" alt="">
                                                 <h4>Mine-sweeper</h4>
-                                                <div class="user-info">
-                                                    <i class="fa fa-user" style="color: yellow;"></i><span
-                                                        class="total-users"></span>
-                                                    <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                        class="live-users"></span>
-                                                    <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                </div>
                                             </div>
                                             </a>
                                         </div> 
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <a href="new_play.html"
                                                 onclick="setDynamicBackground('retro-dungeon-maze-uzzle')">
                                             <div class="item">
                                                 <img src="assets/images/icon.png" alt="">
                                                 <h4>Retro-dungeon-maze-uzzle</h4>
-                                                <div class="user-info">
-                                                    <i class="fa fa-user" style="color: yellow;"></i><span
-                                                        class="total-users"></span>
-                                                    <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                        class="live-users"></span>
-                                                    <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                </div>
                                             </div>
                                             </a>
                                         </div> 
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <a href="new_play.html"
                                                 onclick="setDynamicBackground('space-invaders')">
                                             <div class="item">
                                                 <img src="assets/images/icon.png" alt="">
                                                 <h4>Space-invaders</h4>
-                                                <div class="user-info">
-                                                    <i class="fa fa-user" style="color: yellow;"></i><span
-                                                        class="total-users"></span>
-                                                    <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                        class="live-users"></span>
-                                                    <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                </div>
                                             </div>
                                             </a>
                                         </div> 
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <a href="new_play.html"
                                                 onclick="setDynamicBackground('plankman')">
                                             <div class="item">
                                                 <img src="assets/images/icon.png" alt="">
                                                 <h4>Plankman</h4>
-                                                <div class="user-info">
-                                                    <i class="fa fa-user" style="color: yellow;"></i><span
-                                                        class="total-users"></span>
-                                                    <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                        class="live-users"></span>
-                                                    <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                </div>
                                             </div>
                                             </a>
                                         </div> 
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <a href="new_play.html"
                                                 onclick="setDynamicBackground('ghost-bustin')">
                                             <div class="item">
                                                 <img src="assets/images/icon.png" alt="">
                                                 <h4>Ghost-bustin</h4>
-                                                <div class="user-info">
-                                                    <i class="fa fa-user" style="color: yellow;"></i><span
-                                                        class="total-users"></span>
-                                                    <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                        class="live-users"></span>
-                                                    <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                </div>
                                             </div>
                                             </a>
                                         </div> 
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <a href="new_play.html"
                                                 onclick="setDynamicBackground('stacker')">
                                             <div class="item">
                                                 <img src="assets/images/icon.png" alt="">
                                                 <h4>Stacker</h4>
-                                                <div class="user-info">
-                                                    <i class="fa fa-user" style="color: yellow;"></i><span
-                                                        class="total-users"></span>
-                                                    <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                        class="live-users"></span>
-                                                    <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                </div>
                                             </div>
                                             </a>
                                         </div>                                         
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <a href="new_play.html"
                                                 onclick="setDynamicBackground('lazy-2048')">
                                             <div class="item">
                                                 <img src="assets/images/icon.png" alt="">
                                                 <h4>Lazy-2048</h4>
-                                                <div class="user-info">
-                                                    <i class="fa fa-user" style="color: yellow;"></i><span
-                                                        class="total-users"></span>
-                                                    <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                        class="live-users"></span>
-                                                    <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                </div>
                                             </div>
                                             </a>
                                         </div> 
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <a href="new_play.html"
                                                 onclick="setDynamicBackground('tower-blocks')">
                                             <div class="item">
                                                 <img src="assets/images/icon.png" alt="">
                                                 <h4>Tower-blocks</h4>
-                                                <div class="user-info">
-                                                    <i class="fa fa-user" style="color: yellow;"></i><span
-                                                        class="total-users"></span>
-                                                    <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                        class="live-users"></span>
-                                                    <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                </div>
                                             </div>
                                             </a>
                                         </div> 
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <a href="new_play.html"
                                                 onclick="setDynamicBackground('the-aviator')">
                                             <div class="item">
                                                 <img src="assets/images/icon.png" alt="">
                                                 <h4>The-aviator</h4>
-                                                <div class="user-info">
-                                                    <i class="fa fa-user" style="color: yellow;"></i><span
-                                                        class="total-users"></span>
-                                                    <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                        class="live-users"></span>
-                                                    <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                </div>
                                             </div>
                                             </a>
                                         </div> 
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <a href="new_play.html"
                                                 onclick="setDynamicBackground('typing-game')">
                                             <div class="item">
                                                 <img src="assets/images/icon.png" alt="">
                                                 <h4>Typing-game</h4>
-                                                <div class="user-info">
-                                                    <i class="fa fa-user" style="color: yellow;"></i><span
-                                                        class="total-users"></span>
-                                                    <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                        class="live-users"></span>
-                                                    <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                </div>
                                             </div>
                                             </a>
                                         </div> 
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <a href="new_play.html"
                                                 onclick="setDynamicBackground('emoji-catcher')">
                                             <div class="item">
                                                 <img src="assets/images/icon.png" alt="">
                                                 <h4>Emoji-catcher</h4>
-                                                <div class="user-info">
-                                                    <i class="fa fa-user" style="color: yellow;"></i><span
-                                                        class="total-users"></span>
-                                                    <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                        class="live-users"></span>
-                                                    <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                </div>
                                             </div>
                                             </a>
                                         </div> 
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <a href="new_play.html"
                                                 onclick="setDynamicBackground('simon-says')">
                                             <div class="item">
                                                 <img src="assets/images/icon.png" alt="">
                                                 <h4>Simon-says</h4>
-                                                <div class="user-info">
-                                                    <i class="fa fa-user" style="color: yellow;"></i><span
-                                                        class="total-users"></span>
-                                                    <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                        class="live-users"></span>
-                                                    <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                </div>
                                             </div>
                                             </a>
                                         </div> 
-                                        <div class="col-lg-3 col-sm-6">
-                                            <a href="play.html"
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <a href="new_play.html"
                                                 onclick="setDynamicBackground('whack-a-mole')">
                                             <div class="item">
                                                 <img src="assets/images/icon.png" alt="">
                                                 <h4>Whack-a-mole</h4>
-                                                <div class="user-info">
-                                                    <i class="fa fa-user" style="color: yellow;"></i><span
-                                                        class="total-users"></span>
-                                                    <i class="fa fa-chart-line" style="color: #ec6090;"></i><span
-                                                        class="live-users"></span>
-                                                    <img src="assets/images/live.svg" alt="" class="live-icon">
-                                                </div>
                                             </div>
                                             </a>
                                         </div> 
-
                                     </div>
                                 </div>
                             </div>
@@ -873,7 +407,6 @@
     </div>
     <!-- Placeholder for the common footer -->
     <div id="footer-placeholder"></div>
-    <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/isotope.min.js"></script>
@@ -884,17 +417,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- <script src="assets/js/main.js"></script> -->
     <script>
-        // fetch('_header.html')
-        // .then(response => response.text())
-        // .then(data => {
-        //     document.getElementById('header-placeholder').innerHTML = data;
-        // });
-        // fetch('_footer.html')
-        // .then(response => response.text())
-        // .then(data => {
-        //     document.getElementById('footer-placeholder').innerHTML = data;
-        // });       
-
         fetch('_footer.html')
         .then(response => response.text())
         .then(data => {
@@ -907,170 +429,9 @@
             }
         })
         .catch(error => console.error("Error loading footer:", error));
-
         function setDynamicBackground(imageSrc) {
             localStorage.setItem('gameName', imageSrc);
         }
     </script>
-    <script>
-        function getRandomNumber(min, max) {
-            return Math.floor(Math.random() * (max - min + 1)) + min;
-        }
-        // Function to format numbers in millions
-        function formatNumber(number) {
-            if (number >= 1000000) {
-                return (number / 1000000).toFixed(1) + 'M';
-            }
-            return number.toString();
-        }
-        // Function to set random numbers for total users and live users
-        function setRandomUserNumbers() {
-            const totalUsersElements = document.querySelectorAll('.total-users');
-            const liveUsersElements = document.querySelectorAll('.live-users');
-
-            totalUsersElements.forEach(element => {
-                const totalUsers = getRandomNumber(10020, 10000000);
-                element.textContent = formatNumber(totalUsers);
-            });
-
-            liveUsersElements.forEach(element => {
-                const liveUsers = getRandomNumber(5169, 10420);
-                element.textContent = formatNumber(liveUsers);
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', setRandomUserNumbers);
-    </script>
-    <script>
-        // List of game names
-        const gameNames = [
-            "0hh1", "2048", "align-4",
-            "color-match", "crossy", "hangman",
-            "math-game", "memory-game",
-             "reaction-wall", "word-guessing",
-            // "archery", "delta", "car-game", "clumsy-bird","maze-grid","ping-pong","space-shoot","sudoku-training", "tower-platformer", "ziro-line",
-        ];
-        // Function to get a random game name
-        function getRandomGameName() {
-            const randomIndex = Math.floor(Math.random() * gameNames.length);
-            return gameNames[randomIndex];
-        }
-        // Function to get a random number formatted as "x.xK Playing"
-        function getRandomPlayingCount() {
-            // return (Math.floor(Math.random() * 10) + 1) + '.' + Math.floor(Math.random() * 10) + 'K Playing';
-            return (Math.floor(Math.random() * 10) + 1) + '.' + Math.floor(Math.random() * 10);
-        }
-        // Function to get a random number formatted as "xK Played"
-        function getRandomPlayedCount() {
-            return (Math.floor(Math.random() * 500) + 1) + 'K Played';
-        }
-        // Function to get a random rating between 1.0 and 5.0
-        function getRandomRating() {
-            return (Math.random() * 4 + 1).toFixed(1);
-        }
-        // Function to get a random number formatted as "x.xM"
-        function getRandomViews() {
-            return (Math.random() * 5 + 1).toFixed(1) + 'M';
-        }
-        document.addEventListener("DOMContentLoaded", function() {
-            const items = document.querySelectorAll('.owl-features .item');
-            const usedGameItem = new Set();
-
-            items.forEach(function(item) {
-
-                const gameNameElement = item.querySelector('.game-name');
-                const playingCountElement = item.querySelector('.playing-count');
-                const ratingElement = item.querySelector('.rating');
-                const viewsElement = item.querySelector('.views');
-                const liveImgElement = item.querySelector('.live-img');
-                const hoverEffectElement = item.querySelector('.hover-effect'); // Ensure hover effect works
-                const gameLink = document.createElement('a'); // Create <a> element
-
-                if (gameNameElement) {
-                    let liveGameName = getRandomGameName();
-
-                    // Ensure the game name is unique
-                    while (usedGameItem.has(liveGameName)) {
-                        liveGameName = getRandomGameName();
-                    }
-                    usedGameItem.add(liveGameName);
-
-                    const capitalizedGameName = liveGameName.charAt(0).toUpperCase() + liveGameName.slice(1);
-                    gameNameElement.innerHTML = `${capitalizedGameName} <br><span class='played-count'>${getRandomPlayedCount()}</span>`;
-
-                    if (liveImgElement) {
-                        liveImgElement.src = `assets/images/183-310/${liveGameName}.png`;
-                    }
-
-                     // Set dynamic background and redirect when clicked
-                    gameLink.href = `play.html`;
-                    gameLink.setAttribute("onclick", `setDynamicBackground('${liveGameName}')`);
-
-                    // Wrap the item inside the <a> tag
-                    gameLink.appendChild(item.cloneNode(true)); // Clone the item inside <a>
-                    item.replaceWith(gameLink); // Replace item with <a>
-                }
-                
-                // hover to playing count
-                // if (playingCountElement && ratingElement) {
-                //     const randomCount = getRandomPlayingCount();
-                //     playingCountElement.innerHTML = randomCount + 'K playing';
-                //     ratingElement.innerHTML = randomCount + 'K';
-                // }
-                if (viewsElement) {
-                    viewsElement.innerHTML = getRandomViews();
-                }
-            });
-
-            const streamerNames = document.querySelectorAll('.streamer-name');
-            const streamerImgs = document.querySelectorAll('.streamer-img');
-            const playButtons = document.querySelectorAll('.main-button a'); 
-            const usedGameNames = new Set();
-            streamerNames.forEach(function(nameElement, index) {
-                let randomGameName = getRandomGameName();
-                
-                // Ensure the game name is unique
-                while (usedGameNames.has(randomGameName)) {
-                    randomGameName = getRandomGameName();
-                }
-                usedGameNames.add(randomGameName);
-
-                const capGameName = randomGameName.charAt(0).toUpperCase() + randomGameName.slice(1);
-                nameElement.innerHTML = `${capGameName}`;               // without icon
-                // nameElement.innerHTML = `<i class="fa fa-fire"></i> ${capGameName}`;  // with icon
-
-                if (streamerImgs[index]) {
-                    streamerImgs[index].src = `assets/images/46-46/${randomGameName}.png`;
-                }
-                // Update the play button's onclick event dynamically
-                if (playButtons[index]) {
-                    playButtons[index].setAttribute("onclick", `setDynamicBackground('${randomGameName}')`);
-                }
-            });
-        });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            console.log("Device Width:", window.innerWidth);
-            console.log("Device Height:", window.innerHeight);
-
-            // fetch('ads_api_endpoint.php')
-            // .then(response => response.text()) // Get raw response first
-            // .then(text => {
-            //     console.log("Raw API Response:", text); // Log response
-            //     return JSON.parse(text); // Try parsing JSON
-            // })
-            // .then(data => {
-            //     data.forEach(ad => {
-            //         if (ad.position === 'left') {
-            //             document.getElementById('FloatAdx-left').innerHTML = ad.content;
-            //         } else if (ad.position === 'right') {
-            //             document.getElementById('FloatAdx-right').innerHTML = ad.content;
-            //         }
-            //     });
-            // })
-            // .catch(error => console.error('Error fetching ads:', error));
-        });
-    </script>          
 </body>
 </html>

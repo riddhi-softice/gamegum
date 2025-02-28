@@ -6,12 +6,62 @@
     <title>Connect 4</title>
     <link rel="shortcut icon" href="../assets/images/icon.png">
     <link rel="stylesheet" href="styles.css">
+    <style>
+       /* start screen home button */
+       .home-button {
+            color: white;
+        }
+        .home-button:hover {
+          text-decoration: none;
+          color: white;
+        }
+        :root {
+            --bg: #2c3e50; 
+            --gray-0: white; 
+        }
+
+        /* Home icon playing screen */
+        .home-icon {
+            background: var(--bg);
+            color: var(--gray-0);
+            height: 48px;
+            aspect-ratio: 1;
+            padding: 0;
+            border: none;
+            position: fixed;
+            top: 1rem;
+            left: 1rem;  /* Left side of the screen */
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            opacity: 0.25;
+            cursor: pointer;
+        }
+        .home-icon:hover {
+            opacity: 1;
+        }
+        .home-icon svg {
+            width: 65%;
+            fill: var(--gray-0); 
+        }
+        .home-icon, .game-reset {
+            display: none; 
+        }
+    </style>
 </head>
 <body>
   <div id="image-loader"></div>
   <div id="main" style="display: none;">
       <form>
         <div class="land-of-three">
+          <!-- Home Button -->
+          <a href="../../index.html">
+          <button class="home-icon faux-button" type="button" title="Home">
+            <svg class="" viewBox="0 0 24 24">
+                <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"></path>
+              </svg>
+            </button>
+          </a>
           <button class="game-reset faux-button" type="reset" title="Reset">
             <svg class="reset" viewBox="0 0 24 24">
               <path d="M17.65,6.35C16.2,4.9 14.21,4 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20C15.73,20 18.84,17.45 19.73,14H17.65C16.83,16.33 14.61,18 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6C13.66,6 15.14,6.69 16.22,7.78L13,11H20V4L17.65,6.35Z"></path>
@@ -22,7 +72,14 @@
               <div class="dialog__content dialog__content--intro">
                 <h1>:has Connect 4?</h1>
                 <p>You know the drill!</p>
-                <label class="faux-button" for="dismiss">Start Game</label>
+                <label class="faux-button" id="btn-start-modal" for="dismiss">Start Game</label>
+                <label class="faux-button" for=""><a href="../../index.html" class="home-button">Back to Home</a></label>
+                <!-- <label class="faux-button" for=""><a href="../../index.html" class="home-button">
+                  <svg class="" viewBox="0 0 24 24">
+                      <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"></path>
+                  </svg>
+                  </a>
+                </label> -->
               </div>
             </div>
           </div>
@@ -655,6 +712,14 @@
                       <h1>Really?</h1>
                       <button class="faux-button" type="reset" title="Reset Board">Replay</button>
                     </div>
+                    <button class="faux-button" title="Reset Board" style="margin: 10px;"><a href="../../index.html" class="home-button">
+                      Back to Home</a>
+                    </button>
+                    <!-- <div class="dialog__content dialog__content--win">
+                      <button class="faux-button home-btn">
+                          <a href="../../index.html">Back to Home</a>
+                      </button>
+                    </div> -->
                   </div>
                 </div>
               </div>
@@ -1334,9 +1399,11 @@
       </form>
       <input type="checkbox" id="dismiss" />
   </div>
-
-<script src="script.js"></script>
 <script>
+    document.getElementById("btn-start-modal").addEventListener("click", function () {
+        document.querySelector(".home-icon").style.display = "grid"; 
+        document.querySelector(".game-reset").style.display = "grid"; 
+    });
     fetch('../splash.html')
       .then(response => response.text())
       .then(data => {

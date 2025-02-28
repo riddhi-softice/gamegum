@@ -8,6 +8,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .home-button {
+            display: inline-block;
+            font-size: 16px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px 10px;
+            box-sizing: border-box;
+            letter-spacing: 3px;
+            transition: 0.2s linear;
+            outline: none;
+            border-style: none;
+            background-color: darkgray;
+            color: black;
+            border-radius: 7px;
+        }
+        .home-button:hover {
+            background: green;
+            color: white;
+            outline: none;
+        }
+    </style>
 </head>
 <body>
     <div id="image-loader"></div>
@@ -89,6 +112,7 @@
             </div>
         </div>
         <div class="outside-wrapper">
+            <a href="../../index.html" class="home-button">Back to Home</a>
             <button type="button" id="newGame">New Game</button>
         </div>
     </main>
