@@ -71,6 +71,7 @@ html, body {
   background-color: transparent;
   color: #333344;
   font-size: 30px;
+  cursor: pointer;
 }
 #container #instructions {
   position: absolute;

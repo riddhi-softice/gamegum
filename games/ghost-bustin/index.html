@@ -6,6 +6,46 @@
     <title>Ghost Bustin</title>
     <link rel="shortcut icon" href="../assets/images/icon.png">
     <link rel="stylesheet" href="styles.css">
+    <style>
+      .home-button {
+        cursor: pointer;
+        background: #fff;
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        padding: 8px 12px;
+        text-decoration: none;
+        text-align: center;
+        grid-column: 2;
+        font-size: 14px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: none;
+      }
+      .home-button:hover,button:hover {
+        background: #6c7a89; 
+      }
+      .home-button-play {
+        position: absolute;
+        top: 20px;   
+        left: 20px; 
+        background: #fff;
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 8px 12px;
+        text-decoration: none; 
+        border: none;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+      }
+      .home-button-play:hover {
+        background: #6c7a89; 
+      }
+    </style>
 </head>
 <body>
   <div id="image-loader"></div>
@@ -36,9 +76,11 @@
               Colored ghosts score more points!
             </p>
             <button>Start</button>
+            <a href="../../index.html" class="home-button">Back to Home</a>
           </div>
         </div>
         <div class="backdrop"></div>
+        <a href="../../index.html" class="home-button-play">Back to Home</a>
         <div class="game" style="--rows: 3; --cols: 3">
           <div class="ghost-pen">
             <div class="ghost__container" style="--speed: 1.3458155259806195; --delay: 1; --color: #fff; --score: 1">
@@ -624,9 +666,10 @@
           </div>
         </div>
         <div class="end">
-          <h1 class="title">Good job!</h1>
+          <h1 class="title">Game Over!</h1>
           <h1 class="title score">You scored &nbsp;</h1>
           <button type="reset">Try again?</button>
+          <a href="../../index.html" class="home-button">Back to Home</a>
           <div class="credit-ghost">
             <svg class="ghost__image-body" viewBox="0 0 100 130" preserveAspectRatio="xMinYMin">
               <g id="layer1" transform="translate(0,-922.36216)">
@@ -655,11 +698,11 @@
         document.getElementById('image-loader').innerHTML = data;
       });
     setTimeout(() => {
-        document.getElementById('image-loader').style.display = 'none';
-        document.getElementById('main').style.display = '';
-        document.body.style.backgroundImage = 'none'; 
-        document.body.style.backgroundSize = '';
-        document.body.style.background = '#082113'; // Set new background
+      document.getElementById('image-loader').style.display = 'none';
+      document.getElementById('main').style.display = '';
+      document.body.style.backgroundImage = 'none'; 
+      document.body.style.backgroundSize = '';
+      document.body.style.background = '#082113';
     }, 3000);
 </script>
 </body>

@@ -7,10 +7,35 @@
     <title>Tower Blocks</title>
     <link rel="shortcut icon" href="../assets/images/icon.png">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .home-icon {
+            background: var(--bg);
+            position: fixed; 
+            top: 1rem;
+            left: 1rem;
+            z-index: 9999 !important;
+            opacity: 1 !important; 
+            cursor: pointer;
+        }
+        .home-icon svg {
+            width: 27px;
+            fill: black; 
+        }
+        .home-icon:hover {
+            background: #efefef ;
+        }
+    </style>
 </head>
 <body>
     <div id="image-loader"></div>
     <div id="container" style="display: none;">
+        <a href="../../index.html">
+        <button class="home-icon" type="button" title="Home">
+            <svg class="" viewBox="0 0 24 24">
+                <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"></path>
+            </svg>
+            </button>
+        </a>
         <div id="game"></div>
         <div id="score">0</div>
         <div id="instructions">Click (or press the spacebar) to place the block</div>

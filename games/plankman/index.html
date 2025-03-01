@@ -6,20 +6,60 @@
     <title>Connect 4</title>
     <link rel="shortcut icon" href="../assets/images/icon.png">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .home-icon {
+            background: var(--bg);
+            color: var(--gray-0);
+            height: 48px;
+            aspect-ratio: 1;
+            padding: 0;
+            border: none;
+            /* position: fixed; */
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            opacity: 0.25;
+            cursor: pointer;
+        }
+        .home-icon:hover {
+            opacity: 1;
+        }
+        .home-icon svg {
+            width: 65%;
+            fill: var(--gray-0); 
+        }
+
+        .home-button {
+          background: black;
+          color: #ffd;
+          display: block;
+          height: 6vmin;
+          line-height: 6vmin;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          box-sizing: border-box;
+          border: 0;
+          font-family: 'Pirata One', serif;
+          font-size: 3.5vmin;
+          text-decoration: none;
+        }
+        .home-button:hover {
+          background: #222;
+          cursor: pointer;
+        }
+    </style>
 </head>
 <body>
   <div id="image-loader"></div>
   <div id="main" style="display: none;">
 
     <link href="https://fonts.googleapis.com/css2?family=No+va+Mono&family=Pirata+One&display=swap" rel="stylesheet">
-
     <input type="checkbox" id="animations" />
-    
     <div id="waves">
       <div class="wave wave-1"></div>
       <div class="wave wave-2"></div>
     </div>
-    
     <div id="ship">
       <div class="flag"></div>
       <div class="sail"></div>
@@ -30,7 +70,6 @@
       <div class="ship-body"></div>
       <div class="rudder"></div>
     </div>
-    
     <form>  
       <input type="radio" name="sentence" id="sentence-0" />
       <input type="radio" name="sentence" id="sentence-1" />
@@ -60,6 +99,9 @@
               <label for="sentence-7" class="label">Play</label>
               <label for="sentence-8" class="label">Play</label>
               <label for="sentence-9" class="label">Play</label>
+            </p>
+            <p>
+              <a href="../../index.html" class="home-button">Back to Home</a>
             </p>
           </div>
         </div>
@@ -145,6 +187,9 @@
             <p>
               <input type="reset" class="button" value="Play Again" />
             </p>
+            <p>
+              <a href="../../index.html" class="home-button">Back to Home</a>
+            </p>
           </div>
         </div>
       </div>
@@ -156,6 +201,9 @@
             <p>You didn't guess the movie before walking the plank.</p>
             <p>
               <input type="reset" class="button" value="Play Again" />
+            </p>
+            <p>
+              <a href="../../index.html" class="home-button">Back to Home</a>
             </p>
           </div>
         </div>
@@ -200,9 +248,14 @@
         <div class="gill gill-2"></div>
         <div class="gill gill-3"></div>
       </div>
-    
     </form>
-    
+    <a href="../../index.html">
+      <button class="home-icon" type="button" title="Home">
+        <svg class="" viewBox="0 0 24 24">
+            <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"></path>
+          </svg>
+        </button>
+    </a>
     <label for="animations">ARRRnimations</label>
 </div>
 <script>
