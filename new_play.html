@@ -45,21 +45,30 @@
             margin-top: 10px;
             margin-bottom: 10px;
         }
-        .read-more {
+        p {
+            font-size: 22px;
+            line-height: 36px;
+        }
+        .game-ins {
+            margin-top: 25px;
+        }
+        /* .read-more {
             color: #ec6090;
             cursor: pointer;
             font-size: 14px;
             text-decoration: underline !important;
-
         }
         .read-more:hover {
             color: #ec6090;
-        }
+        } */
         .g-ins {
-            font-size: 15px;
+            font-size: 22px;
             color: #666;
-            line-height: 30px;
+            line-height: 40px;
             margin-bottom: 0px;
+        }
+        h3 {
+            margin-bottom: 5px;
         }
     </style>
 </head>
@@ -141,13 +150,12 @@
                                     <div class="content">
                                         <div class="row">
                                             <div class="col-lg-12">
-                                                <h6>Description:</h6>
+                                                <h3>Description:</h3>
                                                 <p id="game-description"></p>
                                             </div>
                                             <div class="col-lg-12">
-                                                <h6 class="game-ins">Instructions:</h6>
-                                                <!-- <p id="game-instructions"></p>
-                                            </br> -->
+                                                <h3 class="game-ins">Instructions:</h3>
+                                                <!-- <p id="game-instructions"></p></br> -->
                                                 <ul id="game-instructionss" class="g-ins">
                                                 </ul>
                                             </div>
@@ -850,8 +858,8 @@
                 default:
                     gameUrl = '#';
                     backgroundImage = 'assets/images/transparent_bg/banner-bg.jpg'; 
-                    gameDescription = "";
-                    gameInstructions = 'Default instructions';
+                    gameDescription = "Default Description";
+                    gameInstructions = ['Default instructions'];
                     break;
             }
             if (backgroundImage) {
@@ -867,9 +875,8 @@
                 listItem.textContent = gameInstructions;
                 instructionsList.appendChild(listItem);
             });
-
             // Update the description and instruction elements
-            // document.getElementById('game-description').innerText = gameDescription;
+            document.getElementById('game-description').innerText = gameDescription;
             // document.getElementById('game-instructions').innerText = gameInstructions;
             if (gameName) 
             {
@@ -882,28 +889,30 @@
                     }
                 }
             }
-            let descriptionElement = document.getElementById("game-description");
-            let readMoreBtn = document.getElementById("read-more-btn");
-            let maxLength = 440; 
-            if (gameDescription.length > maxLength) {
-                let shortText = gameDescription.substring(0, maxLength) + `... <a href="#" id="read-more-btn" class="read-more">Read More</a>`;
-                descriptionElement.innerHTML = shortText; 
-                let expanded = false;
-                document.getElementById("read-more-btn").addEventListener("click", function (event) {
-                    event.preventDefault(); 
-                    if (!expanded) {
-                        descriptionElement.innerHTML = gameDescription + ` <a href="#" id="read-more-btn" class="read-more">Read Less</a>`;
-                        expanded = true;
-                    } else {
-                        descriptionElement.innerHTML = shortText;
-                        expanded = false;
-                    }
-                    document.getElementById("read-more-btn").addEventListener("click", arguments.callee);
-                });
-            } else {
-                descriptionElement.innerText = gameDescription; 
-            }
-            document.getElementById("game-instructions").innerText = gameInstructions;
+            // let descriptionElement = document.getElementById("game-description");
+            // descriptionElement.innerHTML = gameDescription;
+
+            // description with read more button
+            // let readMoreBtn = document.getElementById("read-more-btn");
+            // let maxLength = 440; 
+            // if (gameDescription.length > maxLength) {
+                // let shortText = gameDescription.substring(0, maxLength) + `... <a href="#" id="read-more-btn" class="read-more">Read More</a>`;
+                // descriptionElement.innerHTML = shortText; 
+                // let expanded = false;
+                // document.getElementById("read-more-btn").addEventListener("click", function (event) {
+                //     event.preventDefault(); 
+                //     if (!expanded) {
+                //         descriptionElement.innerHTML = gameDescription + ` <a href="#" id="read-more-btn" class="read-more">Read Less</a>`;
+                //         expanded = true;
+                //     } else {
+                //         descriptionElement.innerHTML = shortText;
+                //         expanded = false;
+                //     }
+                //     document.getElementById("read-more-btn").addEventListener("click", arguments.callee);
+                // });
+            // } else {
+            //     descriptionElement.innerText = gameDescription; 
+            // }
         };
     </script>  
     <script>

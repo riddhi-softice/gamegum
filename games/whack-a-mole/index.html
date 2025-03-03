@@ -6,10 +6,43 @@
     <title>Whack-a-mole</title>
     <link rel="shortcut icon" href="../assets/images/icon.png">
     <link rel="stylesheet" href="styles.css">
+    <style>
+      .home-icon {
+          background: var(--bg);
+          color: var(--gray-0);
+          height: 48px;
+          aspect-ratio: 1;
+          padding: 0;
+          border: none;
+          position: fixed; 
+          top: 1rem;
+          left: 1rem;  
+          border-radius: 50%;
+          display: grid;
+          place-items: center;
+          opacity: 0.25;
+          cursor: pointer;
+      }
+      .home-icon:hover {
+          opacity: 1;
+      }
+      .home-icon svg {
+          width: 65%;
+          fill: var(--gray-0); 
+      }
+    </style>
 </head>
 <body>
   <div id="image-loader"></div>
   <div id="main" style="display: none;">
+    <a href="../../index.html">
+      <button class="home-icon" type="button" title="Home">
+        <svg class="" viewBox="0 0 24 24">
+            <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"></path>
+          </svg>
+        </button>
+    </a>
+
     <h1>Whack-a-mole!</h1>
     <h2>Score: <span class="score">0</span></h2>
     <button id="start" onClick="startGame()">Start</button>
@@ -47,7 +80,7 @@
         document.body.style.backgroundImage = 'none'; 
         document.body.style.backgroundSize = '';
         document.body.style.background = '#fff9e2'; // Set new background
-    }, 3000);
+    }, 300);
 </script>
 </body>
 </html>

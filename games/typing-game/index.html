@@ -1,13 +1,46 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous"/>
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="../assets/images/icon.png">
+    <style>
+        .home-icon {
+            position: absolute;
+            top: 10px;
+            left: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-family: inherit;
+            border-radius: var(--border-radius);
+            padding: 10px 10px;
+            border: none;
+            background: var(--overlay-color);
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease-in-out;
+        }
+        .home-icon:hover {
+            background-color: var(--secondary-color);
+        }
+        .home-icon:active {
+            transform: scale(0.98);
+        }
+        .home-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--text-color);
+        }
+    </style>
 </head>
+
 <body>
     <div id="image-loader"></div>
     <div id="main" style="display: none;">
@@ -15,43 +48,46 @@
             <i class="fas fa-cog"></i>
         </button>
         <div class="settings" id="settings">
+            <a href="../../index.html">
+                <button class="home-icon" type="button" title="Home">
+                    <svg class="" viewBox="0 0 24 24">
+                        <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"></path>
+                    </svg>
+                </button>
+            </a>
             <form id="settings-form">
-            <label for="difficulty">Difficulty</label>
-            <select id="difficulty">
-                <option value="easy">Easy</option>
-                <option value="medium">Medium</option>
-                <option value="hard">Hard</option>
-            </select>
+                <label for="difficulty" style="margin-left: 30px;">Difficulty</label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
             </form>
         </div>
         <div class="container">
             <h2>👩‍💻 Speed Typer 👨‍💻</h2>
             <small>Type the following:</small>
             <h1 id="word"></h1>
-            <input
-            type="text"
-            id="text"
-            autocomplete="off"
-            placeholder="Type the word here..." />
+            <input type="text" id="text" autocomplete="off" placeholder="Type the word here..." />
             <p class="time-container">Time left: <span id="time">10s</span></p>
             <p class="score-container">Score: <span id="score">0</span></p>
             <div id="end-game-container" class="end-game-container"></div>
         </div>
     </div>
-<script src="script.js"></script>
-<script>
-    fetch('../splash.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('image-loader').innerHTML = data;
-      });
-    setTimeout(() => {
-        document.getElementById('image-loader').style.display = 'none';
-        document.getElementById('main').style.display = '';
-        document.body.style.backgroundImage = 'none'; 
-        document.body.style.backgroundSize = '';
-        document.body.style.background = 'var(--primary-color)'; 
-    }, 3000);
-</script>
+    <script src="script.js"></script>
+    <script>
+        fetch('../splash.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('image-loader').innerHTML = data;
+            });
+        setTimeout(() => {
+            document.getElementById('image-loader').style.display = 'none';
+            document.getElementById('main').style.display = '';
+            document.body.style.backgroundImage = 'none';
+            document.body.style.backgroundSize = '';
+            document.body.style.background = 'var(--primary-color)';
+        }, 3000);
+    </script>
 </body>
 </html>

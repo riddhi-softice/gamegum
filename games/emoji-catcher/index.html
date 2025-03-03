@@ -8,11 +8,53 @@
   <title>Emoji-Catcher</title>
   <link rel="shortcut icon" href="../assets/images/icon.png">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .home-icon {
+        color: var(--gray-0);
+        height: 40px;
+        aspect-ratio: 1;
+        padding: 0;
+        border: none;
+        top: 1rem;
+        left: 1rem;  
+        place-items: center;
+        opacity: 0.25;
+        cursor: pointer;
+        margin: 5px 10px 10px 20px;
+    }
+    .home-icon:hover {
+        opacity: 1;
+    }
+    .home-icon svg {
+        width: 65%;
+        fill: var(--gray-0); 
+    }
+    #start {
+      margin: 5px 5px 0px 5px;
+      background: #ccc; 
+      border: none;
+      padding: 8px 16px; 
+      font-size: 16px; 
+      font-weight: 800;
+      color: #000;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      justify-content: center;
+      white-space: nowrap;  
+    }
+  </style>
 </head>
-
 <body>
   <div id="image-loader"></div>
   <div id="main" style="display: none;">
+    <a href="../../index.html">
+      <button class="home-icon" type="button" title="Home">
+        <svg class="" viewBox="0 0 24 24">
+            <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"></path>
+          </svg>
+        </button>
+    </a>
     <div class="scores-container">
       <div class="total-score">
         <h2>Your Score:</h2>
@@ -22,7 +64,7 @@
         <h2>Time left:</h2>
         <h2 id="time-left">60</h2>
       </div>
-        <button id="start" onClick="startGame()">Start</button>
+      <button id="start" onClick="startGame()">Start</button>
     </div>
     <div class="grid-container">
       <div class="grid">
@@ -55,5 +97,4 @@
     }, 3000);
   </script>
 </body>
-
 </html>
