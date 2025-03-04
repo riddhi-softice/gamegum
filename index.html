@@ -86,6 +86,41 @@
         .big-box-hight {
             height: 98% !important;
         }
+
+        .ad-box {
+            min-width: 200px;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #514646; 
+        }
+        .ad-box p {
+            font-size: 13px !important;
+            color: aliceblue;
+        }
+        /* .ad-box {
+            min-width: 200px;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0; 
+        } */
+        /* fix 200*200 height width */
+        /* .ad-box {
+            width: 200px;  
+            height: 200px;  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            background-color: #f0f0f0; 
+        }
+        .ad-box img {
+            width: 200px;  
+            height: 200px;  
+            object-fit: cover; 
+        } */
     </style>
 </head>
 <body>
@@ -208,11 +243,31 @@
                                             <a href="new_play.html"
                                                 onclick="setDynamicBackground('math-game')">
                                                 <div class="item">
-                                                    <img src="assets/images/195-150/math-game.png" alt="">
+                                                    <img src="assets/images/icon.png" alt="">
                                                     <h4>Math Game</h4>
                                                 </div>
                                             </a>
                                         </div>
+
+                                        <!-- <div class="col-lg-3 col-sm-6 col-6">
+                                            <div class="item">
+                                                <img src="assets/images/default_image.jpg" alt="">
+                                                <p style="font: size 13px; color: aliceblue;">Advertisement</p>
+                                            </div>
+                                        </div> -->
+
+                                        <!-- d-none → Hides the element on all screen sizes by default.
+                                        d-sm-block → Makes it visible on small screens (≥576px) and larger. -->
+                                        <div class="col-lg-3 col-sm-6 col-6 d-none d-sm-block">
+                                            <div class="item ad-box">
+                                                <p>Advertisement</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- <div class="col-lg-3 col-sm-6 col-6 d-flex align-items-center justify-content-center ad-box">
+                                            <img src="assets/images/default_image.jpg" width="200" height="200" alt="Ad">
+                                        </div> -->
+                                        
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <a href="new_play.html"
                                                 onclick="setDynamicBackground('memory-game')">
@@ -244,21 +299,21 @@
                                         </div>
 
                                         <div class="col-lg-3 col-sm-6 col-6">
-                                            <a href="play.html" onclick="setDynamicBackground('sudoku')">
+                                            <a href="new_play.html" onclick="setDynamicBackground('sudoku')">
                                             <div class="item">
                                                 <img src="assets/images/195-150/sudoku-training.png" alt="">
                                                 <h4>Sudoku</h4>
                                             </div>
                                             </a>
                                         </div> 
-                                        <!-- <div class="col-lg-3 col-sm-6 col-6">
-                                            <a href="play.html" onclick="setDynamicBackground('Tic-Tac-Toe')">
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <a href="new_play.html" onclick="setDynamicBackground('Tic-Tac-Toe')">
                                             <div class="item">
                                                 <img src="assets/images/icon.png" alt="">
                                                 <h4>Tic-Tac-Toe</h4>
                                             </div>
                                             </a>
-                                        </div> -->
+                                        </div> 
                                       
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <a href="new_play.html" onclick="setDynamicBackground('table-tennis')">
@@ -341,6 +396,13 @@
                                             </div>
                                             </a>
                                         </div> 
+
+                                        <div class="col-lg-3 col-sm-6 col-6 d-none d-sm-block">
+                                            <div class="item ad-box">
+                                                <p>Advertisement</p>
+                                            </div>
+                                        </div>
+
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <a href="new_play.html"
                                                 onclick="setDynamicBackground('tower-blocks')">
@@ -396,6 +458,7 @@
                                             </a>
                                         </div> 
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>

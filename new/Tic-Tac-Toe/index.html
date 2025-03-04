@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./script.js" defer></script>
-    <!-- <style>
-        html, body {
+    <style>
+        /* html, body {
             overflow-x: hidden;
             margin: 0;
             padding: 0;
@@ -19,33 +19,45 @@
         .container {
             max-width: 100%;
             overflow: hidden;
-        }
-    </style> -->
-    <style>
-        .home-button{
-            text-decoration: none;
-            background: #f9f4f4fa;
-            color: black;
-            padding: 10px 20px;
-            border: 1px solid #000000;
-            font-size: 16px;
-            border-radius: 4px;
+        } */
+        .home-icon {
+            background: var(--bg);
+            color: var(--gray-0);
+            height: 48px;
+            aspect-ratio: 1;
+            padding: 0;
+            border: none;
+            position: fixed; 
+            top: 1rem;
+            left: 1rem;  
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            opacity: 0.25;
             cursor: pointer;
-            transition: background-color 0.3s ease;
-            font-weight: 700;
-            transition: background-color 0.3sease;
         }
-        .home-button:hover {
-            background-color: #dddcdcbc;
+        .home-icon:hover {
+            opacity: 1;
         }
-    </style>
+        .home-icon svg {
+            width: 65%;
+            fill: var(--gray-0); 
+        }
+    </style> 
 </head>
 <body>
     <div id="image-loader"></div>
     <div class="container" id="main" style="display: none;">
-        
-            <h3><a href="../../index.html" class="home-button">Back to Home</a>
-            </h3>
+
+        <a href="../../index.html">
+            <button class="home-icon" type="button" title="Home">
+              <svg class="" viewBox="0 0 24 24">
+                  <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"></path>
+                </svg>
+              </button>
+          </a>
+
+            <h1></h1>
             <div class="result"></div>
             <div class="reset-container">
                 <button class="reset">Reset ↻</button>
@@ -132,7 +144,6 @@
             document.body.style.backgroundSize = '';
             document.body.style.background = '#dddcdcbc'; // Set new background
         }, 300);
-
     </script>
 </body>
 </html>
