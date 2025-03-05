@@ -191,9 +191,9 @@ Game Details Style
 
     background-color: #27292a;
     border-radius: 23px;
-    padding: 10px;
-    padding-top: 20px;
-    margin-bottom: 26px;
+    /* padding: 10px; */
+    padding-top: 10px;
+    margin-bottom: 20px;
   }
   
   /* .game-details .content .right-info ul li {
