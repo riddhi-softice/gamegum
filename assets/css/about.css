@@ -11,7 +11,8 @@ html, body {
 body .page-content {
     margin-top: 110px;
     background-color: #27292a;
-    padding: 30px 50px 30px 50px;
+    /* padding: 30px 50px 30px 50px; */
+    padding: 35px;
     border-radius: 23px;
 }
 

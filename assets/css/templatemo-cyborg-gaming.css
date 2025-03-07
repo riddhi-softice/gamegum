@@ -1752,3 +1752,7 @@ body {
     width: 16%;
   }
 }
+.footer-cls {
+  border-top: 1px solid #FFFFFF4D;
+  width: 100vw;
+}
