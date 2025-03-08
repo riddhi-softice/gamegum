@@ -85,9 +85,21 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 body, * {
-  cursor: url("../images/cursor-1a.png") 0 0, auto !important;
+  cursor: url("../images/cursor-1a.png") 12 12, auto !important;
 }
+
+/* If needed, you can apply a fallback cursor for clickable elements */
+a, .menu-trigger, .nav li a {
+  cursor: url("../images/cursor-1a.png") 12 12, pointer;
+}
+
+/* Ensure pointer-events are correct for clickable areas */
+header, nav, .nav li, .logo, a, .menu-trigger {
+  pointer-events: auto;
+}
+
 
 a {
 	color: #CCC;
@@ -353,7 +365,8 @@ Header Style
 }
 
 .header-area {
-  background-color: transparent;
+  /* background-color: transparent; */
+  background-color: #27292a;
   position: absolute;
   height: 70px;
   top: 15px;
@@ -368,7 +381,8 @@ Header Style
 
 .header-area .main-nav {
   min-height: 80px;
-  background: transparent;
+  /* background: transparent; */
+  /* background: #27292a; */
   display: flex;
   padding: 15px 0px;
   border-radius: 50px;
@@ -376,7 +390,7 @@ Header Style
 
 .background-header .main-nav {
   padding: 0px;
-  background-color: transparent;
+  background-color: #27292a;
 }
 
 .header-area .main-nav #search {
@@ -452,12 +466,14 @@ Header Style
   font-weight: 400;
   font-size: 14px;
   text-transform: capitalize;
-  color: #666;
+  color: #eee;
+  /* color: #666; */
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  border: transparent;
+  /* border: transparent; */
+  border: #27292a;
   padding: 13px 10px;
   border-radius: 18px;
   letter-spacing: .3px;
@@ -589,7 +605,8 @@ Header Style
 .header-area .main-nav .menu-trigger.active span,
 .header-area .main-nav .menu-trigger.active span:before,
 .header-area .main-nav .menu-trigger.active span:after {
-  background-color: transparent;
+  /* background-color: transparent; */
+  background-color: #27292a;
   width: 100%;
 }
 
@@ -640,7 +657,7 @@ Header Style
     top: 0;
   }
   .header-area .main-nav {
-    background-color: transparent;
+    background-color: #27292a;
     border-radius: 0px;
   }
   .header-area .main-nav .nav {
@@ -708,12 +725,14 @@ Header Style
     margin-top: 70px !important;
   }
   .header-area .main-nav .nav li:first-child {
-    border-top: 1px solid #eee;
+    /* border-top: 1px solid #eee; */
+    border-top:1px solid #ffffff4f;
   }
   .header-area .main-nav .nav li {
     width: 100%;
-    background: #fff;
-    border-bottom: 1px solid #eee;
+    border-bottom:1px solid #ffffff4f;
+    /* background: #fff; */
+    /* border-bottom: 1px solid #eee; */
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
@@ -722,11 +741,12 @@ Header Style
     line-height: 50px !important;
     padding: 0px !important;
     border: none !important;
-    background: #fff !important;
-    color: #1e1e1e !important;
+    /* background: #fff !important; */
+    /* color: #1e1e1e !important; */
+    color: #eee !important;
   }
   .header-area .main-nav .nav li a:hover {
-    background: #fff !important;
+    /* background: #fff !important; */
     color: #e75e8d!important;
   }
   /* .header-area .main-nav .nav li:last-child a img {
@@ -1301,7 +1321,7 @@ Featured Banner Style
 
 .feature-banner .thumb a {
   position: absolute;
-  left: 50%;
+  left: 49%;
   top: 50%;
   transform: translate(-23px, -23px);
   /* width: 46px;

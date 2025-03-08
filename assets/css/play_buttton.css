@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900');
+
+:root {
+  --text-color: #e75e8d;
+  --shadow-color: hsla(210, 40%, 52%, 0.4);
+  --btn-color: hsl(210, 80%, 42%);
+  --bg-color: #141218;
+}
+
+/* Custom Button Styling */
+.custom-button {
+  position: relative;
+  top: 50%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+  padding: 15px 50px; /* Increased padding */
+  font-size: 24px; /* Larger font */
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Space between icon and text */
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-family: "Source Code Pro", monospace;
+  background-color: #fff;
+  color: #e75e8d;
+  border: none;
+  border-radius: 10px; /* Slightly more rounded */
+  box-shadow: var(--shadow-color) 4px 4px 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+
+/* Hover Effect */
+.custom-button:hover {
+  border-color: #fff;
+  transform: translate(-50%, -50%) scale(1.08); /* Increased hover scaling */
+  box-shadow: 0 0 20px rgba(227, 220, 223, 0.8), 0 0 40px rgba(254, 251, 252, 0.5);
+}
+
+/* Glowing Border Animation */
+/* .custom-button::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  border-radius: 10px;
+  border: 3px solid transparent;
+  animation: glowing 1.5s linear infinite;
+  z-index: -1;
+} */
+
+/* Animated Bubbles */
+.custom-button::before {
+  content: '';
+  pointer-events: none;
+  opacity: 0.6;
+  background:
+      radial-gradient(circle at 20% 35%, transparent 0, transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+      radial-gradient(circle at 75% 44%, transparent 0, transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+      radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px),
+      radial-gradient(circle at 30% 10%, transparent 0, transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+      radial-gradient(circle at 60% 80%, transparent 0, transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+      /* radial-gradient(circle at 75% 20%, transparent 0, transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px), */
+      radial-gradient(circle at 10% 60%, transparent 0, transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+      radial-gradient(circle at 90% 50%, transparent 0, transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px);
+  width: 100%;
+  height: 180%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  /* animation: bubbles 3s linear infinite both, randomDelay 2s ease-in-out infinite; */
+  animation: bubbles 3s linear infinite both;
+}
+@keyframes bubbles {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-66.666%);
+  }
+}
+@keyframes randomDelay {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  /* 50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  } */
+  100% {
+    opacity: 1;
+  }
+}
+
+.play-game-image {
+  border-radius: 23px;
+  filter: blur(4px);
+  transition: filter 0.3s ease-in-out;
+}
+
+/* .play-game-image:hover {
+  filter: blur(0px); 
+} */
+
+
+@media (max-width: 768px) {
+  .custom-button {
+      font-size: 14px;
+      padding: 10px 20px;
+  }
+}
+
+.thumb {
+  position: relative; /* Ensure .thumb acts as a relative container */
+  display: inline-block;
+  width: 100%;
+}
+
+.thumb a {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* Center the button perfectly */
+  background-color: #fff;
+  color: #ec6090;
+  font-weight: 600;
+  font-size: large;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+
