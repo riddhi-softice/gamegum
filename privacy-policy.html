@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css">
     <link rel="stylesheet" href="assets/css/about.css">
     <link rel="stylesheet" href="assets/css/footer.css">
+    <style>
+        /* .header-area {
+            background-color: #27292a; 
+        } */
+    </style>
 </head>
 <body>
     
@@ -68,10 +73,10 @@
                     <div class="header-text">
 
                         <h6>Privacy Policy</h6>
-                        <p>Last updated: [Date]</p>
+                        <p>Last updated: 2025-03-08</p>
 
                         <h6>Introduction</h6>
-                        <p>Welcome to [Your Website Name]. This privacy policy outlines how we collect, use, and protect your personal information when you use our website.</p>
+                        <p>Welcome to baseapk. This privacy policy outlines how we collect, use, and protect your personal information when you use our website.</p>
 
                         <h6>Information We Collect</h6>
                         <p>We collect various types of information in connection with the services we provide, including:</p>
@@ -109,9 +114,27 @@
                         <p>We may update our privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page. You are advised to review this privacy policy periodically for any changes.</p>
 
                         <h6>Contact Us</h6>
-                        <p>If you have any questions about this privacy policy, please contact us at [Your Contact Information].</p>
+                        <p>If you have any questions about this privacy policy, please contact us at <a href="mailto: baseapk99@gmail.com"> baseapk99@gmail.com</a>.</p>
                     </div>
                 </div>
+
+                <!-- ***** About game Start ***** -->
+                <div class="gaming-library">
+                    <div class="col-lg-12">
+                        <div class="heading-section">
+                            <h4><em>Baseapk </em> Play the Best Free Online Games</h4>
+                        </div>
+                        <p class="abut-p" id="game-about">Baseapk brings you the latest and most exciting free online games, ready to play instantly—no downloads, no sign-ups, no annoying pop-ups. Just pure gaming fun at your fingertips. Whether you're looking for action, puzzles, sports, or arcade classics, we’ve got something for everyone.</p>
+                        <h4 class="abut-heaading">About Baseapk</h4>
+                        <p class="abut-p">At Baseapk, we believe gaming should be simple, fun, and accessible to all. Our platform is built for seamless gameplay, letting you dive right into your favorite games without any hassle. Every month, millions of players from around the world enjoy our collection of top-tier browser games.</p>
+                        <p class="abut-p">Our team is passionate about creating a gaming space that’s free, open, and enjoyable for everyone—whether you're playing solo or challenging your friends.</p>
+                        <h4 class="abut-heaading">Play Anywhere, Anytime</h4>
+                        <p class="abut-p">Baseapk works on desktop, tablets, and mobile devices, so you can enjoy your favorite games anywhere—at home, at school, or on the go. From powerful gaming PCs to smartphones and Chromebooks, if it has a browser, it can run Baseapk!</p>
+                        <p class="abut-p">We’re a team of gamers, developers, and creatives who love what we do. Our mission is simple: to build the ultimate online gaming playground—completely free and available to all</p>
+                    </div>
+                </div>
+                <!-- ***** About game End ***** -->
+
             </div>
         </div>
     </div>
@@ -140,6 +163,10 @@
             }
         })
         .catch(error => console.error("Error loading footer:", error));
+        
+        function setDynamicBackground(imageSrc) {
+            localStorage.setItem('gameName', imageSrc);
+        }
     </script>
 </body>
 </html>

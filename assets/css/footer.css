@@ -142,7 +142,6 @@
         align-items: center;
         text-align: center;
     } */
-
     /* .menu-footer-part, .games-footer-part {
         width: 100%;
         margin-bottom: 15px;
@@ -168,11 +167,9 @@
     .gaming-footer {
         padding: 25px;
     }
-
     .footer-content p {
         font-size: 12px;
     }
-
     .top-social-icon img {
         width: 30px;
         height: 30px;
@@ -185,3 +182,7 @@
     margin: 10px;
     margin-left: 10px;
 }
+
+.cpy-footer {
+    cursor: url("../images/cursor-1a.png") 0 0, auto !important;
+} 

@@ -85,6 +85,9 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body, * {
+  cursor: url("../images/cursor-1a.png") 0 0, auto !important;
+}
 
 a {
 	color: #CCC;
@@ -401,7 +404,7 @@ Header Style
 }
 
 .header-area .main-nav .logo {
-  border-right: 1px solid #27292a;
+  /* border-right: 1px solid #27292a; */
   flex-basis: 25%;
   margin-right: 5%;
   -webkit-transition: all 0.3s ease 0s;
@@ -669,7 +672,7 @@ Header Style
     width: 100%;
   }
   .header-area {
-    background-color: #f7f7f7;
+    background-color: #27292a;
     padding: 0px 15px;
     height: 80px;
     box-shadow: none;
