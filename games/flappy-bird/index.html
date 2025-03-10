@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Flappy Bird</title>
-  <link rel="shortcut icon" href="../assets/images/icon.png">
+  <link rel="shortcut icon" href="../../assets/images/icon.png">
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
   <style>
     body {
@@ -39,7 +39,7 @@
       color: white;
       background: cadetblue;
       border-radius: 5px;
-  }
+    }
     .home-button:hover {
         background: #36c584;
     }
@@ -48,8 +48,10 @@
 
 <body>
   <div id="image-loader"></div>
-  <a href="../../index.html" class="home-button">Back to Home</a>
-  <canvas id="myCanvas" style="display: none;"></canvas>
+
+  <a href="../../index.html" class="home-button" id="home" style="display: none;">Back to Home</a>
+  <canvas id="myCanvas" style="display: none;"> </canvas>
+ 
   <script>
     fetch('../splash.html')
       .then(response => response.text())
@@ -60,11 +62,12 @@
     setTimeout(() => {
       document.getElementById('image-loader').style.display = 'none';
       document.getElementById('myCanvas').style.display = '';
+      document.getElementById('home').style.display = '';
       resizeCanvas(); // Call resize function to set initial canvas size
       document.body.style.backgroundImage = 'none'; 
       document.body.style.backgroundSize = '';
       document.body.style.background = 'rgb(178 187 191)'; 
-    }, 3000);
+    }, 2000);
 
     // Function to resize canvas based on window size
     function resizeCanvas() {
@@ -249,7 +252,7 @@
       add_pipe(2200, 250, 120);
       add_pipe(2400, 30, 100);
       add_pipe(2700, 300, 100);
-      add_pipe(3000, 100, 80);
+      add_pipe(2000, 100, 80);
       add_pipe(3300, 250, 80);
       add_pipe(3600, 50, 60);
       var finish_line = new MySprite('http://s2js.com/img/etc/flappyend.png');

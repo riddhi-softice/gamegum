@@ -350,7 +350,7 @@ Header Style
 */
 
 .background-header {
-  background-color: #fff !important;
+  /* background-color: #fff;  */
   height: 70px!important;
   position: fixed!important;
   top: 0!important;
@@ -1312,29 +1312,29 @@ Featured Banner Style
 */
 
 .feature-banner .thumb {
-  position: relative;
   /* max-height: 305px; */
+  /* position: relative;
   max-height: 900px;
   overflow: hidden;
-  border-radius: 23px;;
+  border-radius: 23px; */
 }
 
 .feature-banner .thumb a {
-  position: absolute;
+  /* position: absolute;
   left: 49%;
   top: 50%;
   transform: translate(-23px, -23px);
+  background-color: #fff;
+  color: #ec6090;
+  font-weight: 600;
+  font-size: large; */
+
   /* width: 46px;
   height: 46px; */
-  background-color: #fff;
   /* border-radius: 50%; */
   /* display: inline-block; */
   /* text-align: center; */
   /* line-height: 46px; */
-  color: #ec6090;
-
-  font-weight: 600;
-  font-size: large;
 }
 
 /* 
@@ -1640,17 +1640,17 @@ Profile Style
 
 .clips .item .thumb a {
   position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-23px, -23px);
-    width: 46px;
-    height: 46px;
-    background-color: #fff;
-    border-radius: 50%;
-    display: inline-block;
-    text-align: center;
-    line-height: 46px;
-    color: #ec6090;
+  left: 50%;
+  top: 50%;
+  transform: translate(-23px, -23px);
+  width: 46px;
+  height: 46px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  line-height: 46px;
+  color: #ec6090;
 }
 
 .clips .item h4 {
@@ -1754,9 +1754,9 @@ body {
   .start-stream .item {
     margin: 15px 0px;
   }
-  .feature-banner .thumb {
+  /* .feature-banner .thumb {
     margin-top: 30px;
-  }
+  } */
   .main-profile .main-info {
     margin: 45px 0px;
   }

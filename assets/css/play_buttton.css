@@ -7,17 +7,33 @@
   --bg-color: #141218;
 }
 
-/* Custom Button Styling */
-.custom-button {
-  position: relative;
+.play-game-image {
+  border-radius: 23px;
+  filter: blur(4px);
+  transition: filter 0.3s ease-in-out;
+}
+.thumb {
+  position: relative; 
+  display: inline-block;
+  width: 100%;
+}
+.thumb a {
+  position: absolute;
+  left: 50%;
   top: 50%;
-  left: 42%;
-  transform: translate(-50%, -50%);
-  padding: 15px 50px; /* Increased padding */
-  font-size: 24px; /* Larger font */
+  transform: translate(-50%, -50%); 
+  background-color: transparent;
+  text-decoration: none;
+}
+.custom-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
   display: flex;
-  align-items: center;
-  gap: 12px; /* Space between icon and text */
+  transform: translate(-50%, -50%);
+  padding: 12px 65px;
+  font-size: 24px;
+  /* gap: 12px; */
   text-align: center;
   text-transform: uppercase;
   font-weight: 900;
@@ -25,17 +41,36 @@
   background-color: #fff;
   color: #e75e8d;
   border: none;
-  border-radius: 10px; /* Slightly more rounded */
+  border-radius: 10px;
   box-shadow: var(--shadow-color) 4px 4px 30px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  z-index: 2;
+  white-space: nowrap; /* Prevent text from wrapping */
 }
-
-/* Hover Effect */
+/* .custom-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  transform: translate(-50%, -50%); 
+  padding: 15px 65px; 
+  font-size: 24px; 
+  gap: 12px; 
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-family: "Source Code Pro", monospace;
+  background-color: #fff;
+  color: #e75e8d;
+  border: none;
+  border-radius: 10px; 
+  box-shadow: var(--shadow-color) 4px 4px 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+} */
 .custom-button:hover {
   border-color: #fff;
-  transform: translate(-50%, -50%) scale(1.08); /* Increased hover scaling */
+  transform: translate(-50%, -50%) scale(1.08); 
   box-shadow: 0 0 20px rgba(227, 220, 223, 0.8), 0 0 40px rgba(254, 251, 252, 0.5);
 }
 
@@ -101,44 +136,35 @@
   }
 }
 
-.play-game-image {
-  border-radius: 23px;
-  filter: blur(4px);
-  transition: filter 0.3s ease-in-out;
-}
 
 /* .play-game-image:hover {
   filter: blur(0px); 
 } */
 
-
-@media (max-width: 768px) {
-  .custom-button {
-      font-size: 14px;
-      padding: 10px 20px;
+@media (max-width: 992px) {
+  .feature-banner .thumb {
+    margin-top: 30px;
   }
 }
-
-.thumb {
-  position: relative; /* Ensure .thumb acts as a relative container */
-  display: inline-block;
-  width: 100%;
+@media (max-width: 768px) {
+  .custom-button {
+    padding: 12px 40px;  /* Reduced padding */
+    font-size: 20px;  /* Smaller font size */
+    gap: 10px;  /* Reduced gap between elements */
+  }
+  .play-game-image {
+    border-radius: 15px;  /* Slightly reduced border-radius for tablets */
+    filter: blur(3px);  /* Slightly reduced blur for tablets */
+  }
 }
-
-.thumb a {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%); /* Center the button perfectly */
-  background-color: #fff;
-  color: #ec6090;
-  font-weight: 600;
-  font-size: large;
-  padding: 12px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-  text-align: center;
-  display: inline-block;
-  transition: all 0.3s ease-in-out;
+@media (max-width: 480px) {
+  .custom-button {
+    padding: 10px 30px;  /* Further reduced padding */
+    font-size: 18px;  /* Even smaller font size */
+    gap: 8px;  /* Further reduced gap */
+  }
+  .play-game-image {
+    border-radius: 10px;  /* Further reduced border-radius for small screens */
+    filter: blur(2px);  /* Reduced blur for small screens */
+  }
 }
-
