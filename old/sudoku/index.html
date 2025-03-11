@@ -12,67 +12,25 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         .home-button {
-            color: #212529;
+            color: #fff;
         }
         .home-button:hover {
-            color: #212529;
+            color: #fff;
         }
-        body, html {
-            overflow: hidden; 
-            height: 100%;     
-            margin: 0;         
-        }
+
         .new-card {
             background: #fff;
-            /* width: fit-content; */
-            /* display: flex; */
-            /* max-width: 41.5%; */
+            width: fit-content;
             box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.14);
             float: center;
-            padding: 32px 23px 32px 32px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            flex-wrap: wrap;
-            justify-content: center;  
-            flex-wrap: wrap; 
-            gap: 10px;
-            width: fit-content; 
-            max-width: 100%;
-            margin: 32px auto 0 auto; 
+            padding: 32px 32px 16px 32px;
         }
-        .option-button {
-            display: block;
-            margin: 12px 15px;
-            font-size: 16px;
-            border: none;
-            outline: none;
-            box-shadow: 0 6px 10px 1px rgba(0, 0, 0, 0.14);
-            border-radius: 2px;
-            transition: all 0.5s;
-            width: 210px; 
-            text-align: center;
-            padding: 10px;
-        }
-        /* .option-button {
-            display: block;
-            margin: 16px 8px 16px 30px;
-            width: 130px;
-            padding: 8px 10px;
-            font-size: 16px;
-            border: none;
-            outline: none;
-            box-shadow: 0 6px 10px 1px rgba(0, 0, 0, 0.14);
-            border-radius: 2px;
-            transition: all 0.5s;
-            text-align: left;
-        } */
     </style>
 </head>
 <body>
     <div id="image-loader"></div>
     <div class="main" id="main" style="display: none;">
-        <!-- <section class="wrapper" oncontextmenu="return false"> -->
-        <section class="wrapper">
+        <section class="wrapper" oncontextmenu="return false">
           <section class="game">
             <div id="gameDiv">
                 
@@ -129,7 +87,7 @@
                                     <span style="left:12px;">New game</span>
                                 </div>
                             </button>
-                            <!-- <button onclick="sudokuSolverMenuClick();" ripple-color="#003c8f"
+                            <button onclick="sudokuSolverMenuClick();" ripple-color="#003c8f"
                                 class="button nav-item vertical-adjust">
                                 <div>
                                     <span class="material-icons">edit</span>
@@ -149,19 +107,20 @@
                                     <a href="#" class="bar-footer-link">Privacy</a>
                                     <a href="#" class="bar-footer-link">Terms</a>
                                 </ul>
-                            </div> -->
+                            </div>
                         </ul>
                     </nav>
                     <div class="nav-menu-blank" onclick="hideHamburgerClick()">
+            
                     </div>
                 </div>
             
-                <!-- <div class="floating">
+                <div class="floating">
                     <button onclick="showDialogClick('dialog');" class="button floating-btn vertical-adjust">
                         <span class="material-icons">add</span>
                         <span style="left:12px;">Add</span>
                     </button>
-                </div> -->
+                </div>
             
                 <div id="dialog" class="dialog">
                     <div id="dialog-box" class="dialog-content">
@@ -207,7 +166,7 @@
                     </div>
                 </div>
             
-                <!-- <div id="about-dialog" class="dialog">
+                <div id="about-dialog" class="dialog">
             
                     <div id="about-dialog-box" onblur="hideDialogButtonClick('about-dialog');"
                         class="dialog-content about-dialog-content">
@@ -259,7 +218,7 @@
                                 class="button dialog-btn vertical-adjust">OK</button>
                         </div>
                     </div>
-                </div> -->
+                </div>
             
                 <div class="body" id="sudoku">
                     <div class="card game">
@@ -653,14 +612,14 @@
 
                 <div class="new-card">
                     <button class="option-button">
-                        <a href="../../index.html" class="home-button">
+                        <a href="../../index.html" class="">
                             <span class="material-icons">home</span>
                             <span>Home</span>
                         </a>
                     </button>
-                    <button onclick="showDialogClick('dialog');" class="option-button">
+                    <button class="option-button">
                         <span class="material-icons">add</span>
-                        <span style="left:12px;">Start</span>
+                        <span>Start</span>
                     </button>
                     <button id="pause-btn" class="option-button" onclick="pauseGameButtonClick()" class="button bar-button more-button">
                         <span class="material-icons" id="pause-icon">pause</span>
@@ -674,10 +633,10 @@
                         <span class="material-icons">help</span>
                         <span>Hint</span>
                     </button>
-                    <!-- <button class="option-button" onclick="restartButtonClick()">
+                    <button class="option-button" onclick="restartButtonClick()">
                         <span class="material-icons">refresh</span>
                         <span>Restart</span>
-                    </button> -->
+                    </button>
                     <button class="option-button" onclick="SurrenderButtonClick()">
                         <span class="material-icons">flag</span>
                         <span>Surrender</span>
@@ -702,7 +661,7 @@
             document.body.style.backgroundImage = 'none'; 
             document.body.style.backgroundSize = '';
             document.body.style.background = 'rgb(235, 235, 240)'; // Set new background
-        }, 2000);
+        }, 200);
     </script>
 </body>
 </html>

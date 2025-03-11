@@ -13,8 +13,9 @@
     }
     .home-button {
         display: block;
-        /* padding: 10px 20px; */
+        padding: 10px 20px;
         text-decoration: none;
+        font-size: 16px;
         text-align: center;
         margin-bottom: 15px;
         transition: background 0.3s ease;
@@ -24,65 +25,11 @@
         border-radius: 8px;
         background-color: #593f6b;
         color: #fff;
-        padding: 2px 12px 4px;
-        cursor: pointer;
     }
     .home-button:hover {
         background: #593f6b;
     }
-
-    
-body, html {
-  overflow: hidden; 
-  height: 100%;
-  margin: 0; 
-}
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #000 radial-gradient(1000px 500px, #3f546b, #000);
-  margin: 0;
-  overflow: hidden; /* Hide scrollbars */
-}
-.wrapper {
-  width: 150%;
-  max-width: 900px; /* Limit width */
-  padding: 20px;
-  text-align: center;
-}
-.board {
-  display: flex;
-  width: 368px;
-  height: 368px;
-  /* position: fixed; */
-}
-.sidebar {
-  /* display: flex; */
-  width: 368px;
-  /* position: fixed; */
-}
-.lit-columns, .lit-cells, .chips, .click-columns {
-  position: absolute;
-  width: 368px;
-  height: 368px;
-}
-.click-columns {
-  position: absolute;
-  width: 368px; /* Updated to match board width */
-  height: 368px;
-  display: flex;
-}
-.click-columns div {
-  flex: 1; /* Ensure equal spacing */
-  height: 100%;
-  cursor: pointer;
-}
-/* .content {
-  padding: 10px 30px;
-} */
-</style>
+  </style>
 </head>
 <body>
   <div id="image-loader"></div>
@@ -90,10 +37,9 @@ body {
     <div class="content">
 
       <div class="sidebar">
-        
-        <!-- <h1>Align 4</h1>  -->
+        <a href="../../index.html" class="home-button">Back to Home</a>
+        <h1>Align 4</h1>
         <div class="panel dif">
-          <a href="../../index.html" class="home-button">Back to Home</a>
           <h2>Difficulty</h2>
           <div class="dif-options">
             <div>
@@ -121,11 +67,11 @@ body {
             <button>Start Game</button>
           </div>
         </div>
-        <!-- <div class="panel info">
+        <div class="panel info">
           <h2></h2>
           <div class="blurb"></div>
           <div class="outlook"></div>
-        </div> -->
+        </div>
       </div>
 
       <div class="board">
@@ -136,10 +82,12 @@ body {
           <div></div>
           <div></div>
           <div></div>
+          <div></div>
         </div>
         <div class="lit-cells"></div>
         <div class="chips"></div>
         <div class="click-columns">
+          <div></div>
           <div></div>
           <div></div>
           <div></div>
