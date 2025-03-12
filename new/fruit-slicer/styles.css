@@ -127,7 +127,7 @@ html {
     z-index: 2;
   }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     #container {
         width: 100%;
         padding: 10px;
@@ -163,4 +163,4 @@ html {
     #gameOver {
         font-size: 1.8rem;
     }
-}
+} */
