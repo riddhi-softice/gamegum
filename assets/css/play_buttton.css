@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900');
 
 :root {
-  --text-color: #e75e8d;
+  --text-color: #b71f47;
+  /* --text-color: #e75e8d; */
   --shadow-color: hsla(210, 40%, 52%, 0.4);
   --btn-color: hsl(210, 80%, 42%);
   --bg-color: #141218;
@@ -29,7 +30,7 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  display: flex;
+  display: flex; 
   transform: translate(-50%, -50%);
   padding: 12px 65px;
   font-size: 24px;
@@ -38,6 +39,8 @@
   text-transform: uppercase;
   font-weight: 900;
   font-family: "Source Code Pro", monospace;
+  /* background-color: #e75e8d;
+  color: #fff; */
   background-color: #fff;
   color: #e75e8d;
   border: none;
