@@ -13,8 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="Assert/Css/bootstrap.css">
     <link rel="stylesheet" href="Assert/Css/style.css">
@@ -37,14 +36,14 @@
                 <input type="checkbox" id="show-menu">
                 <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
                 <div class="nav-content">
-                    <a class="header_logo_link" href="global-finance.html">
+                    <a class="header_logo_link" href="index.html">
                         <div class="logo">
                             <img class="" src="Assert/image/logo.png" alt="health success">
                         </div>
                     </a>
                     <ul class="links">
+                        <li><a href="index.html" data-endpoint="about-us" class="menu-item">Global Insurance</a></li>
                         <li id="services-menu">
-                            <li><a href="index.html" data-endpoint="about-us" class="menu-item">Global Insurance</a></li>
                             <a href="#" class="desktop-link">Category <i class="fa-solid fa-angle-down"></i></a>
                             <input type="checkbox" id="show-services">
                             <label for="show-services" class="services-label">Category<i class="fa-solid fa-angle-down"></i></label>
@@ -52,7 +51,7 @@
                                 <li><a href="life.html" data-endpoint="finance" class="menu-item">Life</a></li>
                                 <li><a href="health.html" data-endpoint="health" class="menu-item">Health</a></li>
                                 <li><a href="vehicle.html" data-endpoint="vehicle" class="menu-item">Vehicle</a></li>
-                                <li><a href="home-insurance.html" data-endpoint="home" class="menu-item">Home</a></li>
+                                <li><a href="home.html" data-endpoint="home" class="menu-item">Home</a></li>
                             </ul>
                         </li>
                         <li><a href="about-us.html" data-endpoint="about-us" class="menu-item">About Us</a></li>
@@ -120,12 +119,11 @@
                 document.getElementById('footer-placeholder').innerHTML = data;
             });
     </script>
-
     <!-- <script>
         document.addEventListener("DOMContentLoaded", () => {
             const menuItems = document.querySelectorAll('.menu-item');
             const currentPath = location.pathname; // e.g., "/en/finance/"
-            console.log(currentPath, "currentPath")
+            // console.log(currentPath, "currentPath")
             menuItems.forEach(item => {
                 const endpoint = `/${item.dataset.endpoint}/`; // Add slashes for matching
                 if (currentPath.includes(endpoint)) {
@@ -136,6 +134,6 @@
                 }
             });
         }); 
-    </script> -->
+    </script>  -->
 </body>
 </html>

@@ -733,7 +733,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
+    /* background: rgba(0, 0, 0, 0.7); */
+    background: rgb(55 53 53 / 70%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -762,8 +763,10 @@
   .popup-content {
     position: relative;
     background: transparent;
+    /* background: #f3e4e6; */
     padding: 10px;
     border-radius: 5px;
+    /* border: 1px solid #121111; */
     border: 1px solid #888;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     min-width: 360px;
@@ -781,6 +784,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #f3e4e6;
   }
   
   
