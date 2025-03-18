@@ -205,15 +205,28 @@ function createLitCell(col, row) {
   .appendTo('.lit-cells');
 }
 
+// function createCursorChip(player, col) {
+//   var playerClass = 'p' + player;
+//   $('<div>', { 'class': 'cursor ' + playerClass })
+//     .css('left', indexToPixels(col))
+//     .appendTo('.chips');
+  
+//   // also highlight column
+//   $('.lit-columns div').eq(col).addClass('lit');
+// }
+
 function createCursorChip(player, col) {
   var playerClass = 'p' + player;
+  var colWidth = $('.click-columns div').width(); // Get the column width dynamically
+
   $('<div>', { 'class': 'cursor ' + playerClass })
-    .css('left', indexToPixels(col))
+    .css('left', col * colWidth)  // Position cursor based on column width
     .appendTo('.chips');
-  
-  // also highlight column
+
+  // Also highlight column
   $('.lit-columns div').eq(col).addClass('lit');
 }
+
 
 function destroyCursorChip() {
   $('.chips .cursor').remove();
@@ -248,6 +261,13 @@ function dropCursorChip(row, callback) {
   setTimeout(callback, ms);
 }
 
+// function indexToPixels(index) {
+//   return (index * 61 + 1) + 'px';
+// }
+
 function indexToPixels(index) {
-  return (index * 61 + 1) + 'px';
+  var boardWidth = $('.board').width(); // Get the board's width dynamically
+  var colWidth = boardWidth / 7; // Calculate column width (7 columns for Connect 4)
+
+  return (index * colWidth) + 'px'; // Position chips based on dynamic column width
 }

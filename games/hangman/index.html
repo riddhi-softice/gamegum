@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
     <style>
         .home-button {
             display: inline-block;
@@ -30,10 +31,33 @@
             color: white;
             outline: none;
         }
+        .logo img {
+            margin-bottom: 37px;
+        }
     </style>
 </head>
 <body>
-    <div id="image-loader"></div>
+    <!-- <div id="image-loader"></div> -->
+
+    <div id="image-loader">
+        <div id="image-container">
+          <div class="logo">
+            <img src="../assets/images/logo.png">
+          </div>
+          <div class="game-logo">
+            <img src="../assets/images/game-name/hangman.png">
+          </div>
+        </div>
+    
+       <div class="loader-custome">
+         <span class="loader"></span>
+        </div>   
+        <div id="button-container">
+          <button class="start-button start-g">START GAME</button>
+          <button class="more-button more-g">MORE GAMES</button>
+        </div>
+    </div>
+
     <main id="main_div" style="display: none;">
         <div class="outside-wrapper">
             <h1 id="statusMessage"> Hangman Game </h1>
@@ -117,20 +141,90 @@
         </div>
     </main>
     <script src="script.js"></script>
-    <script>
-        fetch('../splash.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('image-loader').innerHTML = data;
-        });
-        setTimeout(() => {
-            document.getElementById('image-loader').style.display = 'none';
-            document.getElementById('main_div').style.display = '';
-            document.body.style.backgroundImage = 'none'; 
-            document.body.style.backgroundSize = ''; 
-            document.body.style.background = 'url("https://res.cloudinary.com/dshmwg7vw/image/upload/v1550486966/OCCNFD0.jpg")';
-            resizeCanvas(); 
-        }, 2000);
-    </script>
+
+<script>
+    document.querySelector(".start-button").addEventListener("click", function () {
+        let gameElement = document.documentElement; // Fullscreen the whole page
+
+        if (gameElement.requestFullscreen) {
+            gameElement.requestFullscreen();
+        } else if (gameElement.mozRequestFullScreen) { // Firefox
+            gameElement.mozRequestFullScreen();
+        } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
+            gameElement.webkitRequestFullscreen();
+        } else if (gameElement.msRequestFullscreen) { // IE/Edge
+            gameElement.msRequestFullscreen();
+        }
+
+        document.getElementById('image-loader').style.display = 'none';
+        document.getElementById('main_div').style.display = 'block';
+        document.body.classList.remove("loader-background"); 
+        // Change background
+        document.body.style.background = 'url("https://res.cloudinary.com/dshmwg7vw/image/upload/v1550486966/OCCNFD0.jpg")'; 
+        document.body.style.backgroundSize = 'contain';
+        document.body.style.backgroundRepeat = 'repeat';
+        document.body.style.backgroundPosition = 'relative';
+    });
+    // Redirect "More Games" button
+    document.querySelector(".more-button").addEventListener("click", function () {
+        window.location.href = "../../index.html";
+    });
+
+    // fetch('../splash.html')
+    // .then(response => response.text())
+    // .then(data => {
+    //     document.getElementById('image-loader').innerHTML = data;
+    // });
+    // setTimeout(() => {
+    //     document.getElementById('image-loader').style.display = 'none';
+    //     document.getElementById('main_div').style.display = '';
+    //     document.body.style.backgroundImage = 'none'; 
+    //     document.body.style.backgroundSize = ''; 
+    //     document.body.style.background = 'url("https://res.cloudinary.com/dshmwg7vw/image/upload/v1550486966/OCCNFD0.jpg")';
+    //     resizeCanvas(); 
+    // }, 2000);
+</script>
+
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("hre");
+            
+        let gameLogo = document.querySelector(".game-logo img");
+        let logo = document.querySelector(".logo img");
+        let buttonContainer = document.getElementById("button-container");
+        let imageLoader = document.getElementById("image-loader");
+
+        function adjustLayout() {
+            console.log("jerere");
+            
+            let gameLogoHeight = gameLogo.clientHeight;
+            let gameLogoWidth = gameLogo.clientWidth;
+
+            console.log(`Game Logo Size: ${gameLogoWidth}x${gameLogoHeight}`);
+
+            // Adjust spacing based on game-logo size
+            if (gameLogoWidth <= 250) {
+                logo.style.width = "180px";
+                imageLoader.style.paddingTop = "20%";
+                buttonContainer.style.marginTop = "20px";
+            } else if (gameLogoWidth <= 300) {
+                logo.style.width = "200px";
+                imageLoader.style.paddingTop = "15%";
+                buttonContainer.style.marginTop = "30px";
+            } else if (gameLogoWidth <= 350) {
+                logo.style.width = "220px";
+                imageLoader.style.paddingTop = "10%";
+                buttonContainer.style.marginTop = "40px";
+            } else {
+                logo.style.width = "250px";
+                imageLoader.style.paddingTop = "6%";
+                buttonContainer.style.marginTop = "50px";
+            }
+        }
+
+        // Adjust layout when the image loads
+        gameLogo.onload = adjustLayout;
+    }); 
+    </script> -->
 </body>
 </html>
