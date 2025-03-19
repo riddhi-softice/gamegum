@@ -6,6 +6,9 @@ body, html {
   background: url('../images/bg.png') no-repeat center center;
   background-size: cover;
 }
+body, * {
+  cursor: url("../../../assets/images/cursor-1a.png") 12 12, auto !important;
+}
 
 /* 🖼️ Center Everything */
 #image-loader {

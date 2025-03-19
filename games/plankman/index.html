@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Connect 4</title>
+    <title>Plankman</title>
     <link rel="shortcut icon" href="../../assets/images/icon.png">
     <link rel="stylesheet" href="styles.css">
+    <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
     <style>
         .home-icon {
             background: var(--bg);
@@ -28,7 +29,6 @@
             width: 65%;
             fill: var(--gray-0); 
         }
-
         .home-button {
           background: black;
           color: #ffd;
@@ -48,10 +48,32 @@
           background: #222;
           cursor: pointer;
         }
+        .logo img {
+            margin-bottom: 30px;
+        }
+        .game-logo img {
+            margin-bottom: 60px;
+        }
     </style>
 </head>
 <body>
-  <div id="image-loader"></div>
+  <div id="image-loader">
+    <div id="image-container">
+        <div class="logo">
+            <img src="../../assets/images/logo.png">
+        </div>
+        <div class="game-logo">
+            <img src="../assets/images/game-name/plankman.png">
+        </div>
+    </div>
+    <div class="loader-custome">
+        <span class="loader"></span>
+    </div>
+    <div id="button-container">
+        <button class="start-button start-g">START GAME</button>
+        <button class="more-button more-g">MORE GAMES</button>
+    </div>
+  </div>
   <div id="main" style="display: none;">
 
     <link href="https://fonts.googleapis.com/css2?family=No+va+Mono&family=Pirata+One&display=swap" rel="stylesheet">
@@ -259,18 +281,40 @@
     <label for="animations">ARRRnimations</label>
 </div>
 <script>
-    fetch('../splash.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('image-loader').innerHTML = data;
-      });
-    setTimeout(() => {
+    document.querySelector(".start-button").addEventListener("click", function () {
+        let gameElement = document.documentElement; // Fullscreen the whole page
+
+        if (gameElement.requestFullscreen) {
+            gameElement.requestFullscreen();
+        } else if (gameElement.mozRequestFullScreen) { // Firefox
+            gameElement.mozRequestFullScreen();
+        } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
+            gameElement.webkitRequestFullscreen();
+        } else if (gameElement.msRequestFullscreen) { // IE/Edge
+            gameElement.msRequestFullscreen();
+        }
         document.getElementById('image-loader').style.display = 'none';
         document.getElementById('main').style.display = '';
-        document.body.style.backgroundImage = 'none'; 
-        document.body.style.backgroundSize = '';
-        document.body.style.background = 'linear-gradient(#9df, #beeeff 80%, #9df)'; // Set new background
-    }, 2000);
+
+        // document.body.style.backgroundImage = 'none'; 
+        // document.body.style.backgroundSize = '';
+        document.body.style.background = 'linear-gradient(#9df, #beeeff 80%, #9df)';
+    });
+    document.querySelector(".more-button").addEventListener("click", function () {
+        window.location.href = "../../index.html"; 
+    });
+    // fetch('../splash.html')
+    //   .then(response => response.text())
+    //   .then(data => {
+    //     document.getElementById('image-loader').innerHTML = data;
+    //   });
+    // setTimeout(() => {
+    //     document.getElementById('image-loader').style.display = 'none';
+    //     document.getElementById('main').style.display = '';
+    //     document.body.style.backgroundImage = 'none'; 
+    //     document.body.style.backgroundSize = '';
+    //     document.body.style.background = 'linear-gradient(#9df, #beeeff 80%, #9df)'; // Set new background
+    // }, 2000);
 </script>
 </body>
 </html>

@@ -4,22 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lazy 2048</title>
-    <link rel="shortcut icon" href="../../assets/images/icon.png">
+    <link rel="shortcut icon" href="../assets/images/icon.png">
     <link rel="stylesheet" href="styles.css">
+    <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
+    <style>
+        .home-icon {
+            /* background: var(--bg); */
+            color: var(--gray-0);
+            height: 48px;
+            aspect-ratio: 1;
+            padding: 0;
+            border: none;
+            position: fixed;
+            top: 1rem;
+            left: 1rem;  
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            opacity: 0.25;
+            cursor: pointer;
+        }
+        .home-icon:hover {
+            opacity: 1;
+        }
+        .home-icon svg {
+            width: 65%;
+            fill: var(--gray-0); 
+        }
+        .logo img {
+            margin-bottom: 30px;
+        }
+        @media (min-width: 1024px) {
+            .game-logo img {
+                width: 300px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div id="image-loader"></div>
+    <div id="image-loader">
+        <div id="image-container">
+            <div class="logo">
+                <img src="../../assets/images/logo.png">
+            </div>
+            <div class="game-logo">
+                <img src="../assets/images/game-name/lazy-2048.png">
+            </div>
+        </div>
+        <div class="loader-custome">
+            <span class="loader"></span>
+        </div>
+        <div id="button-container">
+            <button class="start-button start-g" id=start-game>START GAME</button>
+            <button class="more-button more-g">MORE GAMES</button>
+        </div>
+    </div>
     <div id="main" style="display: none;">
-        <div id=container>
-            <canvas id=backcanvas></canvas>
-            <a href="../../index.html">
-                <button class="home-icon"  title="Home">
-                <svg class="" viewBox="0 0 24 24">
-                    <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"></path>
+        <a href="../../index.html">
+            <button class="home-icon" type="button" title="Home">
+              <svg class="" viewBox="0 0 24 24">
+                  <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"></path>
                 </svg>
-                </button>
-            </a>
-            <canvas id=canvas></canvas>
+              </button>
+          </a>
+        <div id=container><canvas id=backcanvas>
+        </canvas><canvas id=canvas></canvas>
             <div id=load>
                 <h1>Loading</h1>
             </div>
@@ -41,18 +90,44 @@
     </div>
     <script src="script.js"></script>
     <script>
-        fetch('../splash.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('image-loader').innerHTML = data;
-            });
-        setTimeout(() => {
+        document.querySelector(".start-button").addEventListener("click", function () {
+            let gameElement = document.documentElement; // Fullscreen the whole page
+
+            if (gameElement.requestFullscreen) {
+                gameElement.requestFullscreen();
+            } else if (gameElement.mozRequestFullScreen) { // Firefox
+                gameElement.mozRequestFullScreen();
+            } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
+                gameElement.webkitRequestFullscreen();
+            } else if (gameElement.msRequestFullscreen) { // IE/Edge
+                gameElement.msRequestFullscreen();
+            }
             document.getElementById('image-loader').style.display = 'none';
             document.getElementById('main').style.display = '';
-            document.body.style.backgroundImage = 'none';
-            document.body.style.backgroundSize = '';
+
             document.body.style.background = '#455A64';
-        }, 300);     
+            document.body.style.backgroundAttachment = 'fixed';
+            document.body.style.display = 'flex';
+            document.body.style.flexDirection = 'column';
+            document.body.style.fontFamily = "'VT323', monospace";
+            document.body.style.alignItems = 'center';
+            document.body.style.justifyContent = 'center';
+        });
+        document.querySelector(".more-button").addEventListener("click", function () {
+            window.location.href = "../../index.html"; 
+        });
+        // fetch('../splash.html')
+        //     .then(response => response.text())
+        //     .then(data => {
+        //         document.getElementById('image-loader').innerHTML = data;
+        //     });
+        // setTimeout(() => {
+        //     document.getElementById('image-loader').style.display = 'none';
+        //     document.getElementById('main').style.display = '';
+        //     document.body.style.backgroundImage = 'none';
+        //     document.body.style.backgroundSize = '';
+        //     document.body.style.background = '#263238';
+        // }, 300);
     </script>
 </body>
 </html>

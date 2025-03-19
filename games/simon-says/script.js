@@ -159,6 +159,9 @@ function showLoseMessage() {
   const message = `Game Over! Correct color was ${
     gamePattern[userPattern.length - 1]
   }.`;
+  const playAgain = document.getElementById("start-btn");
+  playAgain.style.display = "block";
+
   const loseMessageElement = document.getElementById("level-message");
   loseMessageElement.textContent = message;
   // set color to red

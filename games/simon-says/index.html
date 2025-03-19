@@ -6,34 +6,54 @@
     <title>Simon Says</title>
     <link rel="shortcut icon" href="../../assets/images/icon.png">
     <link rel="stylesheet" href="styles.css">
+    <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
     <style>
       .home-icon {
-            background: var(--bg);
-            color: var(--gray-0);
-            height: 48px;
-            aspect-ratio: 1;
-            padding: 0;
-            border: none;
-            /* position: fixed;  */
-            top: 1rem;
-            left: 1rem;  
-            border-radius: 50%;
-            display: grid;
-            place-items: center;
-            opacity: 0.25;
-            cursor: pointer;
-        }
-        .home-icon:hover {
-            opacity: 1;
-        }
-        .home-icon svg {
-            width: 65%;
-            fill: var(--gray-0); 
-        }
+          background: var(--bg);
+          color: var(--gray-0);
+          height: 48px;
+          aspect-ratio: 1;
+          padding: 0;
+          border: none;
+          /* position: fixed;  */
+          top: 1rem;
+          left: 1rem;  
+          border-radius: 50%;
+          display: grid;
+          place-items: center;
+          opacity: 0.25;
+          cursor: pointer;
+      }
+      .home-icon:hover {
+        opacity: 1;
+      }
+      .home-icon svg {
+        width: 65%;
+        fill: var(--gray-0); 
+      }
+      .logo img {
+        margin-bottom: 30px;
+      }
     </style>
 </head>
 <body>
-  <div id="image-loader"></div>
+  <div id="image-loader">
+    <div id="image-container">
+        <div class="logo">
+            <img src="../../assets/images/logo.png">
+        </div>
+        <div class="game-logo">
+            <img src="../assets/images/game-name/simon-says.png">
+        </div>
+    </div>
+    <div class="loader-custome">
+        <span class="loader"></span>
+    </div>
+    <div id="button-container">
+        <button class="start-button start-g" id="start-btn">START GAME</button>
+        <button class="more-button more-g">MORE GAMES</button>
+    </div>
+  </div>
   <div id="main" style="display: none;">
     <a href="../../index.html">
       <button class="home-icon" type="button" title="Home">
@@ -42,7 +62,6 @@
           </svg>
         </button>
     </a>
-    
     <h1>Simon Says Game</h1>
     <div id="game-container">
       <div class="color-btn" id="green"></div>
@@ -61,23 +80,55 @@
         Game Status: <span id="status">Waiting...</span>
       </p>
     </div>
-    <button id="start-btn">Start Game</button>
+    <button id="start-btn" class="play-again">Play Again</button>
     <p id="level-message" style="display: none;"></p>
   </div>
 <script src="script.js"></script>
 <script>
-    fetch('../splash.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('image-loader').innerHTML = data;
-      });
-    setTimeout(() => {
+    document.querySelector(".start-button").addEventListener("click", function () {
+        let gameElement = document.documentElement; // Fullscreen the whole page
+
+        if (gameElement.requestFullscreen) {
+            gameElement.requestFullscreen();
+        } else if (gameElement.mozRequestFullScreen) { // Firefox
+            gameElement.mozRequestFullScreen();
+        } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
+            gameElement.webkitRequestFullscreen();
+        } else if (gameElement.msRequestFullscreen) { // IE/Edge
+            gameElement.msRequestFullscreen();
+        }
         document.getElementById('image-loader').style.display = 'none';
         document.getElementById('main').style.display = '';
-        document.body.style.backgroundImage = 'none'; 
-        document.body.style.backgroundSize = '';
-        document.body.style.background = '#f4f4f9'; // Set new background
-    }, 2000);
+
+        document.body.style.background = '#f4f4f9';
+        document.body.style.backgroundAttachment = 'fixed';
+        document.body.style.display = 'flex';
+        document.body.style.flexDirection = 'column';
+        document.body.style.fontFamily = "'VT323', monospace";
+        document.body.style.alignItems = 'center';
+        document.body.style.justifyContent = 'center';
+    });
+    document.querySelector(".more-button").addEventListener("click", function () {
+        window.location.href = "../../index.html"; 
+    });
+
+    // font-family: Arial, Helvetica, sans-serif;
+    // background-color: #f4f4f9;
+    // text-align: center;
+    // padding: 50px;
+
+    // fetch('../splash.html')
+    //   .then(response => response.text())
+    //   .then(data => {
+    //     document.getElementById('image-loader').innerHTML = data;
+    //   });
+    // setTimeout(() => {
+    //     document.getElementById('image-loader').style.display = 'none';
+    //     document.getElementById('main').style.display = '';
+    //     document.body.style.backgroundImage = 'none'; 
+    //     document.body.style.backgroundSize = '';
+    //     document.body.style.background = '#f4f4f9'; // Set new background
+    // }, 2000);
 </script>
 </body>
 </html>

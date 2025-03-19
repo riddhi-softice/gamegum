@@ -55,10 +55,10 @@
 }
 
 body {
-  display: grid;
+  /* display: grid;
   place-items: center;
   min-height: 100vh;
-  overflow: hidden;
+  overflow: hidden; */
   background: var(--bg);
 }
 
@@ -474,7 +474,8 @@ form > [type="reset"] {
 
 /* Reset button */
 .game-reset {
-  background: var(--bg);
+  /* background: var(--bg); */
+  background: black;
   color: var(--gray-0);
   height: 48px;
   aspect-ratio: 1;
@@ -486,11 +487,12 @@ form > [type="reset"] {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  opacity: 0.25;
+  /* opacity: 0.25; */
 }
 
 .game-reset:hover {
   opacity: 1;
+  background: var(--blue);
 }
 
 .game-reset svg {
