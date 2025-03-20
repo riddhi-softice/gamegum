@@ -59,7 +59,7 @@
     color: #333;
   }
   
-  .play-again {
+  #play-again-btn {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 1.2rem;
@@ -71,8 +71,8 @@
     transition: background-color 0.3s;
   }
   
-  .play-again:hover {
-    background-color: #45a049;
+  #play-again-btn:hover {
+    color: black;
   }
   
   #status {

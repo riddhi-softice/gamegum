@@ -252,6 +252,10 @@ html {
     color: #118ab2;
     font-size: 0.9rem;
   }
+  input,
+    input + span {
+      display: none;
+  }
   
   @media (max-width: 1250px) {
     input,

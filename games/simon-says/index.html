@@ -80,14 +80,13 @@
         Game Status: <span id="status">Waiting...</span>
       </p>
     </div>
-    <button id="start-btn" class="play-again">Play Again</button>
+    <button id="play-again-btn">Play Again</button>
     <p id="level-message" style="display: none;"></p>
   </div>
 <script src="script.js"></script>
 <script>
     document.querySelector(".start-button").addEventListener("click", function () {
         let gameElement = document.documentElement; // Fullscreen the whole page
-
         if (gameElement.requestFullscreen) {
             gameElement.requestFullscreen();
         } else if (gameElement.mozRequestFullScreen) { // Firefox
@@ -100,22 +99,14 @@
         document.getElementById('image-loader').style.display = 'none';
         document.getElementById('main').style.display = '';
 
+        document.body.style.fontFamily = "Arial, Helvetica, sans-serif";
         document.body.style.background = '#f4f4f9';
-        document.body.style.backgroundAttachment = 'fixed';
-        document.body.style.display = 'flex';
-        document.body.style.flexDirection = 'column';
-        document.body.style.fontFamily = "'VT323', monospace";
-        document.body.style.alignItems = 'center';
-        document.body.style.justifyContent = 'center';
+        document.body.style.textAlign = 'center';
+        // document.body.style.padding = '50px';
     });
     document.querySelector(".more-button").addEventListener("click", function () {
         window.location.href = "../../index.html"; 
     });
-
-    // font-family: Arial, Helvetica, sans-serif;
-    // background-color: #f4f4f9;
-    // text-align: center;
-    // padding: 50px;
 
     // fetch('../splash.html')
     //   .then(response => response.text())

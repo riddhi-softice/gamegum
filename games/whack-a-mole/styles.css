@@ -90,7 +90,7 @@ h2 {
   top: 0;
 }
 
-#start {
+#play-again {
   font-family: "Nunito", sans-serif;
   display: inline-block;
   text-decoration: none;
@@ -103,7 +103,7 @@ h2 {
   margin: 1rem;
 }
 
-#start:hover {
+#play-again:hover {
   opacity: 0.8;
 }
   

@@ -30,17 +30,21 @@ var Game = new (function() {
     $('#scorenr').html(getScore());
     $('#tweeturl').hide();
     
-    if (Utils.isTouch())
+  if (Utils.isTouch())
       $('html').addClass('touch');
+  showSizes();
     
     $('[data-size]').each(function(i,el){
       var $el = $(el),
           size = $el.attr('data-size') * 1,
           label = sizes[size - 1];
+          // console.log(size);
+          
       $el.html(label)
       $el.on('touchstart mousedown', function(evt){
         if (Utils.isDoubleTapBug(evt)) return false;
         var size = sizes[$(evt.target).closest('[data-size]').attr('data-size') * 1 - 1];
+        // console.log(size , "si..");
         loadGame(size);
       })
     })
@@ -48,7 +52,7 @@ var Game = new (function() {
     $(window).on('resize', resize);
     $(window).on('orientationchange', resize);
 
-    showTitleScreen();
+    // showSizes();
     resize();
     
     var colors = ['#a7327c', '#c24b31', '#c0cd31']
@@ -65,10 +69,10 @@ var Game = new (function() {
       showMenu();
       return;
     }
-    setTimeout(function(){$('.hide0').removeClass('hide0')}, 300);
-    setTimeout(function(){$('.hide1').removeClass('hide1')}, 1300);
-    setTimeout(function(){$('.show01').removeClass('hidehs')}, 2300);
-    setTimeout(function(){$('.show01').removeClass('show01').addClass('hidehs'); addEventListeners();}, 4200);
+    // setTimeout(function(){$('.hide0').removeClass('hide0')}, 300);
+    // setTimeout(function(){$('.hide1').removeClass('hide1')}, 1300);
+    // setTimeout(function(){$('.show01').removeClass('hidehs')}, 2300);
+    // setTimeout(function(){$('.show01').removeClass('show01').addClass('hidehs'); addEventListeners();}, 4200);
   }
 
   function resize() {
@@ -165,6 +169,8 @@ var Game = new (function() {
   }
 
   function showSizes() {
+    console.log("here");
+    
     onHomeScreen = false;
     showGame();
     $('#boardsize').html('<span>Select a size</span>');
@@ -237,7 +243,6 @@ var Game = new (function() {
     });
     grid.state.save('empty');
 
-
     currentPuzzle = puzzle;
     grid.hint.active = true;
     grid.activateDomRenderer();
@@ -282,9 +287,7 @@ var Game = new (function() {
               }
             }
           }
-
           setTimeout(function() { $('#score').addClass('show');}, 0);
-
         }, 50);
       }, 2000);
     }, 1200);

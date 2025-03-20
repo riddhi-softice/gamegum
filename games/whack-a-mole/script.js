@@ -1,7 +1,7 @@
 const holes = document.querySelectorAll(".hole");
 const scoreBoard = document.querySelector(".score");
 const moles = document.querySelectorAll(".mole");
-const button = document.querySelector("#start");
+const button = document.querySelector("#play-again");
 let lastHole;
 let timeUp = false;
 let score = 0;
