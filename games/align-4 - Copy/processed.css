@@ -60,7 +60,7 @@ h2 {
 }
 
 .dif-options {
-  clear: both;
+  clear: both; 
   overflow: hidden;
   margin: 20px -7px 0;
 
@@ -184,12 +184,10 @@ h2 {
   }
 
   .p1 {
-    /* background-image: url($asset-path + 'p1-chip.png'); */
     background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/77020/p1-chip.png');
   }
 
   .p2 {
-    /* background-image: url($asset-path + 'p2-chip.png'); */
     background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/77020/p2-chip.png');
   }
 
@@ -227,3 +225,165 @@ h2 {
   100% { animation-timing-function: ease-out; transform: translateY(0); }
 }
 
+/* ------------------- */
+
+
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(800px 400px, #3f546b, #000);
+    overflow: hidden;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  .sidebar {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  /* 🎯 Adjust board size to fit mobile view */
+  .board {
+    width: 90vw; /* Make the board responsive */
+    height: 90vw; /* Make sure it's square */
+    max-width: 320px; /* Prevent board from getting too large */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 20px;
+    position: relative;
+  }
+
+  /* Adjust the columns to fit mobile properly */
+  .lit-columns {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+  }
+
+  .lit-columns div {
+    width: 16%; /* Reduce the width to 16% for 6 columns */
+    height: 100%;
+    margin: 1px;
+  }
+
+  .chips div {
+    width: 12vw;
+    max-width: 50px;
+    height: 12vw;
+    max-height: 50px;
+  }
+
+  /* Click columns should be aligned properly */
+  .click-columns div {
+    width: 16%; /* Same width as columns */
+    height: 100%;
+    margin: 0;
+  }
+
+  /* Adjust difficulty options */
+  .dif-options {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .dif-options div {
+    width: 15%;
+  }
+
+  .dif-options label {
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  /* Button styles for mobile */
+  .start button {
+    font-size: 18px;
+    padding: 8px 16px;
+    width: 80%;
+  }
+
+  .freeze .start {
+    display: none;
+  }
+}
+
+
+.chips {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.chips div {
+  position: absolute;
+  width: 15%;  /* Adjust width based on screen size */
+  height: 15%;  /* Ensure chips scale */
+  background-size: contain;
+}
+
+.chips .p1, .chips .p2 {
+  background-size: contain;
+  /* Ensure the chip image scales */
+}
+
+.chips .cursor {
+  transition: left 0.1s ease-out;
+  width: 15%; /* Adjust chip width on mobile */
+  height: 15%; /* Adjust chip height on mobile */
+}
+@media (max-width: 768px) {
+  .chips div {
+    width: 20%;  /* Adjust for mobile */
+    height: 20%; /* Adjust for mobile */
+  }
+
+  .chips .cursor {
+    width: 20%; /* Adjust cursor chip size */
+    height: 20%; /* Adjust cursor chip size */
+  }
+}
+@media (max-width: 768px) {
+  .board {
+    width: 100vw;  /* Make the board full-width on smaller screens */
+    height: 60vh;  /* Adjust height for mobile screens */
+  }
+
+  .chips div {
+    width: 20%;  /* Ensure chips are responsive in width */
+    height: 20%;  /* Adjust chip height */
+  }
+
+  .chips .cursor {
+    width: 20%;  /* Adjust cursor chip size on mobile */
+    height: 20%;  /* Adjust cursor chip size on mobile */
+  }
+}

@@ -1,80 +1,107 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Plankman</title>
-    <link rel="shortcut icon" href="../../assets/images/icon.png">
-    <link rel="stylesheet" href="styles.css">
-    <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
-    <style>
-        .home-icon {
-            background: var(--bg);
-            color: var(--gray-0);
-            height: 48px;
-            aspect-ratio: 1;
-            padding: 0;
-            border: none;
-            /* position: fixed; */
-            border-radius: 50%;
-            display: grid;
-            place-items: center;
-            opacity: 0.25;
-            cursor: pointer;
-        }
-        .home-icon:hover {
-            opacity: 1;
-        }
-        .home-icon svg {
-            width: 65%;
-            fill: var(--gray-0); 
-        }
-        .home-button {
-          background: black;
-          color: #ffd;
-          display: block;
-          height: 6vmin;
-          line-height: 6vmin;
-          text-align: center;
-          cursor: pointer;
-          width: 100%;
-          box-sizing: border-box;
-          border: 0;
-          font-family: 'Pirata One', serif;
-          font-size: 3.5vmin;
-          text-decoration: none;
-        }
-        .home-button:hover {
-          background: #222;
-          cursor: pointer;
-        }
-        .logo img {
-            margin-bottom: 30px;
-        }
-        .game-logo img {
-            margin-bottom: 60px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plankman</title>
+  <link rel="shortcut icon" href="../../assets/images/icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
+  <style>
+    .home-button {
+      background: black;
+      color: #ffd;
+      display: block;
+      height: 6vmin;
+      line-height: 6vmin;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      box-sizing: border-box;
+      border: 0;
+      font-family: 'Pirata One', serif;
+      font-size: 3.5vmin;
+      text-decoration: none;
+    }
+    .home-button:hover {
+      background: #222;
+      cursor: pointer;
+    }
+    .logo img {
+      margin-bottom: 30px;
+    }
+    .game-logo img {
+      margin-bottom: 60px;
+    }
+    /* Style the home button */
+    .home-icon {
+      width: 50px; /* Default width for larger screens */
+      height: 50px; /* Default height for larger screens */
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: fixed; /* Fix the button to the screen */
+      left: 5%;
+      transform: translateX(-50%); /* Center horizontally */
+      z-index: 1000; /* Ensure it's always on top */
+    }
+
+    .home-icon svg {
+      fill: #000; /* Color of the home icon */
+      width: 30px; /* Default width of the SVG */
+      height: 30px; /* Default height of the SVG */
+    }
+
+    /* Make the button responsive */
+    @media (max-width: 600px) {
+      .home-icon {
+        width: 40px; /* Smaller button on mobile */
+        height: 40px; /* Smaller button on mobile */
+      }
+
+      .home-icon svg {
+        width: 28px; /* Resize the icon */
+        height: 28px; /* Resize the icon */
+      }
+    }
+    @media (min-width: 1024px) {
+      .home-icon {
+        left: 1%;
+      }
+    }
+  </style>
 </head>
 <body>
   <div id="image-loader">
     <div id="image-container">
-        <div class="logo">
-            <img src="../../assets/images/logo.png">
-        </div>
-        <div class="game-logo">
-            <img src="../assets/images/game-name/plankman.png">
-        </div>
+      <div class="logo">
+        <img src="../../assets/images/logo.png">
+      </div>
+      <div class="game-logo">
+        <img src="../assets/images/game-name/plankman.png">
+      </div>
     </div>
     <div class="loader-custome">
-        <span class="loader"></span>
+      <span class="loader"></span>
     </div>
     <div id="button-container">
-        <button class="start-button start-g">START GAME</button>
-        <button class="more-button more-g">MORE GAMES</button>
+      <button class="start-button start-g" id="startButton">START GAME</button>
+      <button class="more-button more-g">MORE GAMES</button>
     </div>
   </div>
   <div id="main" style="display: none;">
+
+    <a href="../../index.html">
+      <button class="home-icon" type="button" title="Home">
+        <svg class="" viewBox="0 0 24 24">
+          <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"></path>
+        </svg>
+      </button>
+    </a>
 
     <link href="https://fonts.googleapis.com/css2?family=No+va+Mono&family=Pirata+One&display=swap" rel="stylesheet">
     <input type="checkbox" id="animations" />
@@ -92,7 +119,7 @@
       <div class="ship-body"></div>
       <div class="rudder"></div>
     </div>
-    <form>  
+    <form>
       <input type="radio" name="sentence" id="sentence-0" />
       <input type="radio" name="sentence" id="sentence-1" />
       <input type="radio" name="sentence" id="sentence-2" />
@@ -103,24 +130,24 @@
       <input type="radio" name="sentence" id="sentence-7" />
       <input type="radio" name="sentence" id="sentence-8" />
       <input type="radio" name="sentence" id="sentence-9" />
-    
-      <div id="intro" class="popup">
+
+      <div id="intro" class="popup" >
         <div class="map">
           <div class="map-body">
             <h1>Ahoy, me Hearties!</h1>
             <p>Plankman is a pirate-themed plankman game.</p>
             <p>The topic is "movies", can you guess all ten of them?</p>
             <p id="randomize">
-              <label for="sentence-0" class="label">Play</label>
-              <label for="sentence-1" class="label">Play</label>
-              <label for="sentence-2" class="label">Play</label>
-              <label for="sentence-3" class="label">Play</label>
-              <label for="sentence-4" class="label">Play</label>
-              <label for="sentence-5" class="label">Play</label>
-              <label for="sentence-6" class="label">Play</label>
-              <label for="sentence-7" class="label">Play</label>
-              <label for="sentence-8" class="label">Play</label>
-              <label for="sentence-9" class="label">Play</label>
+              <label for="sentence-0" class="label">Ready</label>
+              <label for="sentence-1" class="label">Ready</label>
+              <label for="sentence-2" class="label">Ready</label>
+              <label for="sentence-3" class="label">Ready</label>
+              <label for="sentence-4" class="label">Ready</label>
+              <label for="sentence-5" class="label">Ready</label>
+              <label for="sentence-6" class="label">Ready</label>
+              <label for="sentence-7" class="label">Ready</label>
+              <label for="sentence-8" class="label">Ready</label>
+              <label for="sentence-9" class="label">Ready</label>
             </p>
             <p>
               <a href="../../index.html" class="home-button">Back to Home</a>
@@ -128,9 +155,9 @@
           </div>
         </div>
       </div>
-    
-      <br/>
-    
+
+      <br />
+
       <input type="checkbox" id="letter-a" class="letter" />
       <input type="checkbox" id="letter-b" class="letter" />
       <input type="checkbox" id="letter-c" class="letter" />
@@ -157,7 +184,7 @@
       <input type="checkbox" id="letter-x" class="letter" />
       <input type="checkbox" id="letter-y" class="letter" />
       <input type="checkbox" id="letter-z" class="letter" />
-    
+
       <div id="person">
         <div class="legs"></div>
         <div class="arms"></div>
@@ -167,7 +194,7 @@
           <div class="eyes"></div>
         </div>
       </div>
-    
+
       <div id="puzzle">
         <span></span>
         <span></span>
@@ -200,7 +227,7 @@
         <span></span>
         <span></span>
       </div>
-    
+
       <div id="won" class="popup">
         <div class="map">
           <div class="map-body">
@@ -215,7 +242,7 @@
           </div>
         </div>
       </div>
-    
+
       <div id="lost" class="popup">
         <div class="map">
           <div class="map-body">
@@ -230,7 +257,7 @@
           </div>
         </div>
       </div>
-    
+
       <div id="labels">
         <label for="letter-a">a</label>
         <label for="letter-b">b</label>
@@ -240,7 +267,7 @@
         <label for="letter-f">f</label>
         <label for="letter-g">g</label>
         <label for="letter-h">h</label>
-        <label for="letter-i">i</label><br/>
+        <label for="letter-i">i</label><br />
         <label for="letter-j">j</label>
         <label for="letter-k">k</label>
         <label for="letter-l">l</label>
@@ -249,7 +276,7 @@
         <label for="letter-o">o</label>
         <label for="letter-p">p</label>
         <label for="letter-q">q</label>
-        <label for="letter-r">r</label><br/>
+        <label for="letter-r">r</label><br />
         <label for="letter-s">s</label>
         <label for="letter-t">t</label>
         <label for="letter-u">u</label>
@@ -259,7 +286,7 @@
         <label for="letter-y">y</label>
         <label for="letter-z">z</label>
       </div>
-    
+
       <div id="shark">
         <div class="shark-body"></div>
         <div class="shark-eye"></div>
@@ -271,50 +298,33 @@
         <div class="gill gill-3"></div>
       </div>
     </form>
-    <a href="../../index.html">
-      <button class="home-icon" type="button" title="Home">
-        <svg class="" viewBox="0 0 24 24">
-            <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"></path>
-          </svg>
-        </button>
-    </a>
+   
     <label for="animations">ARRRnimations</label>
-</div>
+  </div>
 <script>
     document.querySelector(".start-button").addEventListener("click", function () {
-        let gameElement = document.documentElement; // Fullscreen the whole page
+      let gameElement = document.documentElement; // Fullscreen the whole page
 
-        if (gameElement.requestFullscreen) {
-            gameElement.requestFullscreen();
-        } else if (gameElement.mozRequestFullScreen) { // Firefox
-            gameElement.mozRequestFullScreen();
-        } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
-            gameElement.webkitRequestFullscreen();
-        } else if (gameElement.msRequestFullscreen) { // IE/Edge
-            gameElement.msRequestFullscreen();
-        }
-        document.getElementById('image-loader').style.display = 'none';
-        document.getElementById('main').style.display = '';
+      if (gameElement.requestFullscreen) {
+        gameElement.requestFullscreen();
+      } else if (gameElement.mozRequestFullScreen) { // Firefox
+        gameElement.mozRequestFullScreen();
+      } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
+        gameElement.webkitRequestFullscreen();
+      } else if (gameElement.msRequestFullscreen) { // IE/Edge
+        gameElement.msRequestFullscreen();
+      }
+      document.getElementById('image-loader').style.display = 'none';
+      document.getElementById('main').style.display = '';
 
-        // document.body.style.backgroundImage = 'none'; 
-        // document.body.style.backgroundSize = '';
-        document.body.style.background = 'linear-gradient(#9df, #beeeff 80%, #9df)';
+      document.body.style.background = 'linear-gradient(#9df, #beeeff 80%, #9df)';
+      
+      document.body.classList.add('start-anim');
+  
     });
     document.querySelector(".more-button").addEventListener("click", function () {
-        window.location.href = "../../index.html"; 
+      window.location.href = "../../index.html";
     });
-    // fetch('../splash.html')
-    //   .then(response => response.text())
-    //   .then(data => {
-    //     document.getElementById('image-loader').innerHTML = data;
-    //   });
-    // setTimeout(() => {
-    //     document.getElementById('image-loader').style.display = 'none';
-    //     document.getElementById('main').style.display = '';
-    //     document.body.style.backgroundImage = 'none'; 
-    //     document.body.style.backgroundSize = '';
-    //     document.body.style.background = 'linear-gradient(#9df, #beeeff 80%, #9df)'; // Set new background
-    // }, 2000);
 </script>
 </body>
 </html>

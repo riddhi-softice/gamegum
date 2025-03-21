@@ -73,86 +73,112 @@
             <button class="more-button more-g">MORE GAMES</button>
         </div>
     </div>
-    <!-- <div class="" id="gameDiv" style="display: none;"> -->
-        <div id="container" style="display: none;">
-            <div id="loading" class="screen">
-                <div class="vertical">
-                    <h2>Loading..</h2>
-                    <p></p>
-                    <div id="loadinggrid" class="board">
-                        <table data-grid="loadinggrid" cellpadding="0" cellspacing="0">
-                            <tbody>
-                                <tr>
-                                    <td class="odd">
-                                        <div class="tile tile-2 loading">
-                                            <div class="inner"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div> 
-            <div id="game" class="screen">
-                <p id="hintMsg" class="topMsg"></p>
-                <p id="chooseSize" class="topMsg">Select a size to play...</p>
-                <h2 id="boardsize"></h2>
-                <div id="board" class="vertical board"></div>
 
-                <div id="menugrid" class="vertical board hidden">
-                    <table data-grid="menugrid" cellpadding="0" cellspacing="0">
+    <div id="container" style="display: none;">
+        <div id="loading" class="screen">
+            <div class="vertical">
+                <h2>Loading..</h2>
+                <p></p>
+                <div id="loadinggrid" class="board">
+                    <table data-grid="loadinggrid" cellpadding="0" cellspacing="0">
                         <tbody>
                             <tr>
                                 <td class="odd">
-                                    <div class="tile tile-2">
-                                        <div data-action="startGame" data-size="1" class="inner"></div>
-                                    </div>
-                                </td>
-                                <td class="even">
-                                    <div class="tile tile-1">
-                                        <div data-action="startGame" data-size="2" class="inner"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="even">
-                                    <div class="tile tile-1">
-                                        <div data-action="startGame" data-size="3" class="inner"></div>
-                                    </div>
-                                </td>
-                                <td class="odd">
-                                    <div class="tile tile-2">
-                                        <div data-action="startGame" data-size="4" class="inner"></div>
+                                    <div class="tile tile-2 loading">
+                                        <div class="inner"></div>
                                     </div>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
+            </div>
+        </div> 
+        <div id="game" class="screen">
+            <p id="hintMsg" class="topMsg"></p>
+            <p id="chooseSize" class="topMsg">Select a size to play...</p>
+            <h2 id="boardsize"></h2>
+            <div id="board" class="vertical board"></div>
 
-                <div id="score">
-                    <img id="trophy" src="img/trophy.png"><span id="scorenr">30744</span>
+            <div id="menugrid" class="vertical board hidden">
+                <table data-grid="menugrid" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td class="odd">
+                                <div class="tile tile-2">
+                                    <div data-action="startGame" data-size="1" class="inner"></div>
+                                </div>
+                            </td>
+                            <td class="even">
+                                <div class="tile tile-1">
+                                    <div data-action="startGame" data-size="2" class="inner"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="even">
+                                <div class="tile tile-1">
+                                    <div data-action="startGame" data-size="3" class="inner"></div>
+                                </div>
+                            </td>
+                            <td class="odd">
+                                <div class="tile tile-2">
+                                    <div data-action="startGame" data-size="4" class="inner"></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="score">
+                <img id="trophy" src="img/trophy.png"><span id="scorenr">30744</span>
+            </div>
+            <div id="bar">
+                <div class="iconcon" id="homeButton" title="Home">
+                    <div id="home" class="icon"></div>
                 </div>
-                <div id="bar">
-                    <div class="iconcon" data-action="undo">
-                        <div id="undo" class="icon"></div>
-                    </div>
-                    <div class="iconcon" data-action="back">
-                        <div id="back" class="icon"></div>
-                    </div>
-                    <a class="iconcon" id="tweeturl" target="_blank" href="about:blank" data-action="tweet"><span id="tweet"
-                            class="icon"></span></a>
-                    <div class="iconcon" data-action="help">
-                        <div id="help" class="icon"></div>
-                    </div>
+                <div class="iconcon" data-action="undo" title="Undo">
+                    <div id="undo" class="icon"></div>
+                </div>
+                <div class="iconcon" data-action="back" title="Back">
+                    <div id="back" class="icon"></div>
+                </div>
+                <!-- <a class="iconcon" id="tweeturl" target="_blank" href="about:blank" data-action="tweet"><span id="tweet" class="icon"></span></a> -->
+                <div class="iconcon" data-action="help" title="Help">
+                    <div id="help" class="icon"></div>
                 </div>
             </div>
         </div>
-        <a href="../../index.html" class="home-button">Back to Home</a>
-        <div id="feelsize"></div>
-    <!-- </div> -->
-   
+    </div>
+    <div id="feelsize"></div>
+    
+    <script>
+        document.getElementById("homeButton").addEventListener("click", function () {
+             window.location.href = "../../index.html";
+        });
+        document.querySelector(".more-button").addEventListener("click", function () {
+            window.location.href = "../../index.html"; 
+        });
+        document.querySelector(".start-button").addEventListener("click", function () {
+
+            let splashScreen = document.getElementById("image-loader");
+            if (splashScreen) {
+                splashScreen.remove();
+                // console.log("Splash screen removed");
+            }
+            let splashCss = document.querySelector('link[href="../assets/css/splash.css"]');
+            if (splashCss) {
+                splashCss.remove();
+                console.log("splash.css removed");
+            }
+            // document.getElementById('image-loader').style.display = 'none';
+            document.getElementById('container').style.display = '';
+            document.body.style.backgroundImage = 'none'; 
+            document.body.style.backgroundSize = '';
+            document.body.style.background = '#222';             
+        });
+    </script> 
     <script>
         var WebFontConfig = {
             custom: {
@@ -185,30 +211,5 @@
             document.write('<scr' + 'ipt src="' + scripts[i] + (Config.barph ? ('?barph=' + (new Date() * 1)) : '') + '"></scr' + 'ipt>');
         }
     </script>
-    <script>
-        document.querySelector(".more-button").addEventListener("click", function () {
-            window.location.href = "../../index.html"; 
-        });
-        document.querySelector(".start-button").addEventListener("click", function () {
-
-            let splashScreen = document.getElementById("image-loader");
-            if (splashScreen) {
-                splashScreen.remove();
-                // console.log("Splash screen removed");
-            }
-            let splashCss = document.querySelector('link[href="../assets/css/splash.css"]');
-            if (splashCss) {
-                splashCss.remove();
-                console.log("splash.css removed");
-            }
-
-            // document.getElementById('image-loader').style.display = 'none';
-            document.getElementById('container').style.display = '';
-
-            document.body.style.backgroundImage = 'none'; 
-            document.body.style.backgroundSize = '';
-            document.body.style.background = '#222';  
-        });
-    </script> 
 </body>
 </html>
