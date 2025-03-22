@@ -26,14 +26,14 @@ body, * {
 .logo img {
   width: 200px;
   height: auto;
-  margin-bottom: 10px; 
+  margin-bottom: 50px; 
 }
 
 /* Game Name */
 .game-logo img {
   width: 280px;
   height: auto;
-  margin-bottom: 30px; 
+  margin-bottom: 60px; 
 }
 
 /* Loader */
@@ -79,14 +79,24 @@ body, * {
   50% { width: 100%; }
   100% { width: 0%; }
 }
-#button-container {
+/* #button-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
   width: 100%;
   margin-top: 35px; 
+} */
+
+#button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  margin-top: 55px;
 }
+
 .start-button, .more-button {
   padding: 12px 60px;
   font-size: 22px;
@@ -114,7 +124,7 @@ body, * {
     padding-top: 23%;
   }
   .logo img { width: 180px; }
-  .game-logo img { width: 240px; }
+  .game-logo img { width: 260px; }
   .start-button, .more-button { width: 60%; font-size: 18px; padding: 8px 30px; }
 }
 
