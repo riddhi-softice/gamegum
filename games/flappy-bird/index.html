@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self';  script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com;  style-src 'self' 'unsafe-inline';  img-src 'self' https://*.googleusercontent.com https://*.googlesyndication.com;connect-src 'self';">
+
   <title>Flappy Bird</title>
   <link rel="shortcut icon" href="../../assets/images/icon.png">
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
@@ -70,9 +72,9 @@
 
   <a href="../../index.html" class="home-button" id="home" style="display: none;">Back to Home</a>
   <canvas id="myCanvas" style="display: none;"> </canvas>
- 
+  <script type="text/javascript" src="../assets/js/disable-click.js"></script>
   <script>
-      document.querySelector(".start-button").addEventListener("click", function () {
+    document.querySelector(".start-button").addEventListener("click", function () {
         let gameElement = document.documentElement; // Fullscreen the whole page
 
         if (gameElement.requestFullscreen) {
@@ -100,22 +102,6 @@
     document.querySelector(".more-button").addEventListener("click", function () {
         window.location.href = "../../index.html"; // Redirect "More Games" button
     });
-
-    // fetch('../splash.html')
-    //   .then(response => response.text())
-    //   .then(data => {
-    //     document.getElementById('image-loader').innerHTML = data;
-    //   });
-
-    // setTimeout(() => {
-    //   document.getElementById('image-loader').style.display = 'none';
-    //   document.getElementById('myCanvas').style.display = '';
-    //   document.getElementById('home').style.display = '';
-    //   resizeCanvas(); // Call resize function to set initial canvas size
-    //   document.body.style.backgroundImage = 'none'; 
-    //   document.body.style.backgroundSize = '';
-    //   document.body.style.background = 'cadetblue'; 
-    // }, 2000);
 
     // Function to resize canvas based on window size
     function resizeCanvas() {

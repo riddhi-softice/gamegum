@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self';  script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com;  style-src 'self' 'unsafe-inline';  img-src 'self' https://*.googleusercontent.com https://*.googlesyndication.com;connect-src 'self';">
+
   <title>Connect 4</title>
   <link rel="shortcut icon" href="../../assets/images/icon.png">
   <link rel="stylesheet" href="styles.css">
@@ -1449,6 +1451,7 @@
     </form>
     <input type="checkbox" id="dismiss" />
   </div>
+  <script type="text/javascript" src="../assets/js/disable-click.js"></script>
   <script>
     document.querySelector(".start-button").addEventListener("click", function () {
       let gameElement = document.documentElement; // Fullscreen the whole page
@@ -1474,18 +1477,6 @@
         document.querySelector(".game-reset").style.display = "grid";
     });
 
-    // fetch('../splash.html')
-    //   .then(response => response.text())
-    //   .then(data => {
-    //     document.getElementById('image-loader').innerHTML = data;
-    //   });
-    // setTimeout(() => {
-    //     document.getElementById('image-loader').style.display = 'none';
-    //     document.getElementById('main').style.display = '';
-    //     document.body.style.backgroundImage = 'none';
-    //     document.body.style.backgroundSize = '';
-    //     document.body.style.background = '#302b2b'; // Set new background
-    // }, 2000);
   </script>
 </body>
 </html>

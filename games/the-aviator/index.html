@@ -5,13 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>The Aviator: The Game</title>
-	<meta name="description"
-		content="Demo of the game: The Making of 'The Aviator': Animating a Basic 3D Scene with Three.js" />
-	<meta name="keywords"
-		content="three.js, webgl, tutorial, game, 3d, animation, airplane, web development, javascript" />
+	<meta name="description" content="Demo of the game: The Making of 'The Aviator': Animating a Basic 3D Scene with Three.js" />
+	<meta name="keywords" content="three.js, webgl, tutorial, game, 3d, animation, airplane, web development, javascript" />
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self';  script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com;  style-src 'self' 'unsafe-inline';  img-src 'self' https://*.googleusercontent.com https://*.googlesyndication.com;connect-src 'self';">
 	<link rel="shortcut icon" href="favicon.ico">
-	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700italic' rel='stylesheet'
-		type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/demo.css" />
 	<link rel="stylesheet" type="text/css" href="css/game.css" />
 	<script type="text/javascript" src="js/TweenMax.min.js"></script>
@@ -108,47 +106,34 @@
 			<a class="demo-link" href="part1.html">Part 1</a>
 			<a class="demo-link" href="part2.html">Part 2</a>
 		</nav> -->
+	<script type="text/javascript" src="../assets/js/disable-click.js"></script>
 	<script>
 		document.querySelector(".start-button").addEventListener("click", function () {
         let gameElement = document.documentElement; // Fullscreen the whole page
 
-        if (gameElement.requestFullscreen) {
-            gameElement.requestFullscreen();
-        } else if (gameElement.mozRequestFullScreen) { // Firefox
-            gameElement.mozRequestFullScreen();
-        } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
-            gameElement.webkitRequestFullscreen();
-        } else if (gameElement.msRequestFullscreen) { // IE/Edge
-            gameElement.msRequestFullscreen();
-        }
+			if (gameElement.requestFullscreen) {
+				gameElement.requestFullscreen();
+			} else if (gameElement.mozRequestFullScreen) { // Firefox
+				gameElement.mozRequestFullScreen();
+			} else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
+				gameElement.webkitRequestFullscreen();
+			} else if (gameElement.msRequestFullscreen) { // IE/Edge
+				gameElement.msRequestFullscreen();
+			}
 
-        document.getElementById('image-loader').style.display = 'none';
-        document.getElementById('gameHolder').style.display = 'block';
-        document.body.classList.remove("loader-background"); 
-        // Change background
-        document.body.style.background = 'url("https://res.cloudinary.com/dshmwg7vw/image/upload/v1550486966/OCCNFD0.jpg")'; 
-        document.body.style.backgroundSize = 'contain';
-        document.body.style.backgroundRepeat = 'repeat';
-        document.body.style.backgroundPosition = 'relative';
-    });
-    // Redirect "More Games" button
-    document.querySelector(".more-button").addEventListener("click", function () {
-        window.location.href = "../../index.html";
-    });
-
-		// fetch('../splash.html')
-		// 	.then(response => response.text())
-		// 	.then(data => {
-		// 		document.getElementById('image-loader').innerHTML = data;
-		// 	});
-		// setTimeout(() => {
-		// 	document.getElementById('image-loader').style.display = 'none';
-		// 	document.getElementById('gameHolder').style.display = '';
-		// 	document.body.style.backgroundImage = 'none';
-		// 	document.body.style.backgroundSize = '';
-		// 	document.body.style.background = 'black'; // Set new background
-		// }, 2000);
+			document.getElementById('image-loader').style.display = 'none';
+			document.getElementById('gameHolder').style.display = 'block';
+			document.body.classList.remove("loader-background"); 
+			// Change background
+			document.body.style.background = 'url("https://res.cloudinary.com/dshmwg7vw/image/upload/v1550486966/OCCNFD0.jpg")'; 
+			document.body.style.backgroundSize = 'contain';
+			document.body.style.backgroundRepeat = 'repeat';
+			document.body.style.backgroundPosition = 'relative';
+		});
+		// Redirect "More Games" button
+		document.querySelector(".more-button").addEventListener("click", function () {
+			window.location.href = "../../index.html";
+		});
 	</script>
 </body>
-
 </html>

@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self';  script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com;  style-src 'self' 'unsafe-inline';  img-src 'self' https://*.googleusercontent.com https://*.googlesyndication.com;connect-src 'self';">
+
   <title>Emoji-Catcher</title>
   <link rel="shortcut icon" href="../../assets/images/icon.png">
   <link rel="stylesheet" href="styles.css">
@@ -98,6 +100,7 @@
       </div>
     </div>
   </div>
+  <script type="text/javascript" src="../assets/js/disable-click.js"></script>
   <script src="script.js"></script>
   <script>
       document.querySelector(".start-button").addEventListener("click", function () {
@@ -123,19 +126,6 @@
     document.querySelector(".more-button").addEventListener("click", function () {
         window.location.href = "../../index.html"; 
     });
-
-    // fetch('../splash.html')
-    //   .then(response => response.text())
-    //   .then(data => {
-    //     document.getElementById('image-loader').innerHTML = data;
-    //   });
-    // setTimeout(() => {
-    //   document.getElementById('image-loader').style.display = 'none';
-    //   document.getElementById('main').style.display = '';
-    //   document.body.style.backgroundImage = 'none';
-    //   document.body.style.backgroundSize = '';
-    //   document.body.style.background = 'rgb(10, 10, 10)'; // Set new background
-    // }, 2000);
   </script>
 </body>
 </html>

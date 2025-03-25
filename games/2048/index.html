@@ -8,6 +8,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self';  script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com;  style-src 'self' 'unsafe-inline';  img-src 'self' https://*.googleusercontent.com https://*.googlesyndication.com;connect-src 'self';">
+
   <link rel="shortcut icon" href="../../assets/images/icon.png">
   <link href="style/main.css" rel="stylesheet" type="text/css">
   <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
@@ -122,6 +124,7 @@
     </p>
   </div>
 
+  <script type="text/javascript" src="../assets/js/disable-click.js"></script>
   <script src="js/bind_polyfill.js"></script>
   <script src="js/classlist_polyfill.js"></script>
   <script src="js/animframe_polyfill.js"></script>
@@ -133,11 +136,6 @@
   <script src="js/game_manager.js"></script>
   <script src="js/application.js"></script>
   <script>
-    // fetch('../splash.html')
-    //   .then(response => response.text())
-    //   .then(data => {
-    //     document.getElementById('image-loader').innerHTML = data;
-    //   });
     document.querySelector(".start-button").addEventListener("click", function () {
         let gameElement = document.documentElement; // Fullscreen the whole page
 
@@ -162,13 +160,6 @@
     document.querySelector(".more-button").addEventListener("click", function () {
         window.location.href = "../../index.html";
     });
-
-    // setTimeout(() => {
-    //   document.getElementById('image-loader').style.display = 'none';
-    //   document.getElementById('main').style.display = 'block';
-    //   document.body.style.backgroundImage = 'none'; 
-    //   document.body.style.backgroundSize = ''; 
-    // }, 200000); 
   </script>
 </body>
 </html>
