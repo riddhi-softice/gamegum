@@ -137,6 +137,8 @@
 
         <div id="footer-placeholder"></div>
     </section>
+
+    <script src="Assert/js/disable_source.js"></script>
     <script>
         fetch('_footer.html')
             .then(response => response.text())
@@ -146,87 +148,6 @@
     </script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Get the current URL path
-            const currentPath = window.location.pathname;
-            // console.log('currentPath..', currentPath);
-
-            // Define the links and their corresponding active classes
-            const links = {
-                'vehicle.html': 'active',
-                'life.html': 'active',
-                'life.html': 'active',
-                'home-insurance.html': 'active',
-                'contact-us.html': 'active',
-                'about-us.html': 'active',
-                'privacy-policy.html': 'active',
-            };
-
-            document.querySelectorAll("a").forEach(link => {
-                // console.log("Checking link:", link.href, "Expected path:", link.getAttribute('href'));
-
-                for (const [path, activeClass] of Object.entries(links)) {
-                    if (link.getAttribute('href') && link.getAttribute('href').endsWith(path)) {
-                        if (currentPath.endsWith(path)) { 
-                            // console.log("Match found! Adding class:", activeClass, "to link:", link);
-                            link.classList.add(activeClass);
-                        }
-                    }
-                }
-            });
-
-            // Services menu handling
-            const servicesMenu = document.getElementById('services-menu');
-            if (servicesMenu) {
-                servicesMenu.querySelectorAll('ul li a').forEach(link => {
-                    if (link.getAttribute('href') && currentPath.endsWith(link.getAttribute('href'))) {
-                        console.log("Service menu match found for:", link.getAttribute('href'));
-                        link.parentElement.classList.add('active');
-                        servicesMenu.classList.add('active');
-                    }
-                });
-            }
-        });
-
-        // category menu default open
-        // document.addEventListener("DOMContentLoaded", function () {
-        //     const showServicesCheckbox = document.getElementById('show-services');
-        //     const servicesLabel = document.querySelector('.services-label');
-        //     const desktopLink = document.querySelector('.desktop-link');
-
-        //     // Ensure the checkbox is checked initially
-        //     showServicesCheckbox.checked = true;
-        //     // Set the icon to the up arrow by default and add the active class
-        //     servicesLabel.querySelector('i').classList.remove('fa-angle-down');
-        //     servicesLabel.querySelector('i').classList.add('fa-angle-up');
-        //     servicesLabel.classList.add('active'); // When open
-        //     servicesLabel.classList.remove('active'); // When closed
-
-        //     // Set the icon and classes for the initial state
-        //     const updateIconAndClass = () => {
-        //         if (showServicesCheckbox.checked) {
-        //             // Dropdown open
-        //             servicesLabel.querySelector('i').classList.remove('fa-angle-down');
-        //             servicesLabel.querySelector('i').classList.add('fa-angle-up');
-        //             desktopLink.classList.add('active'); // Add active class to .desktop-link
-        //             servicesLabel.classList.add('active'); // Add active class
-        //             servicesLabel.classList.add('active'); // Add active class
-        //         } else {
-        //             // Dropdown closed
-        //             servicesLabel.querySelector('i').classList.remove('fa-angle-up');
-        //             servicesLabel.querySelector('i').classList.add('fa-angle-down');
-        //             desktopLink.classList.remove('active'); // Remove active class from .desktop-link
-        //             servicesLabel.classList.remove('active'); // Remove active class
-        //         }
-        //     };
-
-        //     // Initialize the default state
-        //     updateIconAndClass();
-
-        //     // Add event listener for checkbox state change
-        //     showServicesCheckbox.addEventListener('change', updateIconAndClass);
-        // });
-
         document.addEventListener("DOMContentLoaded", () => {
             const menuItems = document.querySelectorAll('.menu-item');
             const currentPath = location.pathname; // e.g., "/en/finance/"

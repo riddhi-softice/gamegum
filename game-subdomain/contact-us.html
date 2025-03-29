@@ -117,6 +117,7 @@
 
         <div id="footer-placeholder"></div>
     </section>
+    <script src="Assert/js/disable_source.js"></script>
     <script>
          fetch('_footer.html')
             .then(response => response.text())
@@ -124,22 +125,5 @@
                 document.getElementById('footer-placeholder').innerHTML = data;
             });
     </script>
-
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const menuItems = document.querySelectorAll('.menu-item');
-            const currentPath = location.pathname; // e.g., "/en/finance/"
-            console.log(currentPath, "currentPath")
-            menuItems.forEach(item => {
-                const endpoint = `/${item.dataset.endpoint}/`; // Add slashes for matching
-                if (currentPath.includes(endpoint)) {
-                    console.log(endpoint, "endpoint")
-                    item.style.color = "White";
-                    item.style.backgroundColor = "#2F9CD9";
-                    item.style.borderRadius = "10px";
-                }
-            });
-        }); 
-    </script> -->
 </body>
 </html>

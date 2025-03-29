@@ -154,6 +154,8 @@
 
         <div id="footer-placeholder"></div>
     </section>
+
+    <script src="Assert/js/disable_source.js"></script>
     <script>
          fetch('_footer.html')
             .then(response => response.text())
@@ -162,51 +164,6 @@
             });
     </script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Get the current URL path
-            const currentPath = window.location.pathname;
-            console.log('currentPath', currentPath);
-
-            // Define the links and their corresponding active classes
-            const links = {
-                '/carro.html': 'active_carro',
-                '/health.html': 'active_health',
-                '/contact-us.html': 'active_contact',
-                '/about-us.html': 'active_about',
-                '/privacy-policy.html': 'active_privacy',
-            };
-
-            // Check if the current path matches any of the links
-            for (const [path, activeClass] of Object.entries(links)) {
-                if (currentPath.includes(path)) {
-                    // Set the active class on the corresponding link
-                    const activeLink = document.querySelector(`a[href="${path}"]`);
-                    if (activeLink) {
-                        activeLink.classList.add(activeClass);
-                    }
-
-                    // Check if the current path matches any link inside the Services <ul>
-                    const servicesMenu = document.getElementById('services-menu');
-                    const serviceLinks = servicesMenu.querySelectorAll('ul li a');
-                    console.log("serviceLinks", serviceLinks);
-
-                    // const activeClass = document.getElementById('.desktop-link');
-                    // console.log(".desktop-link", activeClass);
-
-                    serviceLinks.forEach(link => {
-                        if (link.getAttribute('href') === path) {
-                            // Add active class to the inner <li>
-                            link.parentElement.classList.add('active');
-                            // Add active class to the outer <li>
-                            servicesMenu.classList.add('active');
-                        }
-                    });
-
-                    break; // Exit the loop once a match is found
-                }
-            }
-        });
-
         document.addEventListener("DOMContentLoaded", function () {
             const showServicesCheckbox = document.getElementById('show-services');
             const servicesLabel = document.querySelector('.services-label');

@@ -166,6 +166,8 @@
 
         <div id="footer-placeholder"></div>
     </section>
+
+    <script src="Assert/js/disable_source.js"></script>
     <script>
          fetch('_footer.html')
             .then(response => response.text())
@@ -173,91 +175,7 @@
                 document.getElementById('footer-placeholder').innerHTML = data;
             });
     </script>
-
     <script>
-        // document.addEventListener("DOMContentLoaded", function () {
-        //     // Get the current URL path
-        //     const currentPath = window.location.pathname;
-        //     console.log('currentPath', currentPath);
-
-        //     // Define the links and their corresponding active classes
-        //     const links = {
-        //         '/carro.html': 'active_carro',
-        //         '/health.html': 'active_health',
-        //         '/contact-us.html': 'active_contact',
-        //         '/about-us.html': 'active_about',
-        //         '/privacy-policy.html': 'active_privacy',
-        //     };
-
-        //     // Check if the current path matches any of the links
-        //     for (const [path, activeClass] of Object.entries(links)) {
-        //         if (currentPath.includes(path)) {
-        //             // Set the active class on the corresponding link
-        //             const activeLink = document.querySelector(`a[href="${path}"]`);
-        //             if (activeLink) {
-        //                 activeLink.classList.add(activeClass);
-        //             }
-
-        //             // Check if the current path matches any link inside the Services <ul>
-        //             const servicesMenu = document.getElementById('services-menu');
-        //             const serviceLinks = servicesMenu.querySelectorAll('ul li a');
-        //             console.log("serviceLinks", serviceLinks);
-
-        //             // const activeClass = document.getElementById('.desktop-link');
-        //             // console.log(".desktop-link", activeClass);
-
-        //             serviceLinks.forEach(link => {
-        //                 if (link.getAttribute('href') === path) {
-        //                     // Add active class to the inner <li>
-        //                     link.parentElement.classList.add('active');
-        //                     // Add active class to the outer <li>
-        //                     servicesMenu.classList.add('active');
-        //                 }
-        //             });
-
-        //             break; // Exit the loop once a match is found
-        //         }
-        //     }
-        // });
-
-        // document.addEventListener("DOMContentLoaded", function () {
-        //     const showServicesCheckbox = document.getElementById('show-services');
-        //     const servicesLabel = document.querySelector('.services-label');
-        //     const desktopLink = document.querySelector('.desktop-link');
-
-        //     // Ensure the checkbox is checked initially
-        //     showServicesCheckbox.checked = true;
-        //     // Set the icon to the up arrow by default and add the active class
-        //     servicesLabel.querySelector('i').classList.remove('fa-angle-down');
-        //     servicesLabel.querySelector('i').classList.add('fa-angle-up');
-        //     servicesLabel.classList.add('active'); // When open
-        //     servicesLabel.classList.remove('active'); // When closed
-
-        //     // Set the icon and classes for the initial state
-        //     const updateIconAndClass = () => {
-        //         if (showServicesCheckbox.checked) {
-        //             // Dropdown open
-        //             servicesLabel.querySelector('i').classList.remove('fa-angle-down');
-        //             servicesLabel.querySelector('i').classList.add('fa-angle-up');
-        //             desktopLink.classList.add('active'); // Add active class to .desktop-link
-        //             servicesLabel.classList.add('active'); // Add active class
-        //             servicesLabel.classList.add('active'); // Add active class
-        //         } else {
-        //             // Dropdown closed
-        //             servicesLabel.querySelector('i').classList.remove('fa-angle-up');
-        //             servicesLabel.querySelector('i').classList.add('fa-angle-down');
-        //             desktopLink.classList.remove('active'); // Remove active class from .desktop-link
-        //             servicesLabel.classList.remove('active'); // Remove active class
-        //         }
-        //     };
-
-        //     // Initialize the default state
-        //     updateIconAndClass();
-
-        //     // Add event listener for checkbox state change
-        //     showServicesCheckbox.addEventListener('change', updateIconAndClass);
-        // });
-
         document.addEventListener("DOMContentLoaded", () => {
             const menuItems = document.querySelectorAll('.menu-item');
             const currentPath = location.pathname; // e.g., "/en/finance/"

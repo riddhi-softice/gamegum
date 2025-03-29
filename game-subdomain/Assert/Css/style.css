@@ -4,14 +4,9 @@
     src: url(../font/GothamNarrow-Medium.otf);
   }
   
-  html, body {
-      background: #1f2122;
+  /* html, body {
+    background: #1f2122;
   }
-  /* .app_wrapper,
-  .container {
-    background-color :#27292a !important;
-  } */
-
   body {
     margin: 0;
     padding: 0;
@@ -20,8 +15,49 @@
     background-size: cover;
     overflow: hidden;
     font-family: "Montserrat", sans-serif;
-  } 
+  }  */
 
+    
+ html, body {
+  /*background: #1f2122;*/
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  position: relative;
+  background-color: #1f2122; /* fallback color */
+}
+
+/* Pseudo-element for smooth background transition */
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../image/bg.png);
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* Smooth transition */
+  z-index: -1; /* Put behind content */
+}
+
+/* Apply opacity transition on page load */
+body.loaded::after {
+  opacity: 1;
+}
+
+
+
+  /* .app_wrapper,
+  .container {
+    background-color :#27292a !important;
+  } */
   a,
   span,
   a:hover,

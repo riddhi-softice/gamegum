@@ -240,7 +240,28 @@
                                     <h4><em>Your Gaming</em> Library</h4>
                                 </div>
                                 <div class="header-text">
-                                    <div class="row">                                      
+                                    <div class="row">     
+                                        
+                                        <div class="col-lg-6 col-sm-12">
+                                            <a href="play.html" onclick="return showAdThenRedirect(event, 'play.html', 'the-aviator')">
+                                                <div class="item big-box-hight">
+                                                    <img src="assets/images/195-150/the-aviator.webp" loading="lazy" alt="">
+                                                    <h4 class="main-g">Ad-test</h4>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        
+                                        <!-- Custom Ad Popup -->
+                                        <div id="adPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8);">
+                                            <div style="width:300px; height:250px; background:#fff; margin:100px auto; padding:20px; text-align:center;">
+                                                <p>Advertisement</p>
+                                                <a href="https://your-ad-url.com" target="_blank">
+                                                    <img src="your-ad-banner.jpg" width="300" height="250" alt="Ad">
+                                                </a>
+                                                <button onclick="closeAdPopup()">Close</button>
+                                            </div>
+                                        </div>
+
 
                                         <div class="col-lg-6 col-sm-12">
                                             <a href="play.html" onclick="setDynamicBackground('the-aviator')">
@@ -546,6 +567,20 @@
                         </div>
                     </div>
                     <!-- ***** About game End ***** -->
+
+                    
+                    <!-- Custom Ad Popup -->
+                    <div id="adPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8);">
+                        <div style="width:300px; height:250px; background:#fff; margin:100px auto; padding:20px; text-align:center;">
+                            <p>Advertisement</p>
+                            <a href="https://your-ad-url.com" target="_blank">
+                                <img src="your-ad-banner.jpg" width="300" height="250" alt="Ad">
+                            </a>
+                            <button onclick="closeAdPopup()">Close</button>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -561,6 +596,25 @@
     <script src="assets/js/custom.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- <script src="assets/js/main.js"></script> -->
+
+    <script>
+        function showAdThenRedirect(event, targetUrl, gameName) {
+            event.preventDefault(); // Prevent immediate navigation
+        
+            // Show the ad popup
+            document.getElementById("adPopup").style.display = "block";
+        
+            // Wait for 3 seconds, then redirect to the game page
+            // setTimeout(function () {
+            //     window.location.href = targetUrl; // Redirect to the game page after 3 seconds
+            // }, 3000); // Adjust delay as needed
+        }
+        
+        function closeAdPopup() {
+            document.getElementById("adPopup").style.display = "none"; // Close the ad
+        }
+        </script>
+
     <script>
         fetch('_footer.html')
         .then(response => response.text())
