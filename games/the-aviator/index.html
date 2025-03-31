@@ -7,7 +7,6 @@
 	<title>The Aviator: The Game</title>
 	<meta name="description" content="Demo of the game: The Making of 'The Aviator': Animating a Basic 3D Scene with Three.js" />
 	<meta name="keywords" content="three.js, webgl, tutorial, game, 3d, animation, airplane, web development, javascript" />
-	<meta http-equiv="Content-Security-Policy" content="default-src 'self';  script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com;  style-src 'self' 'unsafe-inline';  img-src 'self' https://*.googleusercontent.com https://*.googlesyndication.com;connect-src 'self';">
 	<link rel="shortcut icon" href="favicon.ico">
 	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/demo.css" />
@@ -125,10 +124,9 @@
 			document.getElementById('gameHolder').style.display = 'block';
 			document.body.classList.remove("loader-background"); 
 			// Change background
-			document.body.style.background = 'url("https://res.cloudinary.com/dshmwg7vw/image/upload/v1550486966/OCCNFD0.jpg")'; 
-			document.body.style.backgroundSize = 'contain';
-			document.body.style.backgroundRepeat = 'repeat';
-			document.body.style.backgroundPosition = 'relative';
+			document.body.style.backgroundPosition = 'absolute';
+			document.body.style.background = 'background: -webkit-linear-gradient(#e4e0ba, #f7d9aa)'; 
+			document.body.style.background = 'linear-gradient(#e4e0ba, #f7d9aa)'; 
 		});
 		// Redirect "More Games" button
 		document.querySelector(".more-button").addEventListener("click", function () {
