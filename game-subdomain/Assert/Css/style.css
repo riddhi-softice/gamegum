@@ -29,7 +29,8 @@
 
 body {
   position: relative;
-  background-color: #1f2122; /* fallback color */
+  background-color: #1f2122; 
+  padding : 0 !important;
 }
 
 /* Pseudo-element for smooth background transition */
@@ -50,6 +51,12 @@ body::after {
 /* Apply opacity transition on page load */
 body.loaded::after {
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+  body::after {
+    background-image: none;
+  }
 }
 
 
