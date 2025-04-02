@@ -30,11 +30,12 @@
 		//   console.log("box" + box);
 		//   console.log("header" + header);
 
-		if (scroll >= box - header) {
-			$("header").addClass("background-header");
-		} else {
-			$("header").removeClass("background-header");
-		}
+		// set sticky heder now
+		// if (scroll >= box - header) {
+		// 	$("header").addClass("background-header");
+		// } else {
+		// 	$("header").removeClass("background-header");
+		// }
 	});
 
 	$('.filters ul li').click(function () {

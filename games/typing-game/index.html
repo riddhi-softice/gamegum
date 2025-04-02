@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Game</title>
   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
@@ -68,9 +69,9 @@
         </div>
     </div>
     <div id="main" style="display: none;">
-        <!-- <button id="settings-btn" class="settings-btn">
+        <button id="settings-btn" class="settings-btn" style="display: none;">
             <i class="fas fa-cog"></i>
-        </button> -->
+        </button>
         <div class="settings" id="settings">
             <a href="../../index.html">
                 <button class="home-icon" type="button" title="Home">
@@ -103,7 +104,7 @@
     <script>
         document.querySelector(".start-button").addEventListener("click", function () {
             let gameElement = document.documentElement; // Fullscreen the whole page
-
+            
             if (gameElement.requestFullscreen) {
                 gameElement.requestFullscreen();
             } else if (gameElement.mozRequestFullScreen) { // Firefox
@@ -116,6 +117,15 @@
             document.getElementById('image-loader').style.display = 'none';
             document.getElementById('main').style.display = '';
 
+            // let splashCss = document.querySelector('link[href="../assets/css/splash.css"]');
+            // if (splashCss) {
+            //     splashCss.remove(); // Removes the splash.css file
+            // }
+            // let imageLoader = document.getElementById("image-loader");
+            // if (imageLoader) {
+            //     imageLoader.remove(); // Removes the image-loader element
+            // }
+
             document.body.style.backgroundColor = 'var(--primary-color)';
             document.body.style.backgroundImage = 'linear-gradient(315deg, var(--primary-color) 0%, var(--gradient-color) 100%)';
             document.body.style.display = 'flex';
@@ -127,18 +137,6 @@
         document.querySelector(".more-button").addEventListener("click", function () {
             window.location.href = "../../index.html"; 
         });
-        // fetch('../splash.html')
-        //     .then(response => response.text())
-        //     .then(data => {
-        //         document.getElementById('image-loader').innerHTML = data;
-        //     });
-        // setTimeout(() => {
-        //     document.getElementById('image-loader').style.display = 'none';
-        //     document.getElementById('main').style.display = '';
-        //     document.body.style.backgroundImage = 'none';
-        //     document.body.style.backgroundSize = '';
-        //     document.body.style.background = 'var(--primary-color)';
-        // }, 2000);
     </script>
 </body>
 </html>

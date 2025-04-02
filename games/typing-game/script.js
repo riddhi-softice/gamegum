@@ -8,29 +8,6 @@ const settings = document.getElementById("settings");
 const settingsForm = document.getElementById("settings-form");
 const difficultySelect = document.getElementById("difficulty");
 
-// List of words for game
-// const words = [
-//   "sigh",
-//   "tense",
-//   "airplane",
-//   "ball",
-//   "pies",
-//   "juice",
-//   "warlike",
-//   "bad",
-//   "north",
-//   "dependent",
-//   "steer",
-//   "silver",
-//   "highfalutin",
-//   "superficial",
-//   "quince",
-//   "eight",
-//   "feeble",
-//   "admit",
-//   "drag",
-//   "loving",
-// ];
 const words = [
     "sigh", "tense", "airplane", "ball", "pies", "juice",
     "warlike", "bad", "north", "dependent", "steer", "silver", 
@@ -42,10 +19,10 @@ const words = [
     "whisper", "jumpy", "rocket", "disk", "cookies",
     "soda", "aggressive", "poor", "east", 
     "navigate", "bronze", "arrogant", "fake", "mango",
-    "five", "frail", "declare", "tug", 
+    "five", "frail", "declare", "tug", "september",
     "breathe", "stiff", "blimp", "cube", "tarts",
-    "rotten", "west", "supportive"
-  ];
+    "rotten", "west", "supportive","wednesday"
+];
   
 let randomWord;
 let score = 0;
@@ -85,10 +62,37 @@ function gameOver() {
   endgameElement.innerHTML = `
     <h1>Time ran out</h1>
     <p>Your final score is ${score}</p>
-    <button onclick="history.go(0)">Play Again</button>
-    `;
+    <button id="play-again">Play Again</button>
+  `;
   endgameElement.style.display = "flex";
+
+  document.getElementById("play-again").addEventListener("click", function () {
+    resetGame();
+  });
 }
+
+function resetGame() { 
+  score = 0;
+  time = 10;
+  scoreElement.innerText = score;
+  timeElement.innerText = time + "s";
+  text.value = "";
+  endgameElement.style.display = "none";
+
+  addWordToDom();
+
+  clearInterval(timeInterval);
+  setInterval(updateTime, 1000);
+}
+
+// function gameOver() {
+//   endgameElement.innerHTML = `
+//     <h1>Time ran out</h1>
+//     <p>Your final score is ${score}</p>
+//     <button onclick="history.go(0)">Play Again</button>
+//     `;
+//   endgameElement.style.display = "flex";
+// }
 
 text.addEventListener("input", (e) => {
   const insertedText = e.target.value;

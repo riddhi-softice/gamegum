@@ -3,9 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self';  script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com;  style-src 'self' 'unsafe-inline';  img-src 'self' https://*.googleusercontent.com https://*.googlesyndication.com;connect-src 'self';">
-
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline';"> -->
+  
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>Baseapk - Play Free Online Games</title>
     <meta name="description" content="Play exciting free online games on Baseapk! Enjoy Sudoku, 2048, Tic-Tac-Toe, Flappy Bird, Connect 4, Space Invaders, Memory Game, and many more. Challenge your skills and have fun!">
@@ -37,6 +35,12 @@
     <link rel="stylesheet" href="assets/css/ads.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/home.css">
+
+    <style>
+        /* .header-area {
+          position: fixed;
+      } */
+    </style>
 </head>
 <body>
     <!-- ***** Preloader Start ***** -->
@@ -80,9 +84,21 @@
                 </div>
             </div>
         </header>
-    <!-- ***** Header Area End ***** -->
+    <!-- ***** Header Area End ***** -->   
 
     <div class="container"> 
+
+        <!-- ***** Ads Start ***** -->
+        <div id="FloatAdx-left">
+            <!-- YOUR AD CODE-->
+            <p>YOUR LEFT AD HERE</p>
+        </div>
+        <div id="FloatAdx-right">
+            <!-- YOUR AD CODE -->
+            YOUR RIGHT AD HERE
+        </div>
+         <!-- ***** Ads End ***** -->
+
         <div class="row">
             <div class="col-lg-12">
                 <div class="page-content" >
@@ -95,18 +111,6 @@
                                 </div>
                                 <div class="header-text">
                                     <div class="row">     
-                                        
-                                        <!-- Custom Ad Popup -->
-                                        <div id="adPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8);">
-                                            <div style="width:300px; height:250px; background:#fff; margin:100px auto; padding:20px; text-align:center;">
-                                                <p>Advertisement</p>
-                                                <a href="https://your-ad-url.com" target="_blank">
-                                                    <img src="your-ad-banner.jpg" width="300" height="250" alt="Ad">
-                                                </a>
-                                                <button onclick="closeAdPopup()">Close</button>
-                                            </div>
-                                        </div>
-
 
                                         <div class="col-lg-6 col-sm-12">
                                             <a href="play.html" onclick="setDynamicBackground('the-aviator')">
