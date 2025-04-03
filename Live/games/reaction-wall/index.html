@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Reaction Wall Game</title>
+    <link rel="shortcut icon" href="../../assets/images/icon.png">
+    <link rel="stylesheet" href="styles.css" />
+    <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
+    
+    <script type="text/javascript" src="../assets/js/group1_autoAd_landing.js" async></script>
+
+    <style>
+        .logo img {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="image-loader">
+        <div id="image-container">
+            <div class="logo">
+                <img src="../../assets/images/logo.png">
+            </div>
+            <div class="game-logo">
+                <img src="../assets/images/game-name/reaction-wall.png">
+            </div>
+        </div>
+        <div class="loader-custome">
+            <span class="loader"></span>
+        </div>
+        <div id="button-container">
+            <button class="start-button start-g">START GAME</button>
+            <button class="more-button more-g">MORE GAMES</button>
+        </div>
+    </div>
+
+    <div id="container" style="display: none;">
+        <a href="https://baseapk.me" class="home-button">Back To Home</a>
+        <div class='info'>
+            <div class='time'>00:00</div>
+            <div class='points'>0</div>
+        </div>
+        <div class='wall'>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='dot'></div>
+            <div class='start'>
+                <button>Start game!</button>
+            </div>
+            <div class='end'>
+                <div class='score'></div>
+                <button>Play again!</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../assets/js/disable-click.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.querySelector(".start-button").addEventListener("click", function () {
+            let gameElement = document.documentElement; // Fullscreen the whole page
+
+            if (gameElement.requestFullscreen) {
+                gameElement.requestFullscreen();
+            } else if (gameElement.mozRequestFullScreen) { // Firefox
+                gameElement.mozRequestFullScreen();
+            } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
+                gameElement.webkitRequestFullscreen();
+            } else if (gameElement.msRequestFullscreen) { // IE/Edge
+                gameElement.msRequestFullscreen();
+            }
+            document.getElementById('image-loader').style.display = 'none';
+            document.getElementById('container').style.display = '';
+
+            document.body.style.backgroundImage = 'none'; 
+            document.body.style.backgroundSize = '';
+            document.body.style.backgroundColor = '#2c3e50';
+        });
+        document.querySelector(".more-button").addEventListener("click", function () {
+            window.location.href = "https://baseapk.me"; 
+        });
+    </script>
+</body>
+
+</html>

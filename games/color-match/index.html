@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
- 
-    <title>Color Match Game</title>
+    <title>Color Match</title>
     <link rel="shortcut icon" href="../../assets/images/icon.png">
     <link rel="stylesheet" href="styles.css">
     <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/ads.css" rel="stylesheet" type="text/css">
     <style>
         .home-button {
             display: block;
@@ -34,8 +34,30 @@
     </style>
 </head>
 <body>
-    <!-- <div id="image-loader"></div> -->
     <div id="image-loader">
+        <!-- sticky ads start -->
+            <div id="FloatAdx-left">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422"
+                    crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:160px;height:600px"
+                    data-ad-client="ca-pub-8263720079379422"
+                    data-ad-slot="2931055714"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <div id="FloatAdx-right">
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:160px;height:600px"
+                     data-ad-client="ca-pub-8263720079379422"
+                     data-ad-slot="2931055714"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        <!-- sticky ads end -->
+
         <div id="image-container">
           <div class="logo">
             <img src="../assets/images/logo.png">
@@ -69,30 +91,30 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
     <script>
-         document.querySelector(".start-button").addEventListener("click", function () {
-        let gameElement = document.documentElement; // Fullscreen the whole page
+        document.querySelector(".start-button").addEventListener("click", function () {
+            let gameElement = document.documentElement; // Fullscreen the whole page
 
-        if (gameElement.requestFullscreen) {
-            gameElement.requestFullscreen();
-        } else if (gameElement.mozRequestFullScreen) { // Firefox
-            gameElement.mozRequestFullScreen();
-        } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
-            gameElement.webkitRequestFullscreen();
-        } else if (gameElement.msRequestFullscreen) { // IE/Edge
-            gameElement.msRequestFullscreen();
-        }
+            if (gameElement.requestFullscreen) {
+                gameElement.requestFullscreen();
+            } else if (gameElement.mozRequestFullScreen) { // Firefox
+                gameElement.mozRequestFullScreen();
+            } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
+                gameElement.webkitRequestFullscreen();
+            } else if (gameElement.msRequestFullscreen) { // IE/Edge
+                gameElement.msRequestFullscreen();
+            }
 
-        document.getElementById('image-loader').style.display = 'none';
-        document.getElementById('main-screen').style.display = 'block';
+            document.getElementById('image-loader').style.display = 'none';
+            document.getElementById('main-screen').style.display = 'block';
 
-        document.body.style.backgroundImage = 'none'; 
-        document.body.style.backgroundSize = '';
-        document.body.style.backgroundColor = '#212429';
-        document.body.style.display = 'flex';
-    });
-    document.querySelector(".more-button").addEventListener("click", function () {
-        window.location.href = "../../index.html"; // Redirect "More Games" button
-    });
+            document.body.style.backgroundImage = 'none'; 
+            document.body.style.backgroundSize = '';
+            document.body.style.backgroundColor = '#212429';
+            document.body.style.display = 'flex';
+        });
+        document.querySelector(".more-button").addEventListener("click", function () {
+            window.location.href = "../../index.html"; // Redirect "More Games" button
+        });
     </script>
 </body>
 </html>

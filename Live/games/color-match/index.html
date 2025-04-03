@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <title>Color Match Game</title>
+    <link rel="shortcut icon" href="../../assets/images/icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
+    
+    <link href="../assets/css/group1_game.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="../assets/js/group1_auto_landing.js" async></script>
+	<style>
+	    @media (max-width: 768px) {
+         .top-adx {
+            height: 100px !important;
+            min-height: 100px !important;
+            max-height: 100px !important;
+            overflow: hidden;
+            }
+        }
+        .home-button {
+            display: block;
+            /* width: 100%;
+            max-width: 200px; */
+            padding: 10px;
+            margin: 10px auto;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background: #f59231;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        .home-button:hover {
+            background: #db7d21;
+        }
+        body {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="image-loader">
+        <!-- sticky ads start -->
+		<div id="FloatAdx-left">
+			<ins class="adsbygoogle"
+				style="display:inline-block;width:160px;height:600px"
+				data-ad-client="ca-pub-8263720079379422"
+				data-ad-slot="2931055714"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+		<div id="FloatAdx-right">
+			<ins class="adsbygoogle"
+				style="display:inline-block;width:160px;height:600px"
+				data-ad-client="ca-pub-8263720079379422"
+				data-ad-slot="2931055714"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+	    <!-- sticky ads end -->
+	
+        <div id="image-container">
+            <div class="top-adx" style="height: 100px !important;">
+                <!-- Start game screen -->
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:300px;height:100px"
+                     data-ad-client="ca-pub-8263720079379422"
+                     data-ad-slot="8787023214"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+          <div class="game-logo">
+            <img src="../assets/images/game-name/color-match.png">
+          </div>
+        </div>
+    
+       <div class="loader-custome">
+         <span class="loader"></span>
+        </div>   
+        <div id="button-container">
+          <button class="start-button start-g">START GAME</button>
+          <button class="more-button more-g">MORE GAMES</button>
+        </div>
+    </div>
+    <main>
+        <div id="main-screen" style="display: none;">
+            <a href="https://baseapk.me" class="home-button">Back to Home</a> 
+            <div class="controls">
+                <div class="new-game">New Game</div>
+                <div>Moves <span class="moves">0</span> / <span>35</span></div>
+            </div>
+            <div id="board"></div>
+            <div id="colors"></div>
+            <div id="game-over"></div>
+        </div>
+    </main>
+    <script type="text/javascript" src="../assets/js/disable-click.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector(".top-adx").style.setProperty("height", "100px", "important");
+        });
+         document.querySelector(".start-button").addEventListener("click", function () {
+        let gameElement = document.documentElement; // Fullscreen the whole page
+
+        if (gameElement.requestFullscreen) {
+            gameElement.requestFullscreen();
+        } else if (gameElement.mozRequestFullScreen) { // Firefox
+            gameElement.mozRequestFullScreen();
+        } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
+            gameElement.webkitRequestFullscreen();
+        } else if (gameElement.msRequestFullscreen) { // IE/Edge
+            gameElement.msRequestFullscreen();
+        }
+
+        document.getElementById('image-loader').style.display = 'none';
+        document.getElementById('main-screen').style.display = 'block';
+
+        document.body.style.backgroundImage = 'none'; 
+        document.body.style.backgroundSize = '';
+        document.body.style.backgroundColor = '#212429';
+        document.body.style.display = 'flex';
+    });
+    document.querySelector(".more-button").addEventListener("click", function () {
+        window.location.href = "https://baseapk.me"; // Redirect "More Games" button
+    });
+    </script>
+</body>
+</html>

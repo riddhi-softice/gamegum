@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Math Game</title>
+    <link rel="shortcut icon" href="../../assets/images/icon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
+    
+    <link href="../assets/css/group1_game.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="../assets/js/group1_auto_landing.js" async></script>
+	<style>
+	    @media (max-width: 768px) {
+         .top-adx {
+            height: 100px !important;
+            min-height: 100px !important;
+            max-height: 100px !important;
+            overflow: hidden;
+            }
+        }
+      .home-button {
+        width: 520px;
+        display: inline-block;
+        padding: 12px 20px;
+        font-size: 18px;
+        margin: 10px auto; 
+        color: white;
+        background: #2ca5d4;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 4px 4px #2980b9;
+      }
+      .home-button:hover {
+        color: white;
+        text-decoration: none;
+        box-shadow: 6px 6px #1c6691;
+      }
+      @media (max-width: 480px) {
+          .home-button {
+              width: 335px;
+          }
+      }
+      @media (min-width: 1024px) {
+          .game-logo img {
+              width: 300px;
+          } 
+      }
+      .logo img {
+          margin-bottom: 30px;
+      }
+    </style>
+</head>
+<body>
+    <div id="image-loader">
+      <!-- sticky ads start -->
+		<div id="FloatAdx-left">
+			<ins class="adsbygoogle"
+				style="display:inline-block;width:160px;height:600px"
+				data-ad-client="ca-pub-8263720079379422"
+				data-ad-slot="2931055714"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+		<div id="FloatAdx-right">
+			<ins class="adsbygoogle"
+				style="display:inline-block;width:160px;height:600px"
+				data-ad-client="ca-pub-8263720079379422"
+				data-ad-slot="2931055714"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+	    <!-- sticky ads end -->
+	
+        <div id="image-container">
+            <div class="top-adx" style="height: 100px !important;">
+                <!-- Start game screen -->
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:300px;height:100px"
+                     data-ad-client="ca-pub-8263720079379422"
+                     data-ad-slot="8787023214"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <div class="game-logo">
+              <img src="../assets/images/game-name/math.png">
+            </div>
+        </div>
+    <div class="loader-custome">
+      <span class="loader"></span>
+      </div>   
+      <div id="button-container">
+        <button class="start-button start-g">START GAME</button>
+        <button class="more-button more-g">MORE GAMES</button>
+      </div>
+    </div>
+
+    <a href="https://baseapk.me" class="home-button">BACK TO HOME</a>
+    <div id="game" class="wrapper" style="display: none;"></div>
+
+    <script type="text/javascript" src="../assets/js/disable-click.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector(".top-adx").style.setProperty("height", "100px", "important");
+        });
+        $('#bar').hide();
+        document.querySelector(".start-button").addEventListener("click", function () {
+            let gameElement = document.documentElement; // Fullscreen the whole page
+
+            if (gameElement.requestFullscreen) {
+                gameElement.requestFullscreen();
+            } else if (gameElement.mozRequestFullScreen) { // Firefox
+                gameElement.mozRequestFullScreen();
+            } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
+                gameElement.webkitRequestFullscreen();
+            } else if (gameElement.msRequestFullscreen) { // IE/Edge
+                gameElement.msRequestFullscreen();
+            }
+            document.getElementById('image-loader').style.display = 'none';
+            document.getElementById('game').style.display = '';
+
+            document.body.style.backgroundImage = 'none'; 
+            document.body.style.backgroundSize = '';
+            document.body.style.backgroundColor = '#e5cc94';
+            $('#bar').show();
+        });
+        document.querySelector(".more-button").addEventListener("click", function () {
+            window.location.href = "https://baseapk.me"; 
+        });
+    </script>
+</body>
+</html>
