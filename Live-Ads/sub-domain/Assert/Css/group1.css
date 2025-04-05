@@ -1,0 +1,50 @@
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: 1140px; /* Standard Bootstrap container width */
+}
+
+/* side Ads */
+#FloatAdx-left, #FloatAdx-right {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #dfe4ea;
+    height: 600px;
+    width: 160px;
+    display: none;
+    /* display: block; */
+}
+
+/* Hide Ads on Smaller Screens /* iPads & Tablets  */
+/* @media (max-width: 1024px) { 
+    #FloatAdx-left, #FloatAdx-right {
+        display: none;
+    }
+} */
+
+
+/* sticky bottom ads */
+.sticky-btm{ 
+    position: fixed; 
+    bottom: 0; left: 0; 
+    width: 100%; min-height: 70px; max-height: 200px; 
+    padding: 5px 0; 
+    box-shadow: 0 -6px 18px 0 rgba(9,32,76,.1); 
+    -webkit-transition: all .1s ease-in; transition: all .1s ease-in; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: #fefefe; z-index: 20; } 
+    
+.sticky-btm-close { 
+    width: 30px; height: 30px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 12px 0 0; 
+    position: absolute; right: 0; top: -30px; 
+    background-color: #fefefe; 
+    box-shadow: 0 -6px 18px 0 rgba(9,32,76,.08); } 
+    
+.sticky-btm .sticky-btm-close svg { width: 22px; height: 22px; fill: #000; } .sticky-btm .sticky-btm-content { overflow: hidden; display: block; position: relative; height: 70px; width: 100%; margin-right: 10px; margin-left: 10px; }

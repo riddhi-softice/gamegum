@@ -4,7 +4,7 @@
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    background: #dfe4ea;
+    /* background: #dfe4ea; */
     height: 600px;
     width: 160px;
     display: flex;
@@ -34,7 +34,7 @@
 }
 /*top  Styling */
 .top-adx {
-    background: #dfe4ea;
+    /* background: #dfe4ea; */
     position: relative;
     width: 300px;
     height: 100px !important;
@@ -53,3 +53,12 @@
 /*        height: 100px !important; */
 /*    }*/
 /*}*/
+
+@media (max-width: 768px) {
+ .top-adx {
+    height: 100px !important;
+    min-height: 100px !important;
+    max-height: 100px !important;
+    overflow: hidden;
+    }
+}

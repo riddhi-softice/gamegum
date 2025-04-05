@@ -1,5 +1,5 @@
  /* HOME PAGE ADS CSS*/
- .ad-box {
+ .adx-box {
     min-width: 250px;
     min-height: 250px;
     display: flex;
@@ -7,11 +7,11 @@
     justify-content: center;
     background-color: #514646; 
 }
-.ad-box p {
+.adx-box p {
     font-size: 13px !important;
     color: aliceblue;
 }
-/* .ad-box {
+/* .adx-box {
     min-width: 200px;
     min-height: 200px;
     display: flex;
@@ -20,7 +20,7 @@
     background-color: #f0f0f0; 
 } */
 /* fix 200*200 height width */
-/* .ad-box {
+/* .adx-box {
     width: 200px;  
     height: 200px;  
     display: flex;  
@@ -28,7 +28,7 @@
     justify-content: center;  
     background-color: #f0f0f0; 
 }
-.ad-box img {
+.adx-box img {
     width: 200px;  
     height: 200px;  
     object-fit: cover; 
@@ -36,12 +36,12 @@
 
 
 /* Home page mobile only*/
-.header_ads {
+.header_adx {
     display: none; /* Hide by default */
 }
 
 @media (max-width: 768px) { 
-    .header_ads {
+    .header_adx {
         display: block; /* Show only on mobile */
     }
 }
@@ -49,23 +49,16 @@
 
   
 /* DETAILS PAGE ADS CSS*/
-#g-detail-desktop-ads {
+#g-detail-desktop-adx {
     display: block;
 }
 
-#g-detail-mobile-ads {
-    display: none;
-}
-
 @media (max-width: 768px) {
-    #g-detail-desktop-ads {
+    #g-detail-desktop-adx {
         display: none;
     }
-    #g-detail-mobile-ads {
-        display: block;
-    }
 }
-#g-detail-desktop-ads, #g-detail-mobile-ads {
+#g-detail-desktop-adx {
     transition: all 0.3s ease;
 }
 
@@ -166,3 +159,30 @@
         display: none;
     }
 }
+
+
+
+/* sticky bottom  */
+.sticky-btm{ 
+    position: fixed; 
+    bottom: 0; left: 0; 
+    width: 100%; min-height: 70px; max-height: 200px; 
+    padding: 5px 0; 
+    box-shadow: 0 -6px 18px 0 rgba(9,32,76,.1); 
+    -webkit-transition: all .1s ease-in; transition: all .1s ease-in; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: #fefefe; z-index: 20; } 
+    
+.sticky-btm-close { 
+    width: 30px; height: 30px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 12px 0 0; 
+    position: absolute; right: 0; top: -30px; 
+    background-color: #fefefe; 
+    box-shadow: 0 -6px 18px 0 rgba(9,32,76,.08); } 
+    
+.sticky-btm .sticky-btm-close svg { width: 22px; height: 22px; fill: #000; } .sticky-btm .sticky-btm-content { overflow: hidden; display: block; position: relative; height: 70px; width: 100%; margin-right: 10px; margin-left: 10px; }

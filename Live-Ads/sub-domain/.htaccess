@@ -1,0 +1,19 @@
+#Protect Browser Behavior
+Header set X-Frame-Options "DENY"
+Header set X-Content-Type-Options "nosniff"
+Header set X-XSS-Protection "1; mode=block"
+Header set Referrer-Policy "no-referrer"
+
+Options -Indexes
+
+# Enable caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+</IfModule>
+
+<FilesMatch "\.(jpg|jpeg|png|gif|webp|svg)$">
+  Header set Cache-Control "max-age=31536000, public"
+</FilesMatch>

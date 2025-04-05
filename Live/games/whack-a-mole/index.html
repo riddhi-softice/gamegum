@@ -7,8 +7,8 @@
     <link rel="shortcut icon" href="../../assets/images/icon.png">
     <link rel="stylesheet" href="styles.css">
     <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
-    
-    <script type="text/javascript" src="../assets/js/group1_autoAd_landing.js" async></script>
+    <link href="../assets/css/group1_game.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="../assets/js/group1_auto_landing.js" async></script>
 
     <style>
       .home-icon {
@@ -40,18 +40,57 @@
       .game-logo img {
         margin-bottom: 60px;
       }
-      @media (min-width: 1024px) {
+        @media (min-width: 1024px) {
             .game-logo img {
                 width: 330px;
             }
+        }
+        @media (max-width: 768px) {
+            #image-loader {
+                padding-top: 15%;
+            }
+        }
+        .game-logo img {
+            margin-bottom: 40px;
+        }
+        .top-adx {
+            margin-bottom: 25px;
         }
     </style>
 </head>
 <body>
   <div id="image-loader">
+    <!-- sticky ads start -->
+	<div id="FloatAdx-left">
+		<ins class="adsbygoogle"
+			style="display:inline-block;width:160px;height:600px"
+			data-ad-client="ca-pub-8263720079379422"
+			data-ad-slot="2931055714"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+	<div id="FloatAdx-right">
+		<ins class="adsbygoogle"
+			style="display:inline-block;width:160px;height:600px"
+			data-ad-client="ca-pub-8263720079379422"
+			data-ad-slot="2931055714"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+    <!-- sticky ads end -->
+
     <div id="image-container">
-        <div class="logo">
-            <img src="../../assets/images/logo.png">
+        <div class="top-adx" style="height: 100px !important;">
+            <!-- Start game screen -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:300px;height:100px"
+                 data-ad-client="ca-pub-8263720079379422"
+                 data-ad-slot="8787023214"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
         <div class="game-logo">
             <img src="../assets/images/game-name/whack-a-mole.png">
@@ -101,6 +140,9 @@
 <script type="text/javascript" src="../assets/js/disable-click.js"></script>
 <script src="script.js"></script>
 <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector(".top-adx").style.setProperty("height", "100px", "important");
+    });
     document.querySelector(".start-button").addEventListener("click", function () {
         let gameElement = document.documentElement; // Fullscreen the whole page
 

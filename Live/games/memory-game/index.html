@@ -13,8 +13,8 @@
   <link rel="shortcut icon" type="image/png" href="app/assets/images/favicon.ico" />
   <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
   
-  <script type="text/javascript" src="../assets/js/group1_autoAd_landing.js" async></script>
-  
+ 	<link href="../assets/css/group1_game.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="../assets/js/group1_auto_landing.js" async></script>
   <style>
     .home-button {
       display: inline-block;
@@ -74,13 +74,41 @@
 
 <body>
   <div id="image-loader">
+    <!-- sticky ads start -->
+	<div id="FloatAdx-left">
+		<ins class="adsbygoogle"
+			style="display:inline-block;width:160px;height:600px"
+			data-ad-client="ca-pub-8263720079379422"
+			data-ad-slot="2931055714"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+	<div id="FloatAdx-right">
+		<ins class="adsbygoogle"
+			style="display:inline-block;width:160px;height:600px"
+			data-ad-client="ca-pub-8263720079379422"
+			data-ad-slot="2931055714"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+    <!-- sticky ads end -->
+
     <div id="image-container">
-      <div class="logo">
-        <img src="../assets/images/logo.png">
-      </div>
-      <div class="game-logo">
-        <img src="../assets/images/game-name/memory-card.png">
-      </div>
+        <div class="top-adx" style="height: 100px !important;">
+            <!-- Start game screen -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:300px;height:100px"
+                 data-ad-client="ca-pub-8263720079379422"
+                 data-ad-slot="8787023214"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        <div class="game-logo">
+            <img src="../assets/images/game-name/memory-card.png">
+        </div>
     </div>
 
     <div class="loader-custome">
@@ -217,6 +245,10 @@
     crossorigin="anonymous"></script>
   <script src="app/assets/js/game.js"></script>
   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector(".top-adx").style.setProperty("height", "100px", "important");
+    });
+        
     document.querySelector(".start-button").addEventListener("click", function () {
       let gameElement = document.documentElement; // Fullscreen the whole page
 

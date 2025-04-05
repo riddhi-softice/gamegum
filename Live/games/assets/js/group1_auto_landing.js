@@ -8,6 +8,3 @@
     document.head.appendChild(script);
 })();
      
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelector(".top-adx").style.setProperty("height", "100px", "important");
-});

@@ -54,6 +54,23 @@ body, * {
   gap: 15px; 
   padding-top: 6%;
 }
+
+/*ads  Styling */
+.top-ads {
+    position: relative;
+    width: 320px;
+    height: 100px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background: #dfe4ea;*/
+    margin-bottom: 15px;
+}
+@media (min-width: 1024px) {
+    .top-ads {
+        left: 14px; /* Fixed position */
+    }
+}
         
 /* Logo */
 .logo img {
