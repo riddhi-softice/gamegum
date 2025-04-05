@@ -30,6 +30,7 @@
 body {
     position: relative;
     background-color: #1f2122; /* fallback color */
+    padding : 0 !important;
 }
 
 /* Pseudo-element for smooth background transition */
@@ -50,6 +51,12 @@ body::after {
 /* Apply opacity transition on page load */
 body.loaded::after {
     opacity: 1;
+}
+
+@media (max-width: 768px) {
+  body::after {
+    background-image: none;
+  }
 }
 
   
@@ -770,7 +777,10 @@ body.loaded::after {
     right: 0;
     bottom: 0;
     /* background: rgba(0, 0, 0, 0.7); */
-    background: rgb(55 53 53 / 70%);
+    /*background: rgb(55 53 53 / 70%);*/
+     background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
     align-items: center;

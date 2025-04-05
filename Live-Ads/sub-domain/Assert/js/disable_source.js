@@ -4,7 +4,7 @@ window.onload = function () {
 };
 
 
-// PAGE RIGHT CLICK DISABLE
+// // PAGE RIGHT CLICK DISABLE
 // document.addEventListener("contextmenu", function (event) {
 //     event.preventDefault();
 // 	// alert("Right-click is disabled!");

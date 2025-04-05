@@ -1,3 +1,4 @@
+/* BOTH SIDE ----------------------------------------------------------------------------------*/
 .container {
     padding: 0 15px;
     margin: 0 auto;
@@ -9,11 +10,11 @@
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    background: #dfe4ea;
+    /*background: #dfe4ea;*/
     height: 600px;
     width: 160px;
+    /*display: block;*/
     display: none;
-    /* display: block; */
 }
 
 /* Hide Ads on Smaller Screens /* iPads & Tablets  */
@@ -24,7 +25,7 @@
 } */
 
 
-/* sticky bottom ads */
+/* sticky bottom ---------------------------------------------*/
 .sticky-btm{ 
     position: fixed; 
     bottom: 0; left: 0; 
@@ -48,3 +49,76 @@
     box-shadow: 0 -6px 18px 0 rgba(9,32,76,.08); } 
     
 .sticky-btm .sticky-btm-close svg { width: 22px; height: 22px; fill: #000; } .sticky-btm .sticky-btm-content { overflow: hidden; display: block; position: relative; height: 70px; width: 100%; margin-right: 10px; margin-left: 10px; }
+
+
+/* CUSTOM POPUP----------------------------------------------------------------------------------*/
+/* Overlay Background */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: none;
+    z-index: 999;
+}
+
+/* Popup Box */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    /*width: 336px;*/
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: none;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    padding: 10px;
+}
+
+/* Header Row: Ad | Countdown | Close */
+.popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* Ad Button */
+.Ad-btn {
+    background: gray;
+    border: none;
+    padding: 4px 12px;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+/* Countdown Text */
+.countdown-text {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Close Button */
+.adx-close-btn {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 4px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* show after 5 sec */
+}
+

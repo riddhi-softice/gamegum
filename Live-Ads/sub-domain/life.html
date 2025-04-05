@@ -47,61 +47,9 @@
             padding-bottom: 0px !important;
         }
     </style>
-    <style>
-      /* Popup Styling */
-      .popup {
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 100%;
-          padding: 20px;
-          background: white;
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-          text-align: center;
-          display: none;
-          z-index: 1000;
-          border-radius: 8px;
-      }
 
-      /* Overlay Background */
-      .overlay {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: rgba(0, 0, 0, 0.5);
-          display: none;
-          z-index: 999;
-      }
-
-      /* Close Button (Initially Hidden) */
-      .close-btn {
-          background: red;
-          color: white;
-          border: none;
-          padding: 8px 12px;
-          cursor: pointer;
-          border-radius: 5px;
-          margin-top: 10px;
-          display: none; /* Hidden initially */
-      }
-
-      /* Open Button */
-      .open-btn {
-          padding: 10px 20px;
-          background: blue;
-          color: white;
-          border: none;
-          cursor: pointer;
-          border-radius: 5px;
-      }
-      </style>
-
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422" crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422" crossorigin="anonymous"></script>
 </head>
-
 <body>
     <!-- Main content of your page -->
     <section class="app_wrapper">
@@ -141,7 +89,7 @@
         <div class="container text-center" style="margin-top: 15px;">
             <img class="car_travel" src="Assert/image/life-ins.webp" loading="lazy" alt="car success">
         </div>
-
+        
         <div class="container">
             <div class="ad_1 col-span-2 mt-4">
                 <div id='div-gpt' style='min-width: 336px; min-height: 300px;'>
@@ -156,9 +104,6 @@
                 </div>
             </div>
         </div>
-
-        <button class="open-btn" onclick="openPopup()">Open Popup</button>
-
 
         <div class="container mt-3">
 
@@ -306,40 +251,6 @@
         </div>
     </div>
 
-
-    <!-- popup -->
-     <!-- Popup & Overlay -->
-     <div class="overlay" id="popupOverlay"></div>
-     <div class="popup" id="popupBox">
-         <p>This popup will close in <span id="countdown">5</span> seconds.</p>
-         <button class="close-btn" id="closeBtn" onclick="closePopup()">Close</button>
-     </div>
- 
-     <script>
-         function openPopup() {
-             document.getElementById("popupOverlay").style.display = "block";
-             document.getElementById("popupBox").style.display = "block";
-             document.getElementById("closeBtn").style.display = "none"; // Hide close button initially
- 
-             let timeLeft = 5; // Countdown from 5 seconds
-             let countdown = document.getElementById("countdown");
- 
-             let timer = setInterval(function () {
-                 timeLeft--;
-                 countdown.textContent = timeLeft;
- 
-                 if (timeLeft <= 0) {
-                     clearInterval(timer);
-                     document.getElementById("closeBtn").style.display = "block"; // Show close button
-                 }
-             }, 1000);
-         }
- 
-        function closePopup() {
-            document.getElementById("popupOverlay").style.display = "none";
-            document.getElementById("popupBox").style.display = "none";
-        }
-     </script>
     
     <script src="Assert/js/group1_float.js"></script>
     <script src="Assert/js/disable_source.js"></script>

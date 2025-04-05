@@ -19,7 +19,6 @@ function adjustAdPosition() {
 window.addEventListener("load", adjustAdPosition);
 window.addEventListener("resize", adjustAdPosition);
 
-
 // Load after 3 secound , bxz dynamic js load take time
 function loadAds() {
     let screenWidth = window.innerWidth;
