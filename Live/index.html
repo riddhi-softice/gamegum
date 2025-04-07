@@ -35,11 +35,18 @@
     <link rel="stylesheet" href="assets/css/group1_display.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/home.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422" crossorigin="anonymous"></script>
      
-    <style>
-    </style>
+    <!-- Analitycs Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5LR732BBVK"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-5LR732BBVK');
+        </script>
+    <!-- Analitycs Google tag (gtag.js) -->
 </head>
 <body>
     <!-- ***** Preloader Start ***** -->
@@ -232,7 +239,7 @@
 
                                         <!-- d-none → Hides the element on all screen sizes by default.
                                         d-sm-block → Makes it visible on small screens (≥576px) and larger. -->
-                                        <div class="col-lg-3 col-sm-6 col-6 d-none d-sm-block">
+                                        <div class="col-lg-3 col-sm-6 col-6 d-none d-sm-block adx-box-hide">
                                             <div class="item adx-box">
                                                 <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422"-->
                                                 <!--     crossorigin="anonymous"></script>-->
@@ -382,9 +389,9 @@
                                                 <h4>Lazy-2048</h4>
                                             </div>
                                             </a>
-                                        </div> 
+                                        </div>  
 
-                                        <div class="col-lg-3 col-sm-6 col-6 d-none d-sm-block">
+                                        <div class="col-lg-3 col-sm-6 col-6 d-none d-sm-block adx-box-hide">
                                             <div class="item adx-box">
                                                 <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422"-->
                                                 <!--     crossorigin="anonymous"></script>-->
@@ -512,36 +519,29 @@
                 <p class="countdown-text">The Game starts in <span id="countdown">5</span> seconds.</p>
                 <button class="adx-close-btn" id="closeBtn" onclick="closeCustomPopup()">X</button>
             </div>
-        
-            <!-- <div id="div-gpt" style="min-width: 336px; min-height: 300px;">
-                <ins class="adsbygoogle"
-                    style="display:inline-block;width:336px;height:300px"
-                    data-ad-client="ca-pub-8263720079379422"
-                    data-ad-slot="9593193649"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div> -->
-
             <div class="popup-ad-wrapper">
                 <!-- Mobile Ad -->
                 <div class="ad-mobile" id="adMobile">
                     <ins class="adsbygoogle"
-                       style="display:inline-block;width:336px;height:300px"
-                       data-ad-client="ca-pub-8263720079379422"
-                       data-ad-slot="9593193649"></ins>
+                        style="display:inline-block;width:336px;height:280px"
+                        data-ad-client="ca-pub-8263720079379422"
+                        data-ad-slot="7802751203"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
                 </div>
                 <!-- Desktop Ad -->
                 <div class="ad-desktop" id="adDesktop">
                     <ins class="adsbygoogle"
-                       style="display:inline-block;width:720px;height:300px"
-                       data-ad-client="ca-pub-8263720079379422"
-                       data-ad-slot="1256574751"></ins>
+                    style="display:inline-block;width:720px;height:450px"
+                    data-ad-client="ca-pub-8263720079379422"
+                    data-ad-slot="4229503557"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
                 </div>
             </div>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            
         </div>
     <!--custom popup -->
 
@@ -576,12 +576,11 @@
         function setDynamicBackground(gName) {
             localStorage.setItem('gameName', gName);
 
-            // Show desktop version directly remove
-            // if (window.innerWidth > 767) {
-            //     // Optional: Show a popup for desktop here instead of redirect
-            //     window.location.href = "play.html";
-            //     return;
-            // }
+            // analitycs click event 
+            gtag('event', 'game_click', {
+                'event_category': 'Games',
+                'event_label': gName // Dynamic label
+            });
 
             const overlay = document.getElementById("popupOverlay");
             const popup = document.getElementById("popupBox");
@@ -607,12 +606,12 @@
                     clearInterval(timer);
                     closeBtn.style.display = "inline-block";
 
-                    // After 2 seconds, redirect
+                    // After 1 seconds, redirect
                     setTimeout(() => {
                         overlay.style.display = "none";
                         popup.style.opacity = "0";
                         window.location.href = "play.html";
-                    }, 2000);
+                    }, 1000);
                 }
             }, 1000);
         }

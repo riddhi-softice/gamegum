@@ -83,7 +83,7 @@ body, * {
 .game-logo img {
   width: 280px;
   height: auto;
-  margin-bottom: 60px; 
+  margin-bottom: 30px; 
 }
 
 /* Loader */
@@ -144,7 +144,7 @@ body, * {
   align-items: center;
   gap: 20px;
   width: 100%;
-  margin-top: 55px;
+  margin-top: 15px;
 }
 
 .start-button, .more-button {

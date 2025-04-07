@@ -4,7 +4,7 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>The Aviator: The Game</title>
+	<title>Aviator</title>
 	<meta name="description" content="Demo of the game: The Making of 'The Aviator': Animating a Basic 3D Scene with Three.js" />
 	<meta name="keywords" content="three.js, webgl, tutorial, game, 3d, animation, airplane, web development, javascript" />
 
@@ -106,16 +106,28 @@
           <button class="start-button start-g">START GAME</button>
           <button class="more-button more-g">MORE GAMES</button>
         </div>
+        <div class='sticky-btm' id='sticky-btm'>
+            <div class='sticky-btm-close' onclick='document.getElementById("sticky-btm").style.display="none"'><svg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'><path d='M278.6 256l68.2-68.2c6.2-6.2 6.2-16.4 0-22.6-6.2-6.2-16.4-6.2-22.6 0L256 233.4l-68.2-68.2c-6.2-6.2-16.4-6.2-22.6 0-3.1 3.1-4.7 7.2-4.7 11.3 0 4.1 1.6 8.2 4.7 11.3l68.2 68.2-68.2 68.2c-3.1 3.1-4.7 7.2-4.7 11.3 0 4.1 1.6 8.2 4.7 11.3 6.2 6.2 16.4 6.2 22.6 0l68.2-68.2 68.2 68.2c6.2 6.2 16.4 6.2 22.6 0 6.2-6.2 6.2-16.4 0-22.6L278.6 256z'/></svg></div>
+            <div class='sticky-btm-content'>
+            <ins class="adsbygoogle"
+                 style="display:inline-block;height:70px;width:100%;line-height:70px;"
+                 data-ad-client="ca-pub-8263720079379422"
+                 data-ad-slot="4737125238"
+                 ></ins><script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            </div>
+        </div>
     </div>
     
 	<div class="game-holder" id="gameHolder" style="display: none;">
-		<a href="https://baseapk.me">
+		<!--<a href="https://baseapk.me">-->
 			<button class="home-icon" type="button" title="Home">
 				<svg class="" viewBox="0 0 24 24">
 					<path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"></path>
 				</svg>
 			</button>
-		</a>
+		<!--</a>-->
 
 		<div class="header">
 			<h1><span>the</span>Aviator</h1>
@@ -187,11 +199,35 @@
 		    document.body.style.backgroundPosition = 'absolute';
 			document.body.style.background = 'background: -webkit-linear-gradient(#e4e0ba, #f7d9aa)'; 
 			document.body.style.background = 'linear-gradient(#e4e0ba, #f7d9aa)'; 
-		});
-		// Redirect "More Games" button
-		document.querySelector(".more-button").addEventListener("click", function () {
-			window.location.href = "https://baseapk.me";
-		});
+		
+		gtag('event', 'start_game_click', {
+          'event_category': 'StartGame',
+          'event_label': 'Aviator Started'
+        });
+    });
+    
+    // HOME BUTTON CLICK INTRACTION --------------------------------------------------------------
+    document.querySelector(".home-icon").addEventListener("click", function () {
+        
+        gtag('event', 'home_button_click', {
+            'event_category': 'Navigation',
+            'event_label': 'Back to Home'
+        });
+        // Optional: small delay to ensure GA event is sent
+        setTimeout(() => {
+            window.location.href = "https://baseapk.me";
+        }, 200); // 200ms delay
+    });
+
+    document.querySelector(".more-button").addEventListener("click", function () {
+        // MORE BUTTON CLICK INTRACTION
+        gtag('event', 'more_games_click', {
+            'event_category': 'Navigation',
+            'event_label': 'More Games Button'
+        });
+        // Redirect "More Games" button
+        window.location.href = "https://baseapk.me";
+    });
 	</script>
 </body>
 </html>

@@ -11,6 +11,15 @@
     font-size: 13px !important;
     color: aliceblue;
 }
+
+/* Hide adx-box on iPad Pro (width between 1000px and 1200px) */
+@media only screen and (min-device-width: 1000px) and (max-device-width: 1200px) and (orientation: portrait),
+       only screen and (min-device-width: 1200px) and (max-device-width: 1000px) and (orientation: landscape) {
+    .adx-box-hide {
+        display: none !important;
+    }
+}
+
 /* .adx-box {
     min-width: 200px;
     min-height: 200px;
@@ -63,35 +72,6 @@
 }
 
 /* BOTH SIDE ADX -------------------------------------------------------------------- */
-/*#FloatAdx-left {*/
-/*    right: 60%; */
-/*    margin-right: 515px; */
-/*    top: 110px;*/
-/*    position: fixed;*/
-/*    height: 600px;*/
-/*    width: 120px;*/
-    /*background:#dfe4ea;*/
-    /*box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);*/
-/*}*/
-/*@media only screen and (max-width:1350px) {*/
-/*    #FloatAdx-left {*/
-/*        display: none*/
-/*    }*/
-/*}*/
-/*#FloatAdx-right {*/
-/*    left: 60%; */
-/*    margin-left: 515px; */
-/*    top: 110px;*/
-/*    position: fixed;*/
-/*    height: 600px;*/
-/*    width: 160px;*/
-/*}*/
-/*@media only screen and (max-width:1350px) {*/
-/*    #FloatAdx-right {*/
-/*        display: none*/
-/*    }*/
-/*}*/
-
 /* Floating Ads */
 #FloatAdx-left, #FloatAdx-right {
     /*background:#dfe4ea;*/
@@ -197,8 +177,6 @@
     display: none;
     z-index: 999;
 }
-
-/* Popup Box */
 .popup {
     position: fixed;
     top: 50%;
@@ -233,8 +211,6 @@
     font-size: 14px;
     border-radius: 5px;
 }
-
-/* Countdown Text */
 .countdown-text {
     flex: 1;
     text-align: center;
@@ -242,8 +218,6 @@
     font-size: 14px;
     margin: 0;
 }
-
-/* Close Button */
 .adx-close-btn {
     background: #ff4d4d;
     color: white;
@@ -260,24 +234,19 @@
   }
   
   /* Show Mobile Ad */
-  @media (max-width: 767px) {
+@media (max-width: 767px) {
     .ad-mobile {
       display: block;
     }
-  }
-  
-  /* Show Desktop Ad */
-  @media (min-width: 768px) {
+} 
+
+/* Show Desktop Ad */
+@media (min-width: 768px) {
     .ad-desktop {
       display: block;
     }
-  
     .popup {
       width: 740px; 
     }
-  
-    .popup-header {
-      padding: 10px 20px;
-    }
-  }
+}
   
