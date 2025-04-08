@@ -117,62 +117,55 @@
             <div id="game-over"></div>
         </div>
     </main>
+
+    <!--custom popup -->
+    <div id="custom-popup-placeholder"></div>
+    <!--custom popup -->
+    
+    <script type="text/javascript" src="../assets/js/common.js"></script>
+    <script>
+        fetch('../custom-popup.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('custom-popup-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error("Error loading footer:", error));
+    </script>
     <script type="text/javascript" src="../assets/js/disable-click.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        document.querySelector(".top-adx").style.setProperty("height", "100px", "important");
-    });
-    
-    document.querySelector(".start-button").addEventListener("click", function () {
-        let gameElement = document.documentElement; // Fullscreen the whole page
-
-        if (gameElement.requestFullscreen) {
-            gameElement.requestFullscreen();
-        } else if (gameElement.mozRequestFullScreen) { // Firefox
-            gameElement.mozRequestFullScreen();
-        } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
-            gameElement.webkitRequestFullscreen();
-        } else if (gameElement.msRequestFullscreen) { // IE/Edge
-            gameElement.msRequestFullscreen();
-        }
-
-        document.getElementById('image-loader').style.display = 'none';
-        document.getElementById('main-screen').style.display = 'block';
-
-        document.body.style.backgroundImage = 'none'; 
-        document.body.style.backgroundSize = '';
-        document.body.style.backgroundColor = '#212429';
-        document.body.style.display = 'flex';
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector(".top-adx").style.setProperty("height", "100px", "important");
+        });
         
-        gtag('event', 'start_game_click', {
-          'event_category': 'StartGame',
-          'event_label': 'Color Match Started'
-        });
-    });
-    
-    // HOME BUTTON CLICK INTRACTION --------------------------------------------------------------
-    document.querySelector(".home-button").addEventListener("click", function () {
-        
-        gtag('event', 'home_button_click', {
-            'event_category': 'Navigation',
-            'event_label': 'Back to Home'
-        });
-        // Optional: small delay to ensure GA event is sent
-        setTimeout(() => {
-            window.location.href = "https://baseapk.me";
-        }, 200); // 200ms delay
-    });
+        document.querySelector(".start-button").addEventListener("click", function () {
+            let gameElement = document.documentElement; // Fullscreen the whole page
 
-    document.querySelector(".more-button").addEventListener("click", function () {
-        // MORE BUTTON CLICK INTRACTION
-        gtag('event', 'more_games_click', {
-            'event_category': 'Navigation',
-            'event_label': 'More Games Button'
+            if (gameElement.requestFullscreen) {
+                gameElement.requestFullscreen();
+            } else if (gameElement.mozRequestFullScreen) { // Firefox
+                gameElement.mozRequestFullScreen();
+            } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
+                gameElement.webkitRequestFullscreen();
+            } else if (gameElement.msRequestFullscreen) { // IE/Edge
+                gameElement.msRequestFullscreen();
+            }
+
+            document.getElementById('image-loader').style.display = 'none';
+            document.getElementById('main-screen').style.display = 'block';
+
+            document.body.style.backgroundImage = 'none'; 
+            document.body.style.backgroundSize = '';
+            document.body.style.backgroundColor = '#212429';
+            document.body.style.display = 'flex';
+            
+            gtag('event', 'start_game_click', {
+            'event_category': 'StartGame',
+            'event_label': 'Color Match Started'
+            });
         });
-        // Redirect "More Games" button
-        window.location.href = "https://baseapk.me";
-    });
+        
+    </script>
 </body>
 </html>

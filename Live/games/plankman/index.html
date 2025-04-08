@@ -85,24 +85,24 @@
 <body>
     <div id="image-loader">
 	    <!-- sticky ads start -->
-		<div id="FloatAdx-left">
-			<ins class="adsbygoogle"
-				style="display:inline-block;width:160px;height:600px"
-				data-ad-client="ca-pub-8263720079379422"
-				data-ad-slot="2931055714"></ins>
-			<script>
-				(adsbygoogle = window.adsbygoogle || []).push({});
-			</script>
-		</div>
-		<div id="FloatAdx-right">
-			<ins class="adsbygoogle"
-				style="display:inline-block;width:160px;height:600px"
-				data-ad-client="ca-pub-8263720079379422"
-				data-ad-slot="2931055714"></ins>
-			<script>
-				(adsbygoogle = window.adsbygoogle || []).push({});
-			</script>
-		</div>
+        <div id="FloatAdx-left">
+          <ins class="adsbygoogle"
+            style="display:inline-block;width:160px;height:600px"
+            data-ad-client="ca-pub-8263720079379422"
+            data-ad-slot="2931055714"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+        <div id="FloatAdx-right">
+          <ins class="adsbygoogle"
+            style="display:inline-block;width:160px;height:600px"
+            data-ad-client="ca-pub-8263720079379422"
+            data-ad-slot="2931055714"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
 	    <!-- sticky ads end -->
 	
         <div id="image-container">
@@ -141,18 +141,17 @@
             </script>
             </div>
         </div>
-        
     </div>
     
     <div id="main" style="display: none;">
 
-    <a href="https://baseapk.me">
+    <!-- <a href="https://baseapk.me"> -->
       <button class="home-icon" type="button" title="Home">
         <svg class="" viewBox="0 0 24 24">
           <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"></path>
         </svg>
       </button>
-    </a>
+    <!-- </a> -->
 
     <link href="https://fonts.googleapis.com/css2?family=No+va+Mono&family=Pirata+One&display=swap" rel="stylesheet">
     <input type="checkbox" id="animations" />
@@ -353,6 +352,19 @@
     <label for="animations">ARRRnimations</label>
   </div>
   
+  <!--custom popup -->
+  <div id="custom-popup-placeholder"></div>
+  <!--custom popup -->
+
+<script type="text/javascript" src="../assets/js/common.js"></script>
+<script>
+    fetch('../custom-popup.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('custom-popup-placeholder').innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:", error));
+</script>
 <script type="text/javascript" src="../assets/js/disable-click.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -380,30 +392,7 @@
           'event_category': 'StartGame',
           'event_label': 'Plankman Started'
         });
-    });
-    
-    // HOME BUTTON CLICK INTRACTION --------------------------------------------------------------
-    document.querySelector(".home-button").addEventListener("click", function () {
-        
-        gtag('event', 'home_button_click', {
-            'event_category': 'Navigation',
-            'event_label': 'Back to Home'
-        });
-        // Optional: small delay to ensure GA event is sent
-        setTimeout(() => {
-            window.location.href = "https://baseapk.me";
-        }, 200); // 200ms delay
-    });
-
-    document.querySelector(".more-button").addEventListener("click", function () {
-        // MORE BUTTON CLICK INTRACTION
-        gtag('event', 'more_games_click', {
-            'event_category': 'Navigation',
-            'event_label': 'More Games Button'
-        });
-        // Redirect "More Games" button
-        window.location.href = "https://baseapk.me";
-    });
+    });    
 </script>
 </body>
 </html>

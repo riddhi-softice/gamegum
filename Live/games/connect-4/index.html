@@ -90,6 +90,9 @@
         margin-top: 70%;
       }
     } 
+    .adsbygoogle {
+      background: transparent;
+    }
   </style>
 </head>
 <body>
@@ -97,7 +100,7 @@
 	    <!-- sticky ads start -->
 		<div id="FloatAdx-left">
 			<ins class="adsbygoogle"
-				style="display:inline-block;width:160px;height:600px"
+				style="display:inline-block;width:160px;height:600px;"
 				data-ad-client="ca-pub-8263720079379422"
 				data-ad-slot="2931055714"></ins>
 			<script>
@@ -106,7 +109,7 @@
 		</div>
 		<div id="FloatAdx-right">
 			<ins class="adsbygoogle"
-				style="display:inline-block;width:160px;height:600px"
+				style="display:inline-block;width:160px;height:600px;"
 				data-ad-client="ca-pub-8263720079379422"
 				data-ad-slot="2931055714"></ins>
 			<script>
@@ -119,7 +122,7 @@
             <div class="top-adx" style="height: 100px !important;">
                 <!-- Start game screen -->
                 <ins class="adsbygoogle"
-                     style="display:inline-block;width:300px;height:100px"
+                     style="display:inline-block;width:300px;height:100px;"
                      data-ad-client="ca-pub-8263720079379422"
                      data-ad-slot="8787023214"></ins>
                 <script>
@@ -133,7 +136,7 @@
                 <div class='sticky-btm-close' onclick='document.getElementById("sticky-btm").style.display="none"'><svg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'><path d='M278.6 256l68.2-68.2c6.2-6.2 6.2-16.4 0-22.6-6.2-6.2-16.4-6.2-22.6 0L256 233.4l-68.2-68.2c-6.2-6.2-16.4-6.2-22.6 0-3.1 3.1-4.7 7.2-4.7 11.3 0 4.1 1.6 8.2 4.7 11.3l68.2 68.2-68.2 68.2c-3.1 3.1-4.7 7.2-4.7 11.3 0 4.1 1.6 8.2 4.7 11.3 6.2 6.2 16.4 6.2 22.6 0l68.2-68.2 68.2 68.2c6.2 6.2 16.4 6.2 22.6 0 6.2-6.2 6.2-16.4 0-22.6L278.6 256z'/></svg></div>
                 <div class='sticky-btm-content'>
                 <ins class="adsbygoogle"
-                     style="display:inline-block;height:70px;width:100%;line-height:70px;"
+                     style="display:inline-block;height:70px;width:100%;line-height:70px; background: transparent;"
                      data-ad-client="ca-pub-8263720079379422"
                      data-ad-slot="4737125238"
                      ></ins><script>
@@ -156,13 +159,13 @@
     <form>
       <div class="land-of-three">
         <!-- Home Button -->
-        <a href="https://baseapk.me">
+        <!-- <a href="https://baseapk.me"> -->
           <button class="home-icon faux-button" type="button" title="Home">
             <svg class="" viewBox="0 0 24 24">
               <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"></path>
             </svg>
           </button>
-        </a>
+        <!-- </a> -->
         <button class="game-reset faux-button" type="reset" title="Reset">
           <svg class="reset" viewBox="0 0 24 24">
             <path
@@ -176,7 +179,7 @@
               <h1>:has Connect 4?</h1>
               <p>You know the drill!</p>
               <label class="faux-button" id="btn-start-modal" for="dismiss">Ready?</label>
-              <label class="faux-button" for=""><a href="https://baseapk.me" class="home-button">Back to Home</a></label>
+              <label class="faux-button" for=""><a class="home-button">Back to Home</a></label>
             </div>
           </div>
         </div> -->
@@ -1496,6 +1499,20 @@
     </form>
     <input type="checkbox" id="dismiss" />
   </div>
+
+  <!--custom popup -->
+  <div id="custom-popup-placeholder"></div>
+  <!--custom popup -->
+  
+  <script type="text/javascript" src="../assets/js/common.js"></script>
+  <script>
+      fetch('../custom-popup.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('custom-popup-placeholder').innerHTML = data;
+      })
+      .catch(error => console.error("Error loading footer:", error));
+  </script>
   <script type="text/javascript" src="../assets/js/disable-click.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -1523,41 +1540,6 @@
         });
     });
     
-    // HOME BUTTON CLICK INTRACTION --------------------------------------------------------------
-    document.querySelector(".home-button").addEventListener("click", function () {
-        
-        gtag('event', 'home_button_click', {
-            'event_category': 'Navigation',
-            'event_label': 'Back to Home'
-        });
-        // Optional: small delay to ensure GA event is sent
-        setTimeout(() => {
-            window.location.href = "https://baseapk.me";
-        }, 200); // 200ms delay
-    });
-    
-    // HOME BUTTON CLICK INTRACTION --------------------------------------------------------------
-    document.querySelector(".home-icon").addEventListener("click", function () {
-        
-        gtag('event', 'home_button_click', {
-            'event_category': 'Navigation',
-            'event_label': 'Back to Home'
-        });
-        // Optional: small delay to ensure GA event is sent
-        setTimeout(() => {
-            window.location.href = "https://baseapk.me";
-        }, 200); // 200ms delay
-    });
-
-    document.querySelector(".more-button").addEventListener("click", function () {
-        // MORE BUTTON CLICK INTRACTION
-        gtag('event', 'more_games_click', {
-            'event_category': 'Navigation',
-            'event_label': 'More Games Button'
-        });
-        // Redirect "More Games" button
-        window.location.href = "https://baseapk.me";
-    });
     document.getElementById("btn-start-modal").addEventListener("click", function () {
         document.querySelector(".home-icon").style.display = "grid";
         document.querySelector(".game-reset").style.display = "grid";

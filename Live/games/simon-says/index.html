@@ -139,6 +139,20 @@
     <button id="play-again-btn">Play Again</button>
     <p id="level-message" style="display: none;"></p>
   </div>
+
+  <!--custom popup -->
+  <div id="custom-popup-placeholder"></div>
+  <!--custom popup -->
+  
+<script type="text/javascript" src="../assets/js/common.js"></script>
+<script>
+    fetch('../custom-popup.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('custom-popup-placeholder').innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:", error));
+</script>
 <script type="text/javascript" src="../assets/js/disable-click.js"></script>
 <script src="script.js"></script>
 <script>
@@ -167,29 +181,6 @@
           'event_category': 'StartGame',
           'event_label': 'Simon Says Started'
         });
-    });
-    
-    // HOME BUTTON CLICK INTRACTION --------------------------------------------------------------
-    document.querySelector(".home-icon").addEventListener("click", function () {
-        
-        gtag('event', 'home_button_click', {
-            'event_category': 'Navigation',
-            'event_label': 'Back to Home'
-        });
-        // Optional: small delay to ensure GA event is sent
-        setTimeout(() => {
-            window.location.href = "https://baseapk.me";
-        }, 200); // 200ms delay
-    });
-
-    document.querySelector(".more-button").addEventListener("click", function () {
-        // MORE BUTTON CLICK INTRACTION
-        gtag('event', 'more_games_click', {
-            'event_category': 'Navigation',
-            'event_label': 'More Games Button'
-        });
-        // Redirect "More Games" button
-        window.location.href = "https://baseapk.me";
     });
 </script>
 </body>

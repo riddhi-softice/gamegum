@@ -301,7 +301,7 @@
             <input checked id='modeMine' name='mode' type='radio'>
             <input id='modeFlag' name='mode' type='radio'>
             <div class='actionSelector'>
-                <a id="home-btn">
+                <a id="homeButton">
                     <svg class="" viewBox="0 0 24 24">
                         <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"></path>
                         </svg>                    
@@ -502,6 +502,20 @@
             </div>
         </form>     
     </div>
+
+    <!--custom popup -->
+    <div id="custom-popup-placeholder"></div>
+    <!--custom popup -->
+
+<script type="text/javascript" src="../assets/js/common.js"></script>
+<script>
+    fetch('../custom-popup.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('custom-popup-placeholder').innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:", error));
+</script>
 <script type="text/javascript" src="../assets/js/disable-click.js"></script>
 <script src="script.js"></script>
 <script>
@@ -534,27 +548,27 @@
     });
     
     // HOME BUTTON CLICK INTRACTION --------------------------------------------------------------
-    document.querySelector("home-btn").addEventListener("click", function () {
+    // document.querySelector("home-btn").addEventListener("click", function () {
         
-        gtag('event', 'home_button_click', {
-            'event_category': 'Navigation',
-            'event_label': 'Back to Home'
-        });
-        // Optional: small delay to ensure GA event is sent
-        setTimeout(() => {
-            window.location.href = "https://baseapk.me";
-        }, 200); // 200ms delay
-    });
+    //     gtag('event', 'home_button_click', {
+    //         'event_category': 'Navigation',
+    //         'event_label': 'Back to Home'
+    //     });
+    //     // Optional: small delay to ensure GA event is sent
+    //     setTimeout(() => {
+    //         window.location.href = "https://baseapk.me";
+    //     }, 200); // 200ms delay
+    // });
 
-    document.querySelector(".more-button").addEventListener("click", function () {
-        // MORE BUTTON CLICK INTRACTION
-        gtag('event', 'more_games_click', {
-            'event_category': 'Navigation',
-            'event_label': 'More Games Button'
-        });
-        // Redirect "More Games" button
-        window.location.href = "https://baseapk.me";
-    });
+    // document.querySelector(".more-button").addEventListener("click", function () {
+    //     // MORE BUTTON CLICK INTRACTION
+    //     gtag('event', 'more_games_click', {
+    //         'event_category': 'Navigation',
+    //         'event_label': 'More Games Button'
+    //     });
+    //     // Redirect "More Games" button
+    //     window.location.href = "https://baseapk.me";
+    // });
 </script>
 </body>
 </html>

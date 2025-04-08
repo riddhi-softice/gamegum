@@ -191,6 +191,19 @@
     </p>
   </div>
 
+  <!--custom popup -->
+  <div id="custom-popup-placeholder"></div>
+  <!--custom popup -->
+  
+  <script>
+    fetch('../custom-popup.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('custom-popup-placeholder').innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:", error));
+  </script>
+  <script type="text/javascript" src="../assets/js/common.js"></script>
   <script type="text/javascript" src="../assets/js/disable-click.js"></script>
   <script src="js/bind_polyfill.js"></script>
   <script src="js/classlist_polyfill.js"></script>
@@ -201,8 +214,7 @@
   <script src="js/tile.js"></script>
   <script src="js/local_storage_manager.js"></script>
   <script src="js/game_manager.js"></script>
-  <script src="js/application.js"></script>
- 
+  <script src="js/application.js"></script> 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
         document.querySelector(".top-adx").style.setProperty("height", "100px", "important");
@@ -237,29 +249,7 @@
           'event_label': '2048 Started'
         });
     });
-    
-    // HOME BUTTON CLICK INTRACTION --------------------------------------------------------------
-    document.querySelector(".home-button").addEventListener("click", function () {
-        
-        gtag('event', 'home_button_click', {
-            'event_category': 'Navigation',
-            'event_label': 'Back to Home'
-        });
-        // Optional: small delay to ensure GA event is sent
-        setTimeout(() => {
-            window.location.href = "https://baseapk.me";
-        }, 200); // 200ms delay
-    });
-
-    document.querySelector(".more-button").addEventListener("click", function () {
-        // MORE BUTTON CLICK INTRACTION
-        gtag('event', 'more_games_click', {
-            'event_category': 'Navigation',
-            'event_label': 'More Games Button'
-        });
-        // Redirect "More Games" button
-        window.location.href = "https://baseapk.me";
-    });
+   
   </script>
 </body>
 </html>

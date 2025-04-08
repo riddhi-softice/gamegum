@@ -201,8 +201,6 @@
     justify-content: space-between;
     margin-bottom: 10px;
 }
-
-/* Ad Button */
 .Ad-btn {
     background: gray;
     border: none;
@@ -228,19 +226,14 @@
     display: none; /* show after 5 sec */
 }
 
-/* Default: hide both */
 .ad-mobile, .ad-desktop {
     display: none;
   }
-  
-  /* Show Mobile Ad */
 @media (max-width: 767px) {
     .ad-mobile {
       display: block;
     }
 } 
-
-/* Show Desktop Ad */
 @media (min-width: 768px) {
     .ad-desktop {
       display: block;

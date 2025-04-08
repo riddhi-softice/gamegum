@@ -76,7 +76,6 @@
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-        
           gtag('config', 'G-5LR732BBVK');
         </script>
     <!-- Analitycs Google tag (gtag.js) -->
@@ -221,29 +220,44 @@
         </div>
     </div>
     <div id="feelsize"></div>
+
+    <!--custom popup -->
+       <div id="custom-popup-placeholder"></div>
+    <!--custom popup -->
     
+    <script type="text/javascript" src="../assets/js/common.js"></script>
+    <script>
+        fetch('../custom-popup.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('custom-popup-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error("Error loading footer:", error));
+    </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             document.querySelector(".top-adx").style.setProperty("height", "100px", "important");
         });
-        document.getElementById("homeButton").addEventListener("click", function () {
+        // document.getElementById("homeButton").addEventListener("click", function () {
+        //     // HOME BUTTON CLICK INTRACTION
+        //     gtag('event', 'home_games_click', {
+        //         'event_category': 'Navigation',
+        //         'event_label': 'Play to Home'
+        //     });
+        //     BackToHome();
+        //     console.log("hss");
+        //     //  window.location.href = "https://baseapk.me";
+        // });
+        // document.querySelector(".more-button").addEventListener("click", function () {
+        //     // MORE BUTTON CLICK INTRACTION
+        //     gtag('event', 'more_games_click', {
+        //         'event_category': 'Navigation',
+        //         'event_label': 'More Games Button'
+        //     });
             
-            // HOME BUTTON CLICK INTRACTION
-            gtag('event', 'home_games_click', {
-                'event_category': 'Navigation',
-                'event_label': 'Play to Home'
-            });
-             window.location.href = "https://baseapk.me";
-        });
-        document.querySelector(".more-button").addEventListener("click", function () {
-            // MORE BUTTON CLICK INTRACTION
-            gtag('event', 'more_games_click', {
-                'event_category': 'Navigation',
-                'event_label': 'More Games Button'
-            });
-            
-            window.location.href = "https://baseapk.me"; 
-        });
+        //     window.location.href = "https://baseapk.me"; 
+        // });
+
         document.querySelector(".start-button").addEventListener("click", function () {
 
             let splashScreen = document.getElementById("image-loader");

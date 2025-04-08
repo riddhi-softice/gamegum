@@ -19,7 +19,7 @@
 	<link href="../assets/css/group1_game.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="../assets/js/group1_auto_landing.js" async></script>
 	<style>
-		 .home-icon {
+		.home-icon {
             background: var(--bg);
             position: fixed; 
             top: 1rem;
@@ -160,13 +160,20 @@
 		<div class="message message--instructions" id="instructions">Grab the blue pills<span>avoid the red ones</span>
 		</div>
 	</div>
-	<!-- Demo links -->
-	<!-- <nav class="meta">
-			<a class="codrops-icon codrops-icon--prev" href="http://tympanus.net/Development/Interactive3DMallMap/" title="Previous Demo"><span>Previous Demo</span></a>
-			<a class="codrops-icon codrops-icon--drop" href="http://tympanus.net/codrops/?p=26501" title="Back to the article"><span>Back to the Codrops article</span></a>
-			<a class="demo-link" href="part1.html">Part 1</a>
-			<a class="demo-link" href="part2.html">Part 2</a>
-		</nav> -->
+	
+	<!--custom popup -->
+    <div id="custom-popup-placeholder"></div>
+    <!--custom popup -->
+    
+    <script type="text/javascript" src="../assets/js/common.js"></script>
+    <script>
+        fetch('../custom-popup.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('custom-popup-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error("Error loading footer:", error));
+    </script>
 	<script type="text/javascript" src="../assets/js/disable-click.js"></script>
 	<script>
     	document.addEventListener("DOMContentLoaded", function () {
@@ -204,29 +211,6 @@
           'event_category': 'StartGame',
           'event_label': 'Aviator Started'
         });
-    });
-    
-    // HOME BUTTON CLICK INTRACTION --------------------------------------------------------------
-    document.querySelector(".home-icon").addEventListener("click", function () {
-        
-        gtag('event', 'home_button_click', {
-            'event_category': 'Navigation',
-            'event_label': 'Back to Home'
-        });
-        // Optional: small delay to ensure GA event is sent
-        setTimeout(() => {
-            window.location.href = "https://baseapk.me";
-        }, 200); // 200ms delay
-    });
-
-    document.querySelector(".more-button").addEventListener("click", function () {
-        // MORE BUTTON CLICK INTRACTION
-        gtag('event', 'more_games_click', {
-            'event_category': 'Navigation',
-            'event_label': 'More Games Button'
-        });
-        // Redirect "More Games" button
-        window.location.href = "https://baseapk.me";
     });
 	</script>
 </body>

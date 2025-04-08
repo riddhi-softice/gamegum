@@ -130,6 +130,7 @@
     </style>
 </head>
 <body>
+    <!-- start splash -->
     <div id="image-loader">
 	    <!-- sticky ads start -->
 		<div id="FloatAdx-left">
@@ -188,7 +189,9 @@
             </div>
         </div>
     </div>
+    <!-- end splash -->
     
+    <!-- game start -->
     <div class="main" id="main" style="display: none;">
         <!-- <section class="wrapper" oncontextmenu="return false"> -->
         <section class="wrapper">
@@ -807,6 +810,21 @@
             </section>
         </section>
     </div>
+    <!-- game end -->
+
+    <!--custom popup -->
+    <div id="custom-popup-placeholder"></div>
+    <!--custom popup -->
+    
+    <script type="text/javascript" src="../assets/js/common.js"></script>
+    <script>
+        fetch('../custom-popup.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('custom-popup-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error("Error loading footer:", error));
+    </script>
     <script type="text/javascript" src="../assets/js/disable-click.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
@@ -830,35 +848,30 @@
             document.body.style.background = 'none'; 
             document.body.style.backgroundSize = '';
             document.body.style.backgroundColor = 'rgb(235, 235, 240)';
-        
-        gtag('event', 'start_game_click', {
-          'event_category': 'StartGame',
-          'event_label': 'Sudoku Game Started'
+            
+            gtag('event', 'start_game_click', {
+            'event_category': 'StartGame',
+            'event_label': 'Sudoku Game Started'
+            });
         });
-    });
-    
-    // HOME BUTTON CLICK INTRACTION --------------------------------------------------------------
-    document.querySelector(".home-button").addEventListener("click", function () {
-        
-        gtag('event', 'home_button_click', {
-            'event_category': 'Navigation',
-            'event_label': 'Back to Home'
-        });
-        // Optional: small delay to ensure GA event is sent
-        setTimeout(() => {
-            window.location.href = "https://baseapk.me";
-        }, 200); // 200ms delay
-    });
 
-    document.querySelector(".more-button").addEventListener("click", function () {
-        // MORE BUTTON CLICK INTRACTION
-        gtag('event', 'more_games_click', {
-            'event_category': 'Navigation',
-            'event_label': 'More Games Button'
-        });
-        // Redirect "More Games" button
-        window.location.href = "https://baseapk.me";
-    });
+        function adjustLayoutForDevice() {
+            const isMobile = window.innerWidth <= 767;
+           
+            const popup = document.querySelector('.popup');
+            const adMobile = document.querySelector('.ad-mobile');
+            const adDesktop = document.querySelector('.ad-desktop');
+
+            if (popup) {
+                if (!isMobile) {
+                    adMobile.style.display = 'none';
+                    adDesktop.style.display = 'block';
+                }
+            }
+        }
+        // Run on load
+        window.addEventListener('load', adjustLayoutForDevice);
+        window.addEventListener('resize', adjustLayoutForDevice);
     </script>
 </body>
 </html>
