@@ -18596,7 +18596,7 @@
   }
   .results .go .minor,
   .results .win .major {
-    background: url("http://www.jerrylow.com/demo/stacker/minor.png");
+    background: url("https://www.jerrylow.com/demo/stacker/minor.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -18605,7 +18605,7 @@
     width: 50px;
   }
   .results .win .major {
-    background-image: url("http://www.jerrylow.com/demo/stacker/major.png");
+    background-image: url("https://www.jerrylow.com/demo/stacker/major.png");
     display: block;
     height: 100px;
     width: 50px;

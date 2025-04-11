@@ -2,7 +2,7 @@
  * Tile
  * Object for storing a single tile. Allows for collecing its own state information, marking, clearing, etc.
  * (c) 2014 Q42
- * http://q42.com | @q42
+ * https://q42.com | @q42
  * Written by Martin Kool
  * martin@q42.nl | @mrtnkl
  */

@@ -177,6 +177,8 @@
     display: none;
     z-index: 999;
 }
+
+/* Popup Box */
 .popup {
     position: fixed;
     top: 50%;
@@ -201,6 +203,8 @@
     justify-content: space-between;
     margin-bottom: 10px;
 }
+
+/* Ad Button */
 .Ad-btn {
     background: gray;
     border: none;
@@ -209,6 +213,8 @@
     font-size: 14px;
     border-radius: 5px;
 }
+
+/* Countdown Text */
 .countdown-text {
     flex: 1;
     text-align: center;
@@ -216,6 +222,8 @@
     font-size: 14px;
     margin: 0;
 }
+
+/* Close Button */
 .adx-close-btn {
     background: #ff4d4d;
     color: white;
@@ -226,14 +234,19 @@
     display: none; /* show after 5 sec */
 }
 
+/* Default: hide both */
 .ad-mobile, .ad-desktop {
     display: none;
   }
+  
+  /* Show Mobile Ad */
 @media (max-width: 767px) {
     .ad-mobile {
       display: block;
     }
 } 
+
+/* Show Desktop Ad */
 @media (min-width: 768px) {
     .ad-desktop {
       display: block;

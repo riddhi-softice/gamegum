@@ -2,7 +2,7 @@
  * State
  * API for pushing and popping the game state and closing unavailable paths while generating.
  * (c) 2014 Q42
- * http://q42.com | @q42
+ * https://q42.com | @q42
  * Written by Martin Kool
  * martin@q42.nl | @mrtnkl
  */

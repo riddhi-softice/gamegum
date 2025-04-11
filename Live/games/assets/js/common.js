@@ -73,7 +73,7 @@ function BackToHome() {
     setTimeout(() => {
         popup.style.opacity = "1";
         homeBtn.style.zIndex = "0";
-    }, 20); 
+    }, 20);
 
     let countdown = 5;
     countdownElement.textContent = countdown;
@@ -88,11 +88,11 @@ function BackToHome() {
             closeBtn.style.display = "inline-block";
 
             // After 1 seconds, redirect
-            // setTimeout(() => {
-            //     overlay.style.display = "none";
-            //     popup.style.opacity = "0";
-            //     window.location.href = "http://baseapk.me";
-            // }, 1000);
+            setTimeout(() => {
+                overlay.style.display = "none";
+                popup.style.opacity = "0";
+                window.location.href = "https://baseapk.me";
+            }, 1000);
         }
     }, 1000);
 }
@@ -103,6 +103,6 @@ function closeCustomPopup() {
 
     // Wait a bit before redirect (optional fade-out effect)
     setTimeout(() => {
-        window.location.href = "http://baseapk.me";
+        window.location.href = "https://baseapk.me";
     }, 200);
 }

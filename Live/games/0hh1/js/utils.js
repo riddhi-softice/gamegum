@@ -3,7 +3,7 @@
  * Martin's senile little utility belt library for being an #omyac
  * Please do not build life support systems with it.
  * (c) 2014 Q42
- * http://q42.com | @q42
+ * https://q42.com | @q42
  * Written by Martin Kool
  * martin@q42.nl | @mrtnkl
  */
@@ -284,8 +284,8 @@ var Colors = new (function() {
       return hsv;
   }
 
-  // rgbToHsv and hsvToRgb are based on Color Match Remix [http://color.twysted.net/]
-  // which is based on or copied from ColorMatch 5K [http://colormatch.dk/]
+  // rgbToHsv and hsvToRgb are based on Color Match Remix [https://color.twysted.net/]
+  // which is based on or copied from ColorMatch 5K [https://colormatch.dk/]
   function hsvToRgb(hsv) {
       var rgb=new Object();
       if (hsv.saturation==0) {

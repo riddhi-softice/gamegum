@@ -2,7 +2,7 @@
  * Tutorial
  * The 0h h1 tutorial with its messages and required tile(s) to tap.
  * (c) 2014 Q42
- * http://q42.com | @q42
+ * https://q42.com | @q42
  * Written by Martin Kool
  * martin@q42.nl | @mrtnkl
  */

@@ -2,7 +2,7 @@
  * Game
  * The main 0h h1 game, a singleton object in global scope.
  * (c) 2014 Q42
- * http://q42.com | @q42
+ * https://q42.com | @q42
  * Written by Martin Kool
  * martin@q42.nl | @mrtnkl
  */

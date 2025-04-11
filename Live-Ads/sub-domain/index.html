@@ -60,6 +60,17 @@
          window.vignetteAd = _shareustag.defineVignetteAdSlot('/shareus-admanager/6997414716/u2TptVOA7L/Inter');
     });
     </script>-->
+    
+    <!-- Analitycs Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5LR732BBVK"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'G-5LR732BBVK');
+        </script>
+    <!-- Analitycs Google tag (gtag.js) -->
 </head>
 <body>
     <section class="app_wrapper">
@@ -185,18 +196,18 @@
                     <h4 class="categories">Get exclusive insurance info</h4>
                     <p class="by_watching_text">By watching ad</p>
                     <div class="categories_box d-flex justify-content-center pt-2 pb-1">
-                        <button data-target="life.html" class="cusBtnOption" id="btn-click">
+                        <button data-target="life.html" class="cusBtnOption btn-click">
                             Life <i class="fa-solid fa-angles-right"></i>
                         </button>
-                        <button data-target="health.html" class="cusBtnOption" id="btn-click">
+                        <button data-target="health.html" class="cusBtnOption btn-click">
                             Health <i class="fa-solid fa-angles-right"></i>
                         </button>
                     </div>
                     <div class="categories_box d-flex justify-content-center pt-2 pb-1">
-                        <button data-target="vehicle.html" class="cusBtnOption" id="btn-click">
+                        <button data-target="vehicle.html" class="cusBtnOption btn-click">
                             Vehicle <i class="fa-solid fa-angles-right"></i>
                         </button>
-                        <button data-target="home-insurance.html" class="cusBtnOption" id="btn-click">
+                        <button data-target="home-insurance.html" class="cusBtnOption btn-click">
                             Home <i class="fa-solid fa-angles-right"></i>
                         </button>
                     </div>
@@ -341,7 +352,7 @@
     </section>
     
     <div class='sticky-btm' id='sticky-btm'>
-        <div class='sticky-btm-close' onclick='document.getElementById("sticky-btm").style.display="none"'><svg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'><path d='M278.6 256l68.2-68.2c6.2-6.2 6.2-16.4 0-22.6-6.2-6.2-16.4-6.2-22.6 0L256 233.4l-68.2-68.2c-6.2-6.2-16.4-6.2-22.6 0-3.1 3.1-4.7 7.2-4.7 11.3 0 4.1 1.6 8.2 4.7 11.3l68.2 68.2-68.2 68.2c-3.1 3.1-4.7 7.2-4.7 11.3 0 4.1 1.6 8.2 4.7 11.3 6.2 6.2 16.4 6.2 22.6 0l68.2-68.2 68.2 68.2c6.2 6.2 16.4 6.2 22.6 0 6.2-6.2 6.2-16.4 0-22.6L278.6 256z'/></svg></div>
+        <div class='sticky-btm-close' onclick='document.getElementById("sticky-btm").style.display="none"'><svg viewBox='0 0 512 512' xmlns='https://www.w3.org/2000/svg'><path d='M278.6 256l68.2-68.2c6.2-6.2 6.2-16.4 0-22.6-6.2-6.2-16.4-6.2-22.6 0L256 233.4l-68.2-68.2c-6.2-6.2-16.4-6.2-22.6 0-3.1 3.1-4.7 7.2-4.7 11.3 0 4.1 1.6 8.2 4.7 11.3l68.2 68.2-68.2 68.2c-3.1 3.1-4.7 7.2-4.7 11.3 0 4.1 1.6 8.2 4.7 11.3 6.2 6.2 16.4 6.2 22.6 0l68.2-68.2 68.2 68.2c6.2 6.2 16.4 6.2 22.6 0 6.2-6.2 6.2-16.4 0-22.6L278.6 256z'/></svg></div>
         <div class='sticky-btm-content'>
 
             <!--<ins class="adsbygoogle"
@@ -375,9 +386,9 @@
         
             <div id="div-gpt" style="min-width: 336px; min-height: 280px;">
                 <ins class="adsbygoogle"
-                    style="display:inline-block;width:336px;height:280px"
-                    data-ad-client="ca-pub-8263720079379422"
-                    data-ad-slot="7802751203"></ins>
+                 style="display:inline-block;width:336px;height:280px"
+                 data-ad-client="ca-pub-8263720079379422"
+                 data-ad-slot="7802751203"></ins>
                 <script>
                      (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
@@ -442,12 +453,12 @@
         });
     </script>-->
 
-    <!--<script>-->
-    <!--    window.onload = function () {-->
-    <!--        document.body.classList.add("loaded");-->
-    <!--    };-->
-    <!--</script>-->
-    <script>
+    <!--<script>
+        window.onload = function () {
+            document.body.classList.add("loaded");
+        };
+    </script>-->
+    <!--<script>
         document.querySelectorAll("#btn-click").forEach(button => {
             button.addEventListener("click", function () {
                 let targetUrl = this.getAttribute("data-target");
@@ -456,7 +467,31 @@
                 }
             });
         });
+    </script>-->
+    
+    <script>
+        // Select all buttons with class 'cusBtnOption'
+        document.querySelectorAll(".btn-click").forEach(button => {
+            button.addEventListener("click", function () {
+                let targetUrl = this.getAttribute("data-target");
+                let label = this.innerText.trim();
+        
+                // Send GA4 event
+                gtag('event', 'insurance_category_click', {
+                    'event_category': 'Insurance',
+                    'event_label': label
+                });
+        
+                // Redirect to the target URL after short delay
+                if (targetUrl) {
+                    setTimeout(() => {
+                        window.location.href = targetUrl;
+                    }, 200); // Delay to ensure GA event is sent
+                }
+            });
+        });
     </script>
+
     <script>
          fetch('_footer.html')
             .then(response => response.text())
@@ -545,7 +580,7 @@
         //     showServicesCheckbox.addEventListener('change', updateIconAndClass);
         // });
 
-        document.addEventListener("DOMContentLoaded", () => {
+        /*document.addEventListener("DOMContentLoaded", () => {
             const menuItems = document.querySelectorAll('.menu-item');
             const currentPath = location.pathname; // e.g., "/gamegum/finance/"
             console.log(currentPath, "currentPath")
@@ -558,7 +593,43 @@
                     item.style.borderRadius = "10px";
                 }
             });
-        }); 
+        }); */
+        
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuItems = document.querySelectorAll('.menu-item');
+            const currentPath = location.pathname; // e.g., "/gamegum/finance/"
+            console.log(currentPath, "currentPath");
+        
+            menuItems.forEach(item => {
+                const endpoint = `/${item.dataset.endpoint}/`; // For highlighting active link
+                const pageName = item.innerText.trim();
+                const targetURL = item.getAttribute("href");
+        
+                // Highlight active menu item
+                if (currentPath.includes(endpoint)) {
+                    console.log(endpoint, "endpoint");
+                    item.style.color = "White";
+                    item.style.backgroundColor = "#2F9CD9";
+                    item.style.borderRadius = "10px";
+                }
+        
+                // Add Google Analytics event tracking
+                item.addEventListener("click", function (e) {
+                    e.preventDefault(); // Prevent immediate navigation for tracking
+                    gtag('event', 'nav_menu_click', {
+                        'event_category': 'Navigation',
+                        'event_label': pageName,
+                        'link_url': targetURL
+                    });
+        
+                    // Navigate after small delay
+                    setTimeout(() => {
+                        window.location.href = targetURL;
+                    }, 200); // 200ms delay
+                });
+            });
+        });
+
     </script>
 </body>
 </html>
