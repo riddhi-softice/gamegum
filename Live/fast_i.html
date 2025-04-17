@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+    <!--<link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"  as="font" type="font/woff2" crossorigin="anonymous">-->
     <title>Baseapk - Play Free Online Games</title>
     <meta name="description" content="Play exciting free online games on Baseapk! Enjoy Sudoku, 2048, Tic-Tac-Toe, Flappy Bird, Connect 4, Space Invaders, Memory Game, and many more. Challenge your skills and have fun!">
     <meta name="keywords" content="free online games, play games, sudoku, 2048, tic-tac-toe, table tennis, connect 4, mine sweeper, flappy bird, memory game, reaction wall, word guessing, math game, retro dungeon maze, space invaders, stacker, lazy 2048, tower blocks, the aviator, typing game, emoji catcher, simon says, whack a mole">
@@ -25,52 +25,84 @@
     <meta name="twitter:image" content="assets/images/icon.png">
 
     <link rel="shortcut icon" href="assets/images/icon.png">
+    
+    
+<!-- Critical CSS Inline -->
+<style>
+/* Only include styles for header, top nav, etc. */
+body {margin:0;font-family:'Poppins',sans-serif;}
+.header {padding:10px;background:#000;color:#fff;}
+</style>
 
-    <link rel="preload" href="assets/images/195-150/the-aviator.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/0hh1.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/2048.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/align-4.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/color-match.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/connect-4.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/emoji-catcher.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/flappy-bird.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/ghost-bustin.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/hangman.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/lazy-2048.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/math-game.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/memory-game.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/minesweeper.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/plankman.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/reaction-wall.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/word-guessing.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/whack-a-mole.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/typing-game.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/tower-blocks.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/tic-tac-toe.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/the-aviator.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/table-tennis.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/sudoku.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/stacker.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/space-invaders.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/simon-says.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/retro-dungeon-maze-puzzle.webp" as="image" type="image/webp">
+<!-- Asynchronously load non-critical CSS -->
 
+<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css"></noscript>
+
+<link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css"></noscript>
+
+<!-- Inline fonts or preload properly -->
+<!--<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" media="print" onload="this.onload=null;this.media='all';">
+<noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+</noscript>-->
+
+
+<!--<link rel="preload" href="vendor/bootstrap/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css"></noscript>
+
+<link rel="preload" href="assets/css/templatemo-cyborg-gaming.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css"></noscript>-->
+
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"></noscript>
+
+
+    <!--<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--<link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css">-->
+    
+
+    <link rel="stylesheet" href="assets/css/group1_display.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/footer.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/home.css" media="print" onload="this.media='all'">
+    
+    <link rel="preload" href="assets/images/195-150/the-aviator.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/the-aviator.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/0hh1.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/2048.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/align-4.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/color-match.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/connect-4.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/emoji-catcher.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/flappy-bird.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/ghost-bustin.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/hangman.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/lazy-2048.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/math-game.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/memory-game.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/minesweeper.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/plankman.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/reaction-wall.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/word-guessing.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/whack-a-mole.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/typing-game.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/tower-blocks.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/tic-tac-toe.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/the-aviator.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/table-tennis.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/sudoku.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/stacker.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/space-invaders.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/simon-says.webp" as="image" type="image/webp">
+      <link rel="preload" href="assets/images/195-150/retro-dungeon-maze-puzzle.webp" as="image" type="image/webp">
     <link rel="preload" href="assets/images/logo.png" as="image" type="image/png">
     <link rel="preload" href="assets/images/footer-logo.png" as="image" type="image/png">
 
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css">
-    <!--<link rel="stylesheet" href="assets/css/owl.css">-->
-    <!--<link rel="stylesheet" href="assets/css/animate.css">-->
-    <!--<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />-->
-    <link rel="stylesheet" href="assets/css/group1_display.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/home.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422" crossorigin="anonymous"></script>
+    <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422" crossorigin="anonymous"></script>-->
 
     <!-- Analitycs Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5LR732BBVK"></script>
+        <!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-5LR732BBVK"></script>-->
         <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -78,6 +110,7 @@
         
           gtag('config', 'G-5LR732BBVK');
         </script>
+    
     <!-- Analitycs Google tag (gtag.js) -->
 
 </head>
@@ -163,10 +196,7 @@
                                     <div class="row">                                      
 
                                         <div class="col-lg-6 col-sm-12">
-                                            <a onclick="gtag('event', 'play_game', {
-                                                        'event_category': 'Games',
-                                                        'event_label': 'Aviator'
-                                                      }); setDynamicBackground('the-aviator')">
+                                            <a onclick="setDynamicBackground('the-aviator')">
                                             <div class="item big-box-hight">
                                                 <img src="assets/images/195-150/the-aviator.webp" loading="lazy" alt="">
                                                 <h4 class="main-g">Aaviator</h4>
@@ -174,7 +204,7 @@
                                             </a>
                                         </div> 
                                         
-                                        <div class="header_adx" style="">
+                                        <div class="header_adx" style="height: 300px !important;">
                                             <div class="ad_1 col-span-2 " style="padding-top: 10px; padding-bottom: 10px;">
                                                 <div id='div-gpt' style='min-width: 336px; min-height: 200px;'>
                                                     <ins class="adsbygoogle"
@@ -250,8 +280,6 @@
                                         <div class="header_adx" style="">
                                             <div class="ad_1 col-span-2 " style="padding-top: 10px; padding-bottom: 10px;">
                                                 <div id='div-gpt' style='min-width: 336px; min-height: 200px;'>
-                                                    <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422"-->
-                                                    <!--     crossorigin="anonymous"></script>-->
                                                     <ins class="adsbygoogle"
                                                          style="display:inline-block;width:336px;height:200px"
                                                          data-ad-client="ca-pub-8263720079379422"
@@ -274,8 +302,6 @@
                                         d-sm-block → Makes it visible on small screens (≥576px) and larger. -->
                                         <div class="col-lg-3 col-sm-6 col-6 d-none d-sm-block adx-box-hide">
                                             <div class="item adx-box">
-                                                <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422"-->
-                                                <!--     crossorigin="anonymous"></script>-->
                                                 <ins class="adsbygoogle"
                                                      style="display:inline-block;width:250px;height:250px"
                                                      data-ad-client="ca-pub-8263720079379422"
@@ -294,7 +320,9 @@
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <a onclick="setDynamicBackground('memory-game')">
                                             <div class="item">
-                                                <img src="assets/images/195-150/memory-game.webp" loading="lazy" alt="">
+                                                <!--<img src="assets/images/195-150/memory-game.webp" loading="lazy" alt="">-->
+                                                <img src="assets/images/195-150/memory-game.webp" width="195" height="150" alt="" class="img-fluid" loading="lazy">
+
                                                 <h4>Memory Game</h4>
                                             </div>
                                             </a>
@@ -426,8 +454,6 @@
 
                                         <div class="col-lg-3 col-sm-6 col-6 d-none d-sm-block adx-box-hide">
                                             <div class="item adx-box">
-                                                <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422"-->
-                                                <!--     crossorigin="anonymous"></script>-->
                                                 <!-- Home content 2 -->
                                                 <ins class="adsbygoogle"
                                                      style="display:inline-block;width:250px;height:250px"
@@ -497,8 +523,7 @@
                     
                     <div class="gaming-library">
                         <div class="col-lg-12">
-                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422"
-                             crossorigin="anonymous"></script>
+                       
                         <ins class="adsbygoogle"
                              style="display:block"
                              data-ad-format="autorelaxed"
@@ -584,15 +609,54 @@
         </div>
     <!--custom popup -->
     
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/isotope.min.js"></script>
+    
+    
+    <script src="vendor/jquery/jquery.min.js" defer></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js" defer></script>
+    <!--<script src="assets/js/isotope.min.js"></script>-->
     <!--<script src="assets/js/owl-carousel.js"></script>-->
     <!--<script src="assets/js/tabs.js"></script>-->
-    <script src="assets/js/popup.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+        
+    <script>
+        function loadScript(url, callback) {
+            const script = document.createElement('script');
+            script.src = url;
+            script.onload = callback;
+            document.body.appendChild(script);
+        }
+        
+        // Load Isotope when the user scrolls to the relevant section
+        document.getElementById('scrollToSection').addEventListener('scroll', function() {
+            loadScript('assets/js/isotope.min.js', function() {
+                // Code to initialize Isotope once loaded
+            });
+        });
+
+    </script>
+    <script src="assets/js/popup.js" defer></script>
+    <script src="assets/js/custom.js" defer></script>
+    <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
     <!-- <script src="assets/js/main.js"></script> -->
+    
+    <!-- Load ads script lazily -->
+    <script>
+      window.addEventListener("scroll", function loadAdsOnce() {
+        const script = document.createElement("script");
+        script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422";
+        script.async = true;
+        document.head.appendChild(script);
+        window.removeEventListener("scroll", loadAdsOnce);
+      });
+      
+        setTimeout(() => {
+          const gtagScript = document.createElement("script");
+          gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-5LR732BBVK";
+          gtagScript.defer = true;
+          document.head.appendChild(gtagScript);
+        }, 3000); // load after 3s
+    </script>
+
     <script>
         fetch('_footer.html')
         .then(response => response.text())
@@ -608,7 +672,7 @@
         .catch(error => console.error("Error loading footer:", error));
     </script>
     
-     <!--  CUSTOM POPUP ------------------------------------------------------------------------ -->
+     <!--  CUSTOM POPUP ------------------------------------------------------------------------/ -->
     <script>
         function setDynamicBackground(gName) {
             localStorage.setItem('gameName', gName);
