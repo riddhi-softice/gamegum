@@ -1,10 +1,10 @@
 // load background image
-window.onload = function () {
-    document.body.classList.add("loaded");
-};
+// window.onload = function () {
+//     document.body.classList.add("loaded");
+// };
 
 
-// // PAGE RIGHT CLICK DISABLE
+// // // PAGE RIGHT CLICK DISABLE
 document.addEventListener("contextmenu", function (event) {
     event.preventDefault();
 	// alert("Right-click is disabled!");

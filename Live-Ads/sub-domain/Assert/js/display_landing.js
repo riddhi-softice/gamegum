@@ -27,7 +27,7 @@ function createPopupAd() {
 
         // Close popup on click
         document.querySelector(".close-popup").addEventListener("click", closePopup);
-    }, 20); // Show popup after 1.5 seconds
+    }, 1000); // Show popup after 1.5 seconds
 }
 
 function closePopup() {

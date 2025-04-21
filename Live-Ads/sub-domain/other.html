@@ -44,16 +44,30 @@
     <link rel="stylesheet" href="Assert/Css/responcive.css">
     <link rel="stylesheet" href="Assert/Css/group1.css">
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422" crossorigin="anonymous"></script>
+    <script defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422" crossorigin="anonymous"></script>
+    <script>
+      setTimeout(() => {
+        const gtagScript = document.createElement("script");
+        gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-5LR732BBVK";
+        gtagScript.async = true;
+        document.head.appendChild(gtagScript);
+    
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-5LR732BBVK');
+      }, 3000); // Delay GTM to avoid render-blocking
+    </script>
+
     <!-- Analitycs Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5LR732BBVK"></script>
+        <!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-5LR732BBVK"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             
             gtag('config', 'G-5LR732BBVK');
-        </script>
+        </script>-->
     <!-- Analitycs Google tag (gtag.js) -->
 </head>
 <body>
@@ -252,8 +266,8 @@
         </div>
     </div>
     
-    <script src="Assert/js/group1_float.js"></script>
-    <script src="Assert/js/disable_source.js"></script>
+    <script src="Assert/js/group1_float.js" defer></script>
+    <script src="Assert/js/disable_source.js" defer></script>
     <script>
          fetch('_footer.html')
             .then(response => response.text())

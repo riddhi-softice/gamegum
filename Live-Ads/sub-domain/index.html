@@ -34,9 +34,7 @@
     <link rel="icon" type="image/x-icon" href="Assert/image/icon.webp">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="Assert/Css/about-us.css">
-    <link rel="stylesheet" href="Assert/Css/contact-us.css">
-    <link rel="stylesheet" href="Assert/Css/faq.css">
+
     <link rel="stylesheet" href="Assert/Css/blog.style.css">
     <link rel="stylesheet" href="Assert/Css/bootstrap.css">
     <link rel="stylesheet" href="Assert/Css/style.css">
@@ -48,30 +46,77 @@
             margin-bottom: 10px;
         }
     </style>
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422" crossorigin="anonymous"></script>
-   
-   <!--<script type="module" src="https://securepubads.shareus.io/scripts/tag/js/gpt.js"></script>
-   <script>window._shareustag = window._shareustag || {cmd: []};
-    _shareustag.cmd.push(function() {
-         // Define Rewarded 
-         Adwindow.rewardAd = _shareustag.defineRewardAdSlot('/shareus-admanager/6997414716/vm4ibCnJOU/Reward');
- 
-         // Define Vignette Ad (fallback)
-         window.vignetteAd = _shareustag.defineVignetteAdSlot('/shareus-admanager/6997414716/u2TptVOA7L/Inter');
-    });
-    </script>-->
+
+    <!-- <script>
+  setTimeout(function () {
+    if (window.adsbygoogle) return; // Already loaded?
+
+    const adsScript = document.createElement("script");
+    adsScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+    adsScript.async = true;
+    adsScript.onload = function () {
+      try {
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (e) {
+        console.error("AdSense push failed:", e);
+      }
+    };
+    document.head.appendChild(adsScript);
+  }, 3000); // 3000ms = 3 seconds
+</script>-->
+
+    <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422" crossorigin="anonymous" defer></script>
     
+<!--<script>
+  setTimeout(function () {
+    if (window.adsbygoogle) return;
+
+    const script = document.createElement("script");
+    script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422";
+    script.setAttribute("crossorigin", "anonymous");
+    script.async = true;
+    script.onload = function () {
+      // Initialize ads manually if not auto
+      const adSlots = document.querySelectorAll(".adsbygoogle");
+      adSlots.forEach(slot => {
+        try {
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        } catch (e) {
+          console.error("Ad push failed", e);
+        }
+      });
+    };
+    document.head.appendChild(script);
+  }, 3000);
+</script>--> 
+
+   
     <!-- Analitycs Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5LR732BBVK"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            
-            gtag('config', 'G-5LR732BBVK');
-        </script>
+    
+    <script>
+      setTimeout(() => {
+        const gtagScript = document.createElement("script");
+        gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-5LR732BBVK";
+        gtagScript.async = true;
+        document.head.appendChild(gtagScript);
+    
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-5LR732BBVK');
+      }, 3000); // Delay GTM to avoid render-blocking
+    </script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-5LR732BBVK" defer></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-5LR732BBVK');
+    </script>
     <!-- Analitycs Google tag (gtag.js) -->
 </head>
+
 <body>
     <section class="app_wrapper">
         <div id="popupAdContainer">
@@ -85,7 +130,7 @@
                 <div class="nav-content">
                     <a class="header_logo_link" href="https://100-play-online.baseapk.me">
                         <div class="logo">
-                            <img class="" src="Assert/image/logo.png" alt="health success">
+                            <img class="" src="Assert/image/logo.png" height="28" width="102" alt="health success">
                         </div>
                     </a>
                     <ul class="links">
@@ -136,11 +181,6 @@
                 <div class="ad_1 col-span-2 " style="padding-top: 10px; padding-bottom: 10px;">
                     <!-- /23201071713/group1_display_landing_top -->
                     <div id='div-gpt' style='min-width: 336px; min-height: 280px;'>
-                        <!-- <script>
-                            googletag.cmd.push(function () { googletag.display('div-gpt-ad-1733386678602-0'); });
-                        </script> -->
-                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422"
-                                 crossorigin="anonymous"></script>
                             <!-- Sub home -->
                             <ins class="adsbygoogle"
                                  style="display:inline-block;width:336px;height:280px"
@@ -165,7 +205,9 @@
                         </button>-->
                         
                         <!--<button id="play-game-btn" class="cusBtnOption" data-game="https://baseapk.me">Play Now</button> -->
+                        
                         <button class="cusBtnOption" onclick="openPopup()">Play Now</button> 
+                        
 
                     </div>
                 </div>
@@ -177,8 +219,7 @@
                 <div class="ad_1 col-span-2 " style="padding-top: 10px; padding-bottom: 10px;">
                     <!-- /23201071713/group1_display_landing_top -->
                     <div id='div-gpt' style='min-width: 336px; min-height: 200px;'>
-                        <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422"-->
-                        <!--     crossorigin="anonymous"></script>-->
+            
                         <ins class="adsbygoogle"
                              style="display:inline-block;width:336px;height:200px"
                              data-ad-client="ca-pub-8263720079379422"
@@ -230,8 +271,6 @@
                         <!-- /23201071713/group1_display_landing_top -->
                         <div id='div-gpt'>
                            
-                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422"
-                                 crossorigin="anonymous"></script>
                             <ins class="adsbygoogle"
                                  style="display:block; text-align:center;"
                                  data-ad-layout="in-article"
@@ -311,8 +350,6 @@
                         <!-- /23201071713/group1_display_landing_top -->
                         <div id='div-gpt' style='min-width: 336px; min-height: 600px;'>
 
-                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422"
-                                 crossorigin="anonymous"></script>
                             <ins class="adsbygoogle"
                                  style="display:inline-block;width:336px;height:600px"
                                  data-ad-client="ca-pub-8263720079379422"
@@ -397,61 +434,10 @@
     <!--custom popup -->
 
 
-    <script src="Assert/js/disable_source.js"></script>
-    <script src="Assert/js/group1_float.js"></script>
-    <!-- <script>
-        document.querySelectorAll("#play-game-btn").forEach(button => {
-            button.addEventListener("click", function() {
-                let gameUrl = this.getAttribute("data-game"); 
-                // Get game URL or ID
-                if (typeof rewardAd !== "undefined" && rewardAd.isReady()) {
-                    // Show Rewarded Ad          
-                    rewardAd.show()
-                    .then(() => {
-                        // alert("Ad watched! Starting the game...");
-                        window.location.href = gameUrl; // Start the game            
-                        })
-                    .catch((error) => {
-                        // console.warn("Rewarded ad failed. Trying Vignette Ad...", error);
-        
-                        // If Rewarded Ad fails, try Vignette Ad
-                        if (typeof vignetteAd !== "undefined" && vignetteAd.isReady()) {
-                            vignetteAd.show()
-                            .then(() => {
-                                // alert("Vignette ad completed! Starting the game...");
-                                window.location.href = gameUrl;
-                            })
-                            .catch(() => {
-                                // alert("No ads available. Starting the game...");
-                                window.location.href = gameUrl;
-                            });
-                        } else {
-                            // alert("No ads available. Starting the game!");
-                            window.location.href = gameUrl;
-                        }
-                    });
-                } else {
-                    // console.warn("No Rewarded Ad available. Trying Vignette Ad...");
-        
-                    // If Rewarded Ad is not ready, try Vignette Ad
-                    if (typeof vignetteAd !== "undefined" && vignetteAd.isReady()) {
-                        vignetteAd.show()
-                        .then(() => {
-                            // alert("Vignette ad completed! Starting the game...");
-                            window.location.href = gameUrl;
-                        })
-                        .catch(() => {
-                            // alert("No ads available. Starting the game...");
-                            window.location.href = gameUrl;
-                        });
-                    } else {
-                        // alert("No ads available. Starting the game...");
-                        window.location.href = gameUrl;
-                    }
-                }
-            });
-        });
-    </script>-->
+    <script src="Assert/js/disable_source.js" defer></script>
+    <script src="Assert/js/group1_float.js" defer></script>
+  
+    <!-- Load ads script lazily -->
 
     <!--<script>
         window.onload = function () {
