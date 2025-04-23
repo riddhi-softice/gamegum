@@ -13,7 +13,8 @@
     <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
 
     <link href="../assets/css/group1_game.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="../assets/js/group1_auto_landing.js" async></script>
+     <link rel="preload" href="../assets/images/game-name/tic-tac-toe.png" as="image" type="image/png">
+    <!--<script type="text/javascript" src="../assets/js/group1_auto_landing.js" async></script>-->
     <style>
         .home-button {
             text-decoration: none;
@@ -191,6 +192,14 @@
             document.getElementById('custom-popup-placeholder').innerHTML = data;
         })
         .catch(error => console.error("Error loading footer:", error));
+    </script>
+    <script>
+      setTimeout(() => {
+        const script = document.createElement("script");
+        script.src = "../assets/js/group1_auto_landing.js";
+        script.defer = true;
+        document.head.appendChild(script);
+      }, 1000); // Load after 2 seconds
     </script>
     <script type="text/javascript" src="../assets/js/disable-click.js"></script>
     <script>

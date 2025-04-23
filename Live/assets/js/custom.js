@@ -258,11 +258,33 @@
 	    });
 	});
 
-	function onScroll(event){
+
+    function onScroll(event) {
+        var scrollPos = $(document).scrollTop();
+        
+        $('.nav a').each(function () {
+            var currLink = $(this);
+            var href = currLink.attr("href");
+    
+            // Skip if href is a full URL or empty/hash
+            if (!href || href.startsWith("http") || href === "#") return;
+    
+            var refElement = $(href);
+            if (refElement.length && refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                $('.nav ul li a').removeClass("active");
+                currLink.addClass("active");
+            } else {
+                currLink.removeClass("active");
+            }
+        });
+    }
+
+	/* function onScroll(event){
 	    var scrollPos = $(document).scrollTop();
 	    $('.nav a').each(function () {
 	        var currLink = $(this);
 	        var refElement = $(currLink.attr("href"));
+	      
 	        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
 	            $('.nav ul li a').removeClass("active");
 	            currLink.addClass("active");
@@ -271,7 +293,7 @@
 	            currLink.removeClass("active");
 	        }
 	    });
-	}
+	}*/
 
 	// Page loading animation
 	$(window).on('load', function () {
@@ -328,8 +350,8 @@
 	}
 })(window.jQuery);
 
-// PAGE RIGHT CLICK DISABLE
-document.addEventListener("contextmenu", function (event) {
+// // PAGE RIGHT CLICK DISABLE
+/*document.addEventListener("contextmenu", function (event) {
     event.preventDefault();
 	// alert("Right-click is disabled!");
 });
@@ -344,5 +366,5 @@ document.addEventListener("keydown", function (event) {
         event.preventDefault();
         // alert("Inspect Element is disabled!");
     }
-});
+});*/
 

@@ -81,11 +81,11 @@ function openPopup() {
             closeBtn.style.display = "inline-block";
             
             // AFTER 2 SECOND AUTOMATIC REDIRECT WHITHOUT CLICK
-            setTimeout(() => {
+            /* setTimeout(() => {
                 window.location.href = "https://baseapk.me";
                 document.getElementById("popupOverlay").style.display = "none";
                 document.getElementById("popupBox").style.opacity = "0";
-            }, 2000);
+            }, 2000); */
         }
     }, 1000);
 }

@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"  as="font" type="font/woff2" crossorigin="anonymous">
     <title>Baseapk - Play Free Online Games</title>
     <meta name="description" content="Play exciting free online games on Baseapk! Enjoy Sudoku, 2048, Tic-Tac-Toe, Flappy Bird, Connect 4, Space Invaders, Memory Game, and many more. Challenge your skills and have fun!">
     <meta name="keywords" content="free online games, play games, sudoku, 2048, tic-tac-toe, table tennis, connect 4, mine sweeper, flappy bird, memory game, reaction wall, word guessing, math game, retro dungeon maze, space invaders, stacker, lazy 2048, tower blocks, the aviator, typing game, emoji catcher, simon says, whack a mole">
@@ -25,7 +25,7 @@
     <meta name="twitter:image" content="assets/images/icon.png">
 
     <link rel="shortcut icon" href="assets/images/icon.png">
-
+    
     <link rel="preload" href="assets/images/195-150/the-aviator.webp" as="image" type="image/webp">
     <link rel="preload" href="assets/images/195-150/0hh1.webp" as="image" type="image/webp">
     <link rel="preload" href="assets/images/195-150/2048.webp" as="image" type="image/webp">
@@ -39,8 +39,8 @@
     <link rel="preload" href="assets/images/195-150/lazy-2048.webp" as="image" type="image/webp">
     <link rel="preload" href="assets/images/195-150/math-game.webp" as="image" type="image/webp">
     <link rel="preload" href="assets/images/195-150/memory-game.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/images/195-150/minesweeper.webp" as="image" type="image/webp">
     <link rel="preload" href="assets/images/195-150/plankman.webp" as="image" type="image/webp">
+    <link rel="preload" href="assets/images/195-150/minesweeper.webp" as="image" type="image/webp">
     <link rel="preload" href="assets/images/195-150/reaction-wall.webp" as="image" type="image/webp">
     <link rel="preload" href="assets/images/195-150/word-guessing.webp" as="image" type="image/webp">
     <link rel="preload" href="assets/images/195-150/whack-a-mole.webp" as="image" type="image/webp">
@@ -59,18 +59,13 @@
     <link rel="preload" href="assets/images/footer-logo.png" as="image" type="image/png">
 
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
-    <!-- <link rel="stylesheet" href="assets/css/fontawesome.css"> -->
     <link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css">
-    <!--<link rel="stylesheet" href="assets/css/owl.css">-->
-    <!--<link rel="stylesheet" href="assets/css/animate.css">-->
-    <!--<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />-->
     <link rel="stylesheet" href="assets/css/group1_display.css">
     <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/home.css">  
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="assets/css/home.css">
+    
+    
     <!-- Analitycs Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5LR732BBVK"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -78,12 +73,12 @@
         
           gtag('config', 'G-5LR732BBVK');
         </script>
+    
     <!-- Analitycs Google tag (gtag.js) -->
-
 </head>
 <body>
     <!-- ***** Preloader Start ***** -->
-    <div id="js-preloader" class="js-preloader">
+    <!--<div id="js-preloader" class="js-preloader">
         <div class="preloader-inner">
             <span class="dot"></span>
             <div class="dots">
@@ -92,7 +87,7 @@
                 <span></span>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- ***** Preloader End ***** -->
 
     <!-- ***** Header Area Start ***** -->
@@ -159,22 +154,28 @@
                                 <div class="heading-section">
                                     <h4><em>Your Gaming</em> Library</h4>
                                 </div>
+                                
                                 <div class="header-text">
                                     <div class="row">                                      
 
                                         <div class="col-lg-6 col-sm-12">
-                                            <a onclick="gtag('event', 'play_game', {
-                                                        'event_category': 'Games',
-                                                        'event_label': 'Aviator'
-                                                      }); setDynamicBackground('the-aviator')">
+                                            <a onclick="setDynamicBackground('the-aviator')">
                                             <div class="item big-box-hight">
-                                                <img src="assets/images/195-150/the-aviator.webp" loading="lazy" alt="">
+                                                <!-- <img src="assets/images/195-150/the-aviator.webp" loading="lazy" class="img-fluid" alt=""> -->
+                                                <img 
+                                                        src="assets/images/195-150/the-aviator.webp" 
+                                                        srcset="assets/images/120-90-mobile/the-aviator.webp 120w, 
+                                                                assets/images/195-150/the-aviator.webp 195w"
+                                                        sizes="(max-width: 768px) 120px, 195px"
+                                                        width="195" height="150" 
+                                                        loading="lazy" class="img-fluid" 
+                                                        alt="">
                                                 <h4 class="main-g">Aaviator</h4>
                                             </div>
                                             </a>
                                         </div> 
                                         
-                                        <div class="header_adx" style="">
+                                        <div class="header_adx" style="height: 300px !important;">
                                             <div class="ad_1 col-span-2 " style="padding-top: 10px; padding-bottom: 10px;">
                                                 <div id='div-gpt' style='min-width: 336px; min-height: 200px;'>
                                                     <ins class="adsbygoogle"
@@ -193,7 +194,15 @@
                                                 <div class="col-lg-6 col-sm-6 col-6">
                                                     <a onclick="setDynamicBackground('2048')">
                                                         <div class="item small-box">
-                                                            <img src="assets/images/195-150/2048.webp" loading="lazy" alt="">
+                                                            <!-- <img src="assets/images/195-150/2048.webp" loading="lazy" class="img-fluid" alt=""> -->
+                                                            <img 
+                                                            src="assets/images/195-150/2048.webp" 
+                                                            srcset="assets/images/120-90-mobile/2048.webp 120w, 
+                                                                    assets/images/195-150/2048.webp 195w"
+                                                            sizes="(max-width: 768px) 120px, 195px"
+                                                            width="195" height="150" 
+                                                            loading="lazy" class="img-fluid" 
+                                                            alt="">
                                                             <h4>2048</h4>
                                                         </div>
                                                     </a>
@@ -202,7 +211,15 @@
                                                 <div class="col-lg-6 col-sm-6 col-6">
                                                     <a onclick="setDynamicBackground('tower-blocks')">
                                                     <div class="item small-box">
-                                                        <img src="assets/images/195-150/tower-blocks.webp" loading="lazy" alt="">
+                                                        <!-- <img src="assets/images/195-150/tower-blocks.webp" loading="lazy" class="img-fluid" alt=""> -->
+                                                        <img 
+                                                        src="assets/images/195-150/tower-blocks.webp" 
+                                                        srcset="assets/images/120-90-mobile/tower-blocks.webp 120w, 
+                                                                assets/images/195-150/tower-blocks.webp 195w"
+                                                        sizes="(max-width: 768px) 120px, 195px"
+                                                        width="195" height="150" 
+                                                        loading="lazy" class="img-fluid" 
+                                                        alt="">
                                                         <h4>Tower-blocks</h4>
                                                     </div>
                                                     </a>
@@ -211,7 +228,15 @@
                                                 <div class="col-lg-6 col-sm-6 col-6">
                                                     <a onclick="setDynamicBackground('color-match')">
                                                         <div class="item small-box">
-                                                            <img src="assets/images/195-150/color-match.webp" loading="lazy" alt="">
+                                                            <!-- <img src="assets/images/195-150/color-match.webp" loading="lazy" class="img-fluid" alt=""> -->
+                                                            <img 
+                                                            src="assets/images/195-150/color-match.webp" 
+                                                            srcset="assets/images/120-90-mobile/color-match.webp 120w, 
+                                                                    assets/images/195-150/color-match.webp 195w"
+                                                            sizes="(max-width: 768px) 120px, 195px"
+                                                            width="195" height="150" 
+                                                            loading="lazy" class="img-fluid" 
+                                                            alt="">
                                                             <h4>Color-Match</h4>
                                                         </div>
                                                     </a>
@@ -219,7 +244,15 @@
                                                 <div class="col-lg-6 col-sm-6 col-6">
                                                     <a onclick="setDynamicBackground('flappy-bird')">
                                                         <div class="item small-box">
-                                                            <img src="assets/images/195-150/flappy-bird.webp" loading="lazy" alt="">
+                                                            <!-- <img src="assets/images/195-150/flappy-bird.webp" loading="lazy" class="img-fluid" alt=""> -->
+                                                            <img 
+                                                            src="assets/images/195-150/flappy-bird.webp" 
+                                                            srcset="assets/images/120-90-mobile/flappy-bird.webp 120w, 
+                                                                    assets/images/195-150/flappy-bird.webp 195w"
+                                                            sizes="(max-width: 768px) 120px, 195px"
+                                                            width="195" height="150" 
+                                                            loading="lazy" class="img-fluid" 
+                                                            alt="">
                                                             <h4>Flappy-Bird</h4>
                                                         </div>
                                                     </a>
@@ -232,7 +265,15 @@
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <a onclick="setDynamicBackground('hangman')">
                                                 <div class="item">
-                                                    <img src="assets/images/195-150/hangman.webp" loading="lazy" alt="">
+                                                    <!-- <img src="assets/images/195-150/hangman.webp" loading="lazy" class="img-fluid" alt=""> -->
+                                                    <img 
+                                                        src="assets/images/195-150/hangman.webp" 
+                                                        srcset="assets/images/120-90-mobile/hangman.webp 120w, 
+                                                                assets/images/195-150/hangman.webp 195w"
+                                                        sizes="(max-width: 768px) 120px, 195px"
+                                                        width="195" height="150" 
+                                                        loading="lazy" class="img-fluid" 
+                                                        alt="">
                                                     <h4>Hangman</h4>
                                                 </div>
                                             </a>
@@ -241,7 +282,15 @@
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <a onclick="setDynamicBackground('math-game')">
                                                 <div class="item">
-                                                    <img src="assets/images/195-150/math-game.webp" loading="lazy" alt="">
+                                                    <!--<img src="assets/images/195-150/math-game.webp" loading="lazy" class="img-fluid" alt="">-->
+                                                    <img 
+                                                      src="assets/images/195-150/math-game.webp" 
+                                                      srcset="assets/images/120-90-mobile/math.webp 120w, 
+                                                              assets/images/195-150/math-game.webp 195w"
+                                                      sizes="(max-width: 768px) 120px, 195px"
+                                                      width="195" height="150" 
+                                                      loading="lazy" class="img-fluid" 
+                                                      alt="">
                                                     <h4>Math Game</h4>
                                                 </div>
                                             </a>
@@ -250,8 +299,6 @@
                                         <div class="header_adx" style="">
                                             <div class="ad_1 col-span-2 " style="padding-top: 10px; padding-bottom: 10px;">
                                                 <div id='div-gpt' style='min-width: 336px; min-height: 200px;'>
-                                                    <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422"-->
-                                                    <!--     crossorigin="anonymous"></script>-->
                                                     <ins class="adsbygoogle"
                                                          style="display:inline-block;width:336px;height:200px"
                                                          data-ad-client="ca-pub-8263720079379422"
@@ -274,8 +321,6 @@
                                         d-sm-block → Makes it visible on small screens (≥576px) and larger. -->
                                         <div class="col-lg-3 col-sm-6 col-6 d-none d-sm-block adx-box-hide">
                                             <div class="item adx-box">
-                                                <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422"-->
-                                                <!--     crossorigin="anonymous"></script>-->
                                                 <ins class="adsbygoogle"
                                                      style="display:inline-block;width:250px;height:250px"
                                                      data-ad-client="ca-pub-8263720079379422"
@@ -294,7 +339,16 @@
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <a onclick="setDynamicBackground('memory-game')">
                                             <div class="item">
-                                                <img src="assets/images/195-150/memory-game.webp" loading="lazy" alt="">
+                                                <!--<img src="assets/images/195-150/memory-game.webp" loading="lazy" class="img-fluid" alt="">-->
+                                                <!-- <img src="assets/images/195-150/memory-game.webp" width="195" height="150" alt="" class="img-fluid" loading="lazy" class="img-fluid"> -->
+                                                <img 
+                                                src="assets/images/195-150/memory-game.webp" 
+                                                srcset="assets/images/120-90-mobile/memory.webp 120w, 
+                                                        assets/images/195-150/memory-game.webp 195w"
+                                                sizes="(max-width: 768px) 120px, 195px"
+                                                width="195" height="150" 
+                                                loading="lazy" class="img-fluid" 
+                                                alt="">
                                                 <h4>Memory Game</h4>
                                             </div>
                                             </a>
@@ -303,7 +357,15 @@
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <a onclick="setDynamicBackground('reaction-wall')">
                                             <div class="item">
-                                                <img src="assets/images/195-150/reaction-wall.webp" loading="lazy" alt="">
+                                                <!-- <img src="assets/images/195-150/reaction-wall.webp" loading="lazy" class="img-fluid" alt=""> -->
+                                                <img 
+                                                src="assets/images/195-150/reaction-wall.webp" 
+                                                srcset="assets/images/120-90-mobile/reaction-wall.webp 120w, 
+                                                        assets/images/195-150/reaction-wall.webp 195w"
+                                                sizes="(max-width: 768px) 120px, 195px"
+                                                width="195" height="150" 
+                                                loading="lazy" class="img-fluid" 
+                                                alt="">
                                                 <h4>Reaction-Wall</h4>
                                             </div>
                                             </a>
@@ -312,7 +374,15 @@
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <a onclick="setDynamicBackground('word-guessing')">
                                             <div class="item">
-                                                <img src="assets/images/195-150/word-guessing.webp" loading="lazy" alt="">
+                                                <!-- <img src="assets/images/195-150/word-guessing.webp" loading="lazy" class="img-fluid" alt=""> -->
+                                                <img 
+                                                src="assets/images/195-150/word-guessing.webp" 
+                                                srcset="assets/images/120-90-mobile/word-guessing.webp 120w, 
+                                                        assets/images/195-150/word-guessing.webp 195w"
+                                                sizes="(max-width: 768px) 120px, 195px"
+                                                width="195" height="150" 
+                                                loading="lazy" class="img-fluid" 
+                                                alt="">
                                                 <h4>Word-Guessing</h4>
                                             </div>
                                             </a>
@@ -321,7 +391,15 @@
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <a onclick="setDynamicBackground('sudoku')">
                                             <div class="item">
-                                                <img src="assets/images/195-150/sudoku.webp" loading="lazy" alt="">
+                                                <!-- <img src="assets/images/195-150/sudoku.webp" loading="lazy" class="img-fluid" alt=""> -->
+                                                <img 
+                                                        src="assets/images/195-150/sudoku.webp" 
+                                                        srcset="assets/images/120-90-mobile/sudoku.webp 120w, 
+                                                                assets/images/195-150/sudoku.webp 195w"
+                                                        sizes="(max-width: 768px) 120px, 195px"
+                                                        width="195" height="150" 
+                                                        loading="lazy" class="img-fluid" 
+                                                        alt="">
                                                 <h4>Sudoku</h4>
                                             </div>
                                             </a>
@@ -329,7 +407,15 @@
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <a onclick="setDynamicBackground('Tic-Tac-Toe')">
                                             <div class="item">
-                                                <img src="assets/images/195-150/tic-tac-toe.webp" loading="lazy" alt="">
+                                                <!-- <img src="assets/images/195-150/tic-tac-toe.webp" loading="lazy" class="img-fluid" alt=""> -->
+                                                <img 
+                                                        src="assets/images/195-150/tic-tac-toe.webp" 
+                                                        srcset="assets/images/120-90-mobile/tic-tac-toe.webp 120w, 
+                                                                assets/images/195-150/tic-tac-toe.webp 195w"
+                                                        sizes="(max-width: 768px) 120px, 195px"
+                                                        width="195" height="150" 
+                                                        loading="lazy" class="img-fluid" 
+                                                        alt="">
                                                 <h4>Tic-Tac-Toe</h4>
                                             </div>
                                             </a>
@@ -338,7 +424,15 @@
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <a onclick="setDynamicBackground('table-tennis')">
                                             <div class="item">
-                                                <img src="assets/images/195-150/table-tennis.webp" loading="lazy" alt="">
+                                                <!-- <img src="assets/images/195-150/table-tennis.webp" loading="lazy" class="img-fluid" alt=""> -->
+                                                <img 
+                                                        src="assets/images/195-150/table-tennis.webp" 
+                                                        srcset="assets/images/120-90-mobile/table-tennis.webp 120w, 
+                                                                assets/images/195-150/table-tennis.webp 195w"
+                                                        sizes="(max-width: 768px) 120px, 195px"
+                                                        width="195" height="150" 
+                                                        loading="lazy" class="img-fluid" 
+                                                        alt="">
                                                 <h4>Table-tennis</h4>
                                             </div>
                                             </a>
@@ -347,7 +441,15 @@
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <a onclick="setDynamicBackground('connect-4')">
                                             <div class="item">
-                                                <img src="assets/images/195-150/connect-4.webp" loading="lazy" alt="">
+                                                <!-- <img src="assets/images/195-150/connect-4.webp" loading="lazy" class="img-fluid" alt=""> -->
+                                                <img 
+                                                        src="assets/images/195-150/connect-4.webp" 
+                                                        srcset="assets/images/120-90-mobile/connect-4.webp 120w, 
+                                                                assets/images/195-150/connect-4.webp 195w"
+                                                        sizes="(max-width: 768px) 120px, 195px"
+                                                        width="195" height="150" 
+                                                        loading="lazy" class="img-fluid" 
+                                                        alt="">
                                                 <h4>Connect-4</h4>
                                             </div>
                                             </a>
@@ -355,7 +457,15 @@
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <a onclick="setDynamicBackground('mine-sweeper')">
                                             <div class="item">
-                                                <img src="assets/images/195-150/minesweeper.webp" loading="lazy" alt="">
+                                                <!-- <img src="assets/images/195-150/minesweeper.webp" loading="lazy" class="img-fluid" alt=""> -->
+                                                <img 
+                                                        src="assets/images/195-150/minesweeper.webp" 
+                                                        srcset="assets/images/120-90-mobile/minesweeper.webp 120w, 
+                                                                assets/images/195-150/minesweeper.webp 195w"
+                                                        sizes="(max-width: 768px) 120px, 195px"
+                                                        width="195" height="150" 
+                                                        loading="lazy" class="img-fluid" 
+                                                        alt="">
                                                 <h4>Mine-sweeper</h4>
                                             </div>
                                             </a>
@@ -363,7 +473,15 @@
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <a onclick="setDynamicBackground('retro-dungeon-maze-puzzle')">
                                             <div class="item">
-                                                <img src="assets/images/195-150/retro-dungeon-maze-puzzle.webp" loading="lazy" alt="">
+                                                <!-- <img src="assets/images/195-150/retro-dungeon-maze-puzzle.webp" loading="lazy" class="img-fluid" alt=""> -->
+                                                <img 
+                                                        src="assets/images/195-150/retro-dungeon-maze-puzzle.webp" 
+                                                        srcset="assets/images/120-90-mobile/retro-dungeon-maze-puzzle.webp 120w, 
+                                                                assets/images/195-150/retro-dungeon-maze-puzzle.webp 195w"
+                                                        sizes="(max-width: 768px) 120px, 195px"
+                                                        width="195" height="150" 
+                                                        loading="lazy" class="img-fluid" 
+                                                        alt="">
                                                 <h4>Retro-dungeon-maze-puzzle</h4>
                                             </div>
                                             </a>
@@ -371,7 +489,15 @@
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <a onclick="setDynamicBackground('space-invaders')">
                                             <div class="item">
-                                                <img src="assets/images/195-150/space-invaders.webp" loading="lazy" alt="">
+                                                <!-- <img src="assets/images/195-150/space-invaders.webp" loading="lazy" class="img-fluid" alt=""> -->
+                                                <img 
+                                                        src="assets/images/195-150/space-invaders.webp" 
+                                                        srcset="assets/images/120-90-mobile/space-invaders.webp 120w, 
+                                                                assets/images/195-150/space-invaders.webp 195w"
+                                                        sizes="(max-width: 768px) 120px, 195px"
+                                                        width="195" height="150" 
+                                                        loading="lazy" class="img-fluid" 
+                                                        alt="">
                                                 <h4>Space-invaders</h4>
                                             </div>
                                             </a>
@@ -394,7 +520,15 @@
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <a onclick="setDynamicBackground('plankman')">
                                             <div class="item">
-                                                <img src="assets/images/195-150/plankman.webp" loading="lazy" alt="">
+                                                <!-- <img src="assets/images/195-150/plankman.webp" loading="lazy" class="img-fluid" alt=""> -->
+                                                <img 
+                                                        src="assets/images/195-150/plankman.webp" 
+                                                        srcset="assets/images/120-90-mobile/plankman.webp 120w, 
+                                                                assets/images/195-150/plankman.webp 195w"
+                                                        sizes="(max-width: 768px) 120px, 195px"
+                                                        width="195" height="150" 
+                                                        loading="lazy" class="img-fluid" 
+                                                        alt="">
                                                 <h4>Plankman</h4>
                                             </div>
                                             </a>
@@ -402,7 +536,15 @@
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <a onclick="setDynamicBackground('ghost-bustin')">
                                             <div class="item">
-                                                <img src="assets/images/195-150/ghost-bustin.webp" loading="lazy" alt="">
+                                                <!-- <img src="assets/images/195-150/ghost-bustin.webp" loading="lazy" class="img-fluid" alt=""> -->
+                                                <img 
+                                                        src="assets/images/195-150/ghost-bustin.webp" 
+                                                        srcset="assets/images/120-90-mobile/ghost-bustin.webp 120w, 
+                                                                assets/images/195-150/ghost-bustin.webp 195w"
+                                                        sizes="(max-width: 768px) 120px, 195px"
+                                                        width="195" height="150" 
+                                                        loading="lazy" class="img-fluid" 
+                                                        alt="">
                                                 <h4>Ghost-bustin</h4>
                                             </div>
                                             </a>
@@ -410,7 +552,15 @@
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <a onclick="setDynamicBackground('stacker')">
                                             <div class="item">
-                                                <img src="assets/images/195-150/stacker.webp" loading="lazy" alt="">
+                                                <!-- <img src="assets/images/195-150/stacker.webp" loading="lazy" class="img-fluid" alt=""> -->
+                                                <img 
+                                                        src="assets/images/195-150/stacker.webp" 
+                                                        srcset="assets/images/120-90-mobile/stacker.webp 120w, 
+                                                                assets/images/195-150/stacker.webp 195w"
+                                                        sizes="(max-width: 768px) 120px, 195px"
+                                                        width="195" height="150" 
+                                                        loading="lazy" class="img-fluid" 
+                                                        alt="">
                                                 <h4>Stacker</h4>
                                             </div>
                                             </a>
@@ -418,7 +568,15 @@
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <a onclick="setDynamicBackground('lazy-2048')">
                                             <div class="item">
-                                                <img src="assets/images/195-150/lazy-2048.webp" loading="lazy" alt="">
+                                                <!-- <img src="assets/images/195-150/lazy-2048.webp" loading="lazy" class="img-fluid" alt=""> -->
+                                                <img 
+                                                        src="assets/images/195-150/lazy-2048.webp" 
+                                                        srcset="assets/images/120-90-mobile/lazy-2048.webp 120w, 
+                                                                assets/images/195-150/lazy-2048.webp 195w"
+                                                        sizes="(max-width: 768px) 120px, 195px"
+                                                        width="195" height="150" 
+                                                        loading="lazy" class="img-fluid" 
+                                                        alt="">
                                                 <h4>Lazy-2048</h4>
                                             </div>
                                             </a>
@@ -426,8 +584,6 @@
 
                                         <div class="col-lg-3 col-sm-6 col-6 d-none d-sm-block adx-box-hide">
                                             <div class="item adx-box">
-                                                <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422"-->
-                                                <!--     crossorigin="anonymous"></script>-->
                                                 <!-- Home content 2 -->
                                                 <ins class="adsbygoogle"
                                                      style="display:inline-block;width:250px;height:250px"
@@ -442,7 +598,15 @@
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <a onclick="setDynamicBackground('align-4')">
                                                 <div class="item">
-                                                    <img src="assets/images/195-150/align-4.webp" loading="lazy" alt="">
+                                                    <!-- <img src="assets/images/195-150/align-4.webp" loading="lazy" class="img-fluid" alt=""> -->
+                                                    <img 
+                                                    src="assets/images/195-150/align-4.webp" 
+                                                    srcset="assets/images/120-90-mobile/align-4.webp 120w, 
+                                                            assets/images/195-150/align-4.webp 195w"
+                                                    sizes="(max-width: 768px) 120px, 195px"
+                                                    width="195" height="150" 
+                                                    loading="lazy" class="img-fluid" 
+                                                    alt="">
                                                     <h4>Align 4</h4>
                                                 </div>
                                             </a>
@@ -450,7 +614,15 @@
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <a onclick="setDynamicBackground('0hh1')">
                                                 <div class="item">
-                                                    <img src="assets/images/195-150/0hh1.webp" loading="lazy" alt="">
+                                                    <!-- <img src="assets/images/195-150/0hh1.webp" loading="lazy" class="img-fluid" alt=""> -->
+                                                    <img 
+                                                    src="assets/images/195-150/0hh1.webp" 
+                                                    srcset="assets/images/120-90-mobile/0hh1.webp 120w, 
+                                                            assets/images/195-150/0hh1.webp 195w"
+                                                    sizes="(max-width: 768px) 120px, 195px"
+                                                    width="195" height="150" 
+                                                    loading="lazy" class="img-fluid" 
+                                                    alt="">
                                                     <h4>0hh1</h4>
                                                 </div>
                                             </a>
@@ -458,7 +630,15 @@
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <a onclick="setDynamicBackground('typing-game')">
                                             <div class="item">
-                                                <img src="assets/images/195-150/typing-game.webp" loading="lazy" alt="">
+                                                <!-- <img src="assets/images/195-150/typing-game.webp" loading="lazy" class="img-fluid" alt=""> -->
+                                                <img 
+                                                        src="assets/images/195-150/typing-game.webp" 
+                                                        srcset="assets/images/120-90-mobile/typing-game.webp 120w, 
+                                                                assets/images/195-150/typing-game.webp 195w"
+                                                        sizes="(max-width: 768px) 120px, 195px"
+                                                        width="195" height="150" 
+                                                        loading="lazy" class="img-fluid" 
+                                                        alt="">
                                                 <h4>Typing-game</h4>
                                             </div>
                                             </a>
@@ -466,7 +646,15 @@
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <a onclick="setDynamicBackground('emoji-catcher')">
                                             <div class="item">
-                                                <img src="assets/images/195-150/emoji-catcher.webp" loading="lazy" alt="">
+                                                <!-- <img src="assets/images/195-150/emoji-catcher.webp" loading="lazy" class="img-fluid" alt=""> -->
+                                                <img 
+                                                        src="assets/images/195-150/emoji-catcher.webp" 
+                                                        srcset="assets/images/120-90-mobile/emoji-catcher.webp 120w, 
+                                                                assets/images/195-150/emoji-catcher.webp 195w"
+                                                        sizes="(max-width: 768px) 120px, 195px"
+                                                        width="195" height="150" 
+                                                        loading="lazy" class="img-fluid" 
+                                                        alt="">
                                                 <h4>Emoji-catcher</h4>
                                             </div>
                                             </a>
@@ -474,7 +662,15 @@
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <a onclick="setDynamicBackground('simon-says')">
                                             <div class="item">
-                                                <img src="assets/images/195-150/simon-says.webp" loading="lazy" alt="">
+                                                <!-- <img src="assets/images/195-150/simon-says.webp" loading="lazy" class="img-fluid" alt=""> -->
+                                                <img 
+                                                        src="assets/images/195-150/simon-says.webp" 
+                                                        srcset="assets/images/120-90-mobile/simon-says.webp 120w, 
+                                                                assets/images/195-150/simon-says.webp 195w"
+                                                        sizes="(max-width: 768px) 120px, 195px"
+                                                        width="195" height="150" 
+                                                        loading="lazy" class="img-fluid" 
+                                                        alt="">
                                                 <h4>Simon-says</h4>
                                             </div>
                                             </a>
@@ -482,7 +678,15 @@
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <a onclick="setDynamicBackground('whack-a-mole', event, 'play.html')">
                                             <div class="item">
-                                                <img src="assets/images/195-150/whack-a-mole.webp" loading="lazy" alt="">
+                                                <!-- <img src="assets/images/195-150/whack-a-mole.webp" loading="lazy" class="img-fluid" alt=""> -->
+                                                <img 
+                                                        src="assets/images/195-150/whack-a-mole.webp" 
+                                                        srcset="assets/images/120-90-mobile/whack-a-mole.webp 120w, 
+                                                                assets/images/195-150/whack-a-mole.webp 195w"
+                                                        sizes="(max-width: 768px) 120px, 195px"
+                                                        width="195" height="150" 
+                                                        loading="lazy" class="img-fluid" 
+                                                        alt="">
                                                 <h4>Whack-a-mole</h4>
                                             </div>
                                             </a>
@@ -490,6 +694,7 @@
                                     </div>
                                     
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -497,8 +702,7 @@
                     
                     <div class="gaming-library">
                         <div class="col-lg-12">
-                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422"
-                             crossorigin="anonymous"></script>
+                       
                         <ins class="adsbygoogle"
                              style="display:block"
                              data-ad-format="autorelaxed"
@@ -585,30 +789,53 @@
     <!--custom popup -->
     
     <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/isotope.min.js"></script>
-    <!--<script src="assets/js/owl-carousel.js"></script>-->
-    <!--<script src="assets/js/tabs.js"></script>-->
-    <script src="assets/js/popup.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- <script src="assets/js/main.js"></script> -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js" defer></script>
+    <script src="assets/js/isotope.min.js" defer></script>
+    <script src="assets/js/popup.js" defer></script>
+    <script src="assets/js/custom.js" defer></script>
+    
+    <!-- Load ads script lazily -->
     <script>
-        fetch('_footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
-            const yearSpan = document.getElementById("currentYear");
-            if (yearSpan) {
-                yearSpan.textContent = new Date().getFullYear();
-            } else {
-                console.error("Element with ID 'currentYear' not found.");
-            }
-        })
-        .catch(error => console.error("Error loading footer:", error));
+        window.addEventListener("scroll", function loadAdsOnce() {
+            const script = document.createElement("script");
+            script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422";
+            script.async = true;
+            document.head.appendChild(script);
+            window.removeEventListener("scroll", loadAdsOnce);
+        });
+      
+        document.addEventListener("DOMContentLoaded", () => {
+            const gtagScript = document.createElement("script");
+            gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-5LR732BBVK";
+            gtagScript.defer = true;
+            document.head.appendChild(gtagScript);
+        });
+    </script>
+
+    <script>
+        if ('requestIdleCallback' in window) {
+            // console.log("hree");
+            requestIdleCallback(loadFooter);
+        } else {
+            // console.log("hre1e");
+            setTimeout(loadFooter, 2000); // fallback
+        }
+        
+        function loadFooter() {
+            fetch('_footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+                const yearSpan = document.getElementById("currentYear");
+                if (yearSpan) {
+                    yearSpan.textContent = new Date().getFullYear();
+                }
+            })
+            .catch(error => console.error("Error loading footer:", error));
+        }
     </script>
     
-     <!--  CUSTOM POPUP ------------------------------------------------------------------------ -->
+    <!--  CUSTOM POPUP ------------------------------------------------------------------------/ -->
     <script>
         function setDynamicBackground(gName) {
             localStorage.setItem('gameName', gName);
@@ -644,11 +871,11 @@
                     closeBtn.style.display = "inline-block";
 
                     // After 2 seconds, redirect
-                    setTimeout(() => {
+                    /*setTimeout(() => {
                         overlay.style.display = "none";
                         popup.style.opacity = "0";
                         window.location.href = "play.html";
-                    }, 2000);
+                    }, 2000);*/
                 }
             }, 1000);
         }

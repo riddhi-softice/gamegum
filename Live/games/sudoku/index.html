@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="styles.css">
     <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
-    
     <link href="../assets/css/group1_game.css" rel="stylesheet" type="text/css">
-	<script type="text/javascript" src="../assets/js/group1_auto_landing.js" async></script>
+    <link rel="preload" href="../assets/images/game-name/sudoku.png" as="image" type="image/png">
+	<!--<script type="text/javascript" src="../assets/js/group1_auto_landing.js" async></script>-->
     <style>
         .home-button {
             color: #212529;
@@ -816,7 +816,7 @@
     <div id="custom-popup-placeholder"></div>
     <!--custom popup -->
     
-    <script type="text/javascript" src="../assets/js/common.js"></script>
+    <script type="text/javascript" src="../assets/js/common.js" defer></script>
     <script>
         fetch('../custom-popup.html')
         .then(response => response.text())
@@ -825,9 +825,27 @@
         })
         .catch(error => console.error("Error loading footer:", error));
     </script>
-    <script type="text/javascript" src="../assets/js/disable-click.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
+    <script>
+      setTimeout(() => {
+        const script = document.createElement("script");
+        script.src = "../assets/js/group1_auto_landing.js";
+        script.defer = true;
+        document.head.appendChild(script);
+      }, 1000); // Load after 2 seconds
+    </script>
+    <!-- Load Google Analytics on scroll -->
+    <script>
+      window.addEventListener("scroll", function loadGtag() {
+        const gtagScript = document.createElement("script");
+        gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-5LR732BBVK";
+        gtagScript.defer = true;
+        document.head.appendChild(gtagScript);
+        window.removeEventListener("scroll", loadGtag);
+      });
+    </script>
+    <script type="text/javascript" src="../assets/js/disable-click.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             document.querySelector(".top-adx").style.setProperty("height", "100px", "important");

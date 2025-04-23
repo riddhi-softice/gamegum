@@ -9,9 +9,16 @@
   <link rel="shortcut icon" href="../../assets/images/icon.png">
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
   <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
-  
   <link href="../assets/css/group1_game.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="../assets/js/group1_auto_landing.js" async></script>
+  <link rel="preload" href="../assets/images/game-name/flappy-bird.png" as="image" type="image/png">
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5LR732BBVK');
+    </script>
+<!--<script type="text/javascript" src="../assets/js/group1_auto_landing.js" async></script>-->
 <style>
     @media (max-width: 768px) {
      .top-adx {
@@ -40,6 +47,10 @@
       background: url('https://s2js.com/img/etc/flappyback.png') no-repeat center center;
       background-size: cover;
     }
+    canvas {
+      will-change: transform;
+    }
+
     .home-button {
       font-family: 'Pacifico';
       position: absolute;
@@ -98,7 +109,7 @@
         </div>
     </div>
 
-   <div class="loader-custome">
+    <div class="loader-custome">
      <span class="loader"></span>
     </div>   
     <div id="button-container">
@@ -124,23 +135,42 @@
   <canvas id="myCanvas" style="display: none;"> </canvas>
 
   <!--custom popup -->
-  <div id="custom-popup-placeholder"></div>
+    <div id="custom-popup-placeholder"></div>
   <!--custom popup -->
   
-  <script type="text/javascript" src="../assets/js/common.js"></script>
-  <script>
+    <script type="text/javascript" src="../assets/js/common.js" defer></script>
+    <script>
       fetch('../custom-popup.html')
       .then(response => response.text())
       .then(data => {
           document.getElementById('custom-popup-placeholder').innerHTML = data;
       })
       .catch(error => console.error("Error loading footer:", error));
-  </script>
-  <script type="text/javascript" src="../assets/js/disable-click.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    </script>
+    <script>
+      setTimeout(() => {
+        const script = document.createElement("script");
+        script.src = "../assets/js/group1_auto_landing.js";
+        script.defer = true;
+        document.head.appendChild(script);
+      }, 1000); // Load after 2 seconds
+    </script>
+    <!-- Load Google Analytics on scroll -->
+    <script>
+      window.addEventListener("scroll", function loadGtag() {
+        const gtagScript = document.createElement("script");
+        gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-5LR732BBVK";
+        gtagScript.defer = true;
+        document.head.appendChild(gtagScript);
+        window.removeEventListener("scroll", loadGtag);
+      });
+    </script>
+    <script type="text/javascript" src="../assets/js/disable-click.js" defer></script>
+    <script>
+    /* document.addEventListener("DOMContentLoaded", function () {
         document.querySelector(".top-adx").style.setProperty("height", "100px", "important");
-    });
+    });*/
+
     document.querySelector(".start-button").addEventListener("click", function () {
         let gameElement = document.documentElement; // Fullscreen the whole page
 
@@ -158,13 +188,20 @@
         document.getElementById('myCanvas').style.display = 'block';
 
         document.getElementById('home').style.display = '';
-        resizeCanvas();
+        
         // document.body.classList.remove("loader-background"); 
         // Change background
         document.body.style.backgroundImage = 'none'; 
         document.body.style.backgroundSize = '';
         document.body.style.background = 'cadetblue'; 
         document.body.style.display = 'flex'; 
+        
+        // resizeCanvas();
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+          clearTimeout(resizeTimeout);
+          resizeTimeout = setTimeout(resizeCanvas, 200);
+        });
         
         gtag('event', 'start_game_click', {
           'event_category': 'StartGame',
@@ -399,6 +436,7 @@
     bird.y = myCanvas.height / 2;
 
     setInterval(Do_a_Frame, 1000 / FPS);
-  </script>
+</script>
+
 </body>
 </html>

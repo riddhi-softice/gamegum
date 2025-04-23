@@ -3,7 +3,7 @@
 // };
 
 // PAGE RIGHT CLICK DISABLE
-document.addEventListener("contextmenu", function (event) {
+/*document.addEventListener("contextmenu", function (event) {
     event.preventDefault();
 	// alert("Right-click is disabled!");
 });
@@ -18,4 +18,4 @@ document.addEventListener("keydown", function (event) {
         event.preventDefault();
         // alert("Inspect Element is disabled!");
     }
-});
+});*/

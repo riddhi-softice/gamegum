@@ -14,9 +14,11 @@
   <link rel="stylesheet" href="processed.css">
   <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
   <link href="splash.css" rel="stylesheet" type="text/css">
-
   <link href="../assets/css/group1_game.css" rel="stylesheet" type="text/css">
-  <script type="text/javascript" src="../assets/js/group1_auto_landing.js" async></script>
+ 
+  <link rel="preload" href="../assets/images/game-name/align-4.png" as="image" type="image/png">
+
+  <!--<script type="text/javascript" src="../assets/js/group1_auto_landing.js" async></script>-->
 
   <style>
     .wrapper {
@@ -185,6 +187,24 @@
   <div id="custom-popup-placeholder"></div>
   <!--custom popup -->
   
+    <script>
+      setTimeout(() => {
+        const script = document.createElement("script");
+        script.src = "../assets/js/group1_auto_landing.js";
+        script.defer = true;
+        document.head.appendChild(script);
+      }, 1500); // Load after 2 seconds
+    </script>
+    <!-- Load Google Analytics on scroll -->
+    <script>
+      window.addEventListener("scroll", function loadGtag() {
+        const gtagScript = document.createElement("script");
+        gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-5LR732BBVK";
+        gtagScript.defer = true;
+        document.head.appendChild(gtagScript);
+        window.removeEventListener("scroll", loadGtag);
+      });
+    </script>
   <script>
     fetch('../custom-popup.html')
     .then(response => response.text())
@@ -193,10 +213,10 @@
     })
     .catch(error => console.error("Error loading footer:", error));
   </script>
-  <script type="text/javascript" src="../assets/js/common.js"></script>
-  <script type="text/javascript" src="../assets/js/disable-click.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="index.js"></script>
+  <script type="text/javascript" src="../assets/js/common.js" defer></script>
+  <script type="text/javascript" src="../assets/js/disable-click.js" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" defer></script>
+  <script src="index.js" defer></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       document.querySelector(".top-adx").style.setProperty("height", "100px", "important");
