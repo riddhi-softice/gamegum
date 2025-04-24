@@ -1,8 +1,8 @@
 #Protect Browser Behavior
-Header set X-Frame-Options "DENY"
-Header set X-Content-Type-Options "nosniff"
-Header set X-XSS-Protection "1; mode=block"
-Header set Referrer-Policy "no-referrer"
+#Header set X-Frame-Options "DENY"
+#Header set X-Content-Type-Options "nosniff"
+#Header set X-XSS-Protection "1; mode=block"
+#Header set Referrer-Policy "no-referrer"
 
 Options -Indexes
 
