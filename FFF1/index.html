@@ -39,58 +39,79 @@
     <link rel="stylesheet" href="Assert/Css/bootstrap.css">
     <link rel="stylesheet" href="Assert/Css/style.css">
     <link rel="stylesheet" href="Assert/Css/responcive.css">
-    <link rel="stylesheet" href="Assert/Css/group1.css">
-    <script src="Assert/js/display_landing.js"></script>
+    <!-- <link rel="stylesheet" href="Assert/Css/group1.css"> -->
+    <!-- <script src="Assert/js/display_landing.js"></script> -->
     <style>
         .text-center {
             margin-bottom: 10px;
         }
+        /* body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        } */
+        #couponBox {
+            /* position: absolute; */
+            left: 50%;
+            transform: translate(-50%, -0%);
+            display: none;
+            width: 335px;
+            height: 220px;
+            background: url('Assert/image/fff/code-show.png') no-repeat center/cover;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative; 
+        }
+        #codeInput {
+            position: absolute;
+            bottom: 14px;
+            left: 97px;
+            width: 160px;
+            height: 30px;
+            border: 1px solid  #E75E8D;
+            background: transparent;
+            border-radius: 3px;
+            padding: 5px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #FFFFFF;
+            user-select: none; /* Prevent selection */
+            -webkit-user-select: none; /* For Safari */
+            -moz-user-select: none; /* For Firefox */
+        }
+        /* Prevent the blue selection effect */
+        #codeInput::selection {
+            background: transparent; /* No background when selecting */
+            color: inherit; /* Keep the text color unchanged */
+        }
+        .cpy-btn {
+            position: absolute;
+            bottom: 14px;
+            right: 20px;
+            width: 60px;
+            height: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            left: 255px;
+            border-radius: 2px;
+            border-width: 1px;
+            color: #FFFFFF;
+            background: rgba(231, 94, 141, 1);
+            border: 1px solid rgba(231, 94, 141, 1);
+            cursor: pointer;
+        }
+        /* Prevent blue border or outline when input is focused */
+        #codeInput:focus {
+            outline: none;
+            border: 1px solid #E75E8D; /* Keep original border color */
+            box-shadow: none; /* Remove any shadow effects */
+        }
     </style>
 
-<!-- <script>
-  setTimeout(function () {
-    if (window.adsbygoogle) return; // Already loaded?
-
-    const adsScript = document.createElement("script");
-    adsScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
-    adsScript.async = true;
-    adsScript.onload = function () {
-      try {
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      } catch (e) {
-        console.error("AdSense push failed:", e);
-      }
-    };
-    document.head.appendChild(adsScript);
-  }, 3000); // 3000ms = 3 seconds
-</script>-->
-
-    <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422" crossorigin="anonymous" defer></script>
-    
-<!--<script>
-  setTimeout(function () {
-    if (window.adsbygoogle) return;
-
-    const script = document.createElement("script");
-    script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422";
-    script.setAttribute("crossorigin", "anonymous");
-    script.async = true;
-    script.onload = function () {
-      // Initialize ads manually if not auto
-      const adSlots = document.querySelectorAll(".adsbygoogle");
-      adSlots.forEach(slot => {
-        try {
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        } catch (e) {
-          console.error("Ad push failed", e);
-        }
-      });
-    };
-    document.head.appendChild(script);
-  }, 3000);
-</script>--> 
-   
-    <!-- Analitycs Google tag (gtag.js) -->
+    <!-- <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422" crossorigin="anonymous" defer></script>
     <script>
       setTimeout(() => {
         const gtagScript = document.createElement("script");
@@ -103,59 +124,17 @@
         gtag('js', new Date());
         gtag('config', 'G-5LR732BBVK');
       }, 3000); // Delay GTM to avoid render-blocking
-    </script>
-    <script src="https://www.googletagmanager.com/gtag/js?id=G-5LR732BBVK" defer></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        
-        gtag('config', 'G-5LR732BBVK');
-    </script>
-    <!-- Analitycs Google tag (gtag.js) -->
+    </script> -->
+   
 </head>
 
 <body>
     <section class="app_wrapper">
-        <div id="popupAdContainer">
-        </div>
-
-        <div class="wrapper" id="header-placeholder">
-            <nav>
-                <input type="checkbox" id="show-search">
-                <input type="checkbox" id="show-menu">
-                <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
-                <div class="nav-content">
-                    <a class="header_logo_link" href="https://100-play-online.baseapk.me">
-                        <div class="logo">
-                            <img class="" src="Assert/image/logo.png" height="28" width="102" alt="health success">
-                        </div>
-                    </a>
-                    <ul class="links">
-                        <li><a href="https://100-play-online.baseapk.me" data-endpoint="about-us" class="menu-item active">Global Insurance</a></li>
-                        <li id="services-menu">
-                            <a href="#" class="desktop-link">Category <i class="fa-solid fa-angle-down"></i></a>
-                            <input type="checkbox" id="show-services">
-                            <label for="show-services" class="services-label">Category<i class="fa-solid fa-angle-down"></i></label>
-                            <ul>
-                                <li><a href="life.html" data-endpoint="finance" class="menu-item">Life</a></li>
-                                <li><a href="health.html" data-endpoint="health" class="menu-item">Health</a></li>
-                                <li><a href="vehicle.html" data-endpoint="vehicle" class="menu-item">Vehicle</a></li>
-                                <li><a href="home-insurance.html" data-endpoint="home" class="menu-item">Home</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="about-us.html" data-endpoint="about-us" class="menu-item">About Us</a></li>
-                        <li><a href="contact-us.html" data-endpoint="contact-us" class="menu-item">Contact Us</a></li>
-                        <li><a href="privacy-policy.html" data-endpoint="privacy-policy" class="menu-item">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
 
         <div class="container mt-1">
 
             <!-- ***** Sticky Ads Start ***** -->
-            <div id="FloatAdx-left">
+            <!-- <div id="FloatAdx-left">
                 <ins class="adsbygoogle"
                     style="display:inline-block;width:160px;height:600px"
                     data-ad-client="ca-pub-8263720079379422"
@@ -172,14 +151,12 @@
                 <script>
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
-            </div>
+            </div> -->
             <!-- ***** Sticky Ads End ***** -->
             
             <div class="header_ads" style="">
                 <div class="ad_1 col-span-2 " style="padding-top: 10px; padding-bottom: 10px;">
-                    <!-- /23201071713/group1_display_landing_top -->
                     <div id='div-gpt' style='min-width: 336px; min-height: 280px;'>
-                            <!-- Sub home -->
                             <ins class="adsbygoogle"
                                  style="display:inline-block;width:336px;height:280px"
                                  data-ad-client="ca-pub-8263720079379422"
@@ -190,29 +167,22 @@
                     </div>
                 </div>
             </div>
+           
 
-            <div class="text-center mt-1">
-                <div class="redeem_box">
-                    <h4 class="redeem_box_text">
-                        Play Free Games on Baseapk games
-                    </h4>
-                    <p class="by_watching_text">By watching ad</p>
-                    <div class="categories_box d-flex justify-content-center pt-2 pb-1">
-                        <!--<button data-target="https://baseapk.me" class="cusBtnOption" id="btn-click">
-                            Play Now
-                        </button>-->
-                        
-                        <!--<button id="play-game-btn" class="cusBtnOption" data-game="https://baseapk.me">Play Now</button> -->
-                        
-                        <button class="cusBtnOption" onclick="openPopup()">Play Now</button> 
-                        
-
-                    </div>
-                </div>
+            <div id="codeBox" class="container mt-1" style="position: relative; margin-bottom: 15px; border-radius: 15px; width: 335px; height: 220px; background: url('Assert/image/fff/Code-Generator.png') no-repeat center/cover;">
             </div>
 
+
+            <!-- Hidden coupon display -->
+            <!-- <div id="couponBox" style="display: none; width: 335px; height: 220px; position: relative; background: url('Assert/image/fff/code-show.png') no-repeat center/cover; border-radius: 15px; margin-bottom: 15px; padding: 20px; box-sizing: border-box;"> -->
+            <div id="couponBox" >
+                <input id="codeInput" type="text" readonly >
+                <button onclick="copyCode()" class="cpy-btn">Copy</button>
+            </div>
+                 
+
             <h2 class="main_title_text">Top Insurance Plans: Health, Life, Vehicle and More</h2>
-            
+
             <div class="header_ads" style="">
                 <div class="ad_1 col-span-2 " style="padding-top: 10px; padding-bottom: 10px;">
                     <!-- /23201071713/group1_display_landing_top -->
@@ -385,95 +355,43 @@
 
         <div id="footer-placeholder"></div>
     </section>
-    
-    <div class='sticky-btm' id='sticky-btm'>
-        <div class='sticky-btm-close' onclick='document.getElementById("sticky-btm").style.display="none"'><svg viewBox='0 0 512 512' xmlns='https://www.w3.org/2000/svg'><path d='M278.6 256l68.2-68.2c6.2-6.2 6.2-16.4 0-22.6-6.2-6.2-16.4-6.2-22.6 0L256 233.4l-68.2-68.2c-6.2-6.2-16.4-6.2-22.6 0-3.1 3.1-4.7 7.2-4.7 11.3 0 4.1 1.6 8.2 4.7 11.3l68.2 68.2-68.2 68.2c-3.1 3.1-4.7 7.2-4.7 11.3 0 4.1 1.6 8.2 4.7 11.3 6.2 6.2 16.4 6.2 22.6 0l68.2-68.2 68.2 68.2c6.2 6.2 16.4 6.2 22.6 0 6.2-6.2 6.2-16.4 0-22.6L278.6 256z'/></svg></div>
-        <div class='sticky-btm-content'>
-
-            <!--<ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-8263720079379422"
-                data-ad-slot="4737125238"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>-->
-            
-            <ins class="adsbygoogle"
-                 style="display:inline-block;height:70px;width:100%;line-height:70px;"
-                 data-ad-client="ca-pub-8263720079379422"
-                 data-ad-slot="4737125238"
-                 ></ins><script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-    </div>
-    
-    <!--custom popup -->
-        <div class="overlay" id="popupOverlay"></div>
-        <div class="popup" id="popupBox">
-            <div class="popup-header">
-                <button class="Ad-btn">Ad</button>
-                <p class="countdown-text">The Game starts in <span id="countdown">5</span> seconds.</p>
-                <button class="adx-close-btn" id="closeBtn" onclick="closeCustomPopup()">X</button>
-            </div>
-        
-            <div id="div-gpt" style="min-width: 336px; min-height: 280px;">
-                <ins class="adsbygoogle"
-                 style="display:inline-block;width:336px;height:280px"
-                 data-ad-client="ca-pub-8263720079379422"
-                 data-ad-slot="7802751203"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
-        </div>
-    <!--custom popup -->
-
-
-    <script src="Assert/js/disable_source.js" defer></script>
-    <script src="Assert/js/group1_float.js" defer></script>
-    <!-- Load ads script lazily -->
-
-    <!--<script>
-        window.onload = function () {
-            document.body.classList.add("loaded");
-        };
-    </script>-->
-    <!--<script>
-        document.querySelectorAll("#btn-click").forEach(button => {
-            button.addEventListener("click", function () {
-                let targetUrl = this.getAttribute("data-target");
-                if (targetUrl) {
-                    window.location.href = targetUrl; // Redirect to the target URL
-                }
-            });
-        });
-    </script>-->
-    
+  
     <script>
-        // Select all buttons with class 'cusBtnOption'
-        document.querySelectorAll(".btn-click").forEach(button => {
-            button.addEventListener("click", function () {
-                let targetUrl = this.getAttribute("data-target");
-                let label = this.innerText.trim();
-        
-                // Send GA4 event
-                gtag('event', 'insurance_category_click', {
-                    'event_category': 'Insurance',
-                    'event_label': label
-                });
-        
-                // Redirect to the target URL after short delay
-                if (targetUrl) {
-                    setTimeout(() => {
-                        window.location.href = targetUrl;
-                    }, 200); // Delay to ensure GA event is sent
-                }
+        document.getElementById('codeBox').addEventListener('click', function () {
+          fetch('http://192.168.1.11/code_generator/generate_code.php')
+            .then(response => response.json())
+            .then(data => {
+              // Hide original div and show the coupon
+              document.getElementById('codeBox').style.display = 'none';
+              document.getElementById('couponBox').style.display = 'block';
+              
+              // Insert the generated code
+              document.getElementById('codeInput').value = data.code; // Adjust depending on your API response
+            })
+            .catch(error => {
+              console.error('Error generating code:', error);
+              alert('Failed to generate code');
             });
         });
-    </script>
+      
+        function copyCode() {
+            const codeInput = document.getElementById('codeInput');
+            const copyBtn = document.querySelector('.cpy-btn');
+
+            codeInput.select();
+            codeInput.setSelectionRange(0, 99999); // For mobile devices
+            document.execCommand('copy');
+
+            // Change button text
+            copyBtn.textContent = 'Copied';
+
+            // Optional: Revert back to "Copy" after 2 seconds
+            // setTimeout(() => {
+            //     copyBtn.textContent = 'Copy';
+            // }, 2000);
+        }
+
+      </script>
 
     <script>
          fetch('_footer.html')
@@ -482,137 +400,7 @@
                 document.getElementById('footer-placeholder').innerHTML = data;
             });
     </script>
-    <script>
-        // document.addEventListener("DOMContentLoaded", function () {
-        //     // Get the current URL path
-        //     const currentPath = window.location.pathname;
-        //     // console.log('currentPath', currentPath);
-
-        //     // Define the links and their corresponding active classes
-        //     const links = {
-        //         '/carro.html': 'active_carro',
-        //         '/health.html': 'active_health',
-        //         '/contact-us.html': 'active_contact',
-        //         '/about-us.html': 'active_about',
-        //         '/privacy-policy.html': 'active_privacy',
-        //     };
-
-        //     // Check if the current path matches any of the links
-        //     for (const [path, activeClass] of Object.entries(links)) {
-        //         if (currentPath.includes(path)) {
-        //             // Set the active class on the corresponding link
-        //             const activeLink = document.querySelector(`a[href="${path}"]`);
-        //             if (activeLink) {
-        //                 activeLink.classList.add(activeClass);
-        //             }
-
-        //             // Check if the current path matches any link inside the Services <ul>
-        //             const servicesMenu = document.getElementById('services-menu');
-        //             const serviceLinks = servicesMenu.querySelectorAll('ul li a');
-        //             // console.log("serviceLinks", serviceLinks);
-
-        //             // const activeClass = document.getElementById('.desktop-link');
-        //             // console.log(".desktop-link", activeClass);
-
-        //             serviceLinks.forEach(link => {
-        //                 if (link.getAttribute('href') === path) {
-        //                     // Add active class to the inner <li>
-        //                     link.parentElement.classList.add('active');
-        //                     // Add active class to the outer <li>
-        //                     servicesMenu.classList.add('active');
-        //                 }
-        //             });
-        //             break; // Exit the loop once a match is found
-        //         }
-        //     }
-        // });
-
-        // document.addEventListener("DOMContentLoaded", function () {
-        //     const showServicesCheckbox = document.getElementById('show-services');
-        //     const servicesLabel = document.querySelector('.services-label');
-        //     const desktopLink = document.querySelector('.desktop-link');
-
-        //     // Ensure the checkbox is checked initially
-        //     showServicesCheckbox.checked = true;
-        //     // Set the icon to the up arrow by default and add the active class
-        //     servicesLabel.querySelector('i').classList.remove('fa-angle-down');
-        //     servicesLabel.querySelector('i').classList.add('fa-angle-up');
-        //     servicesLabel.classList.add('active'); // When open
-        //     servicesLabel.classList.remove('active'); // When closed
-
-        //     // Set the icon and classes for the initial state
-        //     const updateIconAndClass = () => {
-        //         if (showServicesCheckbox.checked) {
-        //             // Dropdown open
-        //             servicesLabel.querySelector('i').classList.remove('fa-angle-down');
-        //             servicesLabel.querySelector('i').classList.add('fa-angle-up');
-        //             desktopLink.classList.add('active'); // Add active class to .desktop-link
-        //             servicesLabel.classList.add('active'); // Add active class
-        //             servicesLabel.classList.add('active'); // Add active class
-        //         } else {
-        //             // Dropdown closed
-        //             servicesLabel.querySelector('i').classList.remove('fa-angle-up');
-        //             servicesLabel.querySelector('i').classList.add('fa-angle-down');
-        //             desktopLink.classList.remove('active'); // Remove active class from .desktop-link
-        //             servicesLabel.classList.remove('active'); // Remove active class
-        //         }
-        //     };
-        //     // Initialize the default state
-        //     updateIconAndClass();
-        //     // Add event listener for checkbox state change
-        //     showServicesCheckbox.addEventListener('change', updateIconAndClass);
-        // });
-
-        /*document.addEventListener("DOMContentLoaded", () => {
-            const menuItems = document.querySelectorAll('.menu-item');
-            const currentPath = location.pathname; // e.g., "/gamegum/finance/"
-            console.log(currentPath, "currentPath")
-            menuItems.forEach(item => {
-                const endpoint = `/${item.dataset.endpoint}/`; // Add slashes for matching
-                if (currentPath.includes(endpoint)) {
-                    console.log(endpoint, "endpoint")
-                    item.style.color = "White";
-                    item.style.backgroundColor = "#2F9CD9";
-                    item.style.borderRadius = "10px";
-                }
-            });
-        }); */
-        
-        document.addEventListener("DOMContentLoaded", () => {
-            const menuItems = document.querySelectorAll('.menu-item');
-            const currentPath = location.pathname; // e.g., "/gamegum/finance/"
-            console.log(currentPath, "currentPath");
-        
-            menuItems.forEach(item => {
-                const endpoint = `/${item.dataset.endpoint}/`; // For highlighting active link
-                const pageName = item.innerText.trim();
-                const targetURL = item.getAttribute("href");
-        
-                // Highlight active menu item
-                if (currentPath.includes(endpoint)) {
-                    console.log(endpoint, "endpoint");
-                    item.style.color = "White";
-                    item.style.backgroundColor = "#2F9CD9";
-                    item.style.borderRadius = "10px";
-                }
-        
-                // Add Google Analytics event tracking
-                item.addEventListener("click", function (e) {
-                    e.preventDefault(); // Prevent immediate navigation for tracking
-                    gtag('event', 'nav_menu_click', {
-                        'event_category': 'Navigation',
-                        'event_label': pageName,
-                        'link_url': targetURL
-                    });
-        
-                    // Navigate after small delay
-                    setTimeout(() => {
-                        window.location.href = targetURL;
-                    }, 200); // 200ms delay
-                });
-            });
-        });
-
-    </script>
+    <script src="Assert/js/disable_source.js" defer></script>
+    <!-- <script src="Assert/js/group1_float.js" defer></script> -->
 </body>
 </html>
