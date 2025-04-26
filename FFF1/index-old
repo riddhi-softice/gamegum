@@ -42,130 +42,75 @@
     
     <link rel="preload" as="image" href="Assert/image/fff/code-show.webp" as="image" type="image/webp">
     <link rel="preload" as="image" href="Assert/image/fff/Code-Generator.webp" as="image" type="image/webp">
-
-
-
-
     <style>
-        .custom-card {
-            margin-top: 15px;
-            width: 330px;
-            height: 220px; /* Increased height a little */
-            background: rgba(0, 0, 0, 1);
+        .text-center {
+            margin-bottom: 10px;
+        }
+        /* body {
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            justify-content: flex-start;
-            padding-top: 15px;
+            margin: 0;
+        } */
+        #couponBox {
+            /* position: absolute; */
+            left: 50%;
+            transform: translate(-50%, -0%);
+            display: none;
+            width: 335px;
+            height: 220px;
+            background: url('Assert/image/fff/code-show.webp') no-repeat center/cover;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative; 
         }
-        .quiz-img {
-            margin-top: 20px;
-            max-width: 100%;
-            height: auto;
-        }
-        .q-text {
-            font-family: K2D;
+        #codeInput {
+            position: absolute;
+            bottom: 14px;
+            left: 97px;
+            width: 160px;
+            height: 30px;
+            border: 1px solid  #E75E8D;
+            background: transparent;
+            border-radius: 3px;
+            padding: 5px;
+            font-size: 13px;
             font-weight: 600;
-            font-size: 15px;
-            line-height: 100%;
-            letter-spacing: 0%;
-            text-align: center;
-            color: rgba(255, 255, 255, 1);
-            margin-top: 10px;
-        }
-        .q-btn {
-            margin-top: 20px;
             color: #FFFFFF;
-            cursor: pointer;
-            width: 300px;
-            height: 36px; 
-            border-radius: 5px;
-            border: 5px solid rgba(231, 94, 141, 1);
-            background: rgba(231, 94, 141, 1);
-            font-family: K2D;
+            user-select: none; /* Prevent selection */
+            -webkit-user-select: none; /* For Safari */
+            -moz-user-select: none; /* For Firefox */
+        }
+        /* Prevent the blue selection effect */
+        #codeInput::selection {
+            background: transparent; /* No background when selecting */
+            color: inherit; /* Keep the text color unchanged */
+        }
+        .cpy-btn {
+            position: absolute;
+            bottom: 14px;
+            right: 20px;
+            width: 65px;
+            height: 30px;
+            font-size: 13px;
             font-weight: 700;
+            left: 255px;
+            border-radius: 2px;
+            border-width: 1px;
+            color: #FFFFFF;
+            background: rgba(231, 94, 141, 1);
+            border: 1px solid rgba(231, 94, 141, 1);
+            cursor: pointer;
+        }
+        /* Prevent blue border or outline when input is focused */
+        #codeInput:focus {
+            outline: none;
+            border: 1px solid #E75E8D; /* Keep original border color */
+            box-shadow: none; /* Remove any shadow effects */
         }
     </style>
-
-<style>
-    #couponBox {
-        margin: 15px auto;
-        width: 100%;
-        max-width: 330px;
-        height: auto;
-        background: #000;
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 15px;
-        box-sizing: border-box;
-        display: none;
-    }
-    
-    #codeInput {
-        width: 100%;
-        max-width: 250px;
-        height: 35px;
-        border: 1px solid #E75E8D;
-        background: transparent;
-        border-radius: 5px;
-        padding: 5px 10px;
-        font-size: 14px;
-        font-weight: 600;
-        color: #FFF;
-        user-select: none;
-        /* text-align: center; */
-        /* margin-bottom: 10px; */
-        margin-right: 36px;
-        margin-top: 5px;
-    }
-    
-    #codeInput::selection {
-        background: transparent;
-        color: inherit;
-    }
-    
-    #codeInput:focus {
-        outline: none;
-        border-color: #E75E8D;
-        box-shadow: none;
-    }
-    
-    .code-cpy-btn {
-        width: 100%;
-        max-width: 85px;
-        height: 35px;
-        margin: 5px 0 20px 0;
-        font-size: 14px;
-        font-weight: 700;
-        border-radius: 5px;
-        color: #FFF;
-        background: #E75E8D;
-        border: none;
-        cursor: pointer;
-        transition: background 0.3s;
-    }
-    
-    .code-cpy-btn:hover {
-        background: #d14b7a;
-    }
-    
-    .code-quiz-img {
-        width: 100px;
-        height: auto;
-        margin: 20px 0;
-    }
-    
-    .code-q-text {
-        font-family: 'K2D', sans-serif;
-        font-weight: 600;
-        font-size: 16px;
-        text-align: center;
-        color: #FFF;
-        margin-top: 10px;
-    }
-    </style>    
 
     <!-- <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422" crossorigin="anonymous" defer></script>
     <script>
@@ -189,6 +134,26 @@
 
         <div class="container mt-1">
 
+            <!-- ***** Sticky Ads Start ***** -->
+            <!-- <div id="FloatAdx-left">
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:160px;height:600px"
+                    data-ad-client="ca-pub-8263720079379422"
+                    data-ad-slot="2931055714"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <div id="FloatAdx-right">
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:160px;height:600px"
+                    data-ad-client="ca-pub-8263720079379422"
+                    data-ad-slot="2931055714"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div> -->
+            <!-- ***** Sticky Ads End ***** -->
             
             <div class="header_ads" style="">
                 <div class="ad_1 col-span-2 " style="padding-top: 10px; padding-bottom: 10px;">
@@ -204,30 +169,16 @@
                 </div>
             </div>
            
-            <!-- <div id="codeBox" class="container mt-1" style="position: relative; margin-bottom: 15px; border-radius: 15px; width: 345px; height: 235px; background: url('Assert/image/fff/Code-Generator.webp') no-repeat center/cover;">
-            </div> -->
-           
-            <div class="container text-center custom-card" id="codeBox">
-                <button class="q-btn">Generator Code</button>
-                <img class="quiz-img" src="Assert/image/fff/dimond.webp" alt="car success"  fetchpriority="high">
-                <label class="q-text">Smash that button for your coupon!</label>
+            <div id="codeBox" class="container mt-1" style="position: relative; margin-bottom: 15px; border-radius: 15px; width: 330px; height: 220px; background: url('Assert/image/fff/Code-Generator.webp') no-repeat center/cover;">
             </div>
 
             <!-- Hidden coupon display -->
-            <!-- <div id="couponBox" >
+            <div id="couponBox" >
                 <input id="codeInput" type="text" readonly >
                 <button onclick="copyCode()" class="cpy-btn">Copy</button>
-            </div> -->
-
-            <div class="container text-center code-custom-card" id="couponBox" style="display: none;">
-                <input id="codeInput" type="text" readonly >
-                <button class="code-cpy-btn" onclick="copyCode()">Copy</button>
-                <img class="code-quiz-img" src="Assert/image/fff/dimond.webp" alt="car success"  fetchpriority="high">
-                <label class="code-q-text">You got the code, copy it and get coin!</label>
             </div>
 
             <h2 class="main_title_text">Top Insurance Plans: Health, Life, Vehicle and More</h2>
-
 
             <div class="header_ads" style="">
                 <div class="ad_1 col-span-2 " style="padding-top: 10px; padding-bottom: 10px;">
@@ -394,7 +345,6 @@
                         stay secure!</p>
                 </div>
             </div>
-
             <div class="d-flex justify-content-center pt-3 pb-4">
                 <a href="other.html" class="cusBtnOption w-100 text-center" id="btn-click">More</a>
             </div>
@@ -405,8 +355,7 @@
   
     <script>
         document.getElementById('codeBox').addEventListener('click', function () {
-        //   fetch('https://videoapps.club/verify_code/generate_code.php')
-          fetch('http://192.168.1.11/code_generator/generate_code.php')
+          fetch('https://videoapps.club/verify_code/generate_code.php')
             .then(response => response.json())
             .then(data => {
               // Hide original div and show the coupon
@@ -438,7 +387,6 @@
             //     copyBtn.textContent = 'Copy';
             // }, 2000);
         }
-
     </script>
     <script>
          fetch('_footer.html')
