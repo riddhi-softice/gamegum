@@ -37,12 +37,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  
     <link rel="stylesheet" href="Assert/Css/bootstrap.css">
     <link rel="stylesheet" href="Assert/Css/style.css">
-    <link rel="stylesheet" href="Assert/Css/responcive.css">
     <style>
         a {
             color: #ffffffde !important;
@@ -54,38 +51,6 @@
 </head>
 <body>
     <section class="app_wrapper">
-
-        <div class="wrapper" id="header-placeholder">
-            <nav>
-                <input type="checkbox" id="show-search">
-                <input type="checkbox" id="show-menu">
-                <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
-                <div class="nav-content">
-                    <a class="header_logo_link" href="https://107-ffquize.baseapk.me">
-                        <div class="logo">
-                            <img class="" src="Assert/image/logo.png" alt="health success">
-                        </div>
-                    </a>
-                    <ul class="links">
-                        <li><a href="https://107-ffquize.baseapk.me" data-endpoint="about-us" class="menu-item">Global Insurance</a></li>
-                        <li id="services-menu">
-                            <a href="#" class="desktop-link">Category <i class="fa-solid fa-angle-down"></i></a>
-                            <input type="checkbox" id="show-services">
-                            <label for="show-services" class="services-label">Category<i class="fa-solid fa-angle-down"></i></label>
-                            <ul>
-                                <li><a href="life.html" data-endpoint="finance" class="menu-item">Life</a></li>
-                                <li><a href="health.html" data-endpoint="health" class="menu-item">Health</a></li>
-                                <li><a href="vehicle.html" data-endpoint="vehicle" class="menu-item">Vehicle</a></li>
-                                <li><a href="home.html" data-endpoint="home" class="menu-item">Home</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="about-us.html" data-endpoint="about-us" class="menu-item active">About Us</a></li>
-                        <li><a href="contact-us.html" data-endpoint="contact-us" class="menu-item">Contact Us</a></li>
-                        <li><a href="privacy-policy.html" data-endpoint="privacy-policy" class="menu-item">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
 
         <div class="container mt-3">
             <div class="mt-4 mb-2">
@@ -138,7 +103,7 @@
         <div id="footer-placeholder"></div>
     </section>
     
-    <script src="Assert/js/disable_source.js"></script>
+    <script src="Assert/js/disable_source.js" defer></script>
  
     <script>
         fetch('_footer.html')
