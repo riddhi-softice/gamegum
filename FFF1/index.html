@@ -36,12 +36,16 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="Assert/image/icon.webp" />
     <link rel="icon" type="image/x-icon" href="Assert/image/icon.webp">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  
-    <!-- <link rel="stylesheet" href="Assert/Css/blog.style.css"> -->
-    <link rel="stylesheet" href="Assert/Css/bootstrap.css">
+    
+     <style>
+        .container { width: 100%; padding-right: 12px; padding-left: 12px; margin-right: auto; margin-left: auto; }
+        .text-center { text-align: center; }
+        .mt-4 { margin-top: 1.5rem; }
+        /* Add more as needed */
+    </style>
+    <link rel="stylesheet" href="Assert/Css/bootstrap.css" media="print" onload="this.onload=null;this.media='all';">
+    <noscript><link rel="stylesheet" href="Assert/Css/bootstrap.css"></noscript>
     <link rel="stylesheet" href="Assert/Css/style.css">
-    <!-- <link rel="stylesheet" href="Assert/Css/responcive.css"> -->
 
     <link rel="preload" as="image" href="Assert/image/fff/dimond.webp" as="image" type="image/webp">
     <link rel="preload" as="image" href="Assert/image/global-1.webp" as="image" type="image/webp">
@@ -428,16 +432,14 @@
         }
     </script>
     
-    
     <!-- disable back-->
- <!--<script type="text/javascript">
-    function preventBack() {
-        window.history.forward(); 
-    }
-    setTimeout("preventBack()", 0);
-    window.onunload = function () { null };
-</script>
--->
+    <!--<script type="text/javascript">
+        function preventBack() {
+            window.history.forward(); 
+        }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+    </script> -->
 
     <script type="text/javascript">
         history.pushState(null, null, location.href);
@@ -447,17 +449,6 @@
         };
     </script>
     
-    <!--<script type="text/javascript">
-        // Push a fake state into the history
-        history.pushState(null, null, location.href);
-        
-        window.onpopstate = function () {
-            // When user tries to go back, force them to stay
-            history.go(1);
-        };
-    </script>-->
-
-
     <script>
         fetch('_footer.html')
             .then(response => response.text())

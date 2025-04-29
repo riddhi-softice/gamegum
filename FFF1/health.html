@@ -33,34 +33,18 @@
     <link rel="shortcut icon" type="image/x-icon" href="Assert/image/icon.webp" />
     <link rel="icon" type="image/x-icon" href="Assert/image/icon.webp">
 
-    <!--<link rel="preconnect" href="https://fonts.googleapis.com">-->
-    <!--<link rel="preconnect" href="https://fonts.gstatic.com">-->
-    <!--<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">-->
-
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-    <link rel="stylesheet" href="Assert/Css/bootstrap.css">
+    <style>
+        .container { width: 100%; padding-right: 12px; padding-left: 12px; margin-right: auto; margin-left: auto; }
+        .text-center { text-align: center; }
+        .mt-4 { margin-top: 1.5rem; }
+        /* Add more as needed */
+    </style>
+    <link rel="stylesheet" href="Assert/Css/bootstrap.css" media="print" onload="this.onload=null;this.media='all';">
+    <noscript><link rel="stylesheet" href="Assert/Css/bootstrap.css"></noscript>
     <link rel="stylesheet" href="Assert/Css/style.css">
-    <!--<link rel="stylesheet" href="Assert/Css/responcive.css">-->
-    <!-- <link rel="stylesheet" href="Assert/Css/group1.css"> -->
     <link rel="stylesheet" href="Assert/Css/custom_fff.css">
 
-    <!-- <script defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422" crossorigin="anonymous"></script>
-    <script>
-      setTimeout(() => {
-        const gtagScript = document.createElement("script");
-        gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-5LR732BBVK";
-        gtagScript.async = true;
-        document.head.appendChild(gtagScript);
-    
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){ dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-5LR732BBVK');
-      }, 3000); // Delay GTM to avoid render-blocking
-    </script> -->
-
 </head>
-
 <body>
     <section class="app_wrapper">
 
@@ -223,8 +207,6 @@
         <div id="footer-placeholder"></div>
     </section>
     
-
-
     <script>
         let currentQuestionIndex = null;
         let countdownInterval = null;
@@ -356,30 +338,23 @@
         }
     </script>
 
-
-
-      
     <!-- disable back-->
- <script type="text/javascript">
-    function preventBack() {
-        window.history.forward(); 
-    }
-    setTimeout("preventBack()", 0);
-    window.onunload = function () { null };
-</script>
+     <script type="text/javascript">
+        function preventBack() {
+            window.history.forward(); 
+        }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+    </script>
      
-    
-    
     <script>
-         fetch('_footer.html')
+        fetch('_footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
             });
     </script>
-    <!-- <script src="Assert/js/group1_float.js" defer></script> -->
     <script src="Assert/js/disable_source.js" defer></script>
-    <!-- <script src="Assert/js/Tcz_web_reward.js" defer></script> -->
 
 </body>
 </html>
