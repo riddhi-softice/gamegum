@@ -81,10 +81,10 @@
     <link rel="preload" href="Assert/image/global-1.webp" as="image" type="image/webp">
     <link rel="preload" href="Assert/image/global-2.webp" as="image" type="image/webp">
 
- <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422" crossorigin="anonymous" defer></script>
+ <!--<script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422" crossorigin="anonymous" defer></script>-->
     
   <!-- Google Ads (deferred load after user interaction) -float-ad right-left blink -->
-  <!--<script>
+  <script>
     function initGoogleAds() {
       if (window.adsbygoogle) {
         loadAds();
@@ -102,20 +102,20 @@
     script.crossOrigin = "anonymous";
     script.onload = initGoogleAds;
     document.head.appendChild(script);
-  </script>-->
+  </script>
 
   <!-- Google Analytics (load after delay) -->
   <script>
     setTimeout(() => {
       const gtagScript = document.createElement("script");
-      gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-5LR732BBVK";
+      gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXX";
       gtagScript.async = true;
       document.head.appendChild(gtagScript);
 
       window.dataLayer = window.dataLayer || [];
       function gtag(){ dataLayer.push(arguments); }
       gtag('js', new Date());
-      gtag('config', 'G-5LR732BBVK');
+      gtag('config', 'G-XXXX');
     }, 2000);
   </script>
 </head>
@@ -257,7 +257,7 @@
                 </div>
             </div>
             
-            <img class="blog_subpost_img" src="Assert/image/global-1.webp" alt="All About Insurance: Travel, Car, Motorcycle, and More">
+            <img class="blog_subpost_img" src="Assert/image/global-1.webp" width="330" height="330" alt="All About Insurance: Travel, Car, Motorcycle, and More">
 
             <div class="mt-4 mb-3">
                 <div>
@@ -333,7 +333,7 @@
                         international destinations require visitors to have travel insurance as a prerequisite for
                         entry.</p>
                 </div>
-                <img class="blog_subpost_img" src="Assert/image/global-2.webp" alt="All About Insurance: Travel, Car, Motorcycle, and More">
+                <img class="blog_subpost_img" src="Assert/image/global-2.webp" width="330" height="330" alt="All About Insurance: Travel, Car, Motorcycle, and More">
                 <div>
                     <h6 class="blog_paragraph_text">Why Insurance is Essential?</h6>
                     <p class="blog_post_subtext">Having insurance helps individuals and businesses avoid financial setbacks caused by
@@ -458,6 +458,7 @@
                 const f = document.getElementById('footer-placeholder');
                 if (f) f.innerHTML = data;
               });
+        
             // Initialize menus, float logic, etc
           });
 

@@ -42,7 +42,8 @@
   font-family: 'K2D', sans-serif;
   font-weight: 700;
   font-size: 16px;
-  color: #FFFFFF;
+  /* color: #FFFFFF; */
+  color: white;
   cursor: pointer;
   transition: background 0.3s, transform 0.2s;
 }

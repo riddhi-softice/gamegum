@@ -31,4 +31,4 @@ function loadAds() {
     }
 }
 // Run after 3 seconds
-setTimeout(loadAds, 3000);
+setTimeout(loadAds, 4000);

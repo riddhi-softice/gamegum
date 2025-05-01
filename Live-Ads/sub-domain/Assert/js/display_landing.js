@@ -55,15 +55,13 @@ function openPopup() {
         document.getElementById("popupBox").style.opacity = "1";
     }, 100);
     
-    
-     // Google Analytics tracking
+    // Google Analytics tracking
     gtag('event', '100_play_now_popup_open', {
         'event_category': 'BeforeGamePopup',
         'event_label': 'Play Now from 100-play-online',
         'page_title': document.title,
         'page_location': window.location.href
     });
-
 
     // Start countdown
     let countdown = 5;
@@ -81,11 +79,11 @@ function openPopup() {
             closeBtn.style.display = "inline-block";
             
             // AFTER 2 SECOND AUTOMATIC REDIRECT WHITHOUT CLICK
-            /* setTimeout(() => {
+            /*setTimeout(() => {
                 window.location.href = "https://baseapk.me";
                 document.getElementById("popupOverlay").style.display = "none";
                 document.getElementById("popupBox").style.opacity = "0";
-            }, 2000); */
+            }, 2000);*/
         }
     }, 1000);
 }

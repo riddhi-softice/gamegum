@@ -31,40 +31,59 @@
     <link rel="canonical" href="https://100-play-online.baseapk.me/vehicle.html">
     <link rel="shortcut icon" type="image/x-icon" href="Assert/image/icon.webp" />
     <link rel="icon" type="image/x-icon" href="Assert/image/icon.webp">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="Assert/Css/bootstrap.css">
+    
+   <!-- FontAwesome (deferred) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"></noscript>
+    
+    <!-- other css -->
+    <style>
+        body {
+          margin: 0;
+          font-family: 'Montserrat', sans-serif;
+          background: #fff;
+          color: #333;
+        }
+        .main_title_text {
+          font-size: 28px;
+          font-weight: 700;
+          color: #fff;
+        }
+        .text-center {
+          margin-bottom: 10px;
+        }
+        .main_list {
+            padding-bottom: 0px !important;
+        }
+      </style>
+    <link rel="stylesheet" href="Assert/Css/bootstrap.css" media="print" onload="this.onload=null;this.media='all';">
+    <noscript><link rel="stylesheet" href="Assert/Css/bootstrap.css"></noscript>
     <link rel="stylesheet" href="Assert/Css/style.css">
     <link rel="stylesheet" href="Assert/Css/responcive.css">
     <link rel="stylesheet" href="Assert/Css/group1.css">
     
-    <script defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422" crossorigin="anonymous"></script>
-    <script>
-      setTimeout(() => {
-        const gtagScript = document.createElement("script");
-        gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-5LR732BBVK";
-        gtagScript.async = true;
-        document.head.appendChild(gtagScript);
+    <!-- preload images -->
+    <link rel="preload" href="Assert/image/logo.png" as="image" type="image/png">
+    <link rel="preload" href="Assert/image/vehicle-ins.webp" as="image" type="image/webp">
+
+
+    <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422" crossorigin="anonymous" defer></script>
     
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){ dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-5LR732BBVK');
-      }, 3000); // Delay GTM to avoid render-blocking
-    </script>
-    <!-- Analitycs Google tag (gtag.js) -->
-        <!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-5LR732BBVK"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            
-            gtag('config', 'G-5LR732BBVK');
-        </script>-->
-    <!-- Analitycs Google tag (gtag.js) -->
+  <!-- Google Analytics (load after delay) -->
+  <script>
+    window.addEventListener("mousemove", function loadGTMOnce() {
+      window.removeEventListener("mousemove", loadGTMOnce);
+      const gtagScript = document.createElement("script");
+      gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-5LR732BBVK";
+      gtagScript.async = true;
+      document.head.appendChild(gtagScript);
+    
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-5LR732BBVK');
+    });
+  </script>
 </head>
 <body>
     <section class="app_wrapper">
@@ -77,7 +96,7 @@
                 <div class="nav-content">
                     <a class="header_logo_link" href="https://100-play-online.baseapk.me">
                         <div class="logo">
-                            <img class="" src="Assert/image/logo.png" alt="health success">
+                            <img class="" src="Assert/image/logo.png" height="28" width="102" alt="logo">
                         </div>
                     </a>
                     <ul class="links">
@@ -102,7 +121,7 @@
         </div>
 
         <div class="container text-center" style="margin-top: 15px;">
-            <img class="car_travel"src="Assert/image/vehicle-ins.webp" loading="lazy" alt="car success">
+            <img class="car_travel"src="Assert/image/vehicle-ins.webp" alt="car success">
         </div>
 
         <div class="container">
@@ -234,30 +253,61 @@
         </div>
     </div>
     
-    <script src="Assert/js/group1_float.js" defer></script>
-    <script src="Assert/js/disable_source.js" defer></script>
-    <script>
-         fetch('_footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            });
-    </script>
-    <script>
+     <!-- scripts -->
+      <script defer>
         document.addEventListener("DOMContentLoaded", function () {
+             // Footer load (async, non-blocking)
+              requestIdleCallback(() => {
+                // Inject footer
+                fetch('_footer.html')
+                  .then(r => r.text())
+                  .then(data => {
+                    const f = document.getElementById('footer-placeholder');
+                    if (f) f.innerHTML = data;
+                  });
+                // Initialize menus, float logic, etc
+              });
+    
+            // Navigation menu tracking : HEADER MENU
+            
+            //--------  Navigation menu tracking : HEADER MENU
+            
+            // selected
+            const menuItems = document.querySelectorAll('.menu-item');
+            const currentPath = location.pathname;
+        
+            menuItems.forEach(item => {
+              const endpoint = `/${item.dataset.endpoint}/`;
+              const pageName = item.innerText.trim();
+              const targetURL = item.getAttribute("href");
+        
+              if (currentPath.includes(endpoint)) {
+                item.style.cssText = "color:white; background-color:#2F9CD9; border-radius:10px;";
+              }
+        
+              item.addEventListener("click", function (e) {
+                e.preventDefault();
+                if (typeof gtag === 'function') {
+                  gtag('event', 'nav_menu_click', {
+                    event_category: 'Navigation',
+                    event_label: pageName,
+                    link_url: targetURL
+                  });
+                }
+                setTimeout(() => window.location.href = targetURL, 200);
+              });
+            });
+            
             const showServicesCheckbox = document.getElementById('show-services');
             const servicesLabel = document.querySelector('.services-label');
             const desktopLink = document.querySelector('.desktop-link');
 
-            // Ensure the checkbox is checked initially
             showServicesCheckbox.checked = true;
-            // Set the icon to the up arrow by default and add the active class
             servicesLabel.querySelector('i').classList.remove('fa-angle-down');
             servicesLabel.querySelector('i').classList.add('fa-angle-up');
             servicesLabel.classList.add('active'); // When open
             servicesLabel.classList.remove('active'); // When closed
 
-            // Set the icon and classes for the initial state
             const updateIconAndClass = () => {
                 if (showServicesCheckbox.checked) {
                     // Dropdown open
@@ -275,63 +325,14 @@
                 }
             };
 
-            // Initialize the default state
             updateIconAndClass();
 
-            // Add event listener for checkbox state change
             showServicesCheckbox.addEventListener('change', updateIconAndClass);
         });
-
-        /*document.addEventListener("DOMContentLoaded", () => {
-            const menuItems = document.querySelectorAll('.menu-item');
-            const currentPath = location.pathname; // e.g., "/en/finance/"
-            console.log(currentPath, "currentPath")
-            menuItems.forEach(item => {
-                const endpoint = `/${item.dataset.endpoint}/`; // Add slashes for matching
-                if (currentPath.includes(endpoint)) {
-                    console.log(endpoint, "endpoint")
-                    item.style.color = "White";
-                    item.style.backgroundColor = "#2F9CD9";
-                    item.style.borderRadius = "10px";
-                }
-            });
-        }); */
-        
-        document.addEventListener("DOMContentLoaded", () => {
-            const menuItems = document.querySelectorAll('.menu-item');
-            const currentPath = location.pathname; // e.g., "/gamegum/finance/"
-            console.log(currentPath, "currentPath");
-        
-            menuItems.forEach(item => {
-                const endpoint = `/${item.dataset.endpoint}/`; // For highlighting active link
-                const pageName = item.innerText.trim();
-                const targetURL = item.getAttribute("href");
-        
-                // Highlight active menu item
-                if (currentPath.includes(endpoint)) {
-                    console.log(endpoint, "endpoint");
-                    item.style.color = "White";
-                    item.style.backgroundColor = "#2F9CD9";
-                    item.style.borderRadius = "10px";
-                }
-        
-                // Add Google Analytics event tracking
-                item.addEventListener("click", function (e) {
-                    e.preventDefault(); // Prevent immediate navigation for tracking
-                    gtag('event', 'nav_menu_click', {
-                        'event_category': 'Navigation',
-                        'event_label': pageName,
-                        'link_url': targetURL
-                    });
-        
-                    // Navigate after small delay
-                    setTimeout(() => {
-                        window.location.href = targetURL;
-                    }, 200); // 200ms delay
-                });
-            });
-        });
-
     </script>
+    
+
+    <script src="Assert/js/group1_float.js" defer></script>
+    <script src="Assert/js/disable_source.js" defer></script>
 </body>
 </html>

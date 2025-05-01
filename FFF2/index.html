@@ -8,18 +8,15 @@
 
     <!-- Primary Meta Tags -->
     <title>Best Insurance Plans – Vehicle, Health, Life & Home Coverage</title>
-    <meta name="description"
-        content="Compare top insurance plans for vehicles, health, life, and home. Find the best coverage at affordable rates. Get instant quotes and expert advice!">
-    <meta name="keywords"
-        content="insurance plans, vehicle insurance, health insurance, life insurance, home insurance, best insurance quotes, affordable insurance, compare insurance">
+    <meta name="description" content="Compare top insurance plans for vehicles, health, life, and home. Find the best coverage at affordable rates. Get instant quotes and expert advice!">
+    <meta name="keywords" content="insurance plans, vehicle insurance, health insurance, life insurance, home insurance, best insurance quotes, affordable insurance, compare insurance">
     <meta name="author" content="Baseapk">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Open Graph (For Social Media Sharing) -->
     <meta property="og:title" content="Best Insurance Plans – Vehicle, Health, Life & Home Coverage">
-    <meta property="og:description"
-        content="Explore the best insurance plans for your vehicle, health, life, and home. Get competitive quotes and expert advice.">
+    <meta property="og:description" content="Explore the best insurance plans for your vehicle, health, life, and home. Get competitive quotes and expert advice.">
     <meta property="og:image" content="https://27-play-ffgame.baseapk.me/Assert/image/global-1.webp">
     <meta property="og:url" content="https://27-play-ffgame.baseapk.me">
     <meta property="og:type" content="website">
@@ -27,17 +24,15 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Best Insurance Plans – Vehicle, Health, Life & Home Coverage">
-    <meta name="twitter:description"
-        content="Find the best insurance plans for vehicles, health, life, and home. Get expert advice and compare policies easily.">
+    <meta name="twitter:description" content="Find the best insurance plans for vehicles, health, life, and home. Get expert advice and compare policies easily.">
     <meta name="twitter:image" content="https://27-play-ffgame.baseapk.me/Assert/image/global-1.webp">
 
     <!-- Canonical URL (Helps with SEO) -->
     <link rel="canonical" href="https://27-play-ffgame.baseapk.me">
-
     <link rel="shortcut icon" type="image/x-icon" href="Assert/image/icon.webp" />
     <link rel="icon" type="image/x-icon" href="Assert/image/icon.webp">
     
-     <style>
+    <style>
         .container { width: 100%; padding-right: 12px; padding-left: 12px; margin-right: auto; margin-left: auto; }
         .text-center { text-align: center; }
         .mt-4 { margin-top: 1.5rem; }
@@ -48,10 +43,9 @@
     <link rel="stylesheet" href="Assert/Css/style.css">
     <link rel="stylesheet" href="Assert/Css/custom_fff.css">
 
-
-    <link rel="preload" as="image" href="Assert/image/fff/dimond.webp" as="image" type="image/webp">
-    <link rel="preload" as="image" href="Assert/image/global-1.webp" as="image" type="image/webp">
-    <link rel="preload" as="image" href="Assert/image/global-2.webp" as="image" type="image/webp">
+    <link rel="preload" href="Assert/image/fff/dimond.webp" as="image" type="image/webp">
+    <link rel="preload" href="Assert/image/global-1.webp" as="image" type="image/webp">
+    <link rel="preload" href="Assert/image/global-2.webp" as="image" type="image/webp">
     <!-- copy code css -->
     <style>
         .code-input-group {
@@ -135,7 +129,7 @@
             <!-- GET CODE AND COPY -->
             <div class="redeem_box" data-target="index.html" id="couponBox">
                 <label class="code-text">Just Copy the code and paste into app to get your diamonds</label>
-                <img class="quiz-img" src="Assert/image/fff/dimond.webp" alt="Quiz Image" fetchpriority="high">
+                <img class="quiz-img" src="Assert/image/fff/dimond.webp" width="161" height="161" alt="Quiz Image" fetchpriority="high">
                 <div class="code-input-group">
                     <input id="codeInput" type="text" readonly>
                     <button class="code-cpy-btn" onclick="copyCode()">Copy</button>
@@ -144,8 +138,7 @@
 
             <h2 class="main_title_text">Top Insurance Plans: Health, Life, Vehicle and More</h2>
           
-            <img class="blog_subpost_img" src="Assert/image/global-1.webp"
-                alt="All About Insurance: Travel, Car, Motorcycle, and More">
+            <img class="blog_subpost_img" src="Assert/image/global-1.webp" width="330" height="330" alt="All About Insurance: Travel, Car, Motorcycle, and More">
             <div class="mt-4 mb-3">
                 <div>
                     <h6 class="blog_paragraph_text">What is Insurance?</h6>
@@ -208,7 +201,7 @@
                         international destinations require visitors to have travel insurance as a prerequisite for
                         entry.</p>
                 </div>
-                <img class="blog_subpost_img" src="Assert/image/global-2.webp" loading="lazy"
+                <img class="blog_subpost_img" src="Assert/image/global-2.webp" width="330" height="330"
                     alt="All About Insurance: Travel, Car, Motorcycle, and More">
                 <div>
                     <h6 class="blog_paragraph_text">Why Insurance is Essential?</h6>
@@ -275,19 +268,43 @@
         window.addEventListener('DOMContentLoaded', function () {
             generateCode();
         });
+
         function generateCode() {
-            // fetch('https://videoapps.club/verify_code/generate_code.php')
-            fetch('http://192.168.1.10/code_generator/generate_code.php')
-                .then(response => response.json())
+            fetch('http://192.168.1.11/code_generator/generate_code.php')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status} - ${response.statusText}`);
+                    }
+                    return response.json();
+                })
                 .then(data => {
-                    // Insert the generated code
-                    document.getElementById('codeInput').value = data.code; // Adjust depending on your API response
+                    if (data.code) {
+                        document.getElementById('codeInput').value = data.code;
+                    } else {
+                        throw new Error('API response does not contain "code" field');
+                    }
                 })
                 .catch(error => {
                     console.error('Error generating code:', error);
-                    alert('Failed to generate code');
+                    alert(`Failed to generate code: ${error.message}`);
                 });
         }
+
+        // function generateCode() {
+        //     // fetch('https://videoapps.club/verify_code/generate_code.php')
+        //     fetch('http://192.168.1.11/code_generator/generate_code.php')
+        //         .then(response => response.json())
+        //         .then(data => {
+        //             // Insert the generated code
+        //             document.getElementById('codeInput').value = data.code; // Adjust depending on your API response
+        //         })
+        //         .catch(error => {
+        //             console.error('Error generating code:', error);
+        //             alert(error);
+        //             // alert('Failed to generate code');
+        //         });
+        // }
+        
         function copyCode() {
             const codeInput = document.getElementById('codeInput');
             const copyBtn = document.querySelector('.code-cpy-btn');
