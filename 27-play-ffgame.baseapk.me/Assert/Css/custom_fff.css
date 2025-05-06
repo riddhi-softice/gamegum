@@ -1,0 +1,52 @@
+.redeem_box {
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.d-title {
+  font-size: 24px;
+}
+.q-text {
+  font-family: 'K2D', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  color: #FFFFFF;
+  /* margin-top: 15px; */
+}
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.quiz-img {
+  margin-top: 15px;
+}
+.d-des {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  width: 250px;
+}
+
+.q-btn {
+  margin-top: 15px;
+  width: 100%;
+  /* max-width: 300px; */
+  height: 40px;
+  background: #E75E8D;
+  border: none;
+  border-radius: 8px;
+  font-family: 'K2D', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  /*color: #FFFFFF;*/
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+.q-btn:hover {
+  background: #d14b7a;
+}

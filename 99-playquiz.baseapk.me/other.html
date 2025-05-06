@@ -43,8 +43,8 @@
     <!-- <link rel="stylesheet" href="Assert/Css/group1.css"> -->
 
     <link rel="preload" href="Assert/image/fff/Scratch-Card-2x.webp" as="image" type="image/webp">
-
-      <!-- Generate code css -->
+    
+     <!-- Generate code css -->
       <style>
         .redeem_box {
             margin: 20px auto;
@@ -103,7 +103,7 @@
       }, 3000); // Delay GTM to avoid render-blocking
     </script> -->
     
-     <!-- new adx-->
+    <!-- new adx-->
     <!--<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>-->
     <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
 
@@ -176,18 +176,19 @@
                 </div>
             </div>
         </div> -->
+
+        <!-- <img class="car_travel" src="Assert/image/fff/Scratch-Card-1x.webp" alt="car success"> -->
         
         <div class="container mt-1">
             <div class="text-center mt-1">
-                <div class="redeem_box watchAdButton" data-target="index.html">
+                <div class="redeem_box watchAdButton" data-target="final.html">
                     <button class="q-btn">Generate Code</button>
                     <img class="quiz-img" src="Assert/image/fff/dimond.webp" alt="Diamond" fetchpriority="high">
                     <label class="q-text">Smash that button for your coupon!</label>
                 </div>
             </div>
         </div>
-
-
+        
         <div class="container mt-3">
 
             <div class="mt-4 mb-2">
@@ -269,19 +270,26 @@
         });
     </script>
   
-  
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        document.querySelectorAll(".watchAdButton").forEach((element) => {
-            element.onclick = () => {
-            const targetUrl = element.getAttribute("data-target");
 
-            window.location.href = targetUrl; 
-            };
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".watchAdButton").forEach((element) => {
+                element.onclick = () => {
+                const targetUrl = element.getAttribute("data-target");
+    
+                window.location.href = targetUrl; 
+                };
+            });
         });
-    });
-</script>
-
+    </script>
+    <!-- disable back-->
+    <script type="text/javascript">
+        function preventBack() {
+            window.history.forward(); 
+        }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+    </script>
     <script>
          fetch('_footer.html')
             .then(response => response.text())
