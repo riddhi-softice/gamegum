@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stimulus Relief 2025</title>
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <style>
+    .card img {
+      max-width: 100%;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    .card p {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 30px;
+    }
+    .card p b {
+      font-weight: bold;
+    }
+    .btn {
+      /* background-color: #1877f2; */
+      background-color: #4267b2;
+      color: white;
+      padding: 12px 65px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #4caf50;
+    }
+    @media (max-width: 480px) {
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="banner">
+    <img src="https://flagcdn.com/us.svg" alt="US Flag" width="24" height="16">
+    Stimulus Relief 2025
+    <img src="https://flagcdn.com/us.svg" alt="US Flag" width="24" height="16">
+  </div>
+  
+  <!-- <div class="banner">Stimulus Relief 2025</div> -->
+  <div class="container">
+    <div class="card">
+      <h1>You May Be Eligible for Stimulus Relief & Benefits</h1>
+      <img src="assets/images/f1.webp" alt="Stimulus Check">
+      <p>Answer <b>3 quick questions</b> to see if you qualify for the 2025 Stimulus!</p>
+      <!-- <button class="btn">GET STARTED</button> -->
+      <a class="btn" href="qes_1.html">CLAIM NOW</a>
+    </div>
+  </div>
+
+  <div class="pg-footer">
+    <footer class="footer">
+      <div class="footer-copyright">
+        <div class="footer-copyright-wrapper">
+          <p class="footer-copyright-text">
+            <a class="footer-copyright-link" href="#" target="_self"> ©<span id="currentYear"></span> | Stimulus Relief | All rights reserved. </a>
+          </p>
+          <p class="footer-copyright-text">
+            <a class="footer-copyright-link1" href="#" target="_self">Privacy</a>  &nbsp;
+            <a class="footer-copyright-link1" href="#" target="_self">Terms </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  
+  <!-- <footer>
+    © Stimulus Relief <span id="currentYear"></span> &nbsp; · &nbsp;
+    <a href="#">Privacy</a> · <a href="#">Terms</a><br>
+    This program is not sponsored by Facebook.
+  </footer> -->
+
+<!-- script start -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // footer current year
+      const yearSpan = document.getElementById("currentYear");
+      if (yearSpan) {
+          yearSpan.textContent = new Date().getFullYear();
+      } else {
+          console.error("Element with ID 'currentYear' not found.");
+      }
+    });       
+</script>
+<!-- disable back-->
+<script type="text/javascript">
+  function preventBack() {
+      window.history.forward(); 
+  }
+  setTimeout("preventBack()", 0);
+  window.onunload = function () { null };
+</script>
+
+<script>
+  // disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C, Ctrl+U
+  document.addEventListener('keydown', function (e) {
+      if (e.key === 'F12' ||
+          (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+          (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+          (e.ctrlKey && e.shiftKey && e.key === 'C') ||
+          (e.ctrlKey && e.key === 'u')) {
+          e.preventDefault();
+          return false;
+      }
+  }); 
+  // right-click disable
+  document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+      return false;
+  });
+</script>
+</body>
+</html>

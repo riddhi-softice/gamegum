@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checking Qualification</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .banner {
+      background-color: #4267b2;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 40px 30px;
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+    }
+
+    .progress-bar {
+      height: 12px;
+      background-color: #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background-color: #4caf50;
+      transition: width 5s linear;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #888;
+      padding: 20px 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="banner">🇺🇸 Stimulus Relief 2025 🇺🇸</div>
+
+  <div class="container">
+    <div class="card">
+      <h1>Checking Your Qualification...</h1>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © Stimulus Relief 2025 &nbsp; · &nbsp;
+    <a href="#">Privacy</a> · <a href="#">Terms</a><br>
+    This program is not sponsored by Facebook.
+  </footer>
+
+  <script>
+    const progress = document.getElementById('progressFill');
+    progress.style.width = '100%';
+
+    // Redirect after 5 seconds (duration of animation)
+    setTimeout(() => {
+      window.location.href = 'qual_success.html';
+    }, 5000);
+  </script>
+
+</body>
+</html>
