@@ -43,21 +43,8 @@
     <link rel="stylesheet" href="Assert/Css/style.css">
     <link rel="stylesheet" href="Assert/Css/custom_fff.css">
     
-    <!-- <script defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8263720079379422" crossorigin="anonymous"></script>
-    <script>
-      setTimeout(() => {
-        const gtagScript = document.createElement("script");
-        gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-5LR732BBVK";
-        gtagScript.async = true;
-        document.head.appendChild(gtagScript);
-    
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){ dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-5LR732BBVK');
-      }, 3000); // Delay GTM to avoid render-blocking
-    </script> -->
-    
+    <!--<link rel="prefetch" href="health.html">-->
+
     <!-- new adx-->
     <!--<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>-->
     <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
@@ -112,21 +99,35 @@
 <body>
     <section class="app_wrapper insuranceSection">
 
-        <!-- <div class="container">
-            <div class="ad_1 col-span-2 mt-4"> -->
+        <!-- Initially visible ad -->
+        <div class="container"  id="adInitialContainer">
+            <div class="ad_1 col-span-2 mt-4">
                 <div id='div-gpt-ad-1746098433849-0'>
                   <script>
                     googletag.cmd.push(function() { googletag.display('div-gpt-ad-1746098433849-0'); });
                   </script>
                 </div>
-            <!-- </div>
-        </div> -->
+            </div>
+        </div>
+        
+        <!-- Hidden by default, shown later -->
+        <div class="container" id="adNextContainer" style="display: none;">
+          <div class="ad_1 col-span-2 mt-4">
+            <div id='div-gpt-ad-1746098433849-0'>
+              <script>
+                googletag.cmd.push(function() {
+                  googletag.display('div-gpt-ad-1746098433849-0');
+                });
+              </script>
+            </div>
+          </div>
+        </div>
 
         <!-- REWARD QUIZ -->
         <div class="container mt-1">
             <div class="text-center mt-1">
                 <div class="redeem_box">
-                    <h4 class="redeem_box_text" style="color: #e75e8d;">1/3 Questions</h4>
+                    <h4 class="redeem_box_text" style="color: #e75e8d;"><span id="qesNumSpan">1</span>/3 Questions</h4>
                     <h4 class="redeem_box_text" id="questionText" style="color: white;"></h4>
                     <div class="select-option" id="optionsBox"></div>
 
@@ -137,7 +138,7 @@
             </div>
         </div>
        
-        <div class="container mt-3">
+        <div class="container mt-3" id="vehiPage">
             <div class="mt-4 mb-2">
                 <h5 class="blog_post_title">What is Vehicle Insurance?</h5>
                 <p class="blog_post_subtext">Vehicle insurance is a financial safety net that protects you from unforeseen losses related to your car or bike. It covers damages, theft, and liabilities that may arise due to accidents. Having valid vehicle insurance is not only a smart financial decision but also a legal requirement in many countries, including India.</p>
@@ -203,23 +204,18 @@
                 <p class="blog_post_subtext">ðŸ’¡ <strong>Pro Tip:</strong> Renew your policy before expiration to avoid penalties and ensure uninterrupted coverage. Stay safe and insured! ðŸš—</p>
             </div>
         </div>
+        
+        <div class="container mt-3" id="healPage"></div>
 
         <div id="footer-placeholder"></div>
     </section>
-    
-    <!-- sticky bottom auto -->
-    <script defer>
-        googletag.cmd.push(() => {
-            googletag.display(AnchorDesktopSlot);
-        });
-    </script>
     
     <script>
         let currentQuestionIndex = null;
         let countdownInterval = null;
         let answered = false;
         let selectedIndex = null;
-
+       
         window.onload = loadRandomQuestion;
     
         const questions = [
@@ -254,7 +250,7 @@
                 correctAnswerIndex: 3
             },
             {
-                question: "Which Free Fire character has the ability called 'Camouflage'”'?",
+                question: "Which Free Fire character has the ability called 'Camouflage'?",
                 options: ["Wukong", "Andrew", "Laura", "Rafael"],
                 correctAnswerIndex: 0
             },
@@ -271,6 +267,10 @@
         ];
     
         function loadRandomQuestion() {
+            
+            answered = false;         // RESET HERE
+            selectedIndex = null;     // RESET SELECTED INDEX
+        
             currentQuestionIndex = Math.floor(Math.random() * questions.length);
             const current = questions[currentQuestionIndex];
     
@@ -334,6 +334,7 @@
                 showMessage('wrongMsg');
             }
 
+                
             setTimeout(() => {
                 const targetUrl = "health.html";
                 setupRewardedAd(targetUrl);
@@ -355,73 +356,205 @@
 <script>
     console.log(typeof page !== "undefined" ? page : 'default', "page");
     let rewardPayload = null;
+    let preloadedHtml = null;
+    let preloadedThird = null;
     
-    function setupRewardedAd(targetUrl) {
+    // Preload the page in advance
+    fetch('qes2.html')
+      .then(res => res.text())
+      .then(html => {
+        preloadedHtml = html;
+        console.log("Preloaded healthhtml");
+      });
+      
+       // Preload the page in advance
+    fetch('qes3.html')
+      .then(res => res.text())
+      .then(html => {
+        preloadedThird = html;
+        console.log("Preloaded home");
+      });
+    
+    /*function setupRewardedAd(targetUrl) {
+        
       window.googletag = window.googletag || { cmd: [] };
     
-      // Define the rewarded ad slot
-      const rewardedSlot = googletag.defineOutOfPageSlot(
-        // "/4932617/rrm-test-reward-ad", // Replace with your actual ad slot ID
-         "/22639388115/rewarded_web_example",
-        googletag.enums.OutOfPageFormat.REWARDED
-      );
-    
-      if (rewardedSlot) {
-        rewardedSlot.addService(googletag.pubads());
-    
-        googletag.pubads().addEventListener("rewardedSlotReady", (event) => {
-          // Make the ad visible and ready
-          event.makeRewardedVisible();
-          console.log("Rewarded ad is active.");
-    
-          // Event listener for when the ad is closed
-          googletag.pubads().addEventListener("rewardedSlotClosed", () => {
-            // if (rewardPayload) {
-            //     // alert("Ad close.");
-            //   window.location.href = targetUrl;
-            // }
-            
-            if (rewardPayload) {
-                window.location.href = targetUrl;
-            } else {
-                // fallback: go to the next page anyway after delay
-                // alert("Ad closed without reward. Redirecting...");
-                setTimeout(() => {
-                  window.location.href = targetUrl;
-                }, 2000); // 2-second delay fallback
-            }
+        // Define the rewarded ad slot
+        const rewardedSlot = googletag.defineOutOfPageSlot(
+         "/22639388115/rewarded_web_example",  // Replace with your actual ad slot ID
+            googletag.enums.OutOfPageFormat.REWARDED
+        );
+     
+        if (rewardedSlot) {
+           console.log("rewardedSlot is ready");
   
-          });
-        });
-        googletag.pubads().addEventListener("rewardedSlotGranted", (event) => {
-          rewardPayload = event.payload;
-          console.log("Reward granted.");
-        });
+            rewardedSlot.addService(googletag.pubads());
+        
+            googletag.pubads().addEventListener("rewardedSlotReady", (event) => {
+              // Make the ad visible and ready
+              event.makeRewardedVisible();
+              console.log("Rewarded ad is active.");
+               loadRandomQuestion(); // when ad ready then qus change
+        
+              // Event listener for when the ad is closed
+              googletag.pubads().addEventListener("rewardedSlotClosed", () => {
+               
+                if (rewardPayload) {
+                    // alert("Ad closed ");
+                    showPreloadedPage();
+                    // window.location.href = targetUrl;
+                } else {
+                    // fallback: go to the next page anyway after delay
+                    // alert("Ad closed without reward. Redirecting...");
+                    setTimeout(() => {
+                        showPreloadedPage();
+                    //   window.location.href = targetUrl;
+                    }, 20); // 2-second delay fallback
+                }
+      
+              });
+            });
+            googletag.pubads().addEventListener("rewardedSlotGranted", (event) => {
+              rewardPayload = event.payload;
+              console.log("Reward granted.");
+            });
+        
+            googletag.pubads().addEventListener("slotRenderEnded", (event) => {
+              if (event.slot === rewardedSlot && event.isEmpty) {
+                // Fallback if no ad is returned
+                console.log("No ad returned for rewarded ad slot...Navigate without the ad");
+                showPreloadedPage();
+                // window.location.href = targetUrl; // Navigate without the ad
+              }
+            });
+        
+            // Enable Google Publisher Services and display the ad
+            googletag.pubads().setTargeting('p', [typeof page !== "undefined" ? page : 'default']);
+            googletag.enableServices();
+            googletag.display(rewardedSlot);
+        } else {
+            
+            loadRandomQuestion();
+            // alert("Rewarded ads are not supported on this page....Navigate without the ad");
+            showPreloadedPage();
+            // window.location.href = targetUrl; // Fallback to navigate directly if ads aren't supported
+        }
+    }*/
     
-        googletag.pubads().addEventListener("slotRenderEnded", (event) => {
-          if (event.slot === rewardedSlot && event.isEmpty) {
-            // Fallback if no ad is returned
-            // alert("No ad returned for rewarded ad slot...Navigate without the ad");
-            window.location.href = targetUrl; // Navigate without the ad
-          }
-        });
+   
+    function setupRewardedAd(targetUrl) {
+         let rewardedSlot = null;
+
+         console.log("ad function call..",rewardedSlot);
+         
+        window.googletag = window.googletag || { cmd: [] };
     
-        // Enable Google Publisher Services and display the ad
-        googletag.pubads().setTargeting('p', [typeof page !== "undefined" ? page : 'default']);
-        googletag.enableServices();
-        googletag.display(rewardedSlot);
-      } else {
-        // alert("Rewarded ads are not supported on this page....Navigate without the ad");
-        window.location.href = targetUrl; // Fallback to navigate directly if ads aren't supported
-      }
+        googletag.cmd.push(() => {
+            if (!rewardedSlot) {
+                rewardedSlot = googletag.defineOutOfPageSlot(
+                    "/22639388115/rewarded_web_example",
+                    googletag.enums.OutOfPageFormat.REWARDED
+                );
+    
+                if (rewardedSlot) {
+                    rewardedSlot.addService(googletag.pubads());
+    
+                    googletag.pubads().addEventListener("rewardedSlotReady", (event) => {
+                        event.makeRewardedVisible();
+                        console.log("Rewarded ad is active.");
+                        loadRandomQuestion();
+                    });
+    
+                    googletag.pubads().addEventListener("rewardedSlotClosed", () => {
+                        if (rewardPayload) {
+                             console.log("Rewarded ad is close...");
+                            showPreloadedPage();
+                        } else {
+                             console.log("Rewarded ad is close else...");
+                            setTimeout(showPreloadedPage, 20);
+                        }
+                    });
+    
+                    googletag.pubads().addEventListener("rewardedSlotGranted", (event) => {
+                        rewardPayload = event.payload;
+                        console.log("Reward granted.");
+                    });
+    
+                    googletag.pubads().addEventListener("slotRenderEnded", (event) => {
+                        if (event.slot === rewardedSlot && event.isEmpty) {
+                            console.log("No ad returned for rewarded ad slot...Navigate without the ad");
+                            showPreloadedPage();
+                            loadRandomQuestion();
+                        }
+                    });
+    
+                    googletag.pubads().setTargeting('p', [typeof page !== "undefined" ? page : 'default']);
+                    googletag.enableServices();
+                }
+            }
+    
+            if (rewardedSlot) {
+                 console.log("Rewarded ad slot...",rewardedSlot);
+                googletag.display(rewardedSlot);
+            } else {
+                console.warn("Rewarded ads not supported");
+                loadRandomQuestion();
+                showPreloadedPage();
+            }
+        });
+        
+         // Clear sessionStorage on page reload (if the page is reloaded, ad will show again)
+        const navigationEntries = performance.getEntriesByType("navigation");
+        // if (navigationEntries.length > 0 && navigationEntries[0].type === "reload") {
+        if (navigationEntries.length > 0) {
+          console.log("Clearing sessionStorage after reload.");
+          sessionStorage.removeItem("adShown");
+        }
     }
 
-    // Clear sessionStorage on page reload (if the page is reloaded, ad will show again)
-    const navigationEntries = performance.getEntriesByType("navigation");
-    if (navigationEntries.length > 0 && navigationEntries[0].type === "reload") {
-      console.log("Clearing sessionStorage after reload.");
-      sessionStorage.removeItem("adShown");
+    function showPreloadedPage() {
+        
+        //change question number
+        let qesNumSpan = document.getElementById("qesNumSpan");
+        let qusNum = parseInt(qesNumSpan.innerText, 10);
+        if(qusNum === 3){
+            window.location.href = 'other.html';
+            return;
+        }
+        qesNumSpan.innerText = qusNum + 1;
+       
+        // Hide feedback messages
+        ['correctMsg', 'wrongMsg', 'emptyMsg'].forEach(msgId => {
+                document.getElementById(msgId).classList.remove('show');
+            });
+        
+        // remove first page content
+        const vehElement = document.getElementById("vehiPage");
+        if (vehElement) vehElement.remove();
+           
+        // Show preloaded next page content
+        if (preloadedHtml && qusNum == 1) {
+            console.log("page contet-1  ",qusNum);
+
+            document.getElementById('healPage').innerHTML = preloadedHtml;
+        } 
+        else if(preloadedThird && qusNum == 2){
+             console.log("page contet-2  ",qusNum);
+             document.getElementById('healPage').innerHTML = preloadedThird;
+        } else {
+            console.log("page contet not found");
+            window.location.href = 'other.html';
+        }
+        
+        // Replace ad containers with a placeholder or message
+        // Show new ad and hide old one
+        const adInitial = document.getElementById("adInitialContainer");
+        const adNext = document.getElementById("adNextContainer");
+        if (adInitial) adInitial.style.display = "none";
+        if (adNext) adNext.style.display = "block";
+        
     }
+
 </script>
    
     <!-- disable back-->
@@ -433,7 +566,14 @@
     <!--    window.onunload = function () { null };-->
     <!--</script>-->
 
-    <script>
+    <!-- sticky bottom auto -->
+    <script defer>
+        googletag.cmd.push(() => {
+            googletag.display(AnchorDesktopSlot);
+        });
+    </script>
+    
+    <script defer>
         fetch('_footer.html')
             .then(response => response.text())
             .then(data => {
