@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pre-Task Code Generator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9fafb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #1f2937;
+    }
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+    }
+    #generateBtn {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      background-color: #6366f1;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: not-allowed;
+      opacity: 0.6;
+      transition: 0.3s;
+    }
+    #generateBtn.enabled {
+      cursor: pointer;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🔐 Complete These Tasks to Unlock Code Generator</h2>
+    <p>Solve the math: <strong id="mathQuestion"></strong></p>
+    <input type="number" id="math" placeholder="Enter your answer" />
+    <p id="mathStatus"></p>
+  </div>
+
+  <script>
+    // Generate two random numbers between 1 and 10
+    const num1 = Math.floor(Math.random() * 10) + 1;
+    const num2 = Math.floor(Math.random() * 10) + 1;
+
+    // Define possible operators
+    const operators = ['+', '-', '*','/'];
+    const operator = operators[Math.floor(Math.random() * operators.length)];
+
+    // Compute correct answer based on operator
+    let correctAnswer;
+    switch (operator) {
+      case '+': 
+        correctAnswer = num1 + num2;
+        break;
+      case '-':
+        correctAnswer = num1 - num2;
+        break;
+      case '*':
+        correctAnswer = num1 * num2;
+      case '/':
+        correctAnswer = num1 / num2;
+        break;
+    }
+
+    // Display the question
+    document.getElementById("mathQuestion").innerText = `${num1} ${operator} ${num2} = ?`;
+
+    // Check user input
+    document.getElementById("math").addEventListener("input", function () {
+      if (parseInt(this.value) === correctAnswer) {
+        document.getElementById("mathStatus").innerText = "✅ Correct!";
+      } else {
+        document.getElementById("mathStatus").innerText = "❌ Incorrect";
+      }
+    });
+  </script>
+</body>
+</html>
