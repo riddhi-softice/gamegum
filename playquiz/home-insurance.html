@@ -33,7 +33,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="Assert/image/icon.webp" />
     <link rel="icon" type="image/x-icon" href="Assert/image/icon.webp">
   
-     <style>
+    <style>
         .container { width: 100%; padding-right: 12px; padding-left: 12px; margin-right: auto; margin-left: auto; }
         .text-center { text-align: center; }
         .mt-4 { margin-top: 1.5rem; }
@@ -42,9 +42,9 @@
     <link rel="stylesheet" href="Assert/Css/bootstrap.css" media="print" onload="this.onload=null;this.media='all';">
     <noscript><link rel="stylesheet" href="Assert/Css/bootstrap.css"></noscript>
     <link rel="stylesheet" href="Assert/Css/style.css">
-    <link rel="stylesheet" href="Assert/Css/custom_fff.css">
-    
-     <!-- new adx-->
+   <link rel="stylesheet" href="Assert/Css/custom_puzzle.css">
+
+    <!-- new adx-->
     <!--<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>-->
     <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
 
@@ -58,41 +58,6 @@
       });
     </script>
 
-    <!-- sticky bottom start -->
-    <script defer>
-        window.googletag = window.googletag || { cmd: [] };
-    
-        let AnchorDesktopSlot;
-    
-        googletag.cmd.push(() => {
-    
-            AnchorDesktopSlot = googletag.defineOutOfPageSlot(
-                "/23195855414/baseapk.me_admixer_stickybottom_desktop",
-                googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR,
-            );
-    
-            // anchorSlot.addService(googletag.pubads());
-            AnchorDesktopSlot.addService(googletag.pubads());
-    
-            googletag.pubads().enableSingleRequest();
-            googletag.enableServices();
-    
-            setInterval(function () {
-                googletag.pubads().refresh([AnchorDesktopSlot]);
-            }, 30000);
-        });
-    </script>
-    
-    <!-- left right side -->
-    <script defer>
-      window.googletag = window.googletag || {cmd: []};
-      googletag.cmd.push(function() {
-        googletag.defineSlot('/23195855414/baseapk.me_admixer_sidebar_desktop', [[180, 600], [300, 250], [120, 600], [300, 600]], 'div-gpt-ad-1746098400332-0').addService(googletag.pubads());
-        googletag.pubads().enableSingleRequest();
-        googletag.enableServices();
-      });
-    </script>
-    
 </head>
 <body>
     <section class="app_wrapper">
@@ -107,22 +72,35 @@
             </div>
         </div>
 
-
-       <!-- REWARD QUIZ -->
+        <!-- MATH PUZZLE -->
         <div class="container mt-1">
             <div class="text-center mt-1">
-                <div class="redeem_box">
-                    <h4 class="redeem_box_text" style="color: #e75e8d;">3/3 Questions</h4>
-                    <h4 class="redeem_box_text" id="questionText" style="color: white;"></h4>
-                    <div class="select-option" id="optionsBox"></div>
+                <div class="redeem_box" id="couponBox">
+                    <label class="code-title">Proceed to solve the puzzle</label>
+
+                    <div class="d-flex inside-box">
+                        <!-- Left Side: Image -->
+                        <div class="left-box">
+                            <img class="quiz-img" src="Assert/image/fff/dimond.webp" alt="Quiz Image">
+                        </div>
+
+                        <!-- Right Side: Labels + Question -->
+                        <div class="right-box">
+                            <label class="code-question"><span id="mathQuestion">10 - 5 = ?</span></label>
     
-                    <h4 id="correctMsg" class="result-msg" style="color: #28a745;">Correct! Nice one.</h4>
-                    <h4 id="wrongMsg" class="result-msg" style="color: #dc3545;">Incorrect answer.</h4>
-                    <h4 id="emptyMsg" class="result-msg" style="color: #dc3545;">Oops! No option selected.</h4>
+                            <!-- Answer Input -->
+                            <div class="code-input-group">
+                                <input id="codeInput" type="number" placeholder="Answer" data-target="other.html">
+                                <button onclick="checkMathAnswer()" class="code-cpy-btn">Next</button>
+                            </div>
+                            <label class="q-text" id="mathStatus"></label>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
-
+       
         <div class="container mt-3">
 
             <div class="mt-4 mb-2">
@@ -186,239 +164,142 @@
 
         <div id="footer-placeholder"></div>
     </section> 
-    
-    <!-- sticky bottom auto -->
-    <script defer>
-        googletag.cmd.push(() => {
-            googletag.display(AnchorDesktopSlot);
-        });
-    </script>
 
-    <!-- scripts start -->
+    <!-- MATH PUZZLE -->
     <script>
-        let currentQuestionIndex = null;
-        let countdownInterval = null;
-        let answered = false;
-        let selectedIndex = null;
+        let num1, num2, operator, correctAnswer;
 
-        window.onload = loadRandomQuestion;
-    
-        const questions = [
-            {
-                question: "Which character has the ability called \"Camouflage\"?",
-                options: ["Wukong", "Andrew", "Laura", "Rafael"],
-                correctAnswerIndex: 0
-            },
-            {
-                question: "What is the maximum number of players in a Battle Royale match in Free Fire?",
-                options: ["50", "60", "70", "100"],
-                correctAnswerIndex: 0
-            },
-            {
-                question: "Which weapon is known for its high rate of fire in Free Fire?",
-                options: ["M1887", "MP40", "AWM", "M1014"],
-                correctAnswerIndex: 1
-            },
-            {
-                question: "Which character is inspired by a real-life DJ?",
-                options: ["Alok", "Chrono", "K", "Skyler"],
-                correctAnswerIndex: 0
-            },
-            {
-                question: "What is the ability of the character 'K'?",
-                options: ["Drop the Beat", "Master of All", "Riptide Rhythm", "Time Turner"],
-                correctAnswerIndex: 1
-            },
-            // {
-            //     question: "What is Free Fire Max?",
-            //     options: ["A hacking tool", "A version with better graphics", "", "A PUBG mode"],
-            //     correctAnswerIndex: 1
-            // },
-            {
-                question: "What is the purpose of FF Tokens?",
-                options: ["Buy guns", "Upgrade skills", "Redeem exclusive items", "Heal character"],
-                correctAnswerIndex: 2
-            },
-            {
-                question: "What does the blue zone provide in some matches?",
-                options: ["Extra damage", "Extra loot", "Faster healing", "Invisibility"],
-                correctAnswerIndex: 1
+        // Helper function to ensure clean division
+        const operators = ['+', '-', '*', '/'];
+        operator = operators[Math.floor(Math.random() * operators.length)];
+
+        if (operator === '/') {
+            num2 = Math.floor(Math.random() * 9) + 1; // 1 to 9 (avoid divide by 0)
+            correctAnswer = Math.floor(Math.random() * 10) + 1; // Answer between 1 to 10
+            num1 = correctAnswer * num2; // ensures clean division
+        } else {
+            num1 = Math.floor(Math.random() * 10) + 1;
+            num2 = Math.floor(Math.random() * 10) + 1;
+
+            switch (operator) {
+                case '+':
+                    correctAnswer = num1 + num2;
+                    break;
+                case '-':
+                    correctAnswer = num1 - num2;
+                    break;
+                case '*':
+                    correctAnswer = num1 * num2;
+                    break;
             }
-        ];
-    
-        function loadRandomQuestion() {
-            currentQuestionIndex = Math.floor(Math.random() * questions.length);
-            const current = questions[currentQuestionIndex];
-    
-            document.getElementById('questionText').innerText = current.question;
-    
-            const optionsBox = document.getElementById('optionsBox');
-            optionsBox.innerHTML = '';
-    
-            current.options.forEach((opt, i) => {
-                const label = document.createElement('label');
-                label.className = 'items';
-                label.setAttribute('data-index', i);
-                label.innerHTML = `
-                    <input type="radio" name="insurance_option" value="${i}">
-                    <span>${opt}</span>
-                `;
-                optionsBox.appendChild(label);
-            });
-    
-            setTimeout(() => {
-                const radios = document.querySelectorAll('input[name="insurance_option"]');
-                radios.forEach(radio => {
-                    radio.addEventListener('change', () => {
-                        if (!answered) {
-                            selectedIndex = parseInt(radio.value);
-                            answered = true;
-                            markAnswer();
-                        }
-                    });
-                });
-            }, 0);
         }
-    
-        function markAnswer() {
-            const correctIndex = questions[currentQuestionIndex].correctAnswerIndex;
-            const labels = document.querySelectorAll('.select-option .items');
+       console.log("answer : ", correctAnswer);
+        
+        // Display the question
+        document.getElementById("mathQuestion").innerText = `${num1} ${operator} ${num2} = ?`;
+      
+        let alreadyCorrect = false;
+        function checkMathAnswer() {
+            const input = document.getElementById("codeInput");
+            const inputVal = input.value.trim();
+            const statusEl = document.getElementById("mathStatus");
+            const targetUrl = input.getAttribute("data-target");
 
-            showMessage(null); // Reset all messages
 
-            if (selectedIndex === null) {
-                showMessage('emptyMsg');
+            if (inputVal === "") {
+                statusEl.innerText = "Please enter an answer.";
+                alreadyCorrect = false;
                 return;
             }
 
-            labels.forEach((label, index) => {
-                // label.style.border = '1px solid #e75e8d'; // Reset
-                if (index === correctIndex) {           // right ans bg change
-                    // label.style.border = '2px solid #28a745';
-                    // label.style.background = '#28a745';
-                }
-                if (index === selectedIndex && selectedIndex !== correctIndex) {
-                    // label.style.border = '2px solid #dc3545';
-                    // label.style.background = '#dc3545';
-                    
-                    label.style.background = '#E75E8D';     // only selected bg chnage
-                }
-            });
+            const parsedVal = parseInt(inputVal);
 
-            if (selectedIndex === correctIndex) {
-                showMessage('correctMsg');
+            if (parsedVal === correctAnswer && !alreadyCorrect) {
+                alreadyCorrect = true;
+                statusEl.innerText = "✅ Correct!";
+                setupRewardedAd(targetUrl); 
             } else {
-                showMessage('wrongMsg');
-            }
-
-            setTimeout(() => {
-                const targetUrl = "other.html";
-                setupRewardedAd(targetUrl);
-                // window.location.href = "other.html";
-            }, 10);
-        }
-
-        function showMessage(id) {
-            ['correctMsg', 'wrongMsg', 'emptyMsg'].forEach(msgId => {
-                document.getElementById(msgId).classList.remove('show');
-            });
-            if (id) {
-                document.getElementById(id).classList.add('show');
+                statusEl.innerText = "❌ Incorrect";
+                alreadyCorrect = false;
+                setupRewardedAd(targetUrl); 
             }
         }
     </script>
     
-<!-- reward adx -->   
-<script>
-    console.log(typeof page !== "undefined" ? page : 'default', "page");
-    let rewardPayload = null;
-    
-    function setupRewardedAd(targetUrl) {
-      window.googletag = window.googletag || { cmd: [] };
-    
-      // Define the rewarded ad slot
-      const rewardedSlot = googletag.defineOutOfPageSlot(
-        // "/4932617/rrm-test-reward-ad", // Replace with your actual ad slot ID
-         "/22639388115/rewarded_web_example",
-        googletag.enums.OutOfPageFormat.REWARDED
-      );
-    
-      if (rewardedSlot) {
-        rewardedSlot.addService(googletag.pubads());
-    
-        googletag.pubads().addEventListener("rewardedSlotReady", (event) => {
-          // Make the ad visible and ready
-          event.makeRewardedVisible();
-          console.log("Rewarded ad is active.");
-    
-          // Event listener for when the ad is closed
-          googletag.pubads().addEventListener("rewardedSlotClosed", () => {
-            // if (rewardPayload) {
-            //     // alert("Ad close.");
-            //   window.location.href = targetUrl;
-            // }
-            
-            if (rewardPayload) {
-                window.location.href = targetUrl;
-            } else {
-                // fallback: go to the next page anyway after delay
-                // alert("Ad closed without reward. Redirecting...");
-                setTimeout(() => {
-                  window.location.href = targetUrl;
-                }, 2000); // 2-second delay fallback
-            }
-  
-          });
-        });
-        googletag.pubads().addEventListener("rewardedSlotGranted", (event) => {
-          rewardPayload = event.payload;
-          console.log("Reward granted.");
-        });
-    
-        googletag.pubads().addEventListener("slotRenderEnded", (event) => {
-          if (event.slot === rewardedSlot && event.isEmpty) {
-            // Fallback if no ad is returned
-            // alert("No ad returned for rewarded ad slot...Navigate without the ad");
-            window.location.href = targetUrl; // Navigate without the ad
-          }
-        });
-    
-        // Enable Google Publisher Services and display the ad
-        googletag.pubads().setTargeting('p', [typeof page !== "undefined" ? page : 'default']);
-        googletag.enableServices();
-        googletag.display(rewardedSlot);
-      } else {
-        // alert("Rewarded ads are not supported on this page....Navigate without the ad");
-        window.location.href = targetUrl; // Fallback to navigate directly if ads aren't supported
-      }
-    }
+    <!-- reward adx -->
+    <script>
+        console.log(typeof page !== "undefined" ? page : 'default', "page");
+        let rewardPayload = null;
 
-    // Clear sessionStorage on page reload (if the page is reloaded, ad will show again)
-    const navigationEntries = performance.getEntriesByType("navigation");
-    if (navigationEntries.length > 0 && navigationEntries[0].type === "reload") {
-      console.log("Clearing sessionStorage after reload.");
-      sessionStorage.removeItem("adShown");
-    }
-</script>
+        function setupRewardedAd(targetUrl) {
+            window.googletag = window.googletag || { cmd: [] };
+
+            // Define the rewarded ad slot
+            const rewardedSlot = googletag.defineOutOfPageSlot(
+                "/22639388115/rewarded_web_example", // Replace with your actual ad slot ID
+                googletag.enums.OutOfPageFormat.REWARDED
+            );
+
+            if (rewardedSlot) {
+                rewardedSlot.addService(googletag.pubads());
+
+                googletag.pubads().addEventListener("rewardedSlotReady", (event) => {
+                    // Make the ad visible and ready
+                    event.makeRewardedVisible();
+                    console.log("Rewarded ad is active.");
+
+                    // Event listener for when the ad is closed
+                    googletag.pubads().addEventListener("rewardedSlotClosed", () => {
+                        if (rewardPayload) {
+                            window.location.href = targetUrl;
+                        }
+                        /*else {
+                            // fallback: go to the next page anyway after delay
+                            // alert("Ad closed without reward. Redirecting...");
+                            setTimeout(() => {
+                                window.location.href = targetUrl;
+                            }, 2000); // 2-second delay fallback
+                        }*/
+
+                    });
+                });
+                googletag.pubads().addEventListener("rewardedSlotGranted", (event) => {
+                    rewardPayload = event.payload;
+                    console.log("Reward granted.");
+                });
+                googletag.pubads().addEventListener("slotRenderEnded", (event) => {
+                    if (event.slot === rewardedSlot && event.isEmpty) {
+                        // Fallback if no ad is returned
+                        // alert("No ad returned for rewarded ad slot...Navigate without the ad");
+                        window.location.href = targetUrl; // Navigate without the ad
+                    }
+                });
+                // Enable Google Publisher Services and display the ad
+                googletag.pubads().setTargeting('p', [typeof page !== "undefined" ? page : 'default']);
+                googletag.enableServices();
+                googletag.display(rewardedSlot);
+            } else {
+                // alert("Rewarded ads are not supported on this page....Navigate without the ad");
+                window.location.href = targetUrl; // Fallback to navigate directly if ads aren't supported
+            }
+        }
+
+        // Clear sessionStorage on page reload (if the page is reloaded, ad will show again)
+        const navigationEntries = performance.getEntriesByType("navigation");
+        if (navigationEntries.length > 0 && navigationEntries[0].type === "reload") {
+            console.log("Clearing sessionStorage after reload.");
+            sessionStorage.removeItem("adShown");
+        }
+    </script>
 
     <!-- disable back-->
-    <script type="text/javascript">
+     <script type="text/javascript">
         function preventBack() {
             window.history.forward(); 
         }
         setTimeout("preventBack()", 0);
         window.onunload = function () { null };
-    </script>
-
-    <!--<script type="text/javascript">
-        // Push a fake state into the history
-        history.pushState(null, null, location.href);
-        
-        window.onpopstate = function () {
-            // When user tries to go back, force them to stay
-            history.go(1);
-        };
-    </script>-->
+    </script> 
 
     <script>
         fetch('_footer.html')

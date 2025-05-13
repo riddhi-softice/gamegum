@@ -1,0 +1,111 @@
+ .redeem_box {
+    margin: 20px auto;
+    padding: 20px;
+    margin: auto;
+}
+ .inside-box {
+    background: #191a1a;
+    /* padding: 20px; */
+    border-radius: 12px;
+    /* max-width: 500px; */
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* box-shadow: 0 0 0 1px #E75E8D; */
+}
+
+.left-box {
+    flex-shrink: 0;
+}
+
+.quiz-img {
+    width: 90px;
+    height: auto;
+}
+
+.right-box {
+    text-align: left;
+    flex-grow: 1;
+}
+
+.code-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.code-question {
+    font-size: 20px;
+    font-weight: 600;
+    color: #E75E8D;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.code-input-group {
+    display: flex;
+    align-items: center;
+}
+
+#codeInput {
+    width: 70%;
+    height: 38px;
+    border: 1px solid #E75E8D;
+    border-right: none;
+    background: #000;
+    color: #fff;
+    padding: 0 12px;
+    font-size: 14px;
+    font-weight: 600;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    outline: none;
+}
+
+.code-cpy-btn {
+    height: 38px;
+    width: 30%;
+    max-width: 90px;
+    background-color: #E75E8D;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    border: 1px solid #E75E8D;
+    border-left: none;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.code-cpy-btn:hover {
+    background-color: #d14b7a;
+}
+
+.q-text {
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+/* Remove number input spinner arrows for Chrome, Safari, Edge, Opera */
+#codeInput::-webkit-inner-spin-button,
+#codeInput::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Remove spinner arrows for Firefox */
+#codeInput {
+    -moz-appearance: textfield;
+}
+
+/* Optional: white border on focus removed */
+#codeInput:focus {
+    outline: none;
+}
