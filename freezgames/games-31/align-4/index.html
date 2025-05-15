@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
+
+  <meta name="viewport"  content="width=device-width, initial-scale=0.8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <title>Align 4</title>
+  <link rel="shortcut icon" href="../../assets/images/icon.png">
+  <link href="https://fonts.googleapis.com/css?family=Doppio+One" rel="stylesheet">
+  <link rel="stylesheet" href="processed.css">
+  <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
+  <link href="splash.css" rel="stylesheet" type="text/css">
+  
+  <script type="text/javascript" src="../assets/js/group1_autoAd_landing.js" async></script>
+  
+  <style>
+    .wrapper {
+      display: none;
+    }
+    .home-button {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 15px;
+        transition: background 0.3s ease;
+        font-family: inherit;
+        font-size: 24px;
+        border: solid 2px #ccc;
+        border-radius: 8px;
+        background-color: #593f6b;
+        color: #fff;
+    }
+    .home-button:hover {
+        background: #593f6b;
+    }
+  </style>
+</head>
+<body>
+  <div id="image-loader">
+    <div id="image-container">
+      <div class="logo">
+        <img src="../../assets/images/logo.png">
+      </div>
+      <div class="game-logo">
+        <img src="../assets/images/game-name/align-4.png">
+      </div>
+    </div>
+
+   <div class="loader-custome">
+     <span class="loader"></span>
+    </div>   
+    <div id="button-container">
+      <button class="start-button start-g">START GAME</button>
+      <button class="more-button more-g">MORE GAMES</button>
+    </div>
+  </div>  
+  <div class="wrapper" id="main">
+    <div class="content">
+
+      <div class="sidebar">
+        <a href="https://freezgames.com" class="home-button">Back to Home</a>
+        <h1>Align 4</h1>
+        <div class="panel dif">
+          <h2>Difficulty</h2>
+          <div class="dif-options">
+            <div>
+              <input id="dif1" type="radio" name="dif-options" value="1">
+              <label for="dif1">1</label>
+            </div>
+            <div>
+              <input id="dif2" type="radio" name="dif-options" value="2">
+              <label for="dif2">2</label>
+            </div>
+            <div>
+              <input id="dif3" type="radio" name="dif-options" value="3" checked>
+              <label for="dif3">3</label>
+            </div>
+            <div>
+              <input id="dif4" type="radio" name="dif-options" value="4">
+              <label for="dif4">4</label>
+            </div>
+            <div>
+              <input id="dif5" type="radio" name="dif-options" value="5">
+              <label for="dif5">5</label>
+            </div>
+          </div>
+          <div class="start">
+            <button>Start Game</button>
+          </div>
+        </div>
+        <div class="panel info">
+          <h2></h2>
+          <div class="blurb"></div>
+          <div class="outlook"></div>
+        </div>
+      </div>
+
+      <div class="board">
+        <div class="lit-columns">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="lit-cells"></div>
+        <div class="chips"></div>
+        <div class="click-columns">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="../assets/js/disable-click.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+  <script>
+    document.querySelector(".start-button").addEventListener("click", function () {
+       
+        let splashCss = document.querySelector('link[href="../assets/css/splash.css"]');
+        if (splashCss) {
+            splashCss.remove();
+            console.log("splash.css removed");
+        }
+
+        document.getElementById('image-loader').style.display = 'none';
+        document.getElementById('main').style.display = 'table-cell';
+
+    });
+    document.querySelector(".more-button").addEventListener("click", function () {
+        window.location.href = "https://freezgames.com"; // Redirect "More Games" button
+    });
+
+ 
+  </script>
+</body>
+</html>

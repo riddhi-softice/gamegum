@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+       <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <title>Tower Blocks</title>
+    <link rel="shortcut icon" href="../../assets/images/icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../assets/js/group1_autoAd_landing.js"></script>
+    
+    <style>
+        .home-icon {
+            background: var(--bg);
+            position: fixed; 
+            top: 1rem;
+            left: 1rem;
+            z-index: 9999 !important;
+            opacity: 1 !important; 
+            cursor: pointer;
+        }
+        .home-icon svg {
+            width: 27px;
+            fill: black; 
+        }
+        .home-icon:hover {
+            background: #efefef ;
+        }
+        .logo img {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="image-loader">
+        <div id="image-container">
+            <div class="logo">
+                <img src="../../assets/images/logo.png">
+            </div>
+            <div class="game-logo">
+                <img src="../assets/images/game-name/tower-blocks.png">
+            </div>
+        </div>
+        <div class="loader-custome">
+            <span class="loader"></span>
+        </div>
+        <div id="button-container">
+            <button class="start-button start-g" id=start-game>START GAME</button>
+            <button class="more-button more-g">MORE GAMES</button>
+        </div>
+    </div>
+    <div id="container" style="display: none;">
+        <a href="https://freezgames.com">
+        <button class="home-icon" type="button" title="Home">
+            <svg class="" viewBox="0 0 24 24">
+                <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"></path>
+            </svg>
+            </button>
+        </a>
+        <div id="game"></div>
+        <div id="score">0</div>
+        <div id="instructions">Click (or press the spacebar) to place the block</div>
+        <div class="game-over">
+            <h2>Game Over</h2>
+            <p>You did great, you're the best.</p>
+            <p>Click or spacebar to start again</p>
+        </div>
+        <div class="game-ready">
+            <div id="start-button">Start</div>
+            <div></div>
+        </div>
+    </div>
+<script type="text/javascript" src="../assets/js/disable-click.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<script src="script.js"></script>
+<script>
+     document.querySelector(".start-button").addEventListener("click", function () {
+        let gameElement = document.documentElement; // Fullscreen the whole page
+
+        if (gameElement.requestFullscreen) {
+            gameElement.requestFullscreen();
+        } else if (gameElement.mozRequestFullScreen) { // Firefox
+            gameElement.mozRequestFullScreen();
+        } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
+            gameElement.webkitRequestFullscreen();
+        } else if (gameElement.msRequestFullscreen) { // IE/Edge
+            gameElement.msRequestFullscreen();
+        }
+        document.getElementById('image-loader').style.display = 'none';
+        document.getElementById('container').style.display = '';
+
+        document.body.style.background = 'white';
+        document.body.style.position = 'relative';
+        document.body.style.fontFamily = "'Comfortaa', cursive";
+
+    });
+    document.querySelector(".more-button").addEventListener("click", function () {
+        window.location.href = "https://freezgames.com"; 
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="../../assets/images/icon.png">
+    <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
+    
+    <script type="text/javascript" src="../assets/js/group1_autoAd_landing.js" async></script>
+
+    <style>
+        .home-icon {
+            position: absolute;
+            top: 10px;
+            left: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-family: inherit;
+            border-radius: var(--border-radius);
+            padding: 10px 10px;
+            border: none;
+            background: var(--overlay-color);
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease-in-out;
+        }
+        .home-icon:hover {
+            background-color: var(--secondary-color);
+        }
+        .home-icon:active {
+            transform: scale(0.98);
+        }
+        .home-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--text-color);
+        }
+        .logo img {
+            margin-bottom: 30px;
+        }
+        .game-logo img {
+            margin-bottom: 60px;
+        }
+        .container{
+            margin-bottom: 60%;
+        }
+    </style>
+</head>
+<body>
+    <div id="image-loader">
+        <div id="image-container">
+            <div class="logo">
+                <img src="../../assets/images/logo.png">
+            </div>
+            <div class="game-logo">
+                <img src="../assets/images/game-name/typing-game.png">
+            </div>
+        </div>
+        <div class="loader-custome">
+            <span class="loader"></span>
+        </div>
+        <div id="button-container">
+            <button class="start-button start-g" id=start-game>START GAME</button>
+            <button class="more-button more-g">MORE GAMES</button>
+        </div>
+    </div>
+    <div id="main" style="display: none;">
+        <!-- <button id="settings-btn" class="settings-btn">
+            <i class="fas fa-cog"></i>
+        </button> -->
+        <div class="settings" id="settings">
+            <a href="https://freezgames.com">
+                <button class="home-icon" type="button" title="Home">
+                    <svg class="" viewBox="0 0 24 24">
+                        <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"></path>
+                    </svg>
+                </button>
+            </a>
+            <form id="settings-form">
+                <label for="difficulty" style="margin-left: 30px;">Difficulty</label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </form>
+        </div>
+        <div class="container">
+            <h2>👩‍💻 Speed Typer 👨‍💻</h2>
+            <small>Type the following:</small>
+            <h1 id="word"></h1>
+            <input type="text" id="text" autocomplete="off" placeholder="Type the word here..." />
+            <p class="time-container">Time left: <span id="time">10s</span></p>
+            <p class="score-container">Score: <span id="score">0</span></p>
+            <div id="end-game-container" class="end-game-container"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../assets/js/disable-click.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.querySelector(".start-button").addEventListener("click", function () {
+            let gameElement = document.documentElement; // Fullscreen the whole page
+
+            if (gameElement.requestFullscreen) {
+                gameElement.requestFullscreen();
+            } else if (gameElement.mozRequestFullScreen) { // Firefox
+                gameElement.mozRequestFullScreen();
+            } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
+                gameElement.webkitRequestFullscreen();
+            } else if (gameElement.msRequestFullscreen) { // IE/Edge
+                gameElement.msRequestFullscreen();
+            }
+            document.getElementById('image-loader').style.display = 'none';
+            document.getElementById('main').style.display = '';
+
+            document.body.style.backgroundColor = 'var(--primary-color)';
+            document.body.style.backgroundImage = 'linear-gradient(315deg, var(--primary-color) 0%, var(--gradient-color) 100%)';
+            document.body.style.display = 'flex';
+            document.body.style.flexDirection = 'column';
+            document.body.style.fontFamily = "'Syne Mono', monospace";
+            document.body.style.alignItems = 'center';
+            document.body.style.justifyContent = 'center';
+        });
+        document.querySelector(".more-button").addEventListener("click", function () {
+            window.location.href = "https://freezgames.com"; 
+        });
+       
+    </script>
+</body>
+</html>

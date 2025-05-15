@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+ 
+  <title>Emoji-Catcher</title>
+  <link rel="shortcut icon" href="../../assets/images/icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
+  
+  <script type="text/javascript" src="../assets/js/group1_autoAd_landing.js" async></script>
+  
+  <style>
+    .home-icon {
+        color: var(--gray-0);
+        height: 40px;
+        aspect-ratio: 1;
+        padding: 0;
+        border: none;
+        top: 1rem;
+        left: 1rem;  
+        place-items: center;
+        opacity: 0.25;
+        cursor: pointer;
+        margin: 5px 10px 10px 20px;
+    }
+    .home-icon:hover {
+        opacity: 1;
+    }
+    .home-icon svg {
+        width: 65%;
+        fill: var(--gray-0); 
+    }
+    #start {
+      margin: 5px 5px 0px 5px;
+      background: #ccc; 
+      border: none;
+      padding: 8px 16px; 
+      font-size: 16px; 
+      font-weight: 800;
+      color: #000;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      justify-content: center;
+      white-space: nowrap;  
+    }
+  </style>
+</head>
+<body>
+  <div id="image-loader">
+    <div id="image-container">
+        <div class="logo">
+            <img src="../../assets/images/logo.png">
+        </div>
+        <div class="game-logo">
+            <img src="../assets/images/game-name/emoji-catcher.png">
+        </div>
+    </div>
+    <div class="loader-custome">
+        <span class="loader"></span>
+    </div>
+    <div id="button-container">
+        <button class="start-button start-g"  onClick="startGame()">START GAME</button>
+        <button class="more-button more-g">MORE GAMES</button>
+    </div>
+</div>
+  <div id="main" style="display: none;">
+    <a href="https://freezgames.com">
+      <button class="home-icon" type="button" title="Home">
+        <svg class="" viewBox="0 0 24 24">
+            <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"></path>
+          </svg>
+        </button>
+    </a>
+    <div class="scores-container">
+      <div class="total-score">
+        <h2>Your Score:</h2>
+        <h2 id="score">0</h2>
+      </div>
+      <div class="time">
+        <h2>Time left:</h2>
+        <h2 id="time-left">60</h2>
+      </div>
+      <button id="start" onClick="startGame()">Start</button>
+    </div>
+    <div class="grid-container">
+      <div class="grid">
+        <div class="square" id="1"></div>
+        <div class="square" id="2"></div>
+        <div class="square" id="3"></div>
+        <div class="square" id="4"></div>
+        <div class="square" id="5"></div>
+        <div class="square" id="6"></div>
+        <div class="square" id="7"></div>
+        <div class="square" id="8"></div>
+        <div class="square" id="9"></div>
+        <div class="square" id="10"></div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="../assets/js/disable-click.js"></script>
+  <script src="script.js"></script>
+  <script>
+      document.querySelector(".start-button").addEventListener("click", function () {
+        let gameElement = document.documentElement; // Fullscreen the whole page
+
+        if (gameElement.requestFullscreen) {
+            gameElement.requestFullscreen();
+        } else if (gameElement.mozRequestFullScreen) { // Firefox
+            gameElement.mozRequestFullScreen();
+        } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
+            gameElement.webkitRequestFullscreen();
+        } else if (gameElement.msRequestFullscreen) { // IE/Edge
+            gameElement.msRequestFullscreen();
+        }
+        document.getElementById('image-loader').style.display = 'none';
+        document.getElementById('main').style.display = '';
+
+        document.body.style.background = 'rgb(10, 10, 10)';
+        document.body.style.color = '#fff';
+        document.body.style.fontFamily = "sans-serif";
+   
+    });
+    document.querySelector(".more-button").addEventListener("click", function () {
+        window.location.href = "https://freezgames.com"; 
+    });
+  </script>
+</body>
+</html>

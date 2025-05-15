@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';  script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com;  style-src 'self' 'unsafe-inline';  img-src 'self' https://*.googleusercontent.com https://*.googlesyndication.com;connect-src 'self';">
+
+    <title>Color Match Game</title>
+    <link rel="shortcut icon" href="../../assets/images/icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
+    <style>
+        .home-button {
+            display: block;
+            /* width: 100%;
+            max-width: 200px; */
+            padding: 10px;
+            margin: 10px auto;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background: #f59231;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        .home-button:hover {
+            background: #db7d21;
+        }
+        body {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="image-loader"></div> -->
+    <div id="image-loader">
+        <div id="image-container">
+          <div class="logo">
+            <img src="../../assets/images/logo.png">
+          </div>
+          <div class="game-logo">
+            <img src="../assets/images/game-name/color-match.png">
+          </div>
+        </div>
+    
+       <div class="loader-custome">
+         <span class="loader"></span>
+        </div>   
+        <div id="button-container">
+          <button class="start-button start-g">START GAME</button>
+          <button class="more-button more-g">MORE GAMES</button>
+        </div>
+    </div>
+    <main>
+        <div id="main-screen" style="display: none;">
+            <a href="https://freezgames.com" class="home-button">Back to Home</a> 
+            <div class="controls">
+                <div class="new-game">New Game</div>
+                <div>Moves <span class="moves">0</span> / <span>35</span></div>
+            </div>
+            <div id="board"></div>
+            <div id="colors"></div>
+            <div id="game-over"></div>
+        </div>
+    </main>
+    <script type="text/javascript" src="../assets/js/disable-click.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+         document.querySelector(".start-button").addEventListener("click", function () {
+        let gameElement = document.documentElement; // Fullscreen the whole page
+
+        if (gameElement.requestFullscreen) {
+            gameElement.requestFullscreen();
+        } else if (gameElement.mozRequestFullScreen) { // Firefox
+            gameElement.mozRequestFullScreen();
+        } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
+            gameElement.webkitRequestFullscreen();
+        } else if (gameElement.msRequestFullscreen) { // IE/Edge
+            gameElement.msRequestFullscreen();
+        }
+
+        document.getElementById('image-loader').style.display = 'none';
+        document.getElementById('main-screen').style.display = 'block';
+
+        document.body.style.backgroundImage = 'none'; 
+        document.body.style.backgroundSize = '';
+        document.body.style.backgroundColor = '#212429';
+        document.body.style.display = 'flex';
+    });
+    document.querySelector(".more-button").addEventListener("click", function () {
+        window.location.href = "https://freezgames.com"; // Redirect "More Games" button
+    });
+    </script>
+</body>
+</html>

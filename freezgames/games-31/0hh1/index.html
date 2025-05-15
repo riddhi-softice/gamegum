@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+<head>
+    <title>0h h1</title>
+    <meta name="description" content="A little logic game by Q42." />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';  script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com;  style-src 'self' 'unsafe-inline';  img-src 'self' https://*.googleusercontent.com https://*.googlesyndication.com;connect-src 'self';">
+
+    <link rel="icon" type="image/png" href="img/icon-1024.png" />
+    <link rel="shortcut icon" href="img/icon-1024.png" />
+    <link rel="apple-touch-icon-precomposed" href="img/icon-1024.png" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <link href="fonts/fonts.css" type="text/css" rel="stylesheet" />
+    <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
+    <style>
+        .home-button {
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 16px;
+            text-align: center;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .home-button:hover {
+            background-color: #ff4830;
+        }
+        @media (max-width: 600px) {
+            .home-button {
+                width: 80%;
+            }
+        }
+        .logo img {
+            margin-bottom: 30px;
+        }
+        .game-logo img {
+            margin-bottom: 60px;
+        }
+        @media (min-width: 1024px) {
+            .game-logo img {
+                width: 330px;
+            }
+        }
+    </style>
+   
+</head>
+<body>
+    <div id="image-loader">
+        <div id="image-container">
+            <div class="logo">
+                <img src="../../assets/images/logo.png">
+            </div>
+            <div class="game-logo">
+                <img src="../assets/images/game-name/0hh1.png">
+            </div>
+        </div>
+        <div class="loader-custome">
+            <span class="loader"></span>
+        </div>
+        <div id="button-container">
+            <button class="start-button start-g"> START GAME
+                <!-- <p data-action="play"> START GAME</p> -->
+            </button>
+            <button class="more-button more-g">MORE GAMES</button>
+        </div>
+    </div>
+
+    <div id="container" style="display: none;">
+        <div id="loading" class="screen">
+            <div class="vertical">
+                <h2>Loading..</h2>
+                <p></p>
+                <div id="loadinggrid" class="board">
+                    <table data-grid="loadinggrid" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td class="odd">
+                                    <div class="tile tile-2 loading">
+                                        <div class="inner"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div> 
+        <div id="game" class="screen">
+            <p id="hintMsg" class="topMsg"></p>
+            <p id="chooseSize" class="topMsg">Select a size to play...</p>
+            <h2 id="boardsize"></h2>
+            <div id="board" class="vertical board"></div>
+
+            <div id="menugrid" class="vertical board hidden">
+                <table data-grid="menugrid" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td class="odd">
+                                <div class="tile tile-2">
+                                    <div data-action="startGame" data-size="1" class="inner"></div>
+                                </div>
+                            </td>
+                            <td class="even">
+                                <div class="tile tile-1">
+                                    <div data-action="startGame" data-size="2" class="inner"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="even">
+                                <div class="tile tile-1">
+                                    <div data-action="startGame" data-size="3" class="inner"></div>
+                                </div>
+                            </td>
+                            <td class="odd">
+                                <div class="tile tile-2">
+                                    <div data-action="startGame" data-size="4" class="inner"></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="score">
+                <img id="trophy" src="img/trophy.png"><span id="scorenr">30744</span>
+            </div>
+            <div id="bar">
+                <div class="iconcon" id="homeButton" title="Home">
+                    <div id="home" class="icon"></div>
+                </div>
+                <div class="iconcon" data-action="undo" title="Undo">
+                    <div id="undo" class="icon"></div>
+                </div>
+                <div class="iconcon" data-action="back" title="Back">
+                    <div id="back" class="icon"></div>
+                </div>
+                <!-- <a class="iconcon" id="tweeturl" target="_blank" href="about:blank" data-action="tweet"><span id="tweet" class="icon"></span></a> -->
+                <div class="iconcon" data-action="help" title="Help">
+                    <div id="help" class="icon"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="feelsize"></div>
+    
+    <script>
+        document.getElementById("homeButton").addEventListener("click", function () {
+             window.location.href = "https://freezgames.com";
+        });
+        document.querySelector(".more-button").addEventListener("click", function () {
+            window.location.href = "https://freezgames.com"; 
+        });
+        document.querySelector(".start-button").addEventListener("click", function () {
+
+            let splashScreen = document.getElementById("image-loader");
+            if (splashScreen) {
+                splashScreen.remove();
+                // console.log("Splash screen removed");
+            }
+            let splashCss = document.querySelector('link[href="../assets/css/splash.css"]');
+            if (splashCss) {
+                splashCss.remove();
+                console.log("splash.css removed");
+            }
+            // document.getElementById('image-loader').style.display = 'none';
+            document.getElementById('container').style.display = '';
+            document.body.style.backgroundImage = 'none'; 
+            document.body.style.backgroundSize = '';
+            document.body.style.background = '#222';             
+        });
+    </script> 
+    <script>
+        var WebFontConfig = {
+            custom: {
+                families: ['molle', 'Josefin Sans'],
+                urls: ['fonts/fonts.css']
+            },
+            active: function () {
+                //Game.start();
+                app.fontsLoaded();
+            }
+        };  
+    </script>
+    <script type="text/javascript" src="../assets/js/disable-click.js"></script>
+    <script type="text/javascript" src="config.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script>
+        var scripts = [
+            'js/jquery-2.1.0.min.js',
+            'js/utils.js',
+            'js/state.js',
+            'js/game.js',
+            'js/grid.js',
+            'js/tile.js',
+            'js/hint.js',
+            'js/tutorial.js',
+            'js/webfont.js',
+            'js/levels.js',
+            'js/backgroundservice.js'
+        ]
+        for (var i = 0; i < scripts.length; i++) {
+            document.write('<scr' + 'ipt src="' + scripts[i] + (Config.barph ? ('?barph=' + (new Date() * 1)) : '') + '"></scr' + 'ipt>');
+        }
+    </script>
+</body>
+</html>
