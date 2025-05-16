@@ -556,7 +556,7 @@
       U = j[1],
       H = document.getElementById("load"),
       W = document.getElementById("home"),
-      z = document.getElementById("start-game"),
+      z = document.getElementById("start"),
       V = document.getElementById("end"),
       X = document.getElementById("reset");
     W.addEventListener("mousedown", r), W.addEventListener("touchstart", r), z.addEventListener("mousedown", a), z.addEventListener("touchstart", a), V.addEventListener("mousedown", r), V.addEventListener("touchstart", r), X.addEventListener("mousedown", f), X.addEventListener("touchstart", f);

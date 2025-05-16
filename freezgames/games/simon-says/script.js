@@ -6,7 +6,6 @@ let clickCount = 0;
 let gameStarted = false;
 
 document.getElementById("start-btn").addEventListener("click", startGame);
-document.getElementById("play-again-btn").addEventListener("click", startGame);
 
 function startGame() {
   if (!gameStarted) {
@@ -142,7 +141,6 @@ function showCongratsMessage() {
   const message = `Congrats! You passed level ${level}!`;
   const congratsMessageElement = document.getElementById("level-message");
   congratsMessageElement.textContent = message;
-  congratsMessageElement.style.color = "green";
   congratsMessageElement.style.display = "block"; // Ensure it's displayed
   setTimeout(() => {
     congratsMessageElement.classList.add("show"); // Show the message with animation

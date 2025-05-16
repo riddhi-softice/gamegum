@@ -48,19 +48,12 @@ var Game = new (function() {
     $(window).on('resize', resize);
     $(window).on('orientationchange', resize);
 
-    showSizes();
+    showTitleScreen();
     resize();
     
     var colors = ['#a7327c', '#c24b31', '#c0cd31']
     Utils.setColorScheme(colors[1]);
   }
-
-  document.querySelector(".start-button").addEventListener("click", function () {
-    // console.log("start..");
-    $('#score').removeClass('show');
-    resize();
-  });
-
 
   function start() {
     // kick in the bgservice in a few ms (fixes non-working iOS5)
@@ -179,7 +172,7 @@ var Game = new (function() {
     $('#board').addClass('hidden');
     $('#bar [data-action]').not('[data-action="back"]').hide();
     $('#board').addClass('hidden');
-    // $('#score').show();      // not need now
+    $('#score').show();
     setTimeout(function() {
       if (grid) grid.clear();
       $('#score').addClass('show');
@@ -224,7 +217,6 @@ var Game = new (function() {
     if (window.STOPPED) return;
     startedTutorial = false;
     $('#undo').closest('.iconcon').css('display', 'inline-block');
-    $('#home').closest('.iconcon').css('display', 'inline-block');
     $('#menugrid').addClass('hidden');
     $('#board').removeClass('hidden');
     $('#bar [data-action]').show();

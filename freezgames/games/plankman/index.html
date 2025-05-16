@@ -7,7 +7,6 @@
   <title>Plankman</title>
   <link rel="shortcut icon" href="../../assets/images/icon.png">
   <link rel="stylesheet" href="styles.css">
-  <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
   <style>
     .home-button {
       background: black;
@@ -28,16 +27,9 @@
       background: #222;
       cursor: pointer;
     }
-    .logo img {
-      margin-bottom: 30px;
-    }
-    .game-logo img {
-      margin-bottom: 60px;
-    }
-    /* Style the home button */
     .home-icon {
-      width: 50px; /* Default width for larger screens */
-      height: 50px; /* Default height for larger screens */
+      width: 50px; 
+      height: 50px;
       background-color: transparent;
       border: none;
       padding: 0;
@@ -45,28 +37,27 @@
       justify-content: center;
       align-items: center;
       cursor: pointer;
-      position: fixed; /* Fix the button to the screen */
+      position: fixed; 
       left: 5%;
-      transform: translateX(-50%); /* Center horizontally */
-      z-index: 1000; /* Ensure it's always on top */
+      transform: translateX(-50%); 
+      z-index: 1000; 
     }
 
     .home-icon svg {
-      fill: #000; /* Color of the home icon */
-      width: 30px; /* Default width of the SVG */
-      height: 30px; /* Default height of the SVG */
+      fill: #000; 
+      width: 30px;
+      height: 30px; 
     }
 
-    /* Make the button responsive */
     @media (max-width: 600px) {
       .home-icon {
-        width: 40px; /* Smaller button on mobile */
-        height: 40px; /* Smaller button on mobile */
+        width: 40px;
+        height: 40px;
       }
 
       .home-icon svg {
-        width: 28px; /* Resize the icon */
-        height: 28px; /* Resize the icon */
+        width: 28px; 
+        height: 28px; 
       }
     }
     @media (min-width: 1024px) {
@@ -77,24 +68,7 @@
   </style>
 </head>
 <body>
-  <div id="image-loader">
-    <div id="image-container">
-      <div class="logo">
-        <img src="../../assets/images/logo.png">
-      </div>
-      <div class="game-logo">
-        <img src="../assets/images/game-name/plankman.png">
-      </div>
-    </div>
-    <div class="loader-custome">
-      <span class="loader"></span>
-    </div>
-    <div id="button-container">
-      <button class="start-button start-g" id="startButton">START GAME</button>
-      <button class="more-button more-g">MORE GAMES</button>
-    </div>
-  </div>
-  <div id="main" style="display: none;">
+  <div id="main">
 
     <a href="https://freezgames.com">
       <button class="home-icon" type="button" title="Home">
@@ -302,30 +276,5 @@
    
     <label for="animations">ARRRnimations</label>
   </div>
-<script>
-    document.querySelector(".start-button").addEventListener("click", function () {
-      let gameElement = document.documentElement; // Fullscreen the whole page
-
-      if (gameElement.requestFullscreen) {
-        gameElement.requestFullscreen();
-      } else if (gameElement.mozRequestFullScreen) { // Firefox
-        gameElement.mozRequestFullScreen();
-      } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
-        gameElement.webkitRequestFullscreen();
-      } else if (gameElement.msRequestFullscreen) { // IE/Edge
-        gameElement.msRequestFullscreen();
-      }
-      document.getElementById('image-loader').style.display = 'none';
-      document.getElementById('main').style.display = '';
-
-      document.body.style.background = 'linear-gradient(#9df, #beeeff 80%, #9df)';
-      
-      document.body.classList.add('start-anim');
-  
-    });
-    document.querySelector(".more-button").addEventListener("click", function () {
-      window.location.href = "https://freezgames.com";
-    });
-</script>
 </body>
 </html>

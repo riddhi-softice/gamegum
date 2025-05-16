@@ -5,13 +5,13 @@ body {
     padding: 0;
 }
 
-/*body {
+body {
     background: url("https://res.cloudinary.com/dshmwg7vw/image/upload/v1550486966/OCCNFD0.jpg");
     background-size: contain;
     background-repeat: repeat;
     font-family: "Permanent Marker", cursive;
     position: relative;
-} */
+}
 
 main {
     display: flex;

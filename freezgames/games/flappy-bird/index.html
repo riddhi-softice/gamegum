@@ -4,28 +4,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
   <title>Flappy Bird</title>
   <link rel="shortcut icon" href="../../assets/images/icon.png">
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
-  <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
-  
   <style>
     body {
       font-family: 'Pacifico';
+      display: flex;
       justify-content: center;
       align-items: center;
+      background-color: cadetblue;
       height: 100vh;
-      /* display: flex; */
-      /* background-color: cadetblue; */
-      /* margin: 0; */
-      /* overflow: hidden; */
+      margin: 0;
+      overflow: hidden;
     }
     canvas {
       border: 1px solid #7f8493;
       max-width: 100%;
       max-height: 100%;
-      /* margin: 10px; */
       display: block;
       background: url('http://s2js.com/img/etc/flappyback.png') no-repeat center center;
       background-size: cover;
@@ -37,7 +33,6 @@
       left: 20px;
       padding: 10px 15px;
       font-size: 13px;
-      /* font-weight: bold; */
       text-decoration: none;
       color: white;
       background: cadetblue;
@@ -48,60 +43,13 @@
     }
   </style>
 </head>
+<body>
 
-<body class="loader-background">
-  <!-- <div id="image-loader"></div> -->
-  <div id="image-loader">
-    <div id="image-container">
-      <div class="logo">
-        <img src="../../assets/images/logo.png">
-      </div>
-      <div class="game-logo">
-        <img src="../assets/images/game-name/flappy-bird.png">
-      </div>
-    </div>
-
-   <div class="loader-custome">
-     <span class="loader"></span>
-    </div>   
-    <div id="button-container">
-      <button class="start-button start-g">START GAME</button>
-      <button class="more-button more-g">MORE GAMES</button>
-    </div>
-</div>
-
-  <a href="https://freezgames.com" class="home-button" id="home" style="display: none;">Back to Home</a>
-  <canvas id="myCanvas" style="display: none;"> </canvas>
-  <script type="text/javascript" src="../assets/js/disable-click.js"></script>
+  <a href="https://freezgames.com" class="home-button" id="home">Back to Home</a>
+  <canvas id="myCanvas"> </canvas>
+ 
   <script>
-    document.querySelector(".start-button").addEventListener("click", function () {
-        let gameElement = document.documentElement; // Fullscreen the whole page
-
-        if (gameElement.requestFullscreen) {
-            gameElement.requestFullscreen();
-        } else if (gameElement.mozRequestFullScreen) { // Firefox
-            gameElement.mozRequestFullScreen();
-        } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
-            gameElement.webkitRequestFullscreen();
-        } else if (gameElement.msRequestFullscreen) { // IE/Edge
-            gameElement.msRequestFullscreen();
-        }
-
-        document.getElementById('image-loader').style.display = 'none';
-        document.getElementById('myCanvas').style.display = 'block';
-
-        document.getElementById('home').style.display = '';
-        resizeCanvas();
-        // document.body.classList.remove("loader-background"); 
-        // Change background
-        document.body.style.backgroundImage = 'none'; 
-        document.body.style.backgroundSize = '';
-        document.body.style.background = 'cadetblue'; 
-        document.body.style.display = 'flex'; 
-    });
-    document.querySelector(".more-button").addEventListener("click", function () {
-        window.location.href = "https://freezgames.com"; // Redirect "More Games" button
-    });
+    resizeCanvas(); // Call resize function to set initial canvas size
 
     // Function to resize canvas based on window size
     function resizeCanvas() {

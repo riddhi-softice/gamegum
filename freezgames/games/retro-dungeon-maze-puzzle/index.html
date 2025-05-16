@@ -7,13 +7,16 @@
   <title>Retro Dungeon Maze Puzzle</title>
   <link rel="shortcut icon" href="../../assets/images/icon.png">
   <link rel="stylesheet" href="styles.css">
-  <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
   <style>
-    .logo img {
-        margin-bottom: 30px;
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden; 
+      background: #1f2122;
     }
-    .game-logo img {
-        margin-bottom: 60px;
+    body, * {
+      cursor: url("../../../assets/images/cursor-1a.png") 12 12, auto !important;
     }
     .home-icon {
         color: var(--gray-0);
@@ -40,25 +43,8 @@
   </style>
 </head>
 <body>
-  <div id="image-loader">
-    <div id="image-container">
-      <div class="logo">
-        <img src="../../assets/images/logo.png">
-      </div>
-      <div class="game-logo">
-        <img src="../assets/images/game-name/retro-dungeon.png">
-      </div>
-    </div>
-    <div class="loader-custome">
-      <span class="loader"></span>
-    </div>
-    <div id="button-container">
-      <button class="start-button start-g">START GAME</button>
-      <button class="more-button more-g">MORE GAMES</button>
-    </div>
-  </div>
 
-  <div id="main" style="display: none;">
+  <div id="main" >
     <a href="https://freezgames.com">
       <button class="home-icon" type="button" title="Home">
         <svg class="" viewBox="0 0 24 24">
@@ -432,29 +418,6 @@
   </div>
 
   <script type="text/javascript" src="../assets/js/disable-click.js"></script>
-  <script>
-      document.querySelector(".start-button").addEventListener("click", function () {
-        let gameElement = document.documentElement; // Fullscreen the whole page
 
-        if (gameElement.requestFullscreen) {
-            gameElement.requestFullscreen();
-        } else if (gameElement.mozRequestFullScreen) { // Firefox
-            gameElement.mozRequestFullScreen();
-        } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
-            gameElement.webkitRequestFullscreen();
-        } else if (gameElement.msRequestFullscreen) { // IE/Edge
-            gameElement.msRequestFullscreen();
-        }
-        document.getElementById('image-loader').style.display = 'none';
-        document.getElementById('main').style.display = '';
-
-        document.body.style.backgroundImage = 'none'; 
-        document.body.style.backgroundSize = '';
-        document.body.style.background = 'black';
-    });
-      document.querySelector(".more-button").addEventListener("click", function () {
-        window.location.href = "https://freezgames.com"; 
-    });
-  </script>
 </body>
 </html>

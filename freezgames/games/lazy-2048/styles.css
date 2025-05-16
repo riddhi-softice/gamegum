@@ -2,7 +2,19 @@
 #menu {
   position: absolute
 }
-
+#end,
+#home,
+#load {
+  width: 100vw;
+  height: 100vh;
+  padding: 5vw;
+}
+.home-icon {
+  opacity: 1; /* Ensure visibility */
+}
+body, html {
+  overflow: hidden; /* Prevent unwanted scrolling */
+}
 #end,
 #home,
 #load,
@@ -14,7 +26,8 @@
 
 body,
 html {
-  background: #263238;
+  /* background: #263238; */
+  background: #455A64;
   height: 100%;
   margin: 0;
   overflow: hidden;
@@ -41,7 +54,8 @@ label {
   height: 100%;
   left: 0;
   position: absolute;
-  top: 0;
+  /* top: 0; */
+  top: 3rem;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   width: 100%
@@ -179,4 +193,38 @@ body.mobile #menu>* {
 
 #q+label {
   display: inline!important
+}
+.home-icon {
+  /* background: var(--bg); */
+  color: var(--gray-0);
+  height: 48px;
+  aspect-ratio: 1;
+  padding: 0;
+  border: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;  
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  opacity: 0.25;
+  cursor: pointer;
+  /* display: none; */
+}
+.home-icon:hover {
+  opacity: 1;
+}
+.home-icon svg {
+  width: 65%;
+  fill: var(--gray-0); 
+}
+
+@media screen and (max-width: 768px) {
+  #menu {
+    width: 100%; /* Adjust menu width for smaller screens */
+  }
+  #start, #reset {
+    font-size: 24px;
+    padding: 20px 60px;
+  }
 }
