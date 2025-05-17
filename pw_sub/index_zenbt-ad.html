@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Google tag (gtag.js) -->
+    <!-- <script src="https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202505130101/pubads_impl_page_level_ads.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-T49SSK1DDC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-T49SSK1DDC');
+    </script> -->
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWPWPP - Play Free Online Games</title>
+    <meta name="description" content="Play exciting free online games on PWPWPP! Enjoy Sudoku, 2048, Tic-Tac-Toe, Flappy Bird, Connect 4, Space Invaders, Memory Game, and many more. Challenge your skills and have fun!">
+    <meta name="keywords" content="free online games, play games, sudoku, 2048, tic-tac-toe, table tennis, connect 4, mine sweeper, flappy bird, memory game, reaction wall, word guessing, math game, retro dungeon maze, space invaders, stacker, lazy 2048, tower blocks, the aviator, typing game, emoji catcher, simon says, whack a mole">
+    <meta name="author" content="PWPWPP Gaming">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="PWPWPP - Play Free Online Games">
+    <meta property="og:description" content="Enjoy a variety of free online games including Sudoku, 2048, Tic-Tac-Toe, Connect 4, Space Invaders, Memory Game, and more!">
+    <meta property="og:image" content="assets/images/icon.png">
+    <meta property="og:url" content="index.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PWPWPP - Play Free Online Games">
+    <meta name="twitter:description" content="Enjoy a collection of classic and modern games including Sudoku, 2048, Flappy Bird, Hangman, and more. Play now for free!">
+    <meta name="twitter:image" content="assets/images/icon.png">
+     <!-- Canonical URL (Helps with SEO) -->
+    <link rel="canonical" href="https://play.fmax.pwpwpp.in/index.html">
+    <link rel="shortcut icon" type="image/x-icon" href="Assert/image/icon.webp" />
+    <link rel="icon" type="image/x-icon" href="Assert/image/icon.webp">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #1f2122;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .page-wrapper {
+            width: 100%;
+            max-width: 425px;
+            margin: 0 auto;
+            background: #27292a;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            width: 100%;
+            padding: 1rem 0;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            border-bottom: 3px solid rgba(192, 192, 192, 0.6);
+        }
+
+        .header-content {
+            width: 100%;
+            max-width: 425px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 1.5rem;
+        } 
+
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 900;
+            color: #ffffffde;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(192, 192, 192, 0.7);
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            color: #ffffffde;
+            text-shadow: 0 4px 20px rgba(255, 215, 0, 0.9);
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            display: block;
+        } */
+
+        #banner-ad {
+            width: 100%;
+            max-width: 425px;
+            margin: 1rem auto 0.5rem;
+            /* Adjusted margin to move it down slightly */
+            padding: 0.5rem;
+            background: #e8ecef;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            position: relative;
+            text-align: center;
+        }
+
+        #banner-ad::before {
+            content: "Advertisement";
+            position: absolute;
+            top: -15px;
+            /* Kept same, but moved ad box down */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #ffffffde;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 0 8px;
+            border-radius: 4px;
+        }
+
+        .ad-divider {
+            width: 90%;
+            max-width: 425px;
+            height: 1px;
+            background: rgba(192, 192, 192, 0.6);
+            margin: 0.5rem auto;
+        }
+
+        .verification-container {
+            width: 100%;
+            max-width: 425px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 1rem;
+            box-sizing: border-box;
+        }
+
+        .game-info {
+            width: 100%;
+            background: transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1rem 0;
+        }
+
+        .game-title {
+            font-size: 2.25rem;
+            font-weight: 900;
+            color: #ffffffde;
+            text-align: center;
+            margin: 0;
+            text-shadow: 0 3px 15px rgba(192, 192, 192, 0.6);
+            letter-spacing: 1.5px;
+        }
+        .game-title-link {
+            text-decoration: none;
+        }
+        .game-title {
+            font-size: 2.25rem;
+            font-weight: 900;
+            color: #ffffffde;
+            text-align: center;
+            margin: 0;
+            text-shadow: 0 3px 15px rgba(192, 192, 192, 0.6);
+            letter-spacing: 1.5px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .game-title:hover {
+            color: yellow;
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+        .game-description {
+            text-align: center;
+            color: #ffffffde;
+            line-height: 1.7;
+            font-size: 1.1rem;
+            margin: 0;
+            padding: 0 1rem;
+            font-weight: 500;
+        }
+        .buttons-container-mobile {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1.5rem 0;
+        }
+        .btn-verify {
+            width: 90%;
+            padding: 1.2rem;
+            border-radius: 15px;
+            font-weight: 700;
+            border: none;
+            font-size: 1.15rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            cursor: pointer;
+            margin-bottom: 1.5rem;
+            color: #fff;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-above-18 {
+            background: linear-gradient(45deg, #2e7d32, #66bb6a);
+        }
+        .btn-below-18 {
+            background: linear-gradient(45deg, #c62828, #ef5350);
+        }
+        .btn-verify::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.5s ease, height 0.5s ease;
+        }
+        .btn-verify:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        .btn-above-18:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(46, 125, 50, 0.7);
+            background: linear-gradient(45deg, #388e3c, #81c784);
+        }
+        .btn-below-18:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(198, 40, 40, 0.7);
+            background: linear-gradient(45deg, #d32f2f, #f44336);
+        }
+        .btn-verify:active {
+            transform: translateY(-2px);
+        }
+        .features-grid {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            padding: 0 0.5rem;
+            box-sizing: border-box;
+        }
+        @media (min-width: 768px) {
+            .features-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        .feature-item {
+            background: #191a1a;
+            padding: 1rem;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ffffffde;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            border: 2px solid rgba(192, 192, 192, 0.4);
+        }
+        .feature-item:hover {
+            transform: translateY(-5px);
+            /* box-shadow: 0 10px 30px rgba(192, 192, 192, 0.5); */
+            border-color: yellow;
+        }
+        .feature-item i {
+            font-size: 1.4rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(192, 192, 192, 0.3), rgba(255, 215, 0, 0.3));
+            /* background: linear-gradient(135deg, rgba(192, 192, 192, 0.3), #dbadbd); */
+            color: #ffffffde;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+        }
+        .feature-item:hover i {
+            transform: scale(1.1) rotate(10deg);
+            background: linear-gradient(135deg, rgba(192, 192, 192, 0.5), rgba(255, 215, 0, 0.5));
+            /* background: linear-gradient(135deg, rgba(192, 192, 192, 0.5), #dbadbd); */
+            color: yellow;
+        }
+        .feature-item span {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #ffffffde;
+            transition: all 0.3s ease;
+        }
+        .feature-item:hover span {
+            color: #ffffffde;
+        }
+        .feature-benefits {
+            width: 100%;
+            list-style-type: none;
+            padding: 0 0.5rem;
+            /* margin: 1rem 0; */
+            font-size: 0.9rem;
+            color: #ffffffde;
+            font-weight: 500;
+        }
+        .feature-benefits li {
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .feature-benefits li::before {
+            content: "\f058";
+            /* Font Awesome check-circle */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: yellow;
+            font-size: 1rem;
+        }
+        .content-warning {
+            width: 100%;
+            background: #3e3e40;
+            /* border: 1px solid yellow;
+            border-radius: 15px; */
+            padding: 1.5rem;
+            /* margin: 1.5rem 0; */
+            /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); */
+        }
+        .content-warning h3 {
+            color: #ffffffde;
+            font-size: 1.15rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .content-warning ul {
+            /* color: #ffffffde;
+            margin: 0; */
+            padding: 0;
+            /* list-style-type: none;
+            font-size: 1rem;
+            font-weight: 500; */
+        }
+        .content-warning ul li {
+            margin-bottom: 0.35rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.3s ease;
+        }
+        .content-warning ul li:hover {
+            transform: translateX(5px);
+        }
+        .content-warning a {
+            color: #ffffffde;
+            text-decoration: none;
+            transition: color 0.3s;
+            padding: 0;
+            font-weight: 500;
+            font-size: 15px;
+        }
+        /* .footer-links {
+            width: 100%;
+            text-align: center;
+            padding: 1.5rem 0;
+            border-top: 2px solid rgba(192, 192, 192, 0.4);
+            margin-top: 0;
+        }
+        .footer-links a {
+            color: #ffffffde;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 700;
+        }
+        .footer-links a:hover {
+            color: yellow;
+            transform: translateY(-3px);
+        }
+        .footer-links a i {
+            font-size: 1.1rem;
+        } */
+    </style>
+    <script src="index.js"></script>
+    <!-- <meta http-equiv="origin-trial"
+        content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
+    <meta http-equiv="origin-trial"
+        content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
+    <meta http-equiv="origin-trial"
+        content="A9wSqI5i0iwGdf6L1CERNdmsTPgVu44ewj8QxTBYgsv1LCPUVF7YmWOvTappqB1139jAymxUW/RO8zmMqo4zlAAAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MzY4MTI4MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
+    <meta http-equiv="origin-trial"
+        content="A+d7vJfYtay4OUbdtRPZA3y7bKQLsxaMEPmxgfhBGqKXNrdkCQeJlUwqa6EBbSfjwFtJWTrWIioXeMW+y8bWAgQAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MzY4MTI4MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"> -->
+
+    <!-- <script src="https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202505130101/pubads_impl.js"
+        async=""></script>
+    <link href="https://securepubads.g.doubleclick.net/pagead/managed/dict/m202505150101/gpt"
+        rel="compression-dictionary"> -->
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!-- <header class="header">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <img src="logo2.png" alt="Zenbt Games Logo">
+                </a>
+            </div>
+        </header> -->
+        <!-- Banner Ad -->
+        <!-- <div id="banner-ad" class="ads-box">
+            <script async="" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+            <div id="gpt-passback" data-google-query-id="CPeOz6PnqY0DFSWj2AUdb0EcMw">
+
+
+                <div id="google_ads_iframe_/23298428693/zenbt_net_1_0__container__"
+                    style="border: 0pt none; display: inline-block; width: 300px; height: 250px;"><iframe
+                        frameborder="0"
+                        src="https://24ae56026e59cc57514a0cd745251157.safeframe.googlesyndication.com/safeframe/1-0-44/html/container.html"
+                        id="google_ads_iframe_/23298428693/zenbt_net_1_0" title="3rd party ad content" name=""
+                        scrolling="no" marginwidth="0" marginheight="0" width="300" height="250"
+                        data-is-safeframe="true"
+                        sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+                        allow="private-state-token-redemption;attribution-reporting" aria-label="Advertisement"
+                        tabindex="0" data-google-container-id="1" style="border: 0px; vertical-align: bottom;"
+                        data-load-complete="true"></iframe></div>
+            </div>
+        </div> -->
+
+        <!-- <div class="ad-divider"></div> Added horizontal line -->
+
+        <div class="verification-container">
+            <div class="game-info">
+                <!-- <h1 class="game-title">Welcome to Zenbt Games</h1> -->
+                
+                <a href="" class="game-title-link">
+                    <h1 class="game-title">Welcome to PWPWPP</h1>
+                </a>
+
+                <div class="buttons-container-mobile">
+                    <button class="btn-verify btn-above-18" onclick="window.location.href='100-play.html'">
+                        <i class="fas fa-check-circle"></i> Age Above 18+
+                    </button>
+                    <button class="btn-verify btn-below-18" onclick="window.location.href='100-play.html'">
+                        <i class="fas fa-gamepad"></i> Age Below 18+
+                    </button>
+                </div>
+
+                <!-- <div id="banner-ad" class="ads-box">
+                    <script async="" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+                    <div id="gpt-passback1" data-google-query-id="CPiOz6PnqY0DFSWj2AUdb0EcMw">
+
+
+                        <div id="google_ads_iframe_/23298428693/zenbt_net_2_0__container__"
+                            style="border: 0pt none; display: inline-block; width: 300px; height: 250px;"><iframe
+                                frameborder="0"
+                                src="https://24ae56026e59cc57514a0cd745251157.safeframe.googlesyndication.com/safeframe/1-0-44/html/container.html"
+                                id="google_ads_iframe_/23298428693/zenbt_net_2_0" title="3rd party ad content" name=""
+                                scrolling="no" marginwidth="0" marginheight="0" width="300" height="250"
+                                data-is-safeframe="true"
+                                sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+                                allow="private-state-token-redemption;attribution-reporting" aria-label="Advertisement"
+                                tabindex="0" data-google-container-id="2" style="border: 0px; vertical-align: bottom;"
+                                data-load-complete="true"></iframe></div>
+                    </div>
+                </div> -->
+
+                <p class="game-description">
+                    Dive into nonstop action with thrilling challenges, stunning graphics, and endless adventures awaiting every gamer
+                </p>
+
+                <!-- <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Top Games</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-users"></i>
+                        <span>Multiplayer</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secure Play</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-trophy"></i>
+                        <span>Rewards</span>
+                    </div>
+                </div> -->
+
+                <div class="features-grid">
+                    <a href="https://pwpwpp.in/" class="feature-item">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Top Games</span>
+                    </a>
+                    <a href="https://pwpwpp.in/" class="feature-item">
+                        <i class="fas fa-users"></i>
+                        <span>Multiplayer</span>
+                    </a>
+                    <a href="https://pwpwpp.in/" class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secure Play</span>
+                    </a>
+                    <a href="https://pwpwpp.in/" class="feature-item">
+                        <i class="fas fa-trophy"></i>
+                        <span>Rewards</span>
+                    </a>
+                </div>
+
+                <!-- <div id="banner-ad" class="ads-box">
+                    <script async="" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+                    <div id="gpt-passback2" data-google-query-id="CPmOz6PnqY0DFSWj2AUdb0EcMw">
+
+
+                        <div id="google_ads_iframe_/23298428693/zenbt_net_3_0__container__"
+                            style="border: 0pt none; display: inline-block; width: 300px; height: 250px;"><iframe
+                                frameborder="0"
+                                src="https://24ae56026e59cc57514a0cd745251157.safeframe.googlesyndication.com/safeframe/1-0-44/html/container.html"
+                                id="google_ads_iframe_/23298428693/zenbt_net_3_0" title="3rd party ad content" name=""
+                                scrolling="no" marginwidth="0" marginheight="0" width="300" height="250"
+                                data-is-safeframe="true"
+                                sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+                                allow="private-state-token-redemption;attribution-reporting" aria-label="Advertisement"
+                                tabindex="0" data-google-container-id="3" style="border: 0px; vertical-align: bottom;"
+                                data-load-complete="true"></iframe></div>
+                    </div>
+                </div> -->
+
+                <ul class="feature-benefits">
+                    <li>Connect with players globally</li>
+                    <li>Team up for epic missions</li>
+                    <li>Compete in real-time battles</li>
+                    <li>Chat and strategize with friends</li>
+                    <li>Climb the global leaderboards</li>
+                    <li>Earn exclusive skins and items</li>
+                    <li>Unlock daily bonus rewards</li>
+                    <li>Win premium currency</li>
+                    <li>Get special event prizes</li>
+                    <li>Level up for rare perks</li>
+                </ul>
+
+                <!-- <div class="content-warning">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Content Rating</h3>
+                    <ul>
+                        <li><i class="fas fa-fist-raised"></i> Intense Action</li>
+                        <li><i class="fas fa-skull"></i> Epic Battles</li>
+                        <li><i class="fas fa-comments"></i> Online Play</li>
+                        <li><i class="fas fa-shopping-cart"></i> Premium Items</li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <a href="games.html"><i class="fas fa-gamepad"></i> Games</a>
+                    <a href="about-us.html"><i class="fas fa-info-circle"></i> About</a>
+                    <a href="contact-us.html"><i class="fas fa-envelope"></i> Contact</a>
+                    <a href="privacy-policy.html"><i class="fas fa-shield-alt"></i> Privacy</a>
+                </div> -->
+
+            </div>
+        </div>
+
+        <div class="content-warning">
+            <a href="https://play.fmax.pwpwpp.in"
+                style="color: yellow; font-size: 36px; font-weight: 900; font-family: 'Arial Black', sans-serif; text-shadow: 2px 2px 4px black;">PWPWPP
+            </a>
+            <p class="footer-text" style="margin: 15px 0; font-size: 14px; line-height: 1.5; color: #ffffffde; text-decoration: none; font-weight: 500;">
+                Your ultimate destination for high-quality browser gaming. There's always something exciting to
+                play.Dive in and have fun!!
+            </p>
+            <h3>Information</h3>
+            <ul>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+            alert('Right-click is disabled to protect our content.');
+        });
+        // Disable keyboard shortcuts (Ctrl+U, Ctrl+Shift+I, F12, etc.)
+        document.onkeydown = function (e) {
+            if (
+                (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'c' || e.key === 'i' || e.key === 'j')) ||
+                e.key === 'F12' ||
+                (e.metaKey && e.altKey && e.key === 'i')
+            ) {
+                e.preventDefault();
+                alert('Access to developer tools and source code is disabled to protect our content.');
+                return false;
+            }
+            return true;
+        };
+        // Disable text selection
+        document.addEventListener('selectstart', function (e) {
+            e.preventDefault();
+        });
+        // Disable drag and drop
+        document.addEventListener('dragstart', function (e) {
+            e.preventDefault();
+        });
+    </script> -->
+
+    <!-- <script>
+        (function () {
+            document.addEventListener("DOMContentLoaded", function () {
+                console.log("DOM fully loaded.");
+
+                function showRewardedAd() {
+                    if (!window.googletag || !googletag.cmd) {
+                        console.error("Google Ad Manager is not properly initialized.");
+                        return;
+                    }
+
+                    googletag.cmd.push(function () {
+                        try {
+                            const rewardedSlot = googletag
+                                .defineOutOfPageSlot(gadsids.display4, googletag.enums.OutOfPageFormat.REWARDED)
+                                .addService(googletag.pubads());
+
+                            googletag.enableServices();
+                            googletag.display(rewardedSlot);
+                            console.log("Attempting to display rewarded ad...");
+
+                            googletag.pubads().addEventListener("rewardedSlotReady", function (evt) {
+                                console.log("Rewarded ad ready.");
+                                evt.makeRewardedVisible();
+                            });
+
+                            googletag.pubads().addEventListener("rewardedSlotClosed", function () {
+                                console.log("Ad closed.");
+                                googletag.destroySlots([rewardedSlot]);
+                            });
+                        } catch (error) {
+                            console.error("Error during ad setup:", error);
+                        }
+                    });
+                }
+
+                // Add 2-second delay before showing the rewarded ad
+                setTimeout(function () {
+                    console.log("2 seconds elapsed, showing rewarded ad...");
+                    showRewardedAd();
+                }, 2000); // 2000 milliseconds = 2 seconds
+            });
+        })();
+    </script> -->
+
+    <!-- <script>
+        window.googletag = window.googletag || { cmd: [] };
+        let anchorSlot;
+
+        googletag.cmd.push(() => {
+            anchorSlot = googletag.defineOutOfPageSlot(
+                gadsids.display5,
+                document.body.clientWidth <= 500
+                    ? googletag.enums.OutOfPageFormat.TOP_ANCHOR
+                    : googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR
+            );
+
+            if (anchorSlot) {
+                anchorSlot
+                    .setTargeting('test', 'anchor')
+                    .addService(googletag.pubads());
+            }
+
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script> -->
+
+    <!-- Display Anchor Ad -->
+    <!-- <script>
+        googletag.cmd.push(() => {
+            if (anchorSlot) {
+                googletag.display(anchorSlot);
+            }
+        });
+    </script> -->
+
+    <!-- <fencedframe id="ps_caff" style="display: none;"></fencedframe><iframe
+        src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0" style="display: none;"></iframe>
+</body><iframe name="goog_topics_frame" src="https://securepubads.g.doubleclick.net/static/topics/topics_frame.html"
+    style="display: none;"></iframe> -->
+
+</html>
