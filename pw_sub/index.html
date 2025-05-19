@@ -4,24 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PWPWPP - Play Free Online Games</title>
-    <meta name="description" content="Play exciting free online games on PWPWPP! Enjoy Sudoku, 2048, Tic-Tac-Toe, Flappy Bird, Connect 4, Space Invaders, Memory Game, and many more. Challenge your skills and have fun!">
+    <title>PW - Play Free Online Games</title>
+    <meta name="description" content="Play exciting free online games on PW! Enjoy Sudoku, 2048, Tic-Tac-Toe, Flappy Bird, Connect 4, Space Invaders, Memory Game, and many more. Challenge your skills and have fun!">
     <meta name="keywords" content="free online games, play games, sudoku, 2048, tic-tac-toe, table tennis, connect 4, mine sweeper, flappy bird, memory game, reaction wall, word guessing, math game, retro dungeon maze, space invaders, stacker, lazy 2048, tower blocks, the aviator, typing game, emoji catcher, simon says, whack a mole">
-    <meta name="author" content="PWPWPP Gaming">
+    <meta name="author" content="PW Gaming">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="PWPWPP - Play Free Online Games">
+    <meta property="og:title" content="PW - Play Free Online Games">
     <meta property="og:description" content="Enjoy a variety of free online games including Sudoku, 2048, Tic-Tac-Toe, Connect 4, Space Invaders, Memory Game, and more!">
-    <meta property="og:image" content="assets/images/icon.png">
+    <meta property="og:image" content="Assert/image/icon.webp">
     <meta property="og:url" content="index.html">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PWPWPP - Play Free Online Games">
+    <meta name="twitter:title" content="PW - Play Free Online Games">
     <meta name="twitter:description" content="Enjoy a collection of classic and modern games including Sudoku, 2048, Flappy Bird, Hangman, and more. Play now for free!">
-    <meta name="twitter:image" content="assets/images/icon.png">
+    <meta name="twitter:image" content="Assert/image/icon.webp">
      <!-- Canonical URL (Helps with SEO) -->
     <link rel="canonical" href="https://play.fmax.pwpwpp.in/index.html">
     <link rel="shortcut icon" type="image/x-icon" href="Assert/image/icon.webp" />
@@ -351,24 +351,47 @@
     
     </style>
 
-     <!-- new adx-->
+    <!-- new adx-->
     <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
     
     <!-- Native start -->
-    <script>
+     <script>
       window.googletag = window.googletag || {cmd: []};
       googletag.cmd.push(function() {
-        googletag.defineSlot('/23301164660/pwpwpp.in_admixer_bignative', [[300, 250], 'fluid'], 'div-gpt-ad-1747388642488-0').addService(googletag.pubads());
+        googletag.defineSlot('/23301164660/pwpwpp.in_admixer_bignative', [[300, 600], 'fluid'], 'div-gpt-ad-1747634131641-0').addService(googletag.pubads());
         googletag.pubads().enableSingleRequest();
         googletag.enableServices();
       });
+    </script> 
+    
+    <!-- sticky bottom -->
+    <script>
+        window.googletag = window.googletag || { cmd: [] };
+    
+        let AnchorDesktopSlot;
+    
+        googletag.cmd.push(() => {
+    
+            AnchorDesktopSlot = googletag.defineOutOfPageSlot(
+                "/23301164660/pwpwpp.in_admixer_stickybottom",
+                googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR,
+            );
+    
+            anchorSlot.addService(googletag.pubads());
+    
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+    
+            setInterval(function () {
+                googletag.pubads().refresh([AnchorDesktopSlot]);
+            }, 30000);
+        });
     </script>
-</head>
 
+</head>
 <body>
     <div class="page-wrapper">
-      
-
+     
         <div class="verification-container">
             <div class="game-info">
                 <!-- <h1 class="game-title">Welcome to Zenbt Games</h1> -->
@@ -376,6 +399,16 @@
                 <a href="" class="game-title-link">
                     <h1 class="game-title">Welcome to PW Games</h1>
                 </a>
+                
+                <!--<div class="container">-->
+                    <div class="ad_1 col-span-2 mt-4">
+                        <div id='div-gpt-ad-1747634131641-0'>
+                          <script>
+                            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747634131641-0'); });
+                          </script>
+                        </div>
+                    </div>
+                <!--</div> -->
 
                 <div class="buttons-container-mobile">
                     <button class="btn-verify btn-above-18 watchRewardButton" data-target="https://100.play.fmax.pwpwpp.in">
@@ -473,12 +506,14 @@
 
     </div>
 
-    <!-- reward adx -->   
+<!-- reward adx -->   
 <script>
     console.log(typeof page !== "undefined" ? page : 'default', "page");
     let rewardPayload = null;
     
     function setupRewardedAd(targetUrl) {
+        console.log("Rewarded show.");
+        
       window.googletag = window.googletag || { cmd: [] };
     
       // Define the rewarded ad slot
@@ -502,6 +537,7 @@
                 // alert("Ad close.");
                 window.location.href = targetUrl;
             }else {
+                //  alert("Ad skip.");
                 window.location.href = targetUrl;
             }
           });
@@ -534,6 +570,7 @@
         console.log("Clickable Element:", element);
         element.onclick = () => {
             const targetUrl = element.getAttribute("data-target");
+             console.log("Clickable url:", targetUrl);
           setupRewardedAd(targetUrl);
         };
       });
@@ -552,12 +589,18 @@
     }
 </script>
 
+ <!-- sticky bottom -->
+<script>
+    googletag.cmd.push(() => {
+        googletag.display(AnchorDesktopSlot);
+    });
+</script>
 
-    <script>
+<script>
         // Disable right-click
         document.addEventListener('contextmenu', function (e) {
             e.preventDefault();
-            alert('Right-click is disabled to protect our content.');
+            // alert('Right-click is disabled to protect our content.');
         });
         // Disable keyboard shortcuts (Ctrl+U, Ctrl+Shift+I, F12, etc.)
         document.onkeydown = function (e) {
@@ -567,7 +610,7 @@
                 (e.metaKey && e.altKey && e.key === 'i')
             ) {
                 e.preventDefault();
-                alert('Access to developer tools and source code is disabled to protect our content.');
+                // alert('Access to developer tools and source code is disabled to protect our content.');
                 return false;
             }
             return true;
@@ -581,6 +624,4 @@
             e.preventDefault();
         });
     </script> 
-
-
 </html>

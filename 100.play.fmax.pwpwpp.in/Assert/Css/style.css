@@ -865,7 +865,7 @@ body.loaded::after {
   
   .footer-logo {
     width: 100%;
-    margin-bottom: 19px;
+    /* margin-bottom: 19px; */
   }
   
   .footer-logo a {
