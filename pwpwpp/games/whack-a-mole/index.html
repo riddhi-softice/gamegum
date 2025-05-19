@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Whack-a-mole</title>
+    <link rel="shortcut icon" href="../../assets/images/icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
+    <style>
+      .home-icon {
+          background: var(--bg);
+          color: var(--gray-0);
+          height: 48px;
+          aspect-ratio: 1;
+          padding: 0;
+          border: none;
+          position: fixed; 
+          top: 1rem;
+          left: 1rem;  
+          border-radius: 50%;
+          display: grid;
+          place-items: center;
+          opacity: 0.25;
+          cursor: pointer;
+      }
+      .home-icon:hover {
+          opacity: 1;
+      }
+      .home-icon svg {
+          width: 65%;
+          fill: var(--gray-0); 
+      }
+      .logo img {
+            margin-bottom: 30px;
+      }
+      .game-logo img {
+        margin-bottom: 60px;
+      }
+      @media (min-width: 1024px) {
+            .game-logo img {
+                width: 330px;
+            }
+        }
+    </style>
+</head>
+<body>
+  <div id="image-loader">
+    <div id="image-container">
+        <div class="logo">
+            <img src="../../assets/images/logo.png">
+        </div>
+        <div class="game-logo">
+            <img src="../assets/images/game-name/whack-a-mole.png">
+        </div>
+    </div>
+    <div class="loader-custome">
+        <span class="loader"></span>
+    </div>
+    <div id="button-container">
+        <button class="start-button start-g" onClick="startGame()">START GAME</button>
+        <button class="more-button more-g">MORE GAMES</button>
+    </div>
+  </div>
+
+  <div id="main" style="display: none;">
+    <a href="https://pwpwpp.in">
+      <button class="home-icon" type="button" title="Home">
+        <svg class="" viewBox="0 0 24 24">
+            <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"></path>
+          </svg>
+        </button>
+    </a>
+    <h1>Whack-a-mole!</h1>
+    <h2>Score: <span class="score">0</span></h2>
+    <button id="play-again" onClick="startGame()">Start</button>
+    <div class="game">
+      <div class="hole hole1">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole2">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole3">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole4">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole5">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole6">
+        <div class="mole"></div>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript" src="../assets/js/disable-click.js"></script>
+<script src="script.js"></script>
+<script>
+    document.querySelector(".start-button").addEventListener("click", function () {
+        let gameElement = document.documentElement; // Fullscreen the whole page
+
+        if (gameElement.requestFullscreen) {
+            gameElement.requestFullscreen();
+        } else if (gameElement.mozRequestFullScreen) { // Firefox
+            gameElement.mozRequestFullScreen();
+        } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
+            gameElement.webkitRequestFullscreen();
+        } else if (gameElement.msRequestFullscreen) { // IE/Edge
+            gameElement.msRequestFullscreen();
+        }
+        document.getElementById('image-loader').style.display = 'none';
+        document.getElementById('main').style.display = '';
+
+        document.body.style.background = '#fff9e2';
+        document.body.style.fontFamily = "'Nunito', sans-serif";
+        document.body.style.textAlign = 'center';
+    });
+    document.querySelector(".more-button").addEventListener("click", function () {
+        window.location.href = "https://pwpwpp.in"; 
+    });
+</script>
+</body>
+</html>

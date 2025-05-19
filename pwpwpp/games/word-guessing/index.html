@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Word Guessing Game</title>
+    <link rel="shortcut icon" href="../../assets/images/icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
+    <style>
+        .home-button {
+            display: inline-block;
+            background-color: #53BDFF;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            text-align: center;
+            position: absolute;
+            top: 20px; 
+            left: 20px;
+            z-index: 1000;
+        }
+        .home-button:hover {
+            background-color: #86d1ff;
+            color: white;
+        } 
+    </style>
+</head>
+<body>
+    <div id="image-loader">
+        <div id="image-container">
+            <div class="logo">
+                <img src="../../assets/images/logo.png">
+            </div>
+            <div class="game-logo">
+                <img src="../assets/images/game-name/word-guess.png">
+            </div>
+        </div>
+        <div class="loader-custome">
+            <span class="loader"></span>
+        </div>
+        <div id="button-container">
+            <button class="start-button start-g">START GAME</button>
+            <button class="more-button more-g">MORE GAMES</button>
+        </div>
+    </div>
+    <div class="hangman" id="gameDiv" style="display: none;">
+        <a href="https://pwpwpp.in" class="home-button">Back To Home</a> 
+        <div class="guess"></div>
+        <form class="guessForm">
+            <input type="text" class="guessLetter" maxlength="1" placeholder="Enter a letter . . . &#x23ce;" /> <button type="submit" class="guessButton">Guess</button>
+        </form>
+        <p>Hint: words are web related. <br /></p>
+        <div class="wrong">
+            <div class="wrongLetters"></div>
+        </div>
+        <div class="message">
+            <h1 class="title"></h1>
+            <p class="text"></p>
+            <button class="restart button">Play Again?</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="../assets/js/disable-click.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.querySelector(".start-button").addEventListener("click", function () {
+            let gameElement = document.documentElement; // Fullscreen the whole page
+
+            if (gameElement.requestFullscreen) {
+                gameElement.requestFullscreen();
+            } else if (gameElement.mozRequestFullScreen) { // Firefox
+                gameElement.mozRequestFullScreen();
+            } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
+                gameElement.webkitRequestFullscreen();
+            } else if (gameElement.msRequestFullscreen) { // IE/Edge
+                gameElement.msRequestFullscreen();
+            }
+            document.getElementById('image-loader').style.display = 'none';
+            document.getElementById('gameDiv').style.display = '';
+
+            document.body.style.backgroundImage = 'none'; 
+            document.body.style.backgroundSize = '';
+            document.body.style.backgroundColor = '#323232';
+        });
+        document.querySelector(".more-button").addEventListener("click", function () {
+            window.location.href = "https://pwpwpp.in"; 
+        });
+    </script>
+</body>
+</html>

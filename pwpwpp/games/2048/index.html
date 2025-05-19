@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>2048</title>
+  
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+ 
+  <link rel="shortcut icon" href="../../assets/images/icon.png">
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"> 
+  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)">
+  <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
+
+  <style>
+    /* body {
+        background: url('../assets/images/bg.png') no-repeat center center;
+        background-size: cover;
+    } */
+    .container {
+      margin-top: 20px;
+      display: none;
+    }
+    .home-button {
+      display: inline-block;
+      background: #8f7a66; 
+      border-radius: 3px;
+      padding: 0 20px;
+      text-decoration: none;
+      color: #f9f6f2;
+      height: 40px;
+      line-height: 42px;
+      text-align: center;
+      float: left; 
+      margin-right: 10px; 
+    }
+    .home-button:hover {
+      background: #776e65; 
+    }
+  </style>
+</head>
+<body>
+  <div id="image-loader">
+
+    <div id="image-container">
+      <!-- <div class="logo">
+        <img src="../assets/images/logo.png">
+      </div> -->
+      <div class="logo">
+        <a href="https://pwpwpp.in">PW GAMES</a>
+      </div>
+
+      <div class="game-logo">
+        <img src="../assets/images/game-name/2048.png">
+      </div>
+    </div>
+
+    <div class="loader-custome">
+     <span class="loader"></span>
+    </div>   
+    
+    <div id="button-container">
+      <button class="start-button start-g">START GAME</button>
+      <button class="more-button more-g">MORE GAMES</button>
+    </div>
+  </div>
+
+  <div class="container" id="main">
+    <div class="heading">
+      <h1 class="title">2048</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+
+    <div class="above-game">
+      <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
+      <a href="https://pwpwpp.in" class="home-button">Back to Home</a>
+      <a class="restart-button">New Game</a>
+    </div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+          <a class="keep-playing-button">Keep going</a>
+          <a class="retry-button">Try again</a>
+        </div>
+      </div>
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+      <div class="tile-container">
+      </div>
+    </div>
+    <p class="game-explanation">
+      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two
+      tiles with the same number touch, they <strong>merge into one!</strong>
+    </p>
+  </div>
+
+  <script type="text/javascript" src="../assets/js/disable-click.js"></script>
+  <script src="js/bind_polyfill.js"></script>
+  <script src="js/classlist_polyfill.js"></script>
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_storage_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script src="js/application.js"></script>
+  <script>
+    document.querySelector(".start-button").addEventListener("click", function () {
+        let gameElement = document.documentElement; // Fullscreen the whole page
+
+        if (gameElement.requestFullscreen) {
+            gameElement.requestFullscreen();
+        } else if (gameElement.mozRequestFullScreen) { // Firefox
+            gameElement.mozRequestFullScreen();
+        } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
+            gameElement.webkitRequestFullscreen();
+        } else if (gameElement.msRequestFullscreen) { // IE/Edge
+            gameElement.msRequestFullscreen();
+        }
+        document.getElementById('image-loader').style.display = 'none';
+        document.getElementById('main').style.display = 'block';
+        document.body.style.backgroundImage = 'none'; 
+        document.body.style.backgroundSize = ''; 
+        document.body.style.background = '#faf8ef'; 
+    });
+
+    // Redirect "More Games" button
+    document.querySelector(".more-button").addEventListener("click", function () {
+        window.location.href = "https://pwpwpp.in";
+    });
+  </script>
+</body>
+</html>

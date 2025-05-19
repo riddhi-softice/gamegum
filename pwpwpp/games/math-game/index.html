@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Math Game</title>
+    <link rel="shortcut icon" href="../../assets/images/icon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
+    <style>
+      .home-button {
+        width: 520px;
+        display: inline-block;
+        padding: 12px 20px;
+        font-size: 18px;
+        margin: 10px auto; 
+        color: white;
+        background: #2ca5d4;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 4px 4px #2980b9;
+      }
+      .home-button:hover {
+        color: white;
+        text-decoration: none;
+        box-shadow: 6px 6px #1c6691;
+      }
+      @media (max-width: 480px) {
+          .home-button {
+              width: 335px;
+          }
+      }
+      @media (min-width: 1024px) {
+          .game-logo img {
+              width: 300px;
+          } 
+      }
+      .logo img {
+          margin-bottom: 30px;
+      }
+    </style>
+</head>
+<body>
+    <div id="image-loader">
+      <div id="image-container">
+        <div class="logo">
+          <a href="https://pwpwpp.in">PW GAMES</a>
+        </div>
+        <div class="game-logo">
+          <img src="../assets/images/game-name/math.png">
+        </div>
+      </div>
+    <div class="loader-custome">
+      <span class="loader"></span>
+      </div>   
+      <div id="button-container">
+        <button class="start-button start-g">START GAME</button>
+        <button class="more-button more-g">MORE GAMES</button>
+      </div>
+    </div>
+
+    <a href="https://pwpwpp.in" class="home-button">BACK TO HOME</a>
+    <div id="game" class="wrapper" style="display: none;"></div>
+
+    <script type="text/javascript" src="../assets/js/disable-click.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        $('#bar').hide();
+        document.querySelector(".start-button").addEventListener("click", function () {
+            let gameElement = document.documentElement; // Fullscreen the whole page
+
+            if (gameElement.requestFullscreen) {
+                gameElement.requestFullscreen();
+            } else if (gameElement.mozRequestFullScreen) { // Firefox
+                gameElement.mozRequestFullScreen();
+            } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
+                gameElement.webkitRequestFullscreen();
+            } else if (gameElement.msRequestFullscreen) { // IE/Edge
+                gameElement.msRequestFullscreen();
+            }
+            document.getElementById('image-loader').style.display = 'none';
+            document.getElementById('game').style.display = '';
+
+            document.body.style.backgroundImage = 'none'; 
+            document.body.style.backgroundSize = '';
+            document.body.style.backgroundColor = '#e5cc94';
+            $('#bar').show();
+        });
+        document.querySelector(".more-button").addEventListener("click", function () {
+            window.location.href = "https://pwpwpp.in"; 
+        });
+    </script>
+</body>
+</html>
