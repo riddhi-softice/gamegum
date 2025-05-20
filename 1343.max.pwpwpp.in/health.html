@@ -37,14 +37,13 @@
         .container { width: 100%; padding-right: 12px; padding-left: 12px; margin-right: auto; margin-left: auto; }
         .text-center { text-align: center; }
         .mt-4 { margin-top: 1.5rem; }
-        /* Add more as needed */
     </style>
     <link rel="stylesheet" href="Assert/Css/bootstrap.css" media="print" onload="this.onload=null;this.media='all';">
     <noscript><link rel="stylesheet" href="Assert/Css/bootstrap.css"></noscript>
     <link rel="stylesheet" href="Assert/Css/style.css">
     <link rel="stylesheet" href="Assert/Css/custom_puzzle.css">
 
- <!-- new adx-->
+    <!-- new adx-->
     <!--<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>-->
     <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
 
@@ -101,7 +100,6 @@
             </div>
         </div>
        
-
         <div class="container mt-3">
            
             <div class="mt-4 mb-2">
@@ -221,6 +219,11 @@
         } else {
             num1 = Math.floor(Math.random() * 10) + 1;
             num2 = Math.floor(Math.random() * 10) + 1;
+
+            if (operator === '-' && num1 < num2) {
+                // Swap to avoid negative result
+                [num1, num2] = [num2, num1];
+            }
 
             switch (operator) {
                 case '+':

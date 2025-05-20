@@ -134,13 +134,13 @@
             // Skip if href is a full URL or empty/hash
             if (!href || href.startsWith("http") || href === "#") return;
     
-            var refElement = $(href);
-            if (refElement.length && refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-                $('.nav ul li a').removeClass("active");
-                currLink.addClass("active");
-            } else {
-                currLink.removeClass("active");
-            }
+            // var refElement = $(href);
+            // if (refElement.length && refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            //     $('.nav ul li a').removeClass("active");
+            //     currLink.addClass("active");
+            // } else {
+            //     currLink.removeClass("active");
+            // }
         });
     }
 

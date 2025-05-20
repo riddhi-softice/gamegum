@@ -36,7 +36,6 @@
         .container { width: 100%; padding-right: 12px; padding-left: 12px; margin-right: auto; margin-left: auto; }
         .text-center { text-align: center; }
         .mt-4 { margin-top: 1.5rem; }
-        /* Add more as needed */
     </style>
     <link rel="stylesheet" href="Assert/Css/bootstrap.css" media="print" onload="this.onload=null;this.media='all';">
     <noscript><link rel="stylesheet" href="Assert/Css/bootstrap.css"></noscript>
@@ -59,7 +58,6 @@
 </head>
 <body>
     <section class="app_wrapper insuranceSection">
-        
         <div class="container">
             <div class="ad_1 col-span-2 mt-4">
                 <div id='div-gpt-ad-1747388642488-0'>
@@ -177,7 +175,7 @@
 
         // Helper function to ensure clean division
         const operators = ['+', '-', '*', '/'];
-        operator = operators[Math.floor(Math.random() * operators.length)];
+        operator = operators[Math.floor(Math.random() * operators.length)];      
 
         if (operator === '/') {
             num2 = Math.floor(Math.random() * 9) + 1; // 1 to 9 (avoid divide by 0)
@@ -187,6 +185,10 @@
             num1 = Math.floor(Math.random() * 10) + 1;
             num2 = Math.floor(Math.random() * 10) + 1;
 
+            if (operator === '-' && num1 < num2) {
+                // Swap to avoid negative result
+                [num1, num2] = [num2, num1];
+            }
             switch (operator) {
                 case '+':
                     correctAnswer = num1 + num2;
@@ -203,7 +205,6 @@
         
         // Display the question
         document.getElementById("mathQuestion").innerText = `${num1} ${operator} ${num2} = ?`;
-      
         // let alreadyCorrect = false;
         function checkMathAnswer() {
             const input = document.getElementById("codeInput");
@@ -216,7 +217,6 @@
                 // alreadyCorrect = false;
                 return;
             }
-
             const parsedVal = parseInt(inputVal);
 
             // if (parsedVal === correctAnswer && !alreadyCorrect) {
