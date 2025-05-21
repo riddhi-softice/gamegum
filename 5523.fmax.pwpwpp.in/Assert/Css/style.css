@@ -41,8 +41,8 @@ body::after {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(../image/bg.png);
-  background-size: cover;
+  /* background-image: url(../image/bg.png);
+  background-size: cover; */
   opacity: 0;
   transition: opacity 1s ease-in-out; /* Smooth transition */
   z-index: -1; /* Put behind content */
@@ -139,7 +139,7 @@ a {
 
 /*******************************************************header*********************************************************/
 .by_watching_text {
-  color: #e75e8d;
+  color: yellow;
   font-size: 12px;
   font-weight: 600;
 }
@@ -181,7 +181,7 @@ a {
 .adBG {
   background-color: #1f2122;
   border-radius: 10px;
-  border: 1px solid #e75e8d;
+  border: 1px solid yellow;
 }
 
 .ad_text {
@@ -198,7 +198,7 @@ a {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background-color: #e75e8d;
+  background-color: yellow;
   font-size: 16px;
   padding: 10px 20px;
   border-radius: 10px;
@@ -253,7 +253,7 @@ a {
 
 .categories {
   font-size: 15px;
-  color: #e75e8d;
+  color: yellow;
   font-weight: 600;
   margin-bottom: 7px;
 }
@@ -273,7 +273,7 @@ a {
   padding: 10px;
   margin-bottom: 15px;
   border-radius: 12px;
-  border: 1px solid #e75e8d;
+  border: 1px solid yellow;
   background-color: #edd3dcab;
 }
 
@@ -281,7 +281,7 @@ a {
   text-align: center;
   font-size: 13px;
   line-height: 23px;
-  color: #e75e8d;
+  color: yellow;
   padding: 9px 0 0px 0;
 }
 
@@ -297,7 +297,7 @@ a {
 }
 
 .readmore_btn {
-  background-color: #e75e8d;
+  background-color: yellow;
   border-radius: 12px;
   padding: 6px 20px;
   border: none;
@@ -328,7 +328,7 @@ a {
 }
 
 .cusBtnOption.active {
-  background-color: #e75e8d;
+  background-color: yellow;
   color: white;
 }
 
@@ -344,14 +344,14 @@ a {
 .categories_arcade {
   font-size: 28px;
   font-weight: 600;
-  color: #e75e8d;
+  color: yellow;
 }
 
 i.fa-brands.fa-square-facebook,
 i.fa-brands.fa-instagram,
 i.fa-brands.fa-threads,
 i.fa-brands.fa-x-twitter {
-  color: #e75e8d;
+  color: yellow;
   font-size: 32px;
 }
 
@@ -437,22 +437,22 @@ nav .nav-content .links {
 
 .nav-content .links li a:hover,
 .nav-content .links li label:hover {
-  background: #e75e8d;
+  background: yellow;
   color: #fff;
 }
 
 /* .nav-content .links li.active a, */
 .nav-content .links li.active label,
 .nav-content .links li.active ul li.active a {
-  background: #e75e8d;
+  background: yellow;
   color: #fff;
 }
 a.active_health,a.active_carro,a.active_contact,a.active_about,a.active_privacy{
-  background: #e75e8d;
+  background: yellow;
   color: #fff !important;
 }
 a.active {
-  background: #e75e8d;
+  background: yellow;
   color: #fff !important;
 }
 
@@ -564,7 +564,7 @@ a.active {
 }
 
 label.services-label.active {
-  background-color: #e75e8d;
+  background-color: yellow;
   color: white !important;
 }
 
@@ -594,7 +594,7 @@ nav .nav-content .links {
 
 i.fas.fa-bars {
   font-size: 23px;
-  color: #e75e8d;
+  color: yellow;
 }
 .logo{
   margin-right: -20px;
@@ -677,7 +677,7 @@ i.fas.fa-bars {
 .dynamic_card{
   padding: 12px;
   background-color: white;
-  border: 1px solid #e75e8d;
+  border: 1px solid yellow;
   border-radius: 10px;
   margin-top: 18px;
 }
@@ -839,13 +839,13 @@ i.fa-solid.fa-chevron-right {
   /* background-color: #1f2122; */
   background-color: #191a1a;
   border-radius: 10px;
-  border: 1px solid #e75e8d;
+  border: 1px solid yellow;
   margin-bottom: 16px;
 }
 .redeem_box_text {
   font-size: 15px;
   line-height: 20px;
-  color: #e75e8d;
+  color: yellow;
   font-weight: 600;
   margin-bottom: 7px;
 }
@@ -911,7 +911,7 @@ i.fa-brands.fa-facebook-f, i.fa-brands.fa-instagram, i.fa-brands.fa-threads, i.f
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background: #e75e8d; */
+  /* background: yellow; */
   border-radius: 6px;
   text-decoration: none;
   color: white;
@@ -959,7 +959,7 @@ i.fa-brands.fa-facebook-f, i.fa-brands.fa-instagram, i.fa-brands.fa-threads, i.f
 }
 
 .footer-links a:hover {
-  color: #e75e8d;
+  color: yellow;
 }
 
 @media (max-width: 1200px) {

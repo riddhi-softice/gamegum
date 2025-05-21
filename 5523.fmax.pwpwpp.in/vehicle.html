@@ -20,7 +20,7 @@
     <meta property="og:title" content="Best Vehicle Insurance Plans - Comprehensive Coverage & Affordable Rates">
     <meta property="og:description"
         content="Get the best vehicle insurance plans with affordable premiums and full coverage. Protect your car, truck, or bike with comprehensive vehicle insurance options.">
-    <meta property="og:image" content="https://5523.fmax.pwpwpp.in/Assert/image/vehicle-ins.webp">
+    <meta property="og:image" content="https://5523.fmax.pwpwpp.in/Assert/image/icon.webp">
     <meta property="og:url" content="https://5523.fmax.pwpwpp.in/vehicle.html">
     <meta property="og:type" content="article">
 
@@ -29,7 +29,7 @@
     <meta name="twitter:title" content="Best Vehicle Insurance Plans - Comprehensive Coverage & Affordable Rates">
     <meta name="twitter:description"
         content="Find the best vehicle insurance coverage for your car, truck, or bike. Compare insurance policies and get the best deal for your vehicle.">
-    <meta name="twitter:image" content="https://5523.fmax.pwpwpp.in/Assert/image/vehicle-ins.webp">
+    <meta name="twitter:image" content="https://5523.fmax.pwpwpp.in/Assert/image/icon.webp">
 
     <!-- Canonical URL (Helps with SEO) -->
     <link rel="canonical" href="https://5523.fmax.pwpwpp.in/vehicle.html">
@@ -65,18 +65,38 @@
     <link rel="preload" as="image" href="Assert/image/fff/d2.webp" type="image/webp" fetchpriority="high">
 
     <!-- new adx-->
-    <!--<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>-->
     <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
 
-   <!-- Native start -->
+    <!-- Native start -->
     <script>
-      window.googletag = window.googletag || {cmd: []};
-      googletag.cmd.push(function() {
-        googletag.defineSlot('/23301164660/pwpwpp.in_admixer_bignative', [[300, 250], 'fluid'], 'div-gpt-ad-1747388642488-0').addService(googletag.pubads());
-        googletag.pubads().enableSingleRequest();
-        googletag.enableServices();
+        //  window.addEventListener("load", function () {  // load
+      document.addEventListener("DOMContentLoaded", function () {
+        window.googletag = window.googletag || { cmd: [] };
+    
+        googletag.cmd.push(function () {
+          googletag.defineSlot(
+            '/23301164660/pwpwpp.in_admixer_bignative',
+            [[300, 250], 'fluid'],
+            'div-gpt-ad-1747388642488-0'
+          ).addService(googletag.pubads());
+          
+        googletag.defineSlot(
+              '/23301164660/pwpwpp.in_admixer_bignative',
+              [[300, 600], 'fluid'],
+              'div-gpt-ad-1747634131641-0'
+            ).addService(googletag.pubads());
+    
+          googletag.pubads().enableSingleRequest();
+          googletag.enableServices();
+    
+        // Display the ad after config
+        googletag.display('div-gpt-ad-1747388642488-0');
+        googletag.display('div-gpt-ad-1747634131641-0');
+
+        });
       });
     </script>
+
 
 </head>
 <body>
@@ -85,9 +105,9 @@
         <div class="container">
             <div class="ad_1 col-span-2 mt-4">
                 <div id='div-gpt-ad-1747388642488-0'>
-                  <script>
-                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747388642488-0'); });
-                  </script>
+                  <!--<script>-->
+                  <!--  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747388642488-0'); });-->
+                  <!--</script>-->
                 </div>
             </div>
         </div>
@@ -98,13 +118,23 @@
                 <div class="redeem_box watchAdButton" data-target="health.html">
                     <label class="q-text d-title">Collect Diamonds</label>
                     <div class="image-wrapper">
-                        <img class="quiz-img" src="Assert/image/fff/d2.webp" alt="Quiz Image" fetchpriority="high">
+                        <img class="quiz-img" src="Assert/image/fff/d2.webp" alt="Quiz Image" width="290" height="100" fetchpriority="high">
+                        <!--<img class="quiz-img" src="Assert/image/fff/d2.webp" alt="Quiz Image" fetchpriority="high">-->
                         <label class="q-text d-des">You're just 2 step away, click next to generate diamonds.</label>
                     </div>
                     <button class="q-btn">Next</button>
                 </div>
             </div>
         </div>
+        
+        <div class="container">
+            <div class="ad_1 col-span-2 mt-4">
+                <div id='div-gpt-ad-1747634131641-0'>
+                  <!--Big native -->
+                </div>
+            </div>
+        </div>
+        
 
         <div class="container mt-3">
             
@@ -209,11 +239,7 @@
                             window.location.href = targetUrl;
                         } 
                         else {
-                            // fallback: go to the next page anyway after delay
-                            // alert("Ad closed without reward. Redirecting...");
-                            // setTimeout(() => {
-                                window.location.href = targetUrl;
-                            // }, 2000); // 2-second delay fallback
+                            window.location.href = targetUrl;
                         }
 
                     });

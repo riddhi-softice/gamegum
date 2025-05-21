@@ -63,7 +63,7 @@
         #codeInput {
             width: 70%;
             height: 35px;
-            border: 1px solid #E75E8D;
+            border: 1px solid yellow;
             background: rgba(0, 0, 0, 1);
             border-top-left-radius: 5px;
             border-bottom-left-radius: 5px;
@@ -81,7 +81,7 @@
         }
         #codeInput:focus {
             outline: none;
-            border-color: #E75E8D;
+            border-color: yellow;
             box-shadow: none;
         }
         
@@ -93,16 +93,16 @@
             font-weight: 700;
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
-            border: 1px solid #E75E8D;
+            border: 1px solid yellow;
             border-left: none; 
-            color: #FFFFFF;
-            background: #E75E8D;
+            color: black;
+            background: yellow;
             cursor: pointer;
             transition: background 0.3s;
             box-sizing: border-box;
         }
         .code-cpy-btn:hover {
-            background: #d14b7a;
+            background: #bfbf64;
         }
         .code-text {
             font-family: 'K2D', sans-serif;
@@ -120,16 +120,38 @@
     </style>
     
     <!-- new adx-->
-    <!--<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>-->
-    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
-
-    <!-- Native start -->
     <script>
-      window.googletag = window.googletag || {cmd: []};
-      googletag.cmd.push(function() {
-        googletag.defineSlot('/23301164660/pwpwpp.in_admixer_bignative', [[300, 250], 'fluid'], 'div-gpt-ad-1747388642488-0').addService(googletag.pubads());
-        googletag.pubads().enableSingleRequest();
-        googletag.enableServices();
+      window.googletag = window.googletag || { cmd: [] };
+    
+      // Wait until the browser is idle
+      requestIdleCallback(() => {
+        const gptScript = document.createElement("script");
+        gptScript.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
+        gptScript.async = true;
+        gptScript.crossOrigin = "anonymous";
+        document.head.appendChild(gptScript);
+    
+        gptScript.onload = function () {
+          googletag.cmd.push(function () {
+            googletag.defineSlot(
+              '/23301164660/pwpwpp.in_admixer_bignative',
+              [[300, 250], 'fluid'],
+              'div-gpt-ad-1747388642488-0'
+            ).addService(googletag.pubads());
+    
+            googletag.defineSlot(
+              '/23301164660/pwpwpp.in_admixer_bignative',
+              [[300, 600], 'fluid'],
+              'div-gpt-ad-1747634131641-0'
+            ).addService(googletag.pubads());
+    
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+    
+            googletag.display('div-gpt-ad-1747388642488-0');
+            googletag.display('div-gpt-ad-1747634131641-0');
+          });
+        };
       });
     </script>
 
@@ -140,9 +162,7 @@
         <div class="container">
             <div class="ad_1 col-span-2 mt-4">
                 <div id='div-gpt-ad-1747388642488-0'>
-                  <script>
-                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747388642488-0'); });
-                  </script>
+                  <!-- Native show -->
                 </div>
             </div>
         </div>
@@ -152,12 +172,21 @@
             <!-- GET CODE AND COPY -->
             <div class="redeem_box" data-target="index.html" id="couponBox">
                 <label class="code-text">Just Copy the code and paste into app to get your diamonds</label>
-                <img class="quiz-img" src="Assert/image/fff/dimond.webp" width="161" height="161" alt="Quiz Image" fetchpriority="high">
+                <img class="quiz-img" src="Assert/image/fff/dimond.webp" width="100" height="100" alt="Quiz Image" fetchpriority="high">
                 <div class="code-input-group">
                     <input id="codeInput" type="text" readonly>
                     <button class="code-cpy-btn" onclick="copyCode()">Copy</button>
                 </div>
             </div>
+            
+            <!--<div class="container">-->
+                <div class="ad_1 col-span-2 mt-4">
+                    <div id='div-gpt-ad-1747634131641-0'>
+                      <!--Big native -->
+                    </div>
+                </div>
+            <!--</div>-->
+            
 
             <h2 class="main_title_text">Top Insurance Plans: Health, Life, Vehicle and More</h2>
           
@@ -165,7 +194,7 @@
             <div class="mt-4 mb-3">
                 <div>
                     <h6 class="blog_paragraph_text">What is Insurance?</h6>
-                    <p class="blog_post_subtext">Insurance is a financial agreement between an individual and an
+                    <p class="blog_post_subtext" style="min-height: 120px;">Insurance is a financial agreement between an individual and an
                         insurance company
                         that provides financial protection against unexpected risks. It helps cover expenses
                         related to health issues, accidents, property damage, or loss of life, reducing the
@@ -224,7 +253,7 @@
                         international destinations require visitors to have travel insurance as a prerequisite for
                         entry.</p>
                 </div>
-                <img class="blog_subpost_img" src="Assert/image/global-2.webp" width="330" height="330" alt="All About Insurance: Travel, Car, Motorcycle, and More">
+                <!--<img class="blog_subpost_img" src="Assert/image/global-2.webp" width="330" height="330" alt="All About Insurance: Travel, Car, Motorcycle, and More">-->
                 <div>
                     <h6 class="blog_paragraph_text">Why Insurance is Essential?</h6>
                     <p class="blog_post_subtext">Having insurance helps individuals and businesses avoid financial
