@@ -20,7 +20,7 @@
     <meta property="og:title" content="Explore More Insurance Options – Comprehensive Coverage for Every Need">
     <meta property="og:description"
         content="Browse various insurance plans including vehicle, life, home, health, and more. Compare options and find the perfect plan for you.">
-    <meta property="og:image" content="https://1343.max.pwpwpp.in/Assert/image/more-1.webp">
+    <meta property="og:image" content="https://1343.max.pwpwpp.in/Assert/image/icon.webp">
     <meta property="og:url" content="https://1343.max.pwpwpp.in/other.html">
     <meta property="og:type" content="article">
 
@@ -29,19 +29,14 @@
     <meta name="twitter:title" content="Explore More Insurance Options – Comprehensive Coverage for Every Need">
     <meta name="twitter:description"
         content="Explore a variety of insurance plans that fit your needs. Whether you’re looking for vehicle, life, health, or home coverage, we’ve got you covered.">
-    <meta name="twitter:image" content="https://1343.max.pwpwpp.in/Assert/image/more-1.webp">
+    <meta name="twitter:image" content="https://1343.max.pwpwpp.in/Assert/image/icon.webp">
 
     <!-- Canonical URL (Helps with SEO) -->
     <link rel="canonical" href="https://1343.max.pwpwpp.in/other.html">
 
     <link rel="shortcut icon" type="image/x-icon" href="Assert/image/icon.webp" />
     <link rel="icon" type="image/x-icon" href="Assert/image/icon.webp">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-
+   
     <link rel="stylesheet" href="Assert/Css/bootstrap.css">
     <link rel="stylesheet" href="Assert/Css/style.css">
 
@@ -92,32 +87,48 @@
             line-height: 1.4;
         }
     </style>
+    
+    <link rel="preload" as="image" href="Assert/image/fff/dimond.webp" type="image/webp">
 
     <!-- new adx-->
-    <!--<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>-->
-    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
-
-    <!-- Native start -->
+    <!-- Native start-->
     <script>
+      // Defer ads until the browser is idle (after LCP)
+      window.requestIdleCallback
+        ? requestIdleCallback(loadAds)
+        : setTimeout(loadAds, 20); // Fallback for unsupported browsers
+    
+      function loadAds() {
         window.googletag = window.googletag || { cmd: [] };
+    
+        const gptScript = document.createElement('script');
+        gptScript.src = 'https://securepubads.g.doubleclick.net/tag/js/gpt.js';
+        gptScript.async = true;
+        gptScript.crossOrigin = 'anonymous';
+        document.head.appendChild(gptScript);
+    
         googletag.cmd.push(function () {
-            googletag.defineSlot('/23301164660/pwpwpp.in_admixer_bignative', [[300, 250], 'fluid'], 'div-gpt-ad-1747388642488-0').addService(googletag.pubads());
-            googletag.pubads().enableSingleRequest();
-            googletag.enableServices();
+          googletag.defineSlot(
+            '/23301164660/pwpwpp.in_admixer_bignative',
+            [[300, 250], 'fluid'],
+            'div-gpt-ad-1747388642488-0'
+          ).addService(googletag.pubads());
+    
+          googletag.pubads().enableSingleRequest();
+          googletag.enableServices();
+    
+          googletag.display('div-gpt-ad-1747388642488-0');
         });
+      }
     </script>
 
 </head>
-
 <body>
     <section class="app_wrapper">
 
         <div class="container">
             <div class="ad_1 col-span-2 mt-4">
                 <div id='div-gpt-ad-1747388642488-0'>
-                    <script>
-                        googletag.cmd.push(function () { googletag.display('div-gpt-ad-1747388642488-0'); });
-                    </script>
                 </div>
             </div>
         </div>
@@ -127,7 +138,7 @@
                 <div class="redeem_box watchAdButton">
                     <!--<div class="redeem_box watchAdButton" data-target="final.html">-->
                     <button class="q-btn watchRewardButton" data-target="final.html">Generate Code</button>
-                    <img class="quiz-img" src="Assert/image/fff/dimond.webp" alt="Diamond" fetchpriority="high">
+                    <img class="quiz-img" src="Assert/image/fff/dimond.webp" width="100" height="100" alt="Diamond" fetchpriority="high">
                     <label class="q-text">Smash that button for your coupon!</label>
                 </div>
             </div>
@@ -137,7 +148,7 @@
 
             <div class="mt-4 mb-2">
                 <h5 class="blog_post_title">What is Insurance?</h5>
-                <p class="blog_post_subtext">Insurance is a financial agreement between an individual and an insurance
+                <p class="blog_post_subtext" style="min-height: 120px;">Insurance is a financial agreement between an individual and an insurance
                     company that provides financial protection against unexpected risks. It helps cover expenses related
                     to health issues, accidents, property damage, or loss of life, reducing the financial burden on
                     policyholders and their families.</p>
@@ -345,5 +356,4 @@
     </script>
     <script src="Assert/js/disable_source.js" defer></script>
 </body>
-
 </html>

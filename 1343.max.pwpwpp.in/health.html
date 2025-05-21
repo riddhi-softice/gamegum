@@ -42,19 +42,51 @@
     <noscript><link rel="stylesheet" href="Assert/Css/bootstrap.css"></noscript>
     <link rel="stylesheet" href="Assert/Css/style.css">
     <link rel="stylesheet" href="Assert/Css/custom_puzzle.css">
+    
+    <link rel="preload" as="image" href="Assert/image/fff/dimond.webp" type="image/webp">
 
     <!-- new adx-->
-    <!--<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>-->
-    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+    <!--<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>-->
 
     <!-- Native start -->
-    <script>
+    <!--<script>
       window.googletag = window.googletag || {cmd: []};
       googletag.cmd.push(function() {
         googletag.defineSlot('/23301164660/pwpwpp.in_admixer_bignative', [[300, 250], 'fluid'], 'div-gpt-ad-1747388642488-0').addService(googletag.pubads());
         googletag.pubads().enableSingleRequest();
         googletag.enableServices();
       });
+    </script>-->
+    
+    <!-- Native start-->
+    <script>
+      // Defer ads until the browser is idle (after LCP)
+      window.requestIdleCallback
+        ? requestIdleCallback(loadAds)
+        : setTimeout(loadAds, 20); // Fallback for unsupported browsers
+    
+      function loadAds() {
+        window.googletag = window.googletag || { cmd: [] };
+    
+        const gptScript = document.createElement('script');
+        gptScript.src = 'https://securepubads.g.doubleclick.net/tag/js/gpt.js';
+        gptScript.async = true;
+        gptScript.crossOrigin = 'anonymous';
+        document.head.appendChild(gptScript);
+    
+        googletag.cmd.push(function () {
+          googletag.defineSlot(
+            '/23301164660/pwpwpp.in_admixer_bignative',
+            [[300, 250], 'fluid'],
+            'div-gpt-ad-1747388642488-0'
+          ).addService(googletag.pubads());
+    
+          googletag.pubads().enableSingleRequest();
+          googletag.enableServices();
+    
+          googletag.display('div-gpt-ad-1747388642488-0');
+        });
+      }
     </script>
 
 </head>
@@ -64,9 +96,6 @@
         <div class="container">
             <div class="ad_1 col-span-2 mt-4">
                 <div id='div-gpt-ad-1747388642488-0'>
-                  <script>
-                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747388642488-0'); });
-                  </script>
                 </div>
             </div>
         </div>
@@ -80,7 +109,7 @@
                     <div class="d-flex inside-box">
                         <!-- Left Side: Image -->
                         <div class="left-box">
-                            <img class="quiz-img" src="Assert/image/fff/dimond.webp" alt="Quiz Image">
+                            <img class="quiz-img" src="Assert/image/fff/dimond.webp" width="90" height="90" alt="Quiz Image">
                         </div>
 
                         <!-- Right Side: Labels + Question -->
@@ -106,7 +135,7 @@
                 <h5 class="blog_post_title">The Ultimate Guide to Health Insurance: Why It’s Essential & How to Choose
                     the Best Plan</h5>
 
-                <p class="blog_post_subtext"><strong>What is Health Insurance?</strong><br>
+                <p class="blog_post_subtext" style="min-height: 120px;"><strong>What is Health Insurance?</strong><br>
                     Health insurance is a financial safety net that covers medical expenses, including hospitalization,
                     doctor visits, medications, and surgeries. It helps individuals and families manage healthcare costs
                     without draining their savings. With rising medical expenses, having a comprehensive health
@@ -219,10 +248,9 @@
         } else {
             num1 = Math.floor(Math.random() * 10) + 1;
             num2 = Math.floor(Math.random() * 10) + 1;
-
+            
             if (operator === '-' && num1 < num2) {
-                // Swap to avoid negative result
-                [num1, num2] = [num2, num1];
+                [num1, num2] = [num2, num1];    // Swap to avoid negative result
             }
 
             switch (operator) {
@@ -237,7 +265,7 @@
                     break;
             }
         }
-       console.log("answer : ", correctAnswer);
+        console.log("answer : ", correctAnswer);
         
         // Display the question
         document.getElementById("mathQuestion").innerText = `${num1} ${operator} ${num2} = ?`;
