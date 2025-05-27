@@ -74,35 +74,30 @@
     <script>
       window.googletag = window.googletag || {cmd: []};
       googletag.cmd.push(function() {
-        googletag.defineSlot('/23301164660/pwpwpp.in_admixer_bignative', [[300, 600], 'fluid'], 'div-gpt-ad-1747634131641-0').addService(googletag.pubads());
-        googletag.pubads().enableSingleRequest();
+        googletag.defineSlot('/23301164660/pwpwpp.in_admixer_bignative', [300, 600], 'div-gpt-ad-1747634131641-0').addService(googletag.pubads());
         googletag.enableServices();
+        if (Math.random() < 1) {
+                        const GEO_TARGETS = [
+                           'California, US','New York, US','Massachusetts, US','Connecticut, US','New Jersey, US','Washington DC, US','Maryland, US','Virginia, US',
+                            'Washington, US','Illinois, US','Texas, US','Florida, US','Nevada, US','Colorado, US','Arizona, US',
+                            'Hawaii, US','London, UK','Manchester, UK','Birmingham, UK','Edinburgh, UK','Cardiff, UK','Belfast, UK',  'Ontario, CA','British Columbia, CA','Alberta, CA',
+                            'Quebec, CA', 'Toronto, CA', 'Vancouver, CA', 'Calgary, CA', 'Ottawa, CA', 'Montreal, CA', 'Sydney, AU', 'Melbourne, AU',
+                            'Perth, AU','Brisbane, AU','Adelaide, AU','Canberra, AU','New South Wales, AU','Victoria, AU',
+                            'Queensland, AU', 'Western Australia, AU', 'Auckland, NZ', 'Wellington, NZ', 'Christchurch, NZ', 'Hamilton, NZ', 'Canterbury, NZ',
+                        ];
+                        const geoTarget =
+                          GEO_TARGETS[
+                            Math.floor(Math.random() * GEO_TARGETS.length)
+                          ];
+                        console.log("GEO", geoTarget);
+                        googletag.pubads().setLocation(geoTarget);
+                      }
       });
-    </script>
+    </script>   
     
-    <!-- sticky bottom-->
-    <script>
-        window.googletag = window.googletag || { cmd: [] };
+    <!-- anchor top sticky -->
+    <script src="Assert/js/anchor_top.js" defer></script>
     
-        let AnchorDesktopSlot;
-    
-        googletag.cmd.push(() => {
-    
-            AnchorDesktopSlot = googletag.defineOutOfPageSlot(
-                 "/23301164660/pwpwpp.in_admixer_stickybottom",
-                googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR,
-            );
-    
-            anchorSlot.addService(googletag.pubads());
-    
-            googletag.pubads().enableSingleRequest();
-            googletag.enableServices();
-    
-            setInterval(function () {
-                googletag.pubads().refresh([AnchorDesktopSlot]);
-            }, 30000);
-        });
-    </script>
 </head>
 <body>
     <section class="app_wrapper">
@@ -272,13 +267,6 @@
         });
     </script>
     <script src="Assert/js/disable_source.js" defer></script>
-    
-     <!-- sticky bottom-->
-    <script>
-        googletag.cmd.push(() => {
-            googletag.display(AnchorDesktopSlot);
-        });
-    </script>
    
 </body>
 </html>

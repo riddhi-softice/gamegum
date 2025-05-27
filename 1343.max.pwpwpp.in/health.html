@@ -58,36 +58,52 @@
       });
     </script>-->
     
-    <!-- Native start-->
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+    
     <script>
-      // Defer ads until the browser is idle (after LCP)
-      window.requestIdleCallback
-        ? requestIdleCallback(loadAds)
-        : setTimeout(loadAds, 20); // Fallback for unsupported browsers
+      window.googletag = window.googletag || { cmd: [] };
     
-      function loadAds() {
-        window.googletag = window.googletag || { cmd: [] };
+      googletag.cmd.push(function () {
+        // GEO targeting (random selection)
+        if (Math.random() < 1) {
+          const GEO_TARGETS = [
+            'California, US','New York, US','Massachusetts, US','Connecticut, US','New Jersey, US','Washington DC, US','Maryland, US','Virginia, US',
+            'Washington, US','Illinois, US','Texas, US','Florida, US','Nevada, US','Colorado, US','Arizona, US',
+            'Hawaii, US','London, UK','Manchester, UK','Birmingham, UK','Edinburgh, UK','Cardiff, UK','Belfast, UK',  'Ontario, CA','British Columbia, CA','Alberta, CA',
+            'Quebec, CA', 'Toronto, CA', 'Vancouver, CA', 'Calgary, CA', 'Ottawa, CA', 'Montreal, CA', 'Sydney, AU', 'Melbourne, AU',
+            'Perth, AU','Brisbane, AU','Adelaide, AU','Canberra, AU','New South Wales, AU','Victoria, AU',
+            'Queensland, AU', 'Western Australia, AU', 'Auckland, NZ', 'Wellington, NZ', 'Christchurch, NZ', 'Hamilton, NZ', 'Canterbury, NZ',
+          ];
+          const geoTarget = GEO_TARGETS[Math.floor(Math.random() * GEO_TARGETS.length)];
+          console.log("GEO Target:", geoTarget);
+          googletag.pubads().setLocation(geoTarget);
+        }
     
-        const gptScript = document.createElement('script');
-        gptScript.src = 'https://securepubads.g.doubleclick.net/tag/js/gpt.js';
-        gptScript.async = true;
-        gptScript.crossOrigin = 'anonymous';
-        document.head.appendChild(gptScript);
+        // Define ad slots with multiple sizes (including 'fluid')
+        googletag.defineSlot(
+          '/23301164660/pwpwpp.in_admixer_bignative',
+          [[300, 250], 'fluid'],
+          'div-gpt-ad-1747388642488-0'
+        ).addService(googletag.pubads());
     
-        googletag.cmd.push(function () {
-          googletag.defineSlot(
-            '/23301164660/pwpwpp.in_admixer_bignative',
-            [[300, 250], 'fluid'],
-            'div-gpt-ad-1747388642488-0'
-          ).addService(googletag.pubads());
+        googletag.defineSlot(
+          '/23301164660/pwpwpp.in_admixer_bignative',
+          [[300, 600], 'fluid'],
+          'div-gpt-ad-1747634131641-0'
+        ).addService(googletag.pubads());
     
-          googletag.pubads().enableSingleRequest();
-          googletag.enableServices();
+        // Request both slots in a single request
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
     
-          googletag.display('div-gpt-ad-1747388642488-0');
-        });
-      }
+        // Display both slots
+        googletag.display('div-gpt-ad-1747388642488-0');
+        googletag.display('div-gpt-ad-1747634131641-0');
+      });
     </script>
+
+<!-- anchor top sticky -->
+<script src="Assert/js/anchor_top.js" defer></script>
 
 </head>
 <body>
@@ -95,7 +111,7 @@
 
         <div class="container">
             <div class="ad_1 col-span-2 mt-4">
-                <div id='div-gpt-ad-1747388642488-0'>
+                <div id='div-gpt-ad-1747634131641-0'>
                 </div>
             </div>
         </div>
@@ -298,74 +314,84 @@
         }
     </script>
     
-    <!-- reward adx -->
+    <!-- reward adx -->   
     <script>
-        console.log(typeof page !== "undefined" ? page : 'default', "page");
-        let rewardPayload = null;
+  console.log(typeof page !== "undefined" ? page : 'default', "page");
 
-        function setupRewardedAd(targetUrl) {
-            window.googletag = window.googletag || { cmd: [] };
+  let rewardPayload = null;
 
-            // Define the rewarded ad slot
-            const rewardedSlot = googletag.defineOutOfPageSlot(
-                 "/23301164660/pwpwpp.in_admixer_rewarded", // Replace with your actual ad slot ID
-                //  "/22639388115/rewarded_web_example",
-                googletag.enums.OutOfPageFormat.REWARDED
-            );
+  function setupRewardedAd(targetUrl) {
+    console.log("Rewarded show.");
 
-            if (rewardedSlot) {
-                rewardedSlot.addService(googletag.pubads());
+    window.googletag = window.googletag || { cmd: [] };
 
-                googletag.pubads().addEventListener("rewardedSlotReady", (event) => {
-                    // Make the ad visible and ready
-                    event.makeRewardedVisible();
-                    console.log("Rewarded ad is active.");
+    googletag.cmd.push(() => {
+      // Define rewarded slot
+      const rewardedSlot = googletag.defineOutOfPageSlot(
+        "/23301164660/pwpwpp.in_admixer_rewarded",
+        googletag.enums.OutOfPageFormat.REWARDED
+      );
 
-                    // Event listener for when the ad is closed
-                    googletag.pubads().addEventListener("rewardedSlotClosed", () => {
-                        if (rewardPayload) {
-                            window.location.href = targetUrl;
-                        }else {
-                            window.location.href = targetUrl;
-                        }
-                        /*else {
-                            // fallback: go to the next page anyway after delay
-                            // alert("Ad closed without reward. Redirecting...");
-                            setTimeout(() => {
-                                window.location.href = targetUrl;
-                            }, 2000); // 2-second delay fallback
-                        }*/
+      if (!rewardedSlot) {
+        console.warn("Rewarded ads not supported. Redirecting...");
+        window.location.href = targetUrl;
+        return;
+      }
 
-                    });
-                });
-                googletag.pubads().addEventListener("rewardedSlotGranted", (event) => {
-                    rewardPayload = event.payload;
-                    console.log("Reward granted.");
-                });
-                googletag.pubads().addEventListener("slotRenderEnded", (event) => {
-                    if (event.slot === rewardedSlot && event.isEmpty) {
-                        // Fallback if no ad is returned
-                        // alert("No ad returned for rewarded ad slot...Navigate without the ad");
-                        window.location.href = targetUrl; // Navigate without the ad
-                    }
-                });
-                // Enable Google Publisher Services and display the ad
-                googletag.pubads().setTargeting('p', [typeof page !== "undefined" ? page : 'default']);
-                googletag.enableServices();
-                googletag.display(rewardedSlot);
-            } else {
-                // alert("Rewarded ads are not supported on this page....Navigate without the ad");
-                window.location.href = targetUrl; // Fallback to navigate directly if ads aren't supported
-            }
+      rewardedSlot.addService(googletag.pubads());
+
+      // Random GEO targeting (10+ countries)
+      if (Math.random() < 1) {
+        const GEO_TARGETS = [
+            'California, US','New York, US','Massachusetts, US','Connecticut, US','New Jersey, US','Washington DC, US','Maryland, US','Virginia, US',
+            'Washington, US','Illinois, US','Texas, US','Florida, US','Nevada, US','Colorado, US','Arizona, US',
+            'Hawaii, US','London, UK','Manchester, UK','Birmingham, UK','Edinburgh, UK','Cardiff, UK','Belfast, UK',  'Ontario, CA','British Columbia, CA','Alberta, CA',
+            'Quebec, CA', 'Toronto, CA', 'Vancouver, CA', 'Calgary, CA', 'Ottawa, CA', 'Montreal, CA', 'Sydney, AU', 'Melbourne, AU',
+            'Perth, AU','Brisbane, AU','Adelaide, AU','Canberra, AU','New South Wales, AU','Victoria, AU',
+            'Queensland, AU', 'Western Australia, AU', 'Auckland, NZ', 'Wellington, NZ', 'Christchurch, NZ', 'Hamilton, NZ', 'Canterbury, NZ',
+        ];
+        const geoTarget = GEO_TARGETS[Math.floor(Math.random() * GEO_TARGETS.length)];
+        console.log("GEO:", geoTarget);
+        googletag.pubads().setLocation(geoTarget);
+      }
+
+      googletag.pubads().setTargeting('p', [typeof page !== "undefined" ? page : 'default']);
+
+      googletag.pubads().addEventListener("rewardedSlotReady", (event) => {
+        event.makeRewardedVisible();
+        console.log("Rewarded ad is active.");
+
+        googletag.pubads().addEventListener("rewardedSlotClosed", () => {
+          console.log("Ad closed.");
+          googletag.destroySlots([rewardedSlot]);
+          window.location.href = targetUrl;
+        });
+      });
+
+      googletag.pubads().addEventListener("rewardedSlotGranted", (event) => {
+        rewardPayload = event.payload;
+        console.log("Reward granted.");
+      });
+
+      googletag.pubads().addEventListener("slotRenderEnded", (event) => {
+        if (event.slot === rewardedSlot && event.isEmpty) {
+          console.warn("No ad returned. Redirecting...");
+          window.location.href = targetUrl;
         }
+      });
 
-        // Clear sessionStorage on page reload (if the page is reloaded, ad will show again)
-        const navigationEntries = performance.getEntriesByType("navigation");
-        if (navigationEntries.length > 0 && navigationEntries[0].type === "reload") {
-            console.log("Clearing sessionStorage after reload.");
-            sessionStorage.removeItem("adShown");
-        }
-    </script>
+      googletag.enableServices();
+      googletag.display(rewardedSlot);
+    });
+  }
+
+  // Reset adShown session on reload
+  const navEntries = performance.getEntriesByType("navigation");
+  if (navEntries.length > 0 && navEntries[0].type === "reload") {
+    console.log("Reload detected. Clearing sessionStorage.");
+    sessionStorage.removeItem("adShown");
+  }
+</script>
     
     <!-- disable back-->
     <script type="text/javascript">

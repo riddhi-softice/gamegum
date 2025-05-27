@@ -37,7 +37,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="Assert/image/icon.webp" />
     <link rel="icon" type="image/x-icon" href="Assert/image/icon.webp">
     
-     <style>
+    <style>
         .container { width: 100%; padding-right: 12px; padding-left: 12px; margin-right: auto; margin-left: auto; }
         .text-center { text-align: center; }
         .mt-4 { margin-top: 1.5rem; }
@@ -119,41 +119,52 @@
         }
     </style>
     
-    <!-- new adx-->
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+    
     <script>
       window.googletag = window.googletag || { cmd: [] };
     
-      // Wait until the browser is idle
-      requestIdleCallback(() => {
-        const gptScript = document.createElement("script");
-        gptScript.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
-        gptScript.async = true;
-        gptScript.crossOrigin = "anonymous";
-        document.head.appendChild(gptScript);
+      googletag.cmd.push(function () {
+        // GEO targeting (random selection)
+        if (Math.random() < 1) {
+          const GEO_TARGETS = [
+            'California, US','New York, US','Massachusetts, US','Connecticut, US','New Jersey, US','Washington DC, US','Maryland, US','Virginia, US',
+            'Washington, US','Illinois, US','Texas, US','Florida, US','Nevada, US','Colorado, US','Arizona, US',
+            'Hawaii, US','London, UK','Manchester, UK','Birmingham, UK','Edinburgh, UK','Cardiff, UK','Belfast, UK',  'Ontario, CA','British Columbia, CA','Alberta, CA',
+            'Quebec, CA', 'Toronto, CA', 'Vancouver, CA', 'Calgary, CA', 'Ottawa, CA', 'Montreal, CA', 'Sydney, AU', 'Melbourne, AU',
+            'Perth, AU','Brisbane, AU','Adelaide, AU','Canberra, AU','New South Wales, AU','Victoria, AU',
+            'Queensland, AU', 'Western Australia, AU', 'Auckland, NZ', 'Wellington, NZ', 'Christchurch, NZ', 'Hamilton, NZ', 'Canterbury, NZ',
+          ];
+          const geoTarget = GEO_TARGETS[Math.floor(Math.random() * GEO_TARGETS.length)];
+          console.log("GEO Target:", geoTarget);
+          googletag.pubads().setLocation(geoTarget);
+        }
     
-        gptScript.onload = function () {
-          googletag.cmd.push(function () {
-            googletag.defineSlot(
-              '/23301164660/pwpwpp.in_admixer_bignative',
-              [[300, 250], 'fluid'],
-              'div-gpt-ad-1747388642488-0'
-            ).addService(googletag.pubads());
+        // Define ad slots with multiple sizes (including 'fluid')
+        googletag.defineSlot(
+          '/23301164660/pwpwpp.in_admixer_bignative',
+          [[300, 250], 'fluid'],
+          'div-gpt-ad-1747388642488-0'
+        ).addService(googletag.pubads());
     
-            googletag.defineSlot(
-              '/23301164660/pwpwpp.in_admixer_bignative',
-              [[300, 600], 'fluid'],
-              'div-gpt-ad-1747634131641-0'
-            ).addService(googletag.pubads());
+        googletag.defineSlot(
+          '/23301164660/pwpwpp.in_admixer_bignative',
+          [[300, 600], 'fluid'],
+          'div-gpt-ad-1747634131641-0'
+        ).addService(googletag.pubads());
     
-            googletag.pubads().enableSingleRequest();
-            googletag.enableServices();
+        // Request both slots in a single request
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
     
-            googletag.display('div-gpt-ad-1747388642488-0');
-            googletag.display('div-gpt-ad-1747634131641-0');
-          });
-        };
+        // Display both slots
+        googletag.display('div-gpt-ad-1747388642488-0');
+        googletag.display('div-gpt-ad-1747634131641-0');
       });
     </script>
+
+<!-- anchor top sticky -->
+<script src="Assert/js/anchor_top.js" defer></script>
 
 </head>
 <body>
