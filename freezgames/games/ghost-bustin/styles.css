@@ -103,6 +103,7 @@ body {
 }
 .ghost__container .ghost__container {
   display: none;
+  
 }
 .ghost:checked {
   -webkit-animation: busted 1.75s 0.25s both;

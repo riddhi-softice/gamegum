@@ -6,7 +6,6 @@
   <title>Space-invaders</title>
   <link rel="shortcut icon" href="../../assets/images/icon.png">
   <link rel="stylesheet" href="styles.css">
-  <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
   <style>
     #controls {
       position: absolute;
@@ -98,30 +97,10 @@
         height: 155vmin;
       }
     }
-    .logo img {
-        margin-bottom: 30px;
-    }
   </style>
 </head>
 <body>
-  <div id="image-loader">
-    <div id="image-container">
-        <div class="logo">
-          <img src="../../assets/images/logo.png">
-        </div>
-        <div class="game-logo">
-            <img src="../assets/images/game-name/space-invaders.png">
-        </div>
-    </div>
-    <div class="loader-custome">
-        <span class="loader"></span>
-    </div>
-    <div id="button-container">
-        <button class="start-button start-g">START GAME</button>
-        <button class="more-button more-g">MORE GAMES</button>
-    </div>
-  </div>
-  <div id="main" style="display: none;">
+  <div id="main">
     <a href="https://freezgames.com" class="home-button">Back to Home</a>
     <input type="checkbox" id="trybrowser" autocomplete="off" />
     <input type="radio" name="state" id="state_restart" checked="checked" autocomplete="off" /><input type="radio"
@@ -897,28 +876,5 @@
     </form>
   </div>
   <script type="text/javascript" src="../assets/js/disable-click.js"></script>
-  <script>
-    document.querySelector(".start-button").addEventListener("click", function () {
-        let gameElement = document.documentElement; // Fullscreen the whole page
-
-        if (gameElement.requestFullscreen) {
-            gameElement.requestFullscreen();
-        } else if (gameElement.mozRequestFullScreen) { // Firefox
-            gameElement.mozRequestFullScreen();
-        } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
-            gameElement.webkitRequestFullscreen();
-        } else if (gameElement.msRequestFullscreen) { // IE/Edge
-            gameElement.msRequestFullscreen();
-        }
-        document.getElementById('image-loader').style.display = 'none';
-        document.getElementById('main').style.display = '';
-        // document.body.style.backgroundImage = 'none'; 
-        // document.body.style.backgroundSize = '';
-        document.body.style.background = 'white';
-    });
-    document.querySelector(".more-button").addEventListener("click", function () {
-        window.location.href = "https://freezgames.com"; 
-    });
-  </script>
 </body>
 </html>

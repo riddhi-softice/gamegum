@@ -8,13 +8,13 @@
   }
   
   body {
-    /* align-items: center;
+    align-items: center;
     background: #172031;
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
     font-family: "VT323", monospace;
-    justify-content: center; */
+    justify-content: center;
   }
   
   h1 {

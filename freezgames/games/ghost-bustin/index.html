@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="../../assets/images/icon.png">
     <link rel="stylesheet" href="styles.css">
     <style>
-      .home-button {
+      /* .home-button {
         cursor: pointer;
         background: #fff;
         color: #000;
@@ -21,6 +21,32 @@
         margin-top: 10px;
         border-radius: 5px;
         border: none;
+      } */
+      .home-button {  
+       position: absolute;
+       /* width: 22%;
+       left: 25rem;
+      bottom: 17rem; */
+         top: 20px;   
+        left: 20px; 
+       cursor: pointer;
+        background: #fff;
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 8px 12px;
+        text-decoration: none;
+          border: none;
+        text-align: center;
+        grid-column: 2;
+        font-size: 14px;
+        margin-top: 10px;
+        border-radius: 5px;
+        z-index: 10;
+        transition: background 0.3s;
+      }
+      .home-button:hover {
+        background: rgba(255, 255, 255, 0.3);
       }
       .home-button:hover,button:hover {
         background: #6c7a89; 
@@ -75,11 +101,12 @@
               Colored ghosts score more points!
             </p>
             <button>Start</button>
-            <a href="https://freezgames.com" class="home-button">Back to Home</a>
           </div>
         </div>
+        <a href="https://freezgames.com" class="home-button"  target="_self">Back to Home</a>
+        
         <div class="backdrop"></div>
-        <a href="https://freezgames.com" class="home-button-play">Back to Home</a>
+        <!-- <a href="https://freezgames.com" class="home-button-play">Back to Home</a> -->
         <div class="game" style="--rows: 3; --cols: 3">
           <div class="ghost-pen">
             <div class="ghost__container" style="--speed: 1.3458155259806195; --delay: 1; --color: #fff; --score: 1">

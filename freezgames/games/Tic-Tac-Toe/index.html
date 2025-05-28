@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self';  script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com;  style-src 'self' 'unsafe-inline';  img-src 'self' https://*.googleusercontent.com https://*.googlesyndication.com;connect-src 'self';">
     <title>Tic Tac Toe</title>
     <link rel="shortcut icon" href="../../assets/images/icon.png">
     <link rel="icon" href="./img/icon.svg" type="image/png">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./script.js" defer></script>
-    <link href="../assets/css/splash.css" rel="stylesheet" type="text/css">
     <style>
         .home-button{
             text-decoration: none;
@@ -28,32 +26,10 @@
         .home-button:hover {
             background-color: #dddcdcbc;
         }
-        @media (max-width: 768px) {
-            #image-loader {
-                padding-top: 25%;
-            }
-        }
     </style>
 </head>
 <body>
-    <div id="image-loader">
-        <div id="image-container">
-            <div class="logo">
-                <img src="../../assets/images/logo.png">
-            </div>
-            <div class="game-logo">
-                <img src="../assets/images/game-name/tic-tac-toe.png">
-            </div>
-        </div>
-        <div class="loader-custome">
-            <span class="loader"></span>
-        </div>
-        <div id="button-container">
-            <button class="start-button start-g">START GAME</button>
-            <button class="more-button more-g">MORE GAMES</button>
-        </div>
-    </div>
-    <div class="container" id="main" style="display: none;">
+    <div class="container" id="main">
         
             <h3><a href="https://freezgames.com" class="home-button">Back to Home</a>
             </h3>
@@ -131,28 +107,5 @@
         </div>
     </div>
     <script type="text/javascript" src="../assets/js/disable-click.js"></script>
-    <script>
-        document.querySelector(".start-button").addEventListener("click", function () {
-            let gameElement = document.documentElement; // Fullscreen the whole page
-
-            if (gameElement.requestFullscreen) {
-                gameElement.requestFullscreen();
-            } else if (gameElement.mozRequestFullScreen) { // Firefox
-                gameElement.mozRequestFullScreen();
-            } else if (gameElement.webkitRequestFullscreen) { // Chrome, Safari, Edge
-                gameElement.webkitRequestFullscreen();
-            } else if (gameElement.msRequestFullscreen) { // IE/Edge
-                gameElement.msRequestFullscreen();
-            }
-            document.getElementById('image-loader').style.display = 'none';
-            document.getElementById('main').style.display = '';
-            document.body.style.backgroundImage = 'none'; 
-            document.body.style.backgroundSize = '';
-            document.body.style.backgroundColor = '#dddcdcbc';
-        });
-        document.querySelector(".more-button").addEventListener("click", function () {
-            window.location.href = "https://freezgames.com"; 
-        });
-    </script>
 </body>
 </html>
