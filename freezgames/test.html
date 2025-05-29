@@ -38,9 +38,9 @@
     <link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css">
     <link rel="stylesheet" href="assets/css/home.css">
 
-    <link rel="stylesheet" href="assets/css/owl.css">
+    <!-- <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/> -->
 
     <link rel="stylesheet" href="assets/css/footer.css" media="print" onload="this.onload=null;this.media='all';">
     <noscript>
@@ -80,7 +80,80 @@
     <link rel="preload" href="assets/images/195-150/simon-says.webp" as="image" type="image/webp">
     <link rel="preload" href="assets/images/195-150/retro-dungeon-maze-puzzle.webp" as="image" type="image/webp">
     <link rel="preload" href="assets/images/logo.png" as="image" type="image/png">
-    <link rel="preload" href="assets/images/logo.png" as="image" type="image/png">
+
+    <style>
+        .ticker-wrapper-h {
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            /* border: 2px solid #87CEEB;
+            border-radius: 5px; */
+            margin-bottom: 25px;
+        }
+
+
+        .heading {
+            background-color: #87CEEB;
+            color: black;
+            padding: 12px 16px;
+            flex: 0 0 auto;
+            z-index: 1000;
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 76px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .heading:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -20px;
+            width: 0;
+            height: 0;
+            border-top: 38px solid transparent;
+            border-bottom: 38px solid transparent;
+            border-left: 20px solid #87CEEB;
+        }
+
+
+        .ticker-inner {
+            overflow: hidden;
+            flex: 1;
+            position: relative;
+        }
+
+        .scroller {
+            display: flex;
+            position: relative;
+            left: 0;
+            margin: 0;
+            padding: 10px 0;
+            list-style: none;
+        }
+
+        .scroller li {
+            margin-right: 15px;
+            white-space: nowrap;
+        }
+
+        /* .scroller img {
+            width: 70px;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+        } */
+         .scroller img {
+            width: 90px;
+            height: 90px;            /*  Match width */
+            border-radius: 50%;      /*  Perfect circle */
+            display: block;
+            object-fit: cover;       /*  Optional: crop to fill */
+        }
+
+    </style>
 </head>
 
 <body>
@@ -121,63 +194,65 @@
                 <div class="page-content">
 
                     <!-- ***** Featured Games Start ***** -->
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-lg-12">
-                            <div class="featured-games header-text">
-                                <div class="owl-features owl-carousel">
-                                    <div class="item">
-                                        <div class="thumb">
-                                            <img src="assets/images/195-150/the-aviator.webp" alt="">
-                                            <div class="hover-effect">
-                                                <h6>2.4K Streaming</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="thumb">
-                                            <img src="assets/images/195-150/the-aviator.webp" alt="">
-                                            <div class="hover-effect">
-                                                <h6>2.4K Streaming</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="thumb">
-                                            <img src="assets/images/195-150/the-aviator.webp" alt="">
-                                            <div class="hover-effect">
-                                                <h6>2.4K Streaming</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="thumb">
-                                            <img src="assets/images/195-150/the-aviator.webp" alt="">
-                                            <div class="hover-effect">
-                                                <h6>2.4K Streaming</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="thumb">
-                                            <img src="assets/images/195-150/the-aviator.webp" alt="">
-                                            <div class="hover-effect">
-                                                <h6>2.4K Streaming</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="thumb">
-                                            <img src="assets/images/195-150/the-aviator.webp" alt="">
-                                            <div class="hover-effect">
-                                                <h6>2.4K Streaming</h6>
-                                            </div>
+                            <div class="ticker-wrapper-h">
+                                <div class="heading">Games</div>
+                                <ul class="news-ticker-h">
+                                    <li><a href=""><img src="assets/images/195-150/the-aviator.webp"></a></li>
+                                    <li><a href=""><img src="assets/images/195-150/2048.webp"></a></li>
+                                    <li><a href=""><img src="assets/images/195-150/tower-blocks.webp"></a></li>
+                                    <li><a href=""><img src="assets/images/195-150/color-match.webp"></a></li>
+                                    <li><a href=""><img src="assets/images/195-150/color-match.webp"></a></li>
+                                    <li><a href=""><img src="assets/images/195-150/color-match.webp"></a></li>
+                                    <li><a href=""><img src="assets/images/195-150/color-match.webp"></a></li>
+                                    <li><a href=""><img src="assets/images/195-150/color-match.webp"></a></li>
+                                    <li><a href=""><img src="assets/images/195-150/color-match.webp"></a></li>
+                                    <li><a href=""><img src="assets/images/195-150/color-match.webp"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- ***** Slider Games Start ***** -->
+                    <!-- <div class="ticker-wrapper-h">
+                        <div class="heading">Trending Games</div>
+                    </div> -->
+                     <!-- <div class="ticker-wrapper-h">
+                        <div class="heading">Trending Games</div>
+                        <div class="ticker-inner">
+                            <ul class="scroller">
+                            </ul>
+                        </div>
+                    </div> -->
+                     <!-- <div class="heading-section">
+                        <h4><em>Trending</em> Games</h4>
+                    </div>
+                    <div class="ticker-wrapper-h">
+                        <div class="ticker-inner">
+                            <ul class="scroller">
+                            </ul>
+                        </div>
+                    </div> -->
+                    <div class="most-popular">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="heading-section">
+                                    <h4><em>Trending</em> Games</h4>
+                                </div>
+                                <div class="header-text">
+                                    <div class="ticker-wrapper-h">
+                                        <div class="ticker-inner">
+                                            <ul class="scroller">
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                             </div>
                         </div>
                     </div>
-                    <!-- ***** Featured Games End ***** -->
+
+                    <!-- ***** Slider Games End ***** -->
 
                     <!-- ***** Most Popular Start ***** -->
                     <div class="most-popular">
@@ -405,24 +480,32 @@
                             <div class="heading-section">
                                 <h4><em>Freez Games </em> Play the Best Free Online Games</h4>
                             </div>
-                            <p class="abut-p" id="game-about">Freez Games brings you the latest and most exciting free
-                                online games, ready to play instantly—no downloads, no sign-ups, no annoying pop-ups.
+                            <p class="abut-p" id="game-about">Freez Games brings you the latest and most exciting
+                                free
+                                online games, ready to play instantly—no downloads, no sign-ups, no annoying
+                                pop-ups.
                                 Just pure gaming fun at your fingertips. Whether you're looking for action, puzzles,
                                 sports, or arcade classics, we've got something for everyone.</p>
                             <h4 class="abut-heaading">About Freez Games</h4>
-                            <p class="abut-p">At Freez Games, we believe gaming should be simple, fun, and accessible to
+                            <p class="abut-p">At Freez Games, we believe gaming should be simple, fun, and
+                                accessible to
                                 all. Our platform is built for seamless gameplay, letting you dive right into your
                                 favorite games without any hassle. Every month, millions of players from around the
                                 world enjoy our collection of top-tier browser games.</p>
-                            <p class="abut-p">Our team is passionate about creating a gaming space that's free, open,
-                                and enjoyable for everyone—whether you're playing solo or challenging your friends.</p>
+                            <p class="abut-p">Our team is passionate about creating a gaming space that's free,
+                                open,
+                                and enjoyable for everyone—whether you're playing solo or challenging your friends.
+                            </p>
                             <h4 class="abut-heaading">Play Anywhere, Anytime</h4>
                             <p class="abut-p">Freez Games works on desktop, tablets, and mobile devices, so you can
                                 enjoy your favorite games anywhere—at home, at school, or on the go. From powerful
-                                gaming PCs to smartphones and Chromebooks, if it has a browser, it can run Freez Games!
+                                gaming PCs to smartphones and Chromebooks, if it has a browser, it can run Freez
+                                Games!
                             </p>
-                            <p class="abut-p">We're a team of gamers, developers, and creatives who love what we do. Our
-                                mission is simple: to build the ultimate online gaming playground—completely free and
+                            <p class="abut-p">We're a team of gamers, developers, and creatives who love what we do.
+                                Our
+                                mission is simple: to build the ultimate online gaming playground—completely free
+                                and
                                 available to all</p>
                         </div>
                     </div>
@@ -468,6 +551,124 @@
     <!-- Load script lazily -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js" defer></script>
+
+    <!-- random slider image -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const imageList = [
+                "the-aviator.webp", "0hh1.webp", "2048.webp", "align-4.webp", "color-match.webp", "connect-4.webp",
+                "emoji-catcher.webp", "flappy-bird.webp", "ghost-bustin.webp", "hangman.webp", "lazy-2048.webp", "math-game.webp",
+                "memory-game.webp", "minesweeper.webp", "plankman.webp", "reaction-wall.webp", "word-guessing.webp",
+                "whack-a-mole.webp", "typing-game.webp", "tower-blocks.webp", "tic-tac-toe.webp", "table-tennis.webp",
+                "sudoku.webp", "stacker.webp", "space-invaders.webp", "simon-says.webp", "retro-dungeon-maze-puzzle.webp"
+            ];
+           
+            const shuffled = imageList.sort(() => 0.5 - Math.random());  // Shuffle array
+            const selected = shuffled.slice(0, 13); // Pick first 15
+
+            const scroller = document.querySelector(".scroller");
+            scroller.innerHTML = ""; // Clear old <li>s
+
+            selected.forEach(filename => {
+                const li = document.createElement("li");
+                // const a = document.createElement("a");
+                // a.href = "#";
+                const img = document.createElement("img");
+                img.src = `assets/images/195-150/${filename}`;
+                img.loading = "lazy";
+
+                // Set onclick
+                img.onclick = function () {
+                    const gameName = filename.replace('.webp', '');
+                    setDynamicBackground(gameName);
+                };
+
+                // a.appendChild(img);
+                li.appendChild(img);
+                scroller.appendChild(li);
+            });
+        });
+    </script>
+
+    <!-- image ticker loop -->
+    <!-- <script>
+        $(document).ready(function () {
+            var speed = 5; // higher = slower
+            var scroller = $('.scroller');
+            var totalWidth = 0;
+
+            scroller.children().each(function () {
+                totalWidth += $(this).outerWidth(true);
+            });
+
+            scroller.css('width', totalWidth + 'px');
+
+            let scrollInterval;
+
+            function startScroll() {
+                function scroll() {
+                    let firstItem = scroller.children().first();
+                    let scrollWidth = firstItem.outerWidth(true);
+
+                    scroller.animate(
+                        { left: -scrollWidth },
+                        scrollWidth * 100 / speed,
+                        'linear',
+                        function () {
+                            scroller.append(firstItem);
+                            scroller.css('left', 0);
+                            if (!scroller.is(':hover')) {
+                                scroll();
+                            }
+                        }
+                    );
+                }
+                scrollInterval = scroll();
+            }
+
+            function stopScroll() {
+                scroller.stop(true);
+            }
+            // Start scrolling initially
+            startScroll();
+
+            // Pause on hover
+            $('.ticker-wrapper-h').on('mouseenter', stopScroll);
+            $('.ticker-wrapper-h').on('mouseleave', startScroll);
+        });
+    </script> -->
+
+    <!-- without hover to pause <script>
+        $(document).ready(function () {
+            var speed = 5; // higher = slower
+            var scroller = $('.scroller');
+            var totalWidth = 0;
+
+            scroller.children().each(function () {
+                totalWidth += $(this).outerWidth(true);
+            });
+
+            scroller.css('width', totalWidth + 'px');
+
+            function scroll() {
+                let firstItem = scroller.children().first();
+                let scrollWidth = firstItem.outerWidth(true);
+
+                scroller.animate(
+                    { left: -scrollWidth },
+                    scrollWidth * 100 / speed,
+                    'linear',
+                    function () {
+                        scroller.append(firstItem);
+                        scroller.css('left', 0);
+                        scroll();
+                    }
+                );
+            }
+            scroll();
+        });
+    </script> -->
+
     <script defer>
         if ('requestIdleCallback' in window) {
             requestIdleCallback(loadFooter);
@@ -485,7 +686,7 @@
                     }
                 })
                 .catch(error => console.error("Error loading footer:", error));
-        }
+        }    
         function setDynamicBackground(gameName) {
             localStorage.setItem('gameName', gameName);
             setTimeout(() => {

@@ -78,3 +78,60 @@ body .page-content {
     margin-top: 18px !important;
     font-size: 19px !important;
 }
+
+/* top image ticker css start */
+.ticker-wrapper-h {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+.heading {
+    background-color: #87CEEB;
+    color: black;
+    padding: 12px 16px;
+    flex: 0 0 auto;
+    z-index: 1000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 76px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.heading:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 0;
+    height: 0;
+    border-top: 38px solid transparent;
+    border-bottom: 38px solid transparent;
+    border-left: 20px solid #87CEEB;
+}
+.ticker-inner {
+    overflow: hidden;
+    flex: 1;
+    position: relative;
+}
+.scroller {
+    display: flex;
+    position: relative;
+    left: 0;
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+}
+.scroller li {
+    margin-right: 15px;
+    white-space: nowrap;
+}
+.scroller img {
+    width: 90px;
+    height: 90px;            /*  Match width */
+    border-radius: 50%;      /*  Perfect circle */
+    display: block;
+    object-fit: cover;       /*  Optional: crop to fill */
+}

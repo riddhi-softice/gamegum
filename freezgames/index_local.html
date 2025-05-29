@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"  as="font" type="font/woff2" crossorigin="anonymous">
     <title>Freez Games - Play Free Online Games</title>
     <meta name="description" content="Play exciting free online games on Freez Games! Enjoy Sudoku, 2048, Tic-Tac-Toe, Flappy Bird, Connect 4, Space Invaders, Memory Game, and many more. Challenge your skills and have fun!">
     <meta name="keywords" content="free online games, play games, sudoku, 2048, tic-tac-toe, table tennis, connect 4, mine sweeper, flappy bird, memory game, reaction wall, word guessing, math game, retro dungeon maze, space invaders, stacker, lazy 2048, tower blocks, the aviator, typing game, emoji catcher, simon says, whack a mole">
@@ -32,9 +33,12 @@
     
     <link rel="stylesheet" href="assets/css/footer.css" media="print" onload="this.onload=null;this.media='all';">
     <noscript><link rel="stylesheet" href="assets/css/footer.css"></noscript>
-
+    
+    <!--<link rel="stylesheet" href="assets/css/group1_display.css">
+    <link rel="stylesheet" href="assets/css/footer.css"> -->
+    
     <!-- preload images-->
-    <link rel="preload" href="assets/images/195-150/the-aviator.webp" as="image" type="image/webp">
+   <link rel="preload" href="assets/images/195-150/the-aviator.webp" as="image" type="image/webp">
     <link rel="preload" href="assets/images/195-150/0hh1.webp" as="image" type="image/webp">
     <link rel="preload" href="assets/images/195-150/2048.webp" as="image" type="image/webp">
     <link rel="preload" href="assets/images/195-150/align-4.webp" as="image" type="image/webp">
@@ -63,7 +67,6 @@
     <link rel="preload" href="assets/images/195-150/simon-says.webp" as="image" type="image/webp">
     <link rel="preload" href="assets/images/195-150/retro-dungeon-maze-puzzle.webp" as="image" type="image/webp">
     <link rel="preload" href="assets/images/logo.png" as="image" type="image/png">
-    
 </head>
 <body>
   
@@ -137,7 +140,6 @@
                                                 <h4 class="main-g">Aviator</h4>
                                             </div>
                                         </div>
-                                        
                                         <div class="col-lg-6 col-sm-12">
                                             <div class="row">
                                                 <div class="col-lg-6 col-sm-6 col-6">
@@ -170,7 +172,7 @@
                                         </div>
                                     </div>
 
-                                    <!--<div class="row">                                       
+                                    <div class="row">                                       
                                         <div class="col-lg-3 col-sm-6 col-6">
                                             <div class="item" onclick="setDynamicBackground('hangman')">
                                                 <img src="assets/images/195-150/hangman.webp"  class="img-fluid"  fetchpriority="high" alt="">
@@ -303,10 +305,7 @@
                                                 <h4>Whack-a-mole</h4>
                                             </div>
                                         </div> 
-                                    </div>-->
-                                    
-                                    <div id="game-list" class="row"></div>
-
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -342,7 +341,7 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js" defer></script> 
 
-    <!-- random slider image -->
+    <!-- random slider-ticker image -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const imageList = [

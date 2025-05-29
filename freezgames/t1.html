@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Game Ticker</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      background-color: #1e1e1e;
+      font-family: sans-serif;
+      padding: 30px;
+    }
+
+    .ticker-wrapper-h {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      border: 2px solid #87CEEB;
+      border-radius: 5px;
+      background: #1e1e1e;
+    }
+
+    /* .heading {
+      background-color: #87CEEB;
+      color: black;
+      padding: 5px 10px;
+      flex-shrink: 0;
+        z-index: 1000;
+      position: relative;
+    }
+
+    .heading:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -20px;
+      border-left: 20px solid #87CEEB;
+      border-top: 17px solid transparent;
+      border-bottom: 15px solid transparent;
+    } */
+    .heading {
+      background-color: #87CEEB;
+      color: black;
+      padding: 12px 16px;
+      flex: 0 0 auto;
+      z-index: 1000;
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 60px;
+      /* Match image height + padding */
+      font-size: 20px;
+      font-weight: bold;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    .heading:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -20px;
+      width: 0;
+      height: 0;
+      border-top: 45px solid transparent;
+      border-bottom: 45px solid transparent;
+      border-left: 20px solid #87CEEB;
+    }
+
+
+    .ticker-inner {
+      overflow: hidden;
+      flex: 1;
+      position: relative;
+    }
+
+    .scroller {
+      display: flex;
+      position: relative;
+      left: 0;
+      margin: 0;
+      padding: 10px 0;
+      list-style: none;
+    }
+
+    .scroller li {
+      margin-right: 15px;
+      white-space: nowrap;
+    }
+
+    .scroller img {
+      width: 70px;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="ticker-wrapper-h">
+    <div class="heading">Games</div>
+    <div class="ticker-inner">
+      <ul class="scroller">
+        <li><a href="#"><img src="assets/images/195-150/the-aviator.webp" /></a></li>
+        <li><a href="#"><img src="assets/images/195-150/2048.webp" /></a></li>
+        <li><a href="#"><img src="assets/images/195-150/tower-blocks.webp" /></a></li>
+        <li><a href="#"><img src="assets/images/195-150/color-match.webp" /></a></li>
+        <li><a href="#"><img src="assets/images/195-150/the-aviator.webp" /></a></li>
+        <li><a href="#"><img src="assets/images/195-150/2048.webp" /></a></li>
+        <li><a href="#"><img src="assets/images/195-150/tower-blocks.webp" /></a></li>
+        <li><a href="#"><img src="assets/images/195-150/color-match.webp" /></a></li>
+        <li><a href="#"><img src="assets/images/195-150/the-aviator.webp" /></a></li>
+        <li><a href="#"><img src="assets/images/195-150/2048.webp" /></a></li>
+        <li><a href="#"><img src="assets/images/195-150/tower-blocks.webp" /></a></li>
+        <li><a href="#"><img src="assets/images/195-150/color-match.webp" /></a></li>
+        <li><a href="#"><img src="assets/images/195-150/color-match.webp" /></a></li>
+
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      var speed = 5; // higher = slower
+      var scroller = $('.scroller');
+      var totalWidth = 0;
+
+      scroller.children().each(function () {
+        totalWidth += $(this).outerWidth(true);
+      });
+
+      scroller.css('width', totalWidth + 'px');
+
+      function scroll() {
+        let firstItem = scroller.children().first();
+        let scrollWidth = firstItem.outerWidth(true);
+
+        scroller.animate(
+          { left: -scrollWidth },
+          scrollWidth * 100 / speed,
+          'linear',
+          function () {
+            scroller.append(firstItem);
+            scroller.css('left', 0);
+            scroll();
+          }
+        );
+      }
+      scroll();
+    });
+  </script>
+
+</body>
+
+</html>
